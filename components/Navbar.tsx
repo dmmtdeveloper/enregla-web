@@ -7,6 +7,9 @@ import logoDark from "@/public/assets/logo-negro.png";
 import { IconAuto } from "./icons/IconAuto";
 import { links } from "@/lib/data";
 import Link from "next/link";
+import { NavContactButton } from "./buttons/NavContactButton";
+import { SunIcon } from "./icons/SunIcon";
+import { MoonIcon } from "./icons/MoonIcon";
 
 export const Navbar = () => {
   return (
@@ -80,12 +83,19 @@ export const Navbar = () => {
         )}
       >
         <Image
-          className={clsx("w-[150px] h-auto hidden lg:block md:block")}
+          className={clsx("w-[150px]  h-auto hidden lg:block md:block")}
           src={logoDark}
           alt="logoDark"
           priority
         />
         <IconAuto className="fill-slate-900 lg:hidden md:block sm:block" />
+      </div>
+
+      <div className="absolute right-3 mt-9">
+        <div className="flex items-center h-full gap-4">
+          <NavContactButton />
+          <MoonIcon />
+        </div>
       </div>
     </header>
   );
