@@ -8,7 +8,7 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <main>
+      <main className="bg-gray-50 text-gray-950 relative h-[5000px]">
         <div
           className={clsx(
             "bg-[#7ADB78]",

@@ -18,11 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${sora.className} bg-gray-50 text-gray-950 relative h-[5000px]`}
-      >
-        {children}
-      </body>
+      <body className={sora.className}>{children}</body>
     </html>
   );
 }
