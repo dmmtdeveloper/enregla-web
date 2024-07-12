@@ -1,13 +1,14 @@
+"use client"
 import React from "react";
 import clsx from "clsx";
-// import { motion } from "framer-motion"
+import { motion } from "framer-motion"
 // import Image from "next/image";
 // import logoDark from "@/public/assets/logo-negro.png"
 
 export const Navbar = () => {
   return (
       <nav className={clsx("z-[999] relative")}>
-      <div
+      <motion.div
         className={clsx(
             "lg:block md:block hidden",
             "fixed top-0 left-1/2 -translate-x-1/2", 
@@ -21,9 +22,9 @@ export const Navbar = () => {
             "sm:w-[36rem] sm:rounded-full"
         )}
         
-        // initial={{ y: -100, opacity: 0 }}
-        // animate={{ y: 0, opacity: 1}}
-      ></div>
+        initial={{ y: -100, x:"-50%" ,opacity: 0 }}
+        animate={{ y: 0, x:"-50%", opacity: 1}}
+      ></motion.div>
       {/* <div className="absolute">
         <Image className={clsx("w-20 h-auto")} src={logoDark} alt="logoDark"/>
       </div> */}
