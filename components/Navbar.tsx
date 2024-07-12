@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <header className={clsx("relative")}>
+    <header className={clsx("relative z-[9999]")}>
       <motion.div
         className={clsx(
           "lg:block hidden",
@@ -48,22 +48,25 @@ export const Navbar = () => {
           )}
         >
           {links.map((link) => (
-            <li
+            <motion.li
               className="h-3/4 flex items-center justify-center"
               key={link.hash}
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
             >
               <Link
                 className={clsx(
                   "flex w-full",
                   "items-center justify-center",
                   "px-3 py-3",
-                  "hover:text-gray-950"
+                  "hover:text-gray-950",
+                  "transition"
                 )}
                 href={link.hash}
               >
                 {link.name}
               </Link>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </nav>
