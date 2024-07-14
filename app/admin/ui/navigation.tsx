@@ -4,6 +4,7 @@ import { navigationMenu } from "../constants/navigation";
 import { MenuIcon } from "@/assets/icons/menu";
 import Image from "next/image";
 import { useState } from "react";
+import { colors } from "../constants/theme";
 
 const enreglaLogo = require("@/assets/images/logo.png");
 const enreglaName = require("@/assets/images/enregla.png");
@@ -14,18 +15,20 @@ export default function Navigation() {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <header className="relative w-[60px] h-screen">
-      <nav className="w-[60px] h-screen flex flex-col items-center justify-between py-[16px] bg-[#43435C] absolute top-0 left-0 z-10">
+    <header className="relative w-[60px] h-screen text-[#fff]">
+      <nav
+        className={`w-[60px] h-screen flex flex-col items-center justify-between py-[16px] bg-green-600 absolute top-0 left-0 z-40`}
+      >
         <div
           onClick={toggle}
-          className="w-[40px] h-[40px] flex items-center justify-center rounded-[8px] bg-[#575779] cursor-pointer"
+          className="w-[40px] h-[40px] flex items-center justify-center rounded-[8px] cursor-pointer"
         >
           <MenuIcon color="#fff" />
         </div>
         <ul className="w-full h-[calc(100%_-_280px)] flex flex-col items-center justify-evenly">
           {navigationMenu.map(({ name, path, icon }) => (
             <Link href={path} key={name}>
-              <div className="w-[40px] h-[40px] flex items-center justify-center rounded-[8px] bg-[#575779]">
+              <div className="w-[40px] h-[40px] flex items-center justify-center rounded-[8px]">
                 {icon}
               </div>
             </Link>
@@ -36,10 +39,10 @@ export default function Navigation() {
         </div>
       </nav>
       <aside
-        className={`w-[120px] h-screen flex flex-col items-center justify-between py-[16px] bg-[#43435C]
+        className={`w-[100px] h-screen flex flex-col items-center justify-between py-[16px] bg-green-600
           ${
             isOpen ? "translate-x-0" : "-translate-x-[180px]"
-          } transition-transform duration-500 absolute top-0 left-[60px]
+          } transition-transform duration-500 absolute top-0 left-[60px] z-30
           `}
       >
         <div className="w-full h-[40px]" />
