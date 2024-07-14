@@ -27,7 +27,7 @@ export default function CustomInput({
     lg: "w-[100%]",
   };
   return (
-    <div className={`${sizeStyles[size]} h-[64px] mx-[8px] my-[4px] relative`}>
+    <div className={`${sizeStyles[size]} mx-[8px] my-[4px] relative`}>
       <Input
         aria-label="input"
         variant="bordered"
@@ -38,8 +38,8 @@ export default function CustomInput({
         color="primary"
         radius="sm"
         classNames={{
-          input: "bg-[#fff] text-[#222]",
-          inputWrapper: "border-[0.5px] border-[#ddd] bg-[#fff]",
+          // input: "text-[#222]",
+          // inputWrapper: "border-[1px] border-[#ddd]",
           errorMessage: "text-[#f00] absolute bottom-[-10px]",
           label: "text-[#555]",
         }}

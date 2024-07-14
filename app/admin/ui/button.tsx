@@ -19,7 +19,7 @@ export default function CustomButton({
         onClick={onClick}
         isDisabled={isDisabled}
         isLoading={isLoading}
-        className={`bg-[${colors.green[600]}] text-white`}
+        className={`bg-green-600 text-white`}
         size={size}
         radius="sm"
         {...rest}
