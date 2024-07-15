@@ -45,7 +45,7 @@ export default function RootLayout({
 
             )}
           ></div>
-          <Navbar />
+          <Navbar/>
           {children}
         </body>
       </StrictMode>

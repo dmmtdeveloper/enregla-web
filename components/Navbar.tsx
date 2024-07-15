@@ -38,7 +38,7 @@ export const Navbar = () => {
             "-translate-x-1/2 py-2 sm:top-[1.7rem]",
             "sm:h-[initial], sm:h-[initial] sm:py-0",
             "lg:block hidden",
-            "flex justify-between"
+            "flex justify-between",
           )}
         >
           <ul
@@ -76,9 +76,37 @@ export const Navbar = () => {
           </ul>
         </nav>
 
-        <div>
-          <NavContactButton />
+        <div className={clsx("right-4", "fixed", "top-9", "h-[3.25rem]")}>
+          <NavContactButton/>
+          <ThemeIcon />
         </div>
+
+        <Image
+          className={clsx(
+            "w-[150px]",
+            "left-4",
+            "fixed top-9",
+            "h-auto hidden",
+            "lg:block md:block"
+          )}
+          src={logoDark}
+          alt="logoDark"
+          priority
+        />
+        <IconAuto
+          className={clsx(
+            "fill-slate-900",
+            "lg:hidden",
+            "md:hidden",
+            "sm:block",
+            "fixed top-6",
+            "left-4",
+            
+            // "w-[150px]",
+
+            
+          )}
+        />
       </div>
     </header>
   );
