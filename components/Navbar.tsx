@@ -10,6 +10,7 @@ import Link from "next/link";
 import { NavContactButton } from "./buttons/NavContactButton";
 import { SunIcon } from "./icons/SunIcon";
 import { MoonIcon } from "./icons/MoonIcon";
+import ThemeIcon from "./ThemeIcons";
 
 export const Navbar = () => {
   return (
@@ -94,7 +95,7 @@ export const Navbar = () => {
       <div className="absolute right-3 mt-9">
         <div className="flex items-center h-full gap-4">
           <NavContactButton />
-          <MoonIcon />
+          <ThemeIcon/>
         </div>
       </div>
     </header>
