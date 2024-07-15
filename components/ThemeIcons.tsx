@@ -1,7 +1,8 @@
 import UseDarkMode from "@/hooks/UseDarkMode";
 import clsx from "clsx";
 
-import { FaMoon, FaSun } from "react-icons/fa";
+import { IoSunny } from "react-icons/io5";
+import { FaMoon,  } from "react-icons/fa6";
 
 const ThemeIcon = () => {
   const [darkTheme, setDarkTheme] = UseDarkMode();
@@ -9,7 +10,7 @@ const ThemeIcon = () => {
   return (
     <span onClick={handleMode}>
       {darkTheme ? (
-        <FaSun
+        <IoSunny
           size="24"
           className={clsx(
             "top-navigation-icon",

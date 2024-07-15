@@ -3,8 +3,9 @@ import React from "react";
 import Link from "next/link";
 import clsx from "clsx";
 import Image from "next/image";
-import logoDark from "@/public/assets/logo-negro.png";
 import ThemeIcon from "./ThemeIcons";
+import logoDark from "@/public/assets/logo-negro.png";
+import logoWhite from "@/public/assets/logo-blanco.png";
 import { NavContactButton } from "./buttons/NavContactButton";
 import { motion } from "framer-motion";
 import { IconAuto } from "./icons/IconAuto";
@@ -100,30 +101,36 @@ export const Navbar = () => {
           <ThemeIcon />
         </div>
 
-        <Image
-          className={clsx(
-            "w-[150px]",
-            "left-4",
-            "fixed top-9",
-            "h-auto hidden",
-            "lg:block md:block"
-          )}
-          src={logoDark}
-          alt="logoDark"
-          priority
-        />
-        <IconAuto
-          className={clsx(
-            "fill-slate-900",
-            "lg:hidden",
-            "md:hidden",
-            "sm:block",
-            "fixed top-6",
-            "left-4"
+        <div>
+          <Image
+            className={clsx(
+              "w-[150px]",
+              "left-4",
+              "fixed top-9",
+              "h-auto",
+              "lg:block md:block",
+              "dark:hidden"
+            )}
+            src={logoDark}
+            alt="logoDark"
+            priority
+          />
+        </div>
 
-            // "w-[150px]",
-          )}
-        />
+        <div className="hidden dark:block">
+          <Image
+            className={clsx(
+              "w-[150px]",
+              "left-4",
+              "fixed top-9",
+              "h-auto",
+              "lg:block md:block sm:hidden"
+            )}
+            src={logoWhite}
+            alt="logoWhite"
+            priority
+          />
+        </div>
       </div>
     </header>
   );
