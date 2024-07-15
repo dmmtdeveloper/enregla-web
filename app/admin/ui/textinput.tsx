@@ -35,13 +35,13 @@ export default function CustomInput({
         value={value}
         onChange={onChange}
         label={placeholder}
-        color="primary"
+        color="success"
         radius="sm"
         classNames={{
-          // input: "text-[#222]",
-          // inputWrapper: "border-[1px] border-[#ddd]",
+          input: "text-[#222]",
+          inputWrapper: "border-[2px] border-[#dec]",
           errorMessage: "text-[#f00] absolute bottom-[-10px]",
-          label: "text-[#555]",
+          label: "text-[#666]",
         }}
         required={true}
         readOnly={readonly}

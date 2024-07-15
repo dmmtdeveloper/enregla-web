@@ -24,7 +24,11 @@ export default function CustomDatePicker({
       visibleMonths={1}
       pageBehavior="single"
       radius="sm"
-      classNames={{ selectorButton: "text-main", calendar: "text-black" }}
+      color="success"
+      classNames={{
+        selectorButton: "text-green-600",
+        calendar: "text-[#222]",
+      }}
     />
   );
 }

@@ -1,12 +1,22 @@
 import CustomDatePicker from "./datepicker";
-import { DateValue, parseDate } from "@internationalized/date";
+import { parseDate } from "@internationalized/date";
 import CustomInput from "./textinput";
 
 type Header = {
   title: string;
+  searchedText: string;
+  searchText: (text: string) => void;
+  fromDate: string;
+  toDate: string;
 };
 
-export default function Header({ title }: Header) {
+export default function Header({
+  title,
+  searchedText,
+  searchText,
+  fromDate,
+  toDate,
+}: Header) {
   return (
     <>
       <section className="w-full h-[80px] flex items-center justify-between">
@@ -14,15 +24,19 @@ export default function Header({ title }: Header) {
         <div className="w-[60%] h-full flex items-center justify-evenly">
           <CustomDatePicker
             label="Inicio"
-            date={parseDate(new Date().toISOString().slice(0, 10))}
+            date={parseDate(fromDate)}
             onChange={() => {}}
           />
           <CustomDatePicker
             label="Fin"
-            date={parseDate(new Date().toISOString().slice(0, 10))}
+            date={parseDate(toDate)}
             onChange={() => {}}
           />
-          <CustomInput value={""} onChange={() => {}} placeholder="Buscar..." />
+          <CustomInput
+            value={searchedText}
+            onChange={(e) => searchText(e.target.value)}
+            placeholder="Buscar..."
+          />
         </div>
       </section>
     </>

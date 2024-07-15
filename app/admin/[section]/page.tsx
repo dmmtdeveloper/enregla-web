@@ -18,7 +18,13 @@ export default function Dashboard() {
 
   return (
     <Layout>
-      <Header title={title} />
+      <Header
+        title={title}
+        fromDate={new Date().toISOString().slice(0, 10)}
+        toDate={new Date().toISOString().slice(0, 10)}
+        searchedText=""
+        searchText={() => {}}
+      />
     </Layout>
   );
 }
