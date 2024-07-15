@@ -9,6 +9,7 @@ import { NavContactButton } from "./buttons/NavContactButton";
 import { motion } from "framer-motion";
 import { IconAuto } from "./icons/IconAuto";
 import { links } from "@/lib/data";
+import { MenuIcon } from "./icons/MenuIcon";
 
 export const Navbar = () => {
   return (
@@ -38,7 +39,7 @@ export const Navbar = () => {
             "-translate-x-1/2 py-2 sm:top-[1.7rem]",
             "sm:h-[initial], sm:h-[initial] sm:py-0",
             "lg:block hidden",
-            "flex justify-between",
+            "flex justify-between"
           )}
         >
           <ul
@@ -76,8 +77,26 @@ export const Navbar = () => {
           </ul>
         </nav>
 
-        <div className={clsx("right-4", "fixed", "top-9", "h-[3.25rem]")}>
-          <NavContactButton/>
+        <div
+          className={clsx(
+            "right-4",
+            "fixed",
+            "top-6",
+            "h-[3.25rem] flex gap-10",
+            "flex items-center gap-5"
+          )}
+        >
+          <NavContactButton />
+          <div
+            className={clsx(
+              "lg:hidden",
+              "md:hidden",
+              "border-r-2 h-5 items-center flex pr-3",
+              "border-gray-500"
+            )}
+          >
+            <MenuIcon />
+          </div>
           <ThemeIcon />
         </div>
 
@@ -100,11 +119,9 @@ export const Navbar = () => {
             "md:hidden",
             "sm:block",
             "fixed top-6",
-            "left-4",
-            
-            // "w-[150px]",
+            "left-4"
 
-            
+            // "w-[150px]",
           )}
         />
       </div>

@@ -1,24 +1,52 @@
-
 import UseDarkMode from "@/hooks/UseDarkMode";
+import clsx from "clsx";
 
-import {
-    FaMoon,
-    FaSun,
-  } from 'react-icons/fa';
-
+import { FaMoon, FaSun } from "react-icons/fa";
 
 const ThemeIcon = () => {
-    const [darkTheme, setDarkTheme] = UseDarkMode();
-    const handleMode = () => setDarkTheme(!darkTheme);
-    return (
-      <span onClick={handleMode}>
-        {darkTheme ? (
-          <FaSun size='24' className='top-navigation-icon' />
-        ) : (
-          <FaMoon size='24' className='top-navigation-icon' />
-        )}
-      </span>
-    );
-  };
-  
-  export default ThemeIcon;
+  const [darkTheme, setDarkTheme] = UseDarkMode();
+  const handleMode = () => setDarkTheme(!darkTheme);
+  return (
+    <span onClick={handleMode}>
+      {darkTheme ? (
+        <FaSun
+          size="24"
+          className={clsx(
+            "top-navigation-icon",
+
+            /*----hover----*/
+            "hover:text-gray-950",
+            "hover:scale-[1.2]",
+
+            /*----transition----*/
+            "transition",
+            "duration-300"
+
+            /*----dark-mode----*/
+
+          )}
+        />
+      ) : (
+        <FaMoon
+          size="24"
+          className={clsx(
+            "top-navigation-icon",
+
+            /*----hover----*/
+            "hover:text-gray-950",
+            "hover:scale-[1.2]",
+
+            /*----transition----*/
+            "transition",
+            "duration-300",
+
+            /*----dark-mode----*/
+            
+          )}
+        />
+      )}
+    </span>
+  );
+};
+
+export default ThemeIcon;
