@@ -78,7 +78,7 @@ export const Navbar = () => {
           </ul>
         </nav>
 
-        <div
+        <motion.div
           className={clsx(
             "right-4",
             "fixed",
@@ -86,6 +86,8 @@ export const Navbar = () => {
             "h-[3.25rem] flex gap-10",
             "flex items-center gap-5"
           )}
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
         >
           <NavContactButton />
           <div
@@ -99,25 +101,41 @@ export const Navbar = () => {
             <MenuIcon />
           </div>
           <ThemeIcon />
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            type: "tween",
+            duration: 0.2,
+          }}
+        >
           <Image
             className={clsx(
               "w-[150px]",
+              "h-auto",
               "left-4",
               "fixed top-9",
-              "h-auto",
               "lg:block md:block",
               "dark:hidden"
             )}
             src={logoDark}
             alt="logoDark"
-            priority
+            quality="95"
+            priority={true}
           />
-        </div>
+        </motion.div>
 
-        <div className="hidden dark:block">
+        <motion.div
+          className="hidden dark:block"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            type: "tween",
+            duration: 0.2,
+          }}
+        >
           <Image
             className={clsx(
               "w-[150px]",
@@ -128,9 +146,10 @@ export const Navbar = () => {
             )}
             src={logoWhite}
             alt="logoWhite"
-            priority
+            quality="95"
+            priority={true}
           />
-        </div>
+        </motion.div>
       </div>
     </header>
   );
