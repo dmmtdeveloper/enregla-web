@@ -24,5 +24,10 @@ export default function useSession() {
     }, 2000);
   };
 
-  return { session, form, handleForm, loginUser };
+  const logoutUser = async () => {
+    setSession({ token: "", user: defaultUser });
+    router.replace("/admin/login");
+  };
+
+  return { session, form, handleForm, loginUser, logoutUser };
 }

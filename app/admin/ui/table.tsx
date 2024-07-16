@@ -22,9 +22,10 @@ export default function CustomTable({ columns, rows, handleEdit, handleDelete }:
       aria-label="table"
       isHeaderSticky
       radius="lg"
-      shadow="md"
+      shadow="none"
       className="max-h-[90%] no-scrollbar"
       classNames={{
+        // base: "border-1 border-white",
         wrapper: "p-0 no-scrollbar text-white bg-transparent",
         th: `text-center text-[14px] text-white font-semibold bg-slate-800`,
         td: "text-center text-[12px] text-white",

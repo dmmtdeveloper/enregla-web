@@ -1,5 +1,5 @@
 export const textStyles = {
-  title: "text-[#222] text-xl font-medium",
+  title: "text-[#fff] text-xl font-medium",
 };
 
 export const colors = {

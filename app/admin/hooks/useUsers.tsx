@@ -15,15 +15,21 @@ export default function useUsers() {
   const [totalUsers, setTotalUsers] = useState<number>(10);
   const [page, setPage] = useState<number>(1);
   const [rows, setRows] = useState<number>(10);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     fetchUsers();
   }, [page, rows]);
 
   const fetchUsers = async () => {
+    setLoading(true);
     const response = await GetUsers({ token: session.token, query: `?page=${page}&rows=${rows}` });
+    if (response.error) {
+      setLoading(false);
+    }
     setUsers(response.users);
     setTotalUsers(response.count);
+    setLoading(false);
   };
 
   const handlePage = (page: number) => setPage(page);
@@ -31,5 +37,5 @@ export default function useUsers() {
 
   const totalPages = Math.ceil(totalUsers / rows);
 
-  return { users, usersColumns, handlePage, handleRows, totalPages, totalUsers, page, rows };
+  return { users, usersColumns, handlePage, handleRows, totalPages, totalUsers, page, rows, loading };
 }

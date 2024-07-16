@@ -1,6 +1,7 @@
 import { HomeIcon } from "@/assets/icons/home";
 import { UsersIcon } from "@/assets/icons/users";
 import { LabelIcon } from "@/assets/icons/label";
+import { BuildingIcon } from "@/assets/icons/building";
 
 export const navigationMenu = [
   { name: "Inicio", path: "/admin/dashboard", icon: <HomeIcon color="#fff" /> },
@@ -13,5 +14,10 @@ export const navigationMenu = [
     name: "Insumos",
     path: "/admin/supplies",
     icon: <LabelIcon color="#fff" />,
+  },
+  {
+    name: "Sucursales",
+    path: "/admin/branches",
+    icon: <BuildingIcon color="#fff" />,
   },
 ];
