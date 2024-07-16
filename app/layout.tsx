@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import clsx from "clsx";
 import React, { StrictMode } from "react";
+import { HeroSection } from "@/components/HeroSection";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -46,6 +47,7 @@ export default function RootLayout({
             )}
           ></div>
           <Navbar/>
+          <HeroSection/>
           {children}
         </body>
       </StrictMode>

@@ -113,7 +113,7 @@ export const Navbar = () => {
         >
           <Image
             className={clsx(
-              "w-[150px]",
+              "w-52",
               "h-auto",
               "left-4",
               "fixed top-9",
@@ -138,10 +138,10 @@ export const Navbar = () => {
         >
           <Image
             className={clsx(
-              "w-[150px]",
+              "w-52",
+              "h-auto",
               "left-4",
               "fixed top-9",
-              "h-auto",
               "lg:block md:block sm:hidden"
             )}
             src={logoWhite}
