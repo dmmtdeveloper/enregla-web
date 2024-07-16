@@ -4,17 +4,13 @@ import useUsers from "../hooks/useUsers";
 import Layout from "../ui/layout";
 import CustomTable from "../ui/table";
 import Header from "../ui/header";
+import CustomPagination from "../ui/pagination";
 
 export default function Dashboard() {
   const path = usePathname();
-  const { usersColumns } = useUsers();
+  const { users, usersColumns, handlePage, handleRows, totalPages, totalUsers, page, rows } = useUsers();
 
-  const title =
-    path === "/admin/dashboard"
-      ? "Reportes"
-      : path === "/admin/operators"
-      ? "Operadores"
-      : "Insumos";
+  const title = path === "/admin/dashboard" ? "Reportes" : path === "/admin/operators" ? "Operadores" : "Insumos";
 
   return (
     <Layout>
@@ -25,6 +21,19 @@ export default function Dashboard() {
         searchedText=""
         searchText={() => {}}
       />
+      <div className="w-full h-[70%]">
+        <CustomTable columns={usersColumns} rows={users} />
+      </div>
+      <div className="w-full h-[5%]">
+        <CustomPagination
+          page={page}
+          rows={rows}
+          totalData={totalUsers}
+          totalpages={totalPages}
+          handlePage={handlePage}
+          handleRows={handleRows}
+        />
+      </div>
     </Layout>
   );
 }

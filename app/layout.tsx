@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import clsx from "clsx";
 import Providers from "./providers";
+import React, { StrictMode } from "react";
 
 const sora = Sora({ subsets: ["latin"] });
 

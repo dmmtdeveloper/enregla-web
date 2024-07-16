@@ -33,11 +33,16 @@ export default function CustomSelect({
       multiple={multiple}
       selectedKeys={value}
       label={placeholder}
-      className={`${sizeStyles[size]} mx-[8px]`}
+      className={`${sizeStyles[size]} mx-[8px] text-white border-none`}
       isDisabled={disabled}
       radius="sm"
-      color="primary"
-      classNames={{ label: "text-[#555]", base: "mb-2" }}
+      classNames={{
+        label: "text-white",
+        base: "mb-2",
+        listboxWrapper: "border-slate-800",
+        listbox: "bg-slate-800",
+        innerWrapper: "border-none",
+      }}
     >
       {options.map((option) => (
         <SelectItem key={option.key} textValue={option.label}>

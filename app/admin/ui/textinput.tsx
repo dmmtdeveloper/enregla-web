@@ -35,13 +35,11 @@ export default function CustomInput({
         value={value}
         onChange={onChange}
         label={placeholder}
-        color="success"
         radius="sm"
         classNames={{
-          input: "text-[#222]",
-          inputWrapper: "border-[2px] border-[#dec]",
+          input: "text-white",
           errorMessage: "text-[#f00] absolute bottom-[-10px]",
-          label: "text-[#666]",
+          label: "text-white",
         }}
         required={true}
         readOnly={readonly}
@@ -49,9 +47,7 @@ export default function CustomInput({
         {...rest}
       />
       {isInvalid && errorMessage && (
-        <small className="text-[10px] text-[#f00] absolute -bottom-[10px] left-2">
-          {errorMessage}
-        </small>
+        <small className="text-[10px] text-[#f00] absolute -bottom-[10px] left-2">{errorMessage}</small>
       )}
     </div>
   );

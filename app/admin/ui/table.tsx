@@ -1,14 +1,6 @@
 import { PenIcon } from "@/assets/icons/pen";
 import { TrashIcon } from "@/assets/icons/trash";
-import {
-  Table,
-  TableHeader,
-  TableColumn,
-  TableBody,
-  TableRow,
-  TableCell,
-  getKeyValue,
-} from "@nextui-org/table";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@nextui-org/table";
 import { User } from "../types/user";
 import { colors } from "@nextui-org/theme";
 
@@ -24,12 +16,7 @@ type TableProps = {
   handleDelete?: (id: number) => void;
 };
 
-export default function CustomTable({
-  columns,
-  rows,
-  handleEdit,
-  handleDelete,
-}: TableProps) {
+export default function CustomTable({ columns, rows, handleEdit, handleDelete }: TableProps) {
   return (
     <Table
       aria-label="table"
@@ -38,9 +25,9 @@ export default function CustomTable({
       shadow="md"
       className="max-h-[90%] no-scrollbar"
       classNames={{
-        wrapper: "p-0 no-scrollbar text-white",
-        th: `text-center text-[14px] text-white font-semibold bg-green-600`,
-        td: "text-center text-[12px] text-black",
+        wrapper: "p-0 no-scrollbar text-white bg-transparent",
+        th: `text-center text-[14px] text-white font-semibold bg-slate-800`,
+        td: "text-center text-[12px] text-white",
       }}
     >
       <TableHeader>

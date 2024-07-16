@@ -7,16 +7,12 @@ type DateRangeProps = {
   onChange: (date: DateValue) => void;
 };
 
-export default function CustomDatePicker({
-  label,
-  date,
-  onChange,
-}: DateRangeProps) {
+export default function CustomDatePicker({ label, date, onChange }: DateRangeProps) {
   return (
     <DatePicker
       aria-label="date"
       label={label}
-      className="my-[4px] mx-[8px]"
+      className="my-[4px] mx-[8px] text-white"
       value={date}
       size="md"
       onChange={onChange}
@@ -24,10 +20,11 @@ export default function CustomDatePicker({
       visibleMonths={1}
       pageBehavior="single"
       radius="sm"
-      color="success"
       classNames={{
-        selectorButton: "text-green-600",
+        selectorButton: "text-white",
         calendar: "text-[#222]",
+        input: "text-white",
+        label: "text-white",
       }}
     />
   );
