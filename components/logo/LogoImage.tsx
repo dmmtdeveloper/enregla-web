@@ -18,19 +18,19 @@ export const LogoImage = () => {
       >
         <Image
           className={clsx(
-            "w-36",
-            "md:w-44",
-            "h-auto",
             "left-4",
             "fixed top-6",
             "lg:block md:block",
-            "dark:hidden",
+            "dark:hidden"
           )}
           src={logoDark}
           alt="logoDark"
           quality="95"
-          priority={true}
-        />
+          priority
+          width={144}
+          height={29}
+          
+          />
       </motion.div>
 
       <motion.div
@@ -44,9 +44,6 @@ export const LogoImage = () => {
       >
         <Image
           className={clsx(
-            "w-36",
-            "md:w-44",
-            "h-auto",
             "left-4",
             "fixed top-6",
             "lg:block md:block sm:hidden"
@@ -54,8 +51,10 @@ export const LogoImage = () => {
           src={logoWhite}
           alt="logoWhite"
           quality="95"
-          priority={true}
-        />
+          priority
+          width={144}
+          height={29}
+          />
       </motion.div>
     </>
   );

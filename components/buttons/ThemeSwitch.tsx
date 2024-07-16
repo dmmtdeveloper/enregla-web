@@ -13,7 +13,7 @@ export default function ThemeSwitch() {
       className={clsx(
         "bottom-5 right-5",
         "bg-white",
-        "w-[3rem] h-[3rem]",
+        "w-[40px] h-[40px]",
         "bg-opacity-20",
         "backdrop-blur-[0.5rem]",
         "border border-white",

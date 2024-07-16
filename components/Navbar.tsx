@@ -2,14 +2,13 @@
 import React from "react";
 import Link from "next/link";
 import clsx from "clsx";
-import ThemeIcon from "./ThemeSwitch";
 
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import { MenuIcon } from "./icons/MenuIcon";
 import { LogoImage } from "./logo/LogoImage";
 import { NavContactButton } from "./buttons/NavContactButton";
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "./buttons/ThemeSwitch";
 
 export const Navbar = () => {
   return (
