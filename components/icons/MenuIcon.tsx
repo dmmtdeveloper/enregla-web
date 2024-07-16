@@ -1,24 +1,55 @@
-import React, { FC, SVGProps } from "react";
-type SvgProps = SVGProps<SVGSVGElement>;
+import clsx from "clsx";
+import { IoMenu } from "react-icons/io5";
+import { GoX } from "react-icons/go";
 
-export const MenuIcon: FC<SvgProps> = (props: SVGProps<SVGSVGElement>) => {
+import React from 'react'
+import UseMenuMode from "@/hooks/UseMenuMode";
+
+
+export const MenuIcon = () => {
+  const [menuTheme, setMenuTheme] = UseMenuMode();
+  const handleMode = () => setMenuTheme(!menuTheme);
+
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="2.5em"
-      height="2.5em"
-      viewBox="0 0 512 512"
-      {...props}
-    >
-      <path
-        fill={props.fill}
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeMiterlimit="10"
-        strokeWidth="38"
-        d="M88 152h336M88 256h336M88 360h336"
-        className="cursor-pointer"
-      />
-    </svg>
-  );
-};
+    <span onClick={handleMode}>
+      {menuTheme ? (
+        <GoX
+          size="30"
+          className={clsx(
+            "top-navigation-icon",
+
+            /*----hover----*/
+            "hover:text-gray-950",
+            // "hover:scale-[1.2]",
+
+            /*----transition----*/
+            // "transition",
+            // "duration-300",
+
+            /*----dark-mode----*/
+            "dark:text-yellow-200"
+          )}
+          />
+        ) : (
+          <IoMenu
+          size="30"
+          className={clsx(
+            "top-navigation-icon",
+            
+            /*----hover----*/
+            "hover:text-gray-950",
+            // "hover:scale-[1.2]",
+            
+            /*----transition----*/
+            // "transition",
+            // "duration-300",
+            
+            /*----dark-mode----*/
+            "dark:text-[#7ADB78]"
+            
+          )}
+        />
+      )}
+    </span>
+  )
+}
