@@ -18,7 +18,7 @@ export const Navbar = () => {
           className={clsx(
             "lg:block",
             "fixed top-0 left-1/2 -translate-x-1/2",
-            "h-[4.5rem] w-full",
+            "h-[5rem] w-full",
             "rounded-none",
             "border-b border-[#a5daac] border-opacity-40",
             "bg-[#a5daac] bg-opacity-50",

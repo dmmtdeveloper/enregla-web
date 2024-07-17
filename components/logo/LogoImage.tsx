@@ -27,8 +27,8 @@ export const LogoImage = () => {
           alt="logoDark"
           quality="95"
           priority
-          width={144}
-          height={29}
+          width={150}
+          height={35}
           
           />
       </motion.div>
@@ -52,8 +52,8 @@ export const LogoImage = () => {
           alt="logoWhite"
           quality="95"
           priority
-          width={144}
-          height={29}
+          width={150}
+          height={35}
           />
       </motion.div>
     </>

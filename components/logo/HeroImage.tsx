@@ -17,7 +17,7 @@ export const HeroPicture = () => {
             /* default*/
             "gradient-mask-b-0",
             "rounded-xl",
-            "border-2 border-green-400",
+            "border-4 border-green-400",
 
             /*dark mode */
             "dark:border-purple-500"
@@ -25,8 +25,8 @@ export const HeroPicture = () => {
           )}
           src={HeroImage}
           alt="hero-image"
-          width={400}
-          height={100}
+          width={1000}
+          height={500}
           priority
         />
       </motion.div>
