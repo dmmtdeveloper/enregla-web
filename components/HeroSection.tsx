@@ -2,9 +2,9 @@
 import clsx from "clsx";
 import React from "react";
 import { motion } from "framer-motion";
-import { HeroPicture } from "./logo/HeroImage";
-import { ButtonCtaHero } from "./buttons/CtaHero";
-import { Paragraph } from "./text/Paragraph";
+import { HeroPicture } from "@/components/img/HeroImage";
+import { ButtonCtaHero } from "@/components/buttons/CtaHero";
+import { Paragraph } from "@/components/text/Paragraph";
 
 export const HeroSection = () => {
   return (

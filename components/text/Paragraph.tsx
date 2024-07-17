@@ -12,6 +12,7 @@ export const Paragraph:FC<TextProps> = ({text}) => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         className="text-center text-[16px] text-gray-800 dark:text-[#CAC6DD]"
+
       >
         {text}
       </motion.p>

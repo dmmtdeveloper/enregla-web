@@ -22,13 +22,15 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={`${sora.className} bg-gray-50 text-gray-950 relative px-4 pt-48 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 h-[5000px]`}
+        className={`${sora.className} bg-[#EDF1F3] relative px-4 pt-48 dark:bg-[#0E0C15] h-[5000px]`}
       >
         <div
           className={clsx(
-            "bg-[#dbd7fb] absolute top-[20rem]",
+            "absolute top-[50rem] items-center flex flex-col",
             "-z-10 right-[12rem] h-[31.25rem] w-[31.25rem]",
-            "rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#AC6AFF]"
+            "rounded-full blur-[10rem] w-[68.75rem]" ,
+            
+            "dark:bg-[#0E0C15]"
           )}
         ></div>
 
@@ -39,10 +41,8 @@ export default function RootLayout({
             "-z-10 left-[-35rem]",
             "h-[30rem] w-[50rem]",
             "rounded-full blur-[10rem]",
-            "sm:w-[68.75rem] md:left-[-33rem]",
-            "lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]",
-
-            "dark:bg-[#676394]"
+            
+            "dark:bg-[#AC6AFF]"
           )}
         ></div>
         <ThemeContextProvider>

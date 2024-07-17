@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import { MenuSwitch } from "./buttons/MenuSwitch";
-import { LogoImage } from "./logo/LogoImage";
+import { LogoImage } from "./img/LogoImage";
 import { ButtonCta } from "./buttons/CtaNav";
 import { ThemeSwitch } from "./buttons/ThemeSwitch";
 

@@ -17,7 +17,7 @@ export const HeroPicture = () => {
             /* default*/
             "gradient-mask-b-0",
             "rounded-xl",
-            "border-4 border-green-400",
+            "border-2 border-green-400",
 
             /*dark mode */
             "dark:border-purple-500"

@@ -15,7 +15,7 @@ export const ButtonCtaHero: FC<ButttonProps> = ({ title }) => {
       <button
         className={clsx(
           "right-16",
-          "rounded-[12px]",
+          "rounded-[16px]",
           "border-opacity-40",
           "bg-[#52c050] bg-opacity-80",
           "shadow-lg shadow-black/[0.1]",
@@ -43,7 +43,8 @@ export const ButtonCtaHero: FC<ButttonProps> = ({ title }) => {
           "disabled:shadow",
 
           /*----dark mode----*/
-          "dark:bg-[#AC6AFF]"
+          "dark:bg-[#AC6AFF]",
+          "dark:hover:bg-purple-700"
         )}
       >
         {title}
