@@ -24,7 +24,7 @@ export const MenuSwitch = () => {
             "duration-300",
 
             /*----dark-mode----*/
-            "text-[#7ADB78]"
+            "text-[#4cb34a]"
           )}
         />
       ) : (
@@ -41,7 +41,7 @@ export const MenuSwitch = () => {
             "duration-300",
 
             /*----dark-mode----*/
-            "text-[#7ADB78]"
+            "text-[#4cb34a]"
           )}
         />
       )}

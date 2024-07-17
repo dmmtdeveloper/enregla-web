@@ -25,3 +25,7 @@ export const links = [
     },
 
 ] as const;
+
+export const textHero = {
+    text:"Nuestro compromiso es proporcionar soluciones integrales que protejan a nuestros clientes y sus vehículos"
+}

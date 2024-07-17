@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { HeroPicture } from "./logo/HeroImage";
 import { ButtonCtaHero } from "./buttons/CtaHero";
+import { Paragraph } from "./text/paragraph";
 
 export const HeroSection = () => {
   return (
@@ -30,14 +31,10 @@ export const HeroSection = () => {
         </div>
 
         <div className="flex items-center justify-center flex-col gap-6">
-          <motion.p
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="text-center text-[16px] px-12 text-gray-800 dark:text-[#CAC6DD]"
-          >
-            Nuestro compromiso es proporcionar soluciones integrales que
-            protejan a nuestros clientes y sus vehículos.
-          </motion.p>
+          <Paragraph
+            text="Nuestro compromiso es proporcionar soluciones integrales que protejan a
+            nuestros clientes y sus vehículos."
+          />
           <ButtonCtaHero title={"CONTACTANOS"} />
         </div>
       </div>

@@ -16,16 +16,21 @@ export const Navbar = () => {
       <div className=" fixed top-0 sm:top-6 sm:h-[3.25rem]">
         <motion.div
           className={clsx(
-            "lg:block hidden",
+            "lg:block",
             "fixed top-0 left-1/2 -translate-x-1/2",
             "h-[4.5rem] w-full",
             "rounded-none",
-            "border border-white border-opacity-40",
-            "bg-white  bg-opacity-80",
+            "border-b border-[#a5daac] border-opacity-40",
+            "bg-[#a5daac] bg-opacity-50",
             "shadow-lg shadow-black/[0.03]",
             "backdrop-blur-[0.5rem]",
             "sm:top-6 sm:h-[3.25rem]",
-            "sm:w-[40rem] sm:rounded-full"
+            "sm:w-[40rem] sm:rounded-full",
+            "bg-slate-400",
+            /* dark mode*/
+            "dark:bg-[#0E0C15]",
+            "dark:border-gray-800",
+            "dark:bg-opacity-50"
           )}
           initial={{ y: -100, x: "-50%", opacity: 0 }}
           animate={{ y: 0, x: "-50%", opacity: 1 }}
