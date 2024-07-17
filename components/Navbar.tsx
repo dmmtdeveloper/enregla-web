@@ -7,7 +7,7 @@ import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import { MenuIcon } from "./icons/MenuIcon";
 import { LogoImage } from "./logo/LogoImage";
-import { NavContactButton } from "./buttons/NavContactButton";
+import { ButtonCta } from "./buttons/cta";
 import ThemeSwitch from "./buttons/ThemeSwitch";
 
 export const Navbar = () => {
@@ -87,7 +87,9 @@ export const Navbar = () => {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >
-            <NavContactButton />
+            <div className="hidden lg:block">
+              <ButtonCta title={"Contacto"} />
+            </div>
             <div
               className={clsx(
                 "lg:hidden",
@@ -99,9 +101,8 @@ export const Navbar = () => {
                 /*----dark-mode----*/
                 "dark:text-white"
               )}
-            >
-              <MenuIcon />
-            </div>
+            ></div>
+            <MenuIcon />
             <ThemeSwitch />
           </motion.div>
           <LogoImage />
