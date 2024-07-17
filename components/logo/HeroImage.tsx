@@ -28,7 +28,6 @@ export const HeroPicture = () => {
           width={400}
           height={100}
           priority
-          objectFit="cover"
         />
       </motion.div>
     </>
