@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const UseMenuMode = () => {
+export const UseMenuMode = () => {
   const [enabled, setEnabled] = useState(false); // Assuming initial state is false
   
   useEffect(() => {
@@ -15,4 +15,3 @@ const UseMenuMode = () => {
   return [enabled, setEnabled];
 };
 
-export default UseMenuMode;

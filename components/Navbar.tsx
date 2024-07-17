@@ -5,10 +5,10 @@ import clsx from "clsx";
 
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
-import { MenuIcon } from "./icons/MenuIcon";
+import { MenuSwitch } from "./buttons/MenuSwitch";
 import { LogoImage } from "./logo/LogoImage";
-import { ButtonCta } from "./buttons/cta";
-import ThemeSwitch from "./buttons/ThemeSwitch";
+import { ButtonCta } from "./buttons/CtaNav";
+import { ThemeSwitch } from "./buttons/ThemeSwitch";
 
 export const Navbar = () => {
   return (
@@ -102,7 +102,7 @@ export const Navbar = () => {
                 "dark:text-white"
               )}
             ></div>
-            <MenuIcon />
+            <MenuSwitch />
             <ThemeSwitch />
           </motion.div>
           <LogoImage />

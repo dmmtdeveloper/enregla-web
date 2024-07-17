@@ -3,9 +3,10 @@ import { IoMenu } from "react-icons/io5";
 import { GoX } from "react-icons/go";
 
 import React from "react";
-import UseMenuMode from "@/hooks/UseMenuMode";
+import {UseMenuMode} from "@/hooks/UseMenuMode";
 
-export const MenuIcon = () => {
+
+export const MenuSwitch = () => {
   const [menuTheme, setMenuTheme] = UseMenuMode();
   const handleMode = () => setMenuTheme(!menuTheme);
 
