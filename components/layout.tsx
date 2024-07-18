@@ -1,35 +1,39 @@
 import clsx from "clsx";
 import { Navbar } from "./Navbar";
+import ThemeContextProvider from "@/context/theme-context";
+import ActiveSectionContextProvider from "@/context/active-section-context";
 
-export default function MainLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <main className="bg-gray-50 text-gray-950 relative h-[5000px]">
+      <main className="bg-[#EDF1F3] relative px-4 pt-48 dark:bg-[#0E0C15] h-[9999px]">
         <div
           className={clsx(
-            "bg-[#7ADB78]",
-            " absolute top-[-6rem]",
-            "-z-10 right-[11rem]",
-            "h-[31.25rem] w-[31.25rem]",
-            "rounded-full blur-[10rem] sm:w-[68.75rem]"
+            "absolute top-[50rem] items-center flex flex-col",
+            "-z-10 right-[12rem] h-[31.25rem] w-[31.25rem]",
+            "rounded-full blur-[10rem] w-[68.75rem]",
+
+            "dark:bg-[#0E0C15]"
           )}
         ></div>
 
         <div
           className={clsx(
-            "bg-[#dbd7fb]",
-            "absolute top-[-1rem] -z-10",
-            "left-[-35rem] h-[31.25rem] w-[50rem]",
-            "rounded-full blur-[10rem] sm:w-[68.75rem]",
-            "md:left-[-33rem] lg-left-[-28rem] xl-left-[-15rem] 2xl:left-[]"
+            "bg-[#7ADB78] items-center flex justify-center",
+            "absolute top-[25rem]",
+            "-z-10 left-[-35rem]",
+            "h-[30rem] w-[50rem]",
+            "rounded-full blur-[10rem]",
+
+            "dark:bg-[#AC6AFF]"
           )}
         ></div>
-        <Navbar />
-        <main className="pt-[31.25rem]">{children}</main>
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <Navbar />
+            {children}
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </main>
     </>
   );

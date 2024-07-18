@@ -1,11 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 import clsx from "clsx";
 
-interface Props {
-  onClick?: () => void;
-}
+type ButttonProps = {
+  title: string;
+};
 
-export const NavContactButton: React.FC<Props> = ({ onClick }) => {
+export const ButtonCta: FC<ButttonProps> = ({ title }) => {
   return (
     <button
       className={clsx(
@@ -17,7 +17,7 @@ export const NavContactButton: React.FC<Props> = ({ onClick }) => {
         "backdrop-blur-[0.5rem]",
         "h-[3.25rem]",
         "w-[10rem] text-gray-100",
-        "hidden lg:block md:block",
+        "lg:block md:block",
 
         /*----hover----*/
         "transition",
@@ -33,14 +33,10 @@ export const NavContactButton: React.FC<Props> = ({ onClick }) => {
         /*----disabled statate----*/
         "disabled:bg-blue-500/50",
         "disabled:cursor-not-allowed",
-        "disabled:shadow",
-
-
-
+        "disabled:shadow"
       )}
-      onClick={onClick}
     >
-      Contacto
+      {title}
     </button>
   );
 };

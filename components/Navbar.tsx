@@ -2,15 +2,13 @@
 import React from "react";
 import Link from "next/link";
 import clsx from "clsx";
-import Image from "next/image";
-import ThemeIcon from "./ThemeIcons";
-import logoDark from "@/public/assets/logo-negro.png";
-import logoWhite from "@/public/assets/logo-blanco.png";
-import { NavContactButton } from "./buttons/NavContactButton";
-import { motion } from "framer-motion";
-import { IconAuto } from "./icons/IconAuto";
+
 import { links } from "@/lib/data";
-import { MenuIcon } from "./icons/MenuIcon";
+import { motion } from "framer-motion";
+import { MenuSwitch } from "./buttons/MenuSwitch";
+import { LogoImage } from "./img/LogoImage";
+import { ButtonCta } from "./buttons/CtaNav";
+import { ThemeSwitch } from "./buttons/ThemeSwitch";
 
 export const Navbar = () => {
   return (
@@ -18,16 +16,21 @@ export const Navbar = () => {
       <div className=" fixed top-0 sm:top-6 sm:h-[3.25rem]">
         <motion.div
           className={clsx(
-            "lg:block hidden",
+            "lg:block",
             "fixed top-0 left-1/2 -translate-x-1/2",
-            "h-[4.5rem] w-full",
+            "h-[5rem] w-full",
             "rounded-none",
-            "border border-white border-opacity-40",
-            "bg-white bg-opacity-80",
+            "border-b border-[#a5daac] border-opacity-40",
+            "bg-[#a5daac] bg-opacity-50",
             "shadow-lg shadow-black/[0.03]",
             "backdrop-blur-[0.5rem]",
             "sm:top-6 sm:h-[3.25rem]",
-            "sm:w-[40rem] sm:rounded-full"
+            "sm:w-[40rem] sm:rounded-full",
+            "bg-slate-200",
+            /* dark mode*/
+            "dark:bg-[#0E0C15]",
+            "dark:border-gray-800",
+            "dark:bg-opacity-50"
           )}
           initial={{ y: -100, x: "-50%", opacity: 0 }}
           animate={{ y: 0, x: "-50%", opacity: 1 }}
@@ -77,79 +80,38 @@ export const Navbar = () => {
             ))}
           </ul>
         </nav>
-
-        <motion.div
-          className={clsx(
-            "right-4",
-            "fixed",
-            "top-6",
-            "h-[3.25rem] flex gap-10",
-            "flex items-center gap-5"
-          )}
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-        >
-          <NavContactButton />
-          <div
+        <div className="bg-gray-200 dark:bg-[#43435C]">
+          <motion.div
             className={clsx(
-              "lg:hidden",
-              "md:hidden",
-              "border-r-2 h-5 items-center flex pr-3",
-              "border-gray-500"
+              "right-4",
+              "fixed",
+              "top-3",
+              "h-[3.25rem]",
+              "flex items-center gap-4"
             )}
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
           >
-            <MenuIcon />
-          </div>
-          <ThemeIcon />
-        </motion.div>
+            <div className="hidden lg:block">
+              <ButtonCta title={"Contacto"} />
+            </div>
+            <div
+              className={clsx(
+                "lg:hidden",
+                "md:hidden",
+                "border-r-2 h-5 items-center flex pr-3",
+                "border-gray-500",
+                "cursor-pointer",
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            type: "tween",
-            duration: 0.2,
-          }}
-        >
-          <Image
-            className={clsx(
-              "w-[150px]",
-              "h-auto",
-              "left-4",
-              "fixed top-9",
-              "lg:block md:block",
-              "dark:hidden"
-            )}
-            src={logoDark}
-            alt="logoDark"
-            quality="95"
-            priority={true}
-          />
-        </motion.div>
-
-        <motion.div
-          className="hidden dark:block"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            type: "tween",
-            duration: 0.2,
-          }}
-        >
-          <Image
-            className={clsx(
-              "w-[150px]",
-              "left-4",
-              "fixed top-9",
-              "h-auto",
-              "lg:block md:block sm:hidden"
-            )}
-            src={logoWhite}
-            alt="logoWhite"
-            quality="95"
-            priority={true}
-          />
-        </motion.div>
+                /*----dark-mode----*/
+                "dark:text-white"
+              )}
+            ></div>
+            <MenuSwitch />
+            <ThemeSwitch />
+          </motion.div>
+          <LogoImage />
+        </div>
       </div>
     </header>
   );

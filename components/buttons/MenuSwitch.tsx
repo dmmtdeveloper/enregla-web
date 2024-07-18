@@ -1,40 +1,21 @@
-import UseDarkMode from "@/hooks/UseDarkMode";
+import React from "react";
 import clsx from "clsx";
+import { IoMenu } from "react-icons/io5";
+import { GoX } from "react-icons/go";
+import { useMenuMode } from "@/hooks/UseMenuMode";
 
-import { IoSunny } from "react-icons/io5";
-import { FaMoon,  } from "react-icons/fa6";
+export const MenuSwitch = () => {
+  const { enabled, setEnabled } = useMenuMode();
 
-const ThemeIcon = () => {
-  const [darkTheme, setDarkTheme] = UseDarkMode();
-  const handleMode = () => setDarkTheme(!darkTheme);
+  const handleMode = () => setEnabled(!enabled);
+
   return (
     <span onClick={handleMode}>
-      {darkTheme ? (
-        <IoSunny
-          size="24"
+      {enabled ? (
+        <GoX
+          size="30"
           className={clsx(
-            "top-navigation-icon",
-
             /*----hover----*/
-            "hover:text-gray-950",
-            "hover:scale-[1.2]",
-
-            /*----transition----*/
-            "transition",
-            "duration-300"
-
-            /*----dark-mode----*/
-
-          )}
-        />
-      ) : (
-        <FaMoon
-          size="24"
-          className={clsx(
-            "top-navigation-icon",
-
-            /*----hover----*/
-            "hover:text-gray-950",
             "hover:scale-[1.2]",
 
             /*----transition----*/
@@ -42,12 +23,27 @@ const ThemeIcon = () => {
             "duration-300",
 
             /*----dark-mode----*/
-            
+            "text-[#4cb34a]"
+          )}
+        />
+      ) : (
+        <IoMenu
+          size="30"
+          className={clsx(
+            "top-navigation-icon",
+
+            /*----hover----*/
+            "hover:scale-[1.2]",
+
+            /*----transition----*/
+            "transition",
+            "duration-300",
+
+            /*----dark-mode----*/
+            "text-[#4cb34a]"
           )}
         />
       )}
     </span>
   );
 };
-
-export default ThemeIcon;

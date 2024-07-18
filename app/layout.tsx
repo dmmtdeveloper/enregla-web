@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
-import { Sora } from "next/font/google";
 import "./globals.css";
+import { Sora } from "next/font/google";
+import type { Metadata } from "next";
 import Providers from "./providers";
 
 const sora = Sora({ subsets: ["latin"] });
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={sora.className}>
+      <body suppressHydrationWarning={true} className={`${sora.className}`}>
         <Providers>{children}</Providers>
       </body>
     </html>

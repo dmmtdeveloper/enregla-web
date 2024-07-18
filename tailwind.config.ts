@@ -19,6 +19,7 @@ const config: Config = {
     },
   },
   plugins: [
+    require("tailwind-gradient-mask-image"),
     nextui({
       themes: {
         light: {
@@ -30,4 +31,5 @@ const config: Config = {
     }),
   ],
 };
+
 export default config;
