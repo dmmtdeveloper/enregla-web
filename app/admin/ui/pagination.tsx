@@ -16,7 +16,6 @@ const rowOptions = [
   { key: "30", label: "30" },
   { key: "40", label: "40" },
   { key: "50", label: "50" },
-  { key: "100", label: "100" },
 ];
 
 export default function CustomPagination({
@@ -36,7 +35,7 @@ export default function CustomPagination({
         page={page}
         onChange={handlePage}
         radius="sm"
-        classNames={{ cursor: "bg-slate-800 text-[#fff]", item: "border-[1px] text-white" }}
+        classNames={{ cursor: "bg-slate-800 text-[#fff]" }}
       />
       <div className="w-[18%] absolute right-0 flex items-center">
         <span className="font-semibold text-[14px] text-white w-[80px] mr-[2%]">Total: {totalData}</span>

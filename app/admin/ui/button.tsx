@@ -1,5 +1,6 @@
 import { Button, type ButtonProps } from "@nextui-org/button";
 import { colors } from "../constants/theme";
+import { Spinner } from "@nextui-org/spinner";
 
 type Button = ButtonProps & {
   text: string;
@@ -16,7 +17,7 @@ export default function CustomButton({
   ...rest
 }: Button) {
   const type = {
-    primary: "bg-teal-700 text-white shadow-md",
+    primary: "bg-cyan-700 text-white",
     secondary: "bg-slate-600 text-white",
   };
   return (
@@ -24,13 +25,12 @@ export default function CustomButton({
       <Button
         onClick={onClick}
         isDisabled={isDisabled}
-        isLoading={isLoading}
-        className={type[buttonType]}
+        className={`${type[buttonType]} shadow-md min-w-[130px]`}
         size={size}
         radius="sm"
         {...rest}
       >
-        {text}
+        {isLoading ? <Spinner size="sm" color="default" /> : text}
       </Button>
     </>
   );

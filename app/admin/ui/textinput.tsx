@@ -27,7 +27,7 @@ export default function CustomInput({
     lg: "w-[100%]",
   };
   return (
-    <div className={`${sizeStyles[size]} mx-[8px] my-[4px] relative`}>
+    <div className={`${sizeStyles[size]} mx-[8px] my-[8px] relative`}>
       <Input
         aria-label="input"
         variant="bordered"
@@ -35,19 +35,21 @@ export default function CustomInput({
         value={value}
         onChange={onChange}
         label={placeholder}
-        radius="sm"
+        color="default"
+        autoComplete="off"
         classNames={{
-          input: "text-white",
-          errorMessage: "text-[#f00] absolute bottom-[-10px]",
+          input: "bg-transparent text-white",
+          inputWrapper: "bg-transparent",
           label: "text-white",
         }}
+        radius="sm"
         required={true}
         readOnly={readonly}
         isInvalid={isInvalid}
         {...rest}
       />
       {isInvalid && errorMessage && (
-        <small className="text-[10px] text-[#f00] absolute -bottom-[10px] left-2">{errorMessage}</small>
+        <small className="text-[10px] text-rose-500 absolute -bottom-[15px] left-2">{errorMessage}</small>
       )}
     </div>
   );

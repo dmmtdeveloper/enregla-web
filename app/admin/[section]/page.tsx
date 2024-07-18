@@ -6,10 +6,24 @@ import CustomTable from "../ui/table";
 import Header from "../ui/header";
 import CustomPagination from "../ui/pagination";
 import { Spinner } from "@nextui-org/spinner";
+import UsersModule from "./users";
 
 export default function Dashboard() {
   const path = usePathname();
-  const { users, usersColumns, handlePage, handleRows, totalPages, totalUsers, page, rows, loading } = useUsers();
+  const {
+    usersColumns,
+    userRows,
+    handleUsersPage,
+    handleUsersRows,
+    totalUsersPages,
+    totalUsers,
+    usersPage,
+    usersRows,
+    loadingUsers,
+    handleSearchUser,
+    searchedUser,
+    filteredUsers,
+  } = useUsers();
 
   const title = path === "/admin/dashboard" ? "Reportes" : path === "/admin/operators" ? "Operadores" : "Insumos";
 
@@ -19,28 +33,22 @@ export default function Dashboard() {
         title={title}
         fromDate={new Date().toISOString().slice(0, 10)}
         toDate={new Date().toISOString().slice(0, 10)}
-        searchedText=""
-        searchText={() => {}}
+        searchedText={path === "/admin/operators" ? searchedUser : path === "/admin/supplies" ? "" : ""}
+        searchText={path === "/admin/operators" ? handleSearchUser : path === "/admin/supplies" ? () => {} : () => {}}
       />
-      <div className="w-full h-[70%]">
-        {loading ? (
-          <div className="w-full h-full flex items-center justify-center">
-            <Spinner size="md" color="default" />
-          </div>
-        ) : (
-          <CustomTable columns={usersColumns} rows={users} />
-        )}
-      </div>
-      <div className="w-full h-[5%]">
-        <CustomPagination
-          page={page}
-          rows={rows}
-          totalData={totalUsers}
-          totalpages={totalPages}
-          handlePage={handlePage}
-          handleRows={handleRows}
+      {path === "/admin/operators" && (
+        <UsersModule
+          loadingUsers={loadingUsers}
+          usersColumns={usersColumns}
+          userRows={searchedUser ? filteredUsers : userRows}
+          usersPage={usersPage}
+          usersRows={usersRows}
+          handleUsersPage={handleUsersPage}
+          handleUsersRows={handleUsersRows}
+          totalUsers={totalUsers}
+          totalUsersPages={totalUsersPages}
         />
-      </div>
+      )}
     </Layout>
   );
 }

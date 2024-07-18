@@ -9,16 +9,25 @@ const config: Config = {
     "./app/admin/ui/*.tsx",
     "./node_modules/@nextui-org/theme/dist/components/(button|input|table|badge|card|date-picker|dropdown|modal|pagination|select|switch|tooltip|spinner|ripple).js",
   ],
-  darkMode: 'class', // class, 'media' or boolean
+  darkMode: "class", // class, 'media' or boolean
   theme: {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
-  plugins: [nextui()],
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {
+            default: "#fff",
+          },
+        },
+      },
+    }),
+  ],
 };
 export default config;

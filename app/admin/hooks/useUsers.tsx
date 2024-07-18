@@ -5,37 +5,76 @@ import useSession from "./useSession";
 
 const usersColumns = [
   { label: "Nombre", key: "name" },
+  { label: "RUT", key: "rut" },
   { label: "Email", key: "email" },
-  { label: "Acciones", key: "actions" },
+  { label: "Sucursal", key: "branch" },
+  { label: "Cargo", key: "role" },
+  { label: "Opciones", key: "options" },
 ];
 
 export default function useUsers() {
   const { session } = useSession();
   const [users, setUsers] = useState<User[]>([]);
   const [totalUsers, setTotalUsers] = useState<number>(10);
-  const [page, setPage] = useState<number>(1);
-  const [rows, setRows] = useState<number>(10);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [usersPage, setUsersPage] = useState<number>(1);
+  const [usersRows, setUsersRows] = useState<number>(10);
+  const [loadingUsers, setLoadingUsers] = useState<boolean>(false);
+  const [searchedUser, setSearchedUser] = useState<string>("");
 
   useEffect(() => {
     fetchUsers();
-  }, [page, rows]);
+  }, [usersPage, usersRows]);
 
   const fetchUsers = async () => {
-    setLoading(true);
-    const response = await GetUsers({ token: session.token, query: `?page=${page}&rows=${rows}` });
+    setLoadingUsers(true);
+    const response = await GetUsers({ token: session.token, query: `?page=${usersPage}&rows=${usersRows}` });
     if (response.error) {
-      setLoading(false);
+      setLoadingUsers(false);
     }
     setUsers(response.users);
     setTotalUsers(response.count);
-    setLoading(false);
+    setLoadingUsers(false);
   };
 
-  const handlePage = (page: number) => setPage(page);
-  const handleRows = (rows: number) => setRows(rows);
+  const handleUsersPage = (usersPage: number) => setUsersPage(usersPage);
+  const handleUsersRows = (usersRows: number) => setUsersRows(usersRows);
 
-  const totalPages = Math.ceil(totalUsers / rows);
+  const handleSearchUser = (text: string) => setSearchedUser(text);
 
-  return { users, usersColumns, handlePage, handleRows, totalPages, totalUsers, page, rows, loading };
+  const totalUsersPages = Math.ceil(totalUsers / usersRows);
+
+  const userRows = users.map((user) => ({
+    id: user.id,
+    name: user.name,
+    rut: user.rut,
+    email: user.email,
+    branch: user.branch.address,
+    role: user.role.name,
+  }));
+
+  const filteredUsers = userRows.filter((user) => {
+    return (
+      user.name.toLowerCase().includes(searchedUser.toLowerCase()) ||
+      user.rut.toLowerCase().includes(searchedUser.toLowerCase()) ||
+      user.email.toLowerCase().includes(searchedUser.toLowerCase()) ||
+      user.branch.toLowerCase().includes(searchedUser.toLowerCase()) ||
+      user.role.toLowerCase().includes(searchedUser.toLowerCase())
+    );
+  });
+
+  return {
+    users,
+    filteredUsers,
+    usersColumns,
+    userRows,
+    handleUsersPage,
+    handleUsersRows,
+    totalUsersPages,
+    totalUsers,
+    usersPage,
+    usersRows,
+    loadingUsers,
+    handleSearchUser,
+    searchedUser,
+  };
 }

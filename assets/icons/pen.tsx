@@ -4,7 +4,7 @@ export const PenIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
-      fill="#444"
+      fill="#fff"
       viewBox="0 0 256 256"
       className="cursor-pointer"
     >
