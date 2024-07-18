@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Paragraph } from "./text/Paragraph";
-import { ClientsImage } from "@/components/img/ClientsImage";
+import { ClientsImage } from "@/components/img/ClientsIcons";
 import clsx from "clsx";
 
 export const ClientSection = () => {
@@ -21,7 +21,7 @@ export const ClientSection = () => {
       <div className="flex flex-col items-center justify-center gap-16">
         <ClientsImage />
         <motion.p
-        className="text-2xl">"Auto en regla, auto seguro"</motion.p>
+        className="text-2xl dark:text-gray-100 text-gray-700 ">"Auto en regla, auto seguro"</motion.p>
       </div>
     </section>
   );

@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Sescobar from "@/public/assets/img/sergioEscobar.png";
-
 import { motion } from "framer-motion";
 import { Difor } from "../icons/Difor";
 import { SergioEscobar } from "../icons/SergioEscobar";
