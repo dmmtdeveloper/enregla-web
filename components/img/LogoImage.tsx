@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import clsx from "clsx";
-import logoDark from "@/public/assets/logo-negro.png";
-import logoWhite from "@/public/assets/logo-blanco.png";
+import logoDark from "@/public/assets/img/logo-negro.png";
+import logoWhite from "@/public/assets/img/logo-blanco.png";
 import { motion } from "framer-motion";
 
 export const LogoImage = () => {

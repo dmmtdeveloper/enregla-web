@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import HeroImage from "@/public/assets/HeroImage.jpg";
+import HeroImage from "@/public/assets/img/HeroImage.jpg";
 import clsx from "clsx";
 
 export const HeroPicture = () => {

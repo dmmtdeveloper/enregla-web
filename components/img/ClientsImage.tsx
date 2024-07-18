@@ -1,10 +1,10 @@
 import Image from "next/image";
-
-import difor from "@/public/assets/difor.png";
-import Sescobar from "@/public/assets/sergioEscobar.png";
+import Sescobar from "@/public/assets/img/sergioEscobar.png";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Difor } from "../icons/Difor";
+import { SergioEscobar } from "../icons/SergioEscobar";
+
 
 export const ClientsImage = () => {
   return (
@@ -19,28 +19,14 @@ export const ClientsImage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            className="w-[90px] h-auto"
-            src={difor}
-            alt="difor"
-            height={100}
-            width={45.31}
-            priority
-          />
+         <Difor/>
         </a>
         <a
           href="https://www.difor.cl/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            className="w-[90px] h-auto"
-            src={Sescobar}
-            alt="sergio escobar"
-            height={100}
-            width={45.31}
-            priority
-          />
+         <SergioEscobar/>
         </a>
       </motion.div>
     </div>

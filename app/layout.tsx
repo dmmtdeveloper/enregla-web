@@ -22,14 +22,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={`${sora.className} bg-[#EDF1F3] relative px-4 pt-48 dark:bg-[#0E0C15] h-[5000px]`}
+        className={`${sora.className} bg-[#EDF1F3] relative px-4 pt-48 dark:bg-[#0E0C15] h-[9999px]`}
       >
         <div
           className={clsx(
             "absolute top-[50rem] items-center flex flex-col",
             "-z-10 right-[12rem] h-[31.25rem] w-[31.25rem]",
             "rounded-full blur-[10rem] w-[68.75rem]" ,
-            
+
             "dark:bg-[#0E0C15]"
           )}
         ></div>
