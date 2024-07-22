@@ -26,13 +26,13 @@ export const HeroSection = () => {
               "dark:text-gray-100"
             )}
           >
-            Enregla seguridad integral automotriz en Chile
+            Solucion integral de seguridad automotriz en Chile
           </motion.p>
         </div>
 
-        <div className="flex items-center justify-center flex-col gap-6">
+        <div className="flex items-center justify-center flex-col gap-6 ">
           <Paragraph
-            text="compromiso en otorgar soluciones integrales que protejan a
+            text="Compromiso en otorgar soluciones que protejan a
             nuestros clientes y sus vehículos."
           />
           <ButtonCtaHero title={"CONTACTANOS"} />

@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 export const ClientSection = () => {
   return (
-    <section>
+    <section className="pb-20">
       <div className={clsx("flex flex-col", "items-center", "gap-4 mt-10")}>
         <motion.p
           initial={{ y: -100, opacity: 0 }}

@@ -27,6 +27,7 @@ export const Navbar = () => {
             "sm:top-6 sm:h-[3.25rem]",
             "sm:w-[40rem] sm:rounded-full",
             "bg-slate-200",
+            
             /* dark mode*/
             "dark:bg-[#0E0C15]",
             "dark:border-gray-800",
