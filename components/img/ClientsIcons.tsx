@@ -19,7 +19,7 @@ export const ClientsImage = () => {
          <Difor/>
         </a>
         <a
-          href="https://www.difor.cl/"
+          href="https://sergioescobar.cl/"
           target="_blank"
           rel="noopener noreferrer"
         >
