@@ -13,7 +13,7 @@ export const BenefitsSection = () => {
     <motion.div
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="flex flex-col items-center p-10 mt-10 px-4 gap-14"
+      className="flex flex-col items-center p-10 mt-10 px-8 gap-14"
     >
       <Subtitles title="Beneficios de grabar tu patente" direction="center"/>
       <div className="flex flex-col gap-10">

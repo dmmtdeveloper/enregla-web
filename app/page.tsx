@@ -5,6 +5,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { HeroSection } from "@/components/HeroSection";
 import { LawSection } from "@/components/LawSection";
 import MainLayout from "@/components/layout";
+import { ResponsabilitySection } from "@/components/ResponsabilitySection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <BenefitsSection/>
       <ContactSection/>
       <LawSection/>
+      <ResponsabilitySection/>
     </MainLayout>
   );
 }

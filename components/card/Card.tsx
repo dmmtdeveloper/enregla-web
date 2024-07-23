@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { FaCheck } from "react-icons/fa6";
 import { GoChevronRight } from "react-icons/go";
 
+
 type CardProps = {
   title: string;
   paragraph: string;
@@ -18,7 +19,7 @@ export const Card: FC<CardProps> = ({ title, paragraph, color }) => {
 
       <div className="flex items-center justify-between">
         <div className="p-2 rounded-xl" style={{ backgroundColor: color }}>
-          <FaCheck className="text-2xl" />
+          <FaCheck className="text-2xl dark:fill-gray-900" />
         </div>
         <div className="flex items-center gap-3">
           <p className="dark:text-gray-50 text-gray-900 font-semibold">EXPLORA MAS</p>

@@ -15,32 +15,37 @@ export const MenuSwitch = () => {
         <GoX
           size="30"
           className={clsx(
+            /*----default----*/
+            
+            "text-[#4cb34a]",
             /*----hover----*/
             "hover:scale-[1.2]",
-
+            
             /*----transition----*/
             "transition",
             "duration-300",
-
+            
             /*----dark-mode----*/
-            "text-[#4cb34a]"
+            "dark:text-purple-400",
           )}
-        />
-      ) : (
-        <IoMenu
+          />
+        ) : (
+          <IoMenu
           size="30"
           className={clsx(
+            /*----default----*/
+            "text-[#4cb34a]",
             "top-navigation-icon",
-
+            
             /*----hover----*/
             "hover:scale-[1.2]",
-
+            
             /*----transition----*/
             "transition",
             "duration-300",
-
+            
             /*----dark-mode----*/
-            "text-[#4cb34a]"
+            "dark:text-purple-400",
           )}
         />
       )}
