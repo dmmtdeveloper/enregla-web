@@ -1,8 +1,9 @@
 import { BenefitsSection } from "@/components/BenefitsSection";
-import { CardContainer } from "@/components/CardContainer";
 import { CardSection } from "@/components/CardSection";
 import { ClientSection } from "@/components/ClientSection";
+import { ContactSection } from "@/components/ContactSection";
 import { HeroSection } from "@/components/HeroSection";
+import { LawSection } from "@/components/LawSection";
 import MainLayout from "@/components/layout";
 
 export default function Home() {
@@ -10,8 +11,10 @@ export default function Home() {
     <MainLayout>
       <HeroSection />
       <ClientSection />
-      <CardContainer/>
+      <CardSection/>
       <BenefitsSection/>
+      <ContactSection/>
+      <LawSection/>
     </MainLayout>
   );
 }

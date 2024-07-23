@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import { MenuSwitch } from "./buttons/MenuSwitch";
-import { LogoImage } from "./img/LogoImage";
+import { LogoImage } from "./IconsImages/LogoImage";
 import { ButtonCta } from "./buttons/CtaNav";
 import { ThemeSwitch } from "./buttons/ThemeSwitch";
 
@@ -27,7 +27,7 @@ export const Navbar = () => {
             "sm:top-6 sm:h-[3.25rem]",
             "sm:w-[40rem] sm:rounded-full",
             "bg-slate-200",
-            
+
             /* dark mode*/
             "dark:bg-[#0E0C15]",
             "dark:border-gray-800",
@@ -83,13 +83,7 @@ export const Navbar = () => {
         </nav>
         <div className="bg-gray-200 dark:bg-[#43435C]">
           <motion.div
-            className={clsx(
-              "right-4",
-              "fixed",
-              "top-3",
-              "h-[3.25rem]",
-              "flex items-center gap-4"
-            )}
+            className={clsx("right-4", "fixed", "top-3", "h-[3.25rem]", "flex items-center gap-4")}
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >

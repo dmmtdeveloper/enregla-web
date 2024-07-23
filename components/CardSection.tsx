@@ -1,27 +1,21 @@
-import React, { FC } from "react";
-import IconCard from "./icons/CardCheck";
-import { GoChevronRight } from "react-icons/go";
+"use client"
+import React from "react";
+import { Card } from "./card/Card";
+import {motion} from "framer-motion"
 
-type CardProps = {
-  title: string;
-  paragraph: string;
-};
-
-export const CardSection: FC<CardProps> = ({ paragraph, title }) => {
+export const CardSection = () => {
   return (
-    <section className="dark:bg-[#16131A] bg-gray-50 rounded-[30px] flex flex-col gap-20 p-10 m-4">
-      <div className="flex flex-col gap-4">
-        <h2 className="text-[24px] text-gray-900 font-bold dark:text-gray-50">{title}</h2>
-        <p className="text-[#837F96]">{paragraph}</p>
-      </div>
+    <motion.div
+    initial={{ y: -100, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    className="flex flex-col px-4">
+      <Card title="Calidad" paragraph="Altos estándares de grabado, permitiéndole al cliente obtener una alta seguridad a su segundo bien más preciado, quedando en regla bajo la nueva normativa." color="#AC6AFF" />
+      
+      <Card title="Experiencia" paragraph="Nos diferenciamos por ser los primeros en estandarizar el servicio, en cuanto a calidad y experiencia de visita de nuestros clientes" color="#FFC876" />
 
-      <div className="flex items-center justify-between">
-        <IconCard backgroundColor="#7ADB78" strokeColor="#ffff" />
-        <div className="flex items-center gap-3">
-          <p className="dark:text-gray-50 text-gray-900 font-semibold">EXPLORA MAS</p>
-          <GoChevronRight className="text-2xl dark:text-gray-50 text-gray-900" />
-        </div>
-      </div>
-    </section>
+      <Card title="Precios competitivos" paragraph="Poseemos precios competitivos acorde al bolsillo de nuestros clientes. Elige enregla para obtener los mejores beneficios en seguridad automotriz." color="#FF776F" />
+
+      <Card title="Equipamiento" paragraph="Conozca el equipamiento completo que ofrecemos para el grabado de vehículos." color="#6087DA" />
+    </motion.div>
   );
 };

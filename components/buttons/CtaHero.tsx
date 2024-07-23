@@ -4,32 +4,37 @@ import { motion } from "framer-motion";
 
 type ButttonProps = {
   title: string;
+  background?: string;
+  border?:string
+  color?:string
+  borderWidth?:string
 };
 
-export const ButtonCtaHero: FC<ButttonProps> = ({ title }) => {
+export const ButtonCtaHero: FC<ButttonProps> = ({ title, background, border, color, borderWidth }) => {
   return (
-    <motion.div
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-    >
+    <motion.div initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
       <button
+        style={{ backgroundColor: background, border:border, color:color, borderWidth: borderWidth }}
         className={clsx(
           "right-16",
           "rounded-[16px]",
           "border-opacity-40",
-          "bg-[#52c050] bg-opacity-80",
+          "bg-opacity-80",
           "shadow-lg shadow-black/[0.1]",
           "backdrop-blur-[0.5rem]",
           "h-[3.25rem]",
-          "w-[11rem] text-gray-100",
+          "w-[11rem] text-gray-50",
           "lg:block md:block",
-          "text-[12px]",
+          "text-[16px]",
           "font-semibold",
+          "tracking-wide",
+          "bg-gray-900",
 
           /*----hover----*/
           "transition",
           "hover:bg-gray-/20",
           "hover:shadow-md",
+       
 
           /*----focus statate----*/
           "outline-none",
