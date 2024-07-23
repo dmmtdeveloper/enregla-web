@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { FaCheck } from "react-icons/fa6";
+import { BsCheckCircleFill } from "react-icons/bs";
 
 type textProps = {
   title: string;
@@ -11,13 +11,11 @@ export const LawComponent: FC<textProps> = ({ title, paragaph }) => {
     <article>
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-5">
-          <div className="bg-purple-600 p-2 rounded-ful w-8 rounded-full">
-            <FaCheck className="text-1xl" />
-          </div>
-          <h3>{title}</h3>
+          <BsCheckCircleFill className="text-2xl fill-purple-600" />
+          <h3 className="text-gray-900 font-semibold dark:text-gray-50">{title}</h3>
         </div>
 
-        <p className="text-[#837F96]">{paragaph}</p>
+        <p className="dark:text-[#837F96] text-gray-900">{paragaph}</p>
       </div>
     </article>
   );

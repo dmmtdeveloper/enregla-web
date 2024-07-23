@@ -48,7 +48,7 @@ export const ButtonCtaHero: FC<ButttonProps> = ({ title, background, border, col
           "disabled:shadow",
 
           /*----dark mode----*/
-          "dark:bg-[#AC6AFF]",
+          "dark:bg-[#7e37d4]",
           "dark:hover:bg-purple-700"
         )}
       >

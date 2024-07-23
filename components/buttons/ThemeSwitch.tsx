@@ -16,6 +16,7 @@ export const  ThemeSwitch = () => {
         "bottom-5 right-5",
         "text-[20px]",
         "text-[#4cb34a]",
+        "dark:text-purple-500",
         "w-[40px] h-[40px]",
         "bg-[#7ADB78]",
         "bg-opacity-30",

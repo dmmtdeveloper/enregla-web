@@ -20,7 +20,7 @@ export const ClientSection = () => {
       </div>
       <div className="flex flex-col items-center justify-center gap-16 pt-10">
         <ClientsImage />
-        <motion.p className="text-3xl dark:text-gray-100 text-gray-900 font-bold">
+        <motion.p className="text-3xl dark:text-gray-100 text-gray-900 font-bold text-center">
           "Auto en regla, auto seguro"
         </motion.p>
       </div>
