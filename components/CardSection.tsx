@@ -11,7 +11,7 @@ export const CardSection: FC<CardProps> = ({ paragraph, title }) => {
   return (
     <section className="dark:bg-[#16131A] bg-gray-50 rounded-[30px] flex flex-col gap-20 p-10 m-4">
       <div className="flex flex-col gap-4">
-        <h2 className="text-[24px] text-gray-900 dark:text-gray-50">{title}</h2>
+        <h2 className="text-[24px] text-gray-900 font-bold dark:text-gray-50">{title}</h2>
         <p className="text-[#837F96]">{paragraph}</p>
       </div>
 
