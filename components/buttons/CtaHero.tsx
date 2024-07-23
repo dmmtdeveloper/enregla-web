@@ -28,7 +28,7 @@ export const ButtonCtaHero: FC<ButttonProps> = ({ title, background, border, col
           "text-[16px]",
           "font-semibold",
           "tracking-wide",
-          "bg-gray-900",
+          "bg-green-600",
 
           /*----hover----*/
           "transition",

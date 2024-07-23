@@ -6,9 +6,9 @@ import { Subtitles } from "../Subtitles/Subtitles";
 export const AvoidFines = () => {
   return (
     <div className="flex items-center justify-center pt-10 flex-col gap-5">
-      <div className="flex flex-col justify-center items-center gap-2 pt-10">
+      <div className="flex flex-col justify-center items-center gap-2 pb-16">
         <Subtitles direction="center" title="Evita multas y graba con nosotros" />
-        <p className="text-[#837F96] text-center">
+        <p className="dark:text-[#837F96] text-center text-gray-900">
           Quienes no realicen el grabado obligatorio según la nueva ley, arriesga una multa que va desde 1 a 1,5 UTM.
         </p>
       </div>
