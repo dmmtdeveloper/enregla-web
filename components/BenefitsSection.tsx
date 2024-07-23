@@ -4,18 +4,19 @@ import { AiOutlineStop } from "react-icons/ai";
 import { HiIdentification } from "react-icons/hi2";
 import { RiPoliceBadgeFill } from "react-icons/ri";
 import { Subtitles } from "./Subtitles/Subtitles";
+import { AiFillSecurityScan } from "react-icons/ai";
 
 export const BenefitsSection = () => {
   return (
     <section className="flex flex-col items-center p-10 mt-10">
-      <h2 className="text-[24px] text-center font-semibold dark:text-gray-50 text-gray-900">
+      <h2 className="text-center font-bold dark:text-gray-50 text-gray-900 text-3xl">
         Beneficios de grabar tu patente
       </h2>
 
       <article className="flex flex-col justify-center items-center pt-10">
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="flex flex-col items-center justify-center gap-4">
-            <AiOutlineStop className="text-[#FF776F] text-3xl" />
+            <AiOutlineStop className="text-[#FF776F] text-4xl" />
             <Subtitles title="Disuasión contra el robo y la clonación" />
           </div>
 
@@ -26,7 +27,7 @@ export const BenefitsSection = () => {
       <article className="flex flex-col justify-center items-center pt-10">
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="flex flex-col items-center justify-center gap-4">
-            <HiIdentification className="text-[#7ADB78] text-3xl" />
+            <HiIdentification className="text-[#7ADB78] text-4xl" />
             <Subtitles title="Facilita identificación y recuperación" />
           </div>
 
@@ -37,7 +38,7 @@ export const BenefitsSection = () => {
       <article className="flex flex-col justify-center items-center pt-10">
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="flex flex-col items-center justify-center gap-4">
-            <RiPoliceBadgeFill className="text-[#FFC876] text-3xl" />
+            <RiPoliceBadgeFill className="text-[#FFC876] text-4xl" />
             <Subtitles title="Cumplimiento legal y evita multas" />
           </div>
 
@@ -48,7 +49,7 @@ export const BenefitsSection = () => {
       <article className="flex flex-col justify-center items-center pt-10">
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="flex flex-col items-center justify-center gap-4">
-            <AiOutlineStop className="text-[#FF776F] text-3xl" />
+          <AiFillSecurityScan className="text-[#AC6AFF] text-4xl"/>
             <Subtitles title="Contribuye a la seguridad vial" />
           </div>
 
