@@ -1,4 +1,5 @@
 
+import { AppSection } from "@/components/AppSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { CardSection } from "@/components/CardSection";
 import { ClientSection } from "@/components/ClientSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <ClientSection />
       <CardSection/>
       <BenefitsSection/>
+      <AppSection/>
       <ContactSection/>
       <LawSection/>
       <ResponsabilitySection/>

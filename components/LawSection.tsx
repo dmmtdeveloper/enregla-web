@@ -7,7 +7,7 @@ import { AvoidFines } from "./Law/AvoidFines";
 
 export const LawSection = () => {
   return (
-    <section className=" flex flex-col px-8 pt-36 gap-10">
+    <section className=" flex flex-col px-8 mt-24 gap-10">
       <div>
         <Subtitles direction="left" title="Conozcamos esta nueva ley 21.601" />
 
