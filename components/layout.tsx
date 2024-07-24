@@ -1,7 +1,7 @@
-import clsx from "clsx";
 import { Navbar } from "./Navbar";
 import ThemeContextProvider from "@/context/theme-context";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (

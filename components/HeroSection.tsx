@@ -2,13 +2,16 @@
 import clsx from "clsx";
 import React from "react";
 import { motion } from "framer-motion";
-import { HeroPicture } from "@/components/IconsImages/HeroImage";
 import { ButtonCtaHero } from "@/components/buttons/CtaHero";
 import { Paragraph } from "@/components/text/Paragraph";
+import { HeroPicture } from "./IconsImages/HeroImage";
+
 
 export const HeroSection = () => {
   return (
-    <section className="flex items-center text-center justify-center flex-col gap-16 px-4">
+    <section
+   
+    className="flex items-center text-center justify-center flex-col gap-16 px-8">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col justify-center text-center">
           <motion.p
@@ -17,13 +20,13 @@ export const HeroSection = () => {
             className={clsx(
               "text-[40px]",
               "md:text-6xl",
-              "text-gray-800",
+              "text-gray-900",
               "text-center",
               "font-bold",
               "leading-[50px]",
 
               /* Dark Mode */
-              "dark:text-gray-100"
+              "dark:text-white"
             )}
           >
             Solucion integral de seguridad automotriz en Chile

@@ -15,7 +15,7 @@ export const LawComponent: FC<textProps> = ({ title, paragaph }) => {
           <h3 className="text-gray-900 font-semibold dark:text-gray-50">{title}</h3>
         </div>
 
-        <p className="dark:text-[#837F96] text-gray-900">{paragaph}</p>
+        <p className="dark:text-[#837F96] text-gray-900 text-justify">{paragaph}</p>
       </div>
     </article>
   );
