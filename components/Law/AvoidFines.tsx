@@ -7,8 +7,8 @@ export const AvoidFines = () => {
   return (
     <div className="flex items-center justify-center pt-10 flex-col gap-5">
       <div className="flex flex-col justify-center items-center gap-2 pb-16">
-        <Subtitles direction="center" title="Evita multas y graba con nosotros" />
-        <p className="dark:text-[#837F96] text-center text-gray-900">
+        <Subtitles direction="left" title="Evita multas y graba con nosotros" />
+        <p className="dark:text-[#837F96]  text-gray-900">
           Quienes no realicen el grabado obligatorio según la nueva ley, arriesga una multa que va desde 1 a 1,5 UTM.
         </p>
       </div>
