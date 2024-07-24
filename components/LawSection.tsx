@@ -9,7 +9,7 @@ export const LawSection = () => {
   return (
     <section className=" flex flex-col px-8 pt-36 gap-10">
       <div>
-        <Subtitles direction="center" title="Conozcamos esta nueva ley 21.601" />
+        <Subtitles direction="left" title="Conozcamos esta nueva ley 21.601" />
 
         <div className="flex flex-col gap-4 pt-10">
           <LawComponent
