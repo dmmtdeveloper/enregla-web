@@ -19,16 +19,15 @@ export const ButtonCtaHero: FC<ButttonProps> = ({ title, background, border, col
           "right-16",
           "rounded-[16px]",
           "border-opacity-40",
-          "bg-opacity-80",
           "shadow-lg shadow-black/[0.1]",
           "backdrop-blur-[0.5rem]",
           "h-[3.25rem]",
-          "w-[11rem] text-gray-50",
+          "w-[11rem] text-[#43435C]",
           "lg:block md:block",
           "text-[16px]",
           "font-semibold",
           "tracking-wide",
-          "bg-green-600",
+          "bg-[#7ADB78]",
 
           /*----hover----*/
           "transition",
@@ -48,8 +47,8 @@ export const ButtonCtaHero: FC<ButttonProps> = ({ title, background, border, col
           "disabled:shadow",
 
           /*----dark mode----*/
-          "dark:bg-[#7e37d4]",
-          "dark:hover:bg-purple-700"
+          // "dark:bg-[#7e37d4]",
+          // "dark:hover:bg-purple-700"
         )}
       >
         {title}

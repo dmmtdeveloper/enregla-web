@@ -19,7 +19,7 @@ export const FooterSection = () => {
         <Image className="dark:block hidden w-60 h-auto" src={logoWhite} alt="logowhite" width={150} height={35} priority />
         <Image className="dark:hidden block w-60 h-auto" src={logoDark} alt="logodark" width={150} height={35} priority />
 
-        <div className="flex items-center justify-between mt-5">
+        <div className="flex  justify-between mt-10">
           <FaInstagram className="text-3xl dark:text-white text-gray-900 "/>
           <FaFacebookSquare className="text-3xl dark:text-white text-gray-900 "/>
           <FaWhatsapp className="text-3xl dark:text-white text-gray-900 "/>

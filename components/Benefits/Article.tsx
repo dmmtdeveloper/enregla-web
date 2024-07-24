@@ -5,7 +5,7 @@ interface ArticleContainerProps {
 
 export const ArticleContainer: React.FC<ArticleContainerProps> = ({ children }) => {
   return (
-    <article className="flex flex-col gap-2 p-8">
+    <article className="flex flex-col gap-2">
       {children}
     </article>
   );
