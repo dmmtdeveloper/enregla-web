@@ -24,6 +24,11 @@ export const links = [
         hash:"#FAQ"
     },
 
+    {
+        name:"Ley 21.601",
+        hash:"#ley"   
+    }
+
 ] as const;
 
 export const textHero = {

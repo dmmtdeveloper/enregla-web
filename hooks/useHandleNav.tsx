@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const useHandleNav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,5 +7,5 @@ export const useHandleNav = () => {
     setMenuOpen(!menuOpen);
   };
 
-  return {handleNav, menuOpen, setMenuOpen}
+  return { handleNav, menuOpen, setMenuOpen };
 };

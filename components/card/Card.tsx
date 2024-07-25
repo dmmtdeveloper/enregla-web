@@ -1,7 +1,5 @@
 import React, { FC } from "react";
-import { FaCheck } from "react-icons/fa6";
 import { GoChevronRight } from "react-icons/go";
-import { IconAuto } from "../icons/IconAuto";
 import { IoCheckbox } from "react-icons/io5";
 
 type CardProps = {

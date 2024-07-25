@@ -5,7 +5,7 @@ import postImageenregla from "@/public/assets/img/post.png";
 
 export const AppSection = () => {
   return (
-    <section className="flex items-center justify-center flex-col gap-5 px-8 mt-20">
+    <section id="App" className="flex items-center justify-center flex-col gap-5 px-8 mt-20 scroll-mt-28">
       <h2 className="text-3xl dark:text-white text-gray-900 font-semibold">
         Reformulando el proceso de grabado de patentes en vehículos
       </h2>

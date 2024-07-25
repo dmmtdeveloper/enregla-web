@@ -1,4 +1,3 @@
-
 import { AppSection } from "@/components/AppSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { CardSection } from "@/components/CardSection";
@@ -15,13 +14,13 @@ export default function Home() {
     <MainLayout>
       <HeroSection />
       <ClientSection />
-      <CardSection/>
-      <BenefitsSection/>
-      <AppSection/>
-      <ContactSection/>
-      <LawSection/>
-      <ResponsabilitySection/>
-      <FooterSection/>
+      <CardSection />
+      <BenefitsSection />
+      <AppSection />
+      <ContactSection />
+      <LawSection />
+      <ResponsabilitySection />
+      <FooterSection />
     </MainLayout>
   );
 }

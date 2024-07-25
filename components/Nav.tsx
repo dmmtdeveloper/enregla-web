@@ -1,15 +1,14 @@
 "use client";
-import React from "react";
-import clsx from "clsx";
-
-import { Logo } from "./nav/Logo";
-import { Links } from "./nav/Links";
-import { LinksMenu } from "./nav/LinksMenu";
+import React, { useState } from "react";
 import { ThemeSwitch } from "./buttons/ThemeSwitch";
-import { useHandleNav } from "@/hooks/useHandleNav";
 import { IoMenu, IoClose } from "react-icons/io5";
-import { CloseButton } from "./nav/CloseButton";
-import { MenuButon } from "./nav/MenuButon";
+import clsx from "clsx";
+import Link from "next/link";
+import { Logo } from "./nav/Logo";
+import { links } from "@/lib/data";
+import { motion } from "framer-motion";
+import { useHandleNav } from "@/hooks/useHandleNav";
+import { Links } from "./nav/Links";
 
 export const Nav = () => {
   const { handleNav, menuOpen } = useHandleNav();
@@ -26,7 +25,9 @@ export const Nav = () => {
         <Links />
 
         <div className="flex items-center justify-center gap-5">
-          <MenuButon />
+          <button onClick={handleNav}>
+            <IoMenu className="text-3xl md:hidden dark:text-purple-500  hover:text-green-400 transition-all" />
+          </button>
           <div
             className={clsx("fixed z-[9999] top-0 w-[100%] h-screen dark:bg-opacity-95 p-8 ease-in-out duration-500", {
               "left-0 bg-[#ecf0f3] dark:bg-[#43435C]": menuOpen,
@@ -35,9 +36,34 @@ export const Nav = () => {
           >
             <div className="flex items-center justify-between">
               <Logo />
-              <CloseButton />
+              <button onClick={handleNav} className="cursor-pointer">
+                <IoClose className="text-3xl dark:text-white  hover:fill-red-400 transition-all" />
+              </button>
             </div>
-            <LinksMenu />
+            <ul className="flex flex-col items-center gap-5 mt-10 dark:text-white text-2xl font-semibold">
+              {links.map((link) => (
+                <motion.li
+                  className="h-3/4 flex items-center justify-center"
+                  key={link.hash}
+                  initial={{ y: -100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                >
+                  <Link
+                    className={clsx(
+                      "flex w-full",
+                      "items-center justify-center",
+                      "px-3 py-3",
+                      "hover:text-green-400",
+                      "transition"
+                    )}
+                    href={link.hash}
+                    onClick={handleNav}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
           </div>
           <ThemeSwitch />
         </div>
