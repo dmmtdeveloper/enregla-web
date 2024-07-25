@@ -9,6 +9,8 @@ import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import { useHandleNav } from "@/hooks/useHandleNav";
 import { Links } from "./nav/Links";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
 
 export const Nav = () => {
   const { handleNav, menuOpen } = useHandleNav();
@@ -64,6 +66,11 @@ export const Nav = () => {
                 </motion.li>
               ))}
             </ul>
+            <div className="flex items-center justify-center mt-40 gap-10">
+              <FaInstagram className="text-4xl dark:text-white text-gray-900 hover:text-green-400 transition all cursor-pointer" />
+              <FaFacebookSquare className="text-4xl dark:text-white text-gray-900 hover:text-green-400 transition all cursor-pointer" />
+              <FaWhatsapp className="text-4xl dark:text-white text-gray-900 hover:text-green-400 transition all cursor-pointer" />
+            </div>
           </div>
           <ThemeSwitch />
         </div>
