@@ -1,18 +1,18 @@
 export const links = [
     {
-        name:"inicio",
+        name:"Inicio",
         hash:"#inicio"
     },
     {
-        name:"servicios",
+        name:"Servicios",
         hash:"#servicios"
     },
     {
-        name:"nosotros",
+        name:"Nosotros",
         hash:"#nosotros"
     },
     {
-        name:"productos",
+        name:"Productos",
         hash:"#productos"
     },
     {
