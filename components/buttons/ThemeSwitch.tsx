@@ -16,7 +16,6 @@ export const  ThemeSwitch = () => {
         "bottom-5 right-5",
         "text-[20px]",
         "text-[#4cb34a]",
-        "dark:text-purple-500",
         "w-[40px] h-[40px]",
         "bg-[#7ADB78]",
         "bg-opacity-30",
@@ -27,14 +26,15 @@ export const  ThemeSwitch = () => {
         "flex",
         "items-center",
         "justify-center",
-
+        
         /*hover efect*/
         "hover:scale-[1.15]",
         "active:scale-105",
         "transition",
         "duration-300",
-
+        
         /* dark-mode*/
+        "dark:text-purple-500",
         "dark:bg-gray-800",
         "dark:bg-gray-100",
       )}
