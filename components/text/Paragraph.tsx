@@ -7,15 +7,15 @@ type TextProps = {
 
 export const Paragraph:FC<TextProps> = ({text}) => {
   return (
-    <div>
+    <>
       <motion.p
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="text-center px-10 text-[16px] text-gray-800 dark:text-[#CAC6DD] leading-7"
+        className="md:px-0  text-center text-[16px] text-gray-800 dark:text-[#CAC6DD] leading-7 lg:px-48"
 
       >
         {text}
       </motion.p>
-    </div>
+    </>
   );
 };

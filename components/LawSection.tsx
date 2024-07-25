@@ -11,7 +11,7 @@ export const LawSection = () => {
       <div>
         <Subtitles direction="left" title="Conozcamos esta nueva ley 21.601" />
 
-        <div className="flex flex-col gap-4 pt-10">
+        <div className="flex flex-col gap-4 md:gap-10 pt-10">
           <LawComponent
             title="¿Qué busca esta nueva normativa?"
             paragaph="Busca prevenir la venta de vehículos robados y la venta de espejos retrovisores entre otros elementos de los vehículos venidos desde el mercado no autorizado."

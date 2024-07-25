@@ -14,10 +14,10 @@ export const BenefitsSection = () => {
     <motion.div
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="flex flex-col items-center p-10 mt-10 px-8 gap-14"
+      className="flex flex-col items-center p-10 mt-10 px-8 gap-14 lg:justify-center"
     >
-      <Subtitles title="Beneficios de grabar tu patente" direction="left" />
-      <div className="flex flex-col gap-10">
+      <h3 className="text-3xl dark:text-gray-50 text-gray-900 font-semibold">Beneficios de grabar tu patente</h3>
+      <div className="md:items-center md:justify-center scroll-mt-20 flex flex-col gap-8 grid-cols-2 lg:auto-cols-auto lg:grid">
         <ArticleContainer>
           <IoShieldSharp className="text-4xl text-[#FF776F]" />
           <Benefits

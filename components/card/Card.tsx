@@ -10,7 +10,7 @@ type CardProps = {
 
 export const Card: FC<CardProps> = ({ title, paragraph, color }) => {
   return (
-    <article className="flex flex-col p-10 mt-4 rounded-[30px] dark:bg-[#16131A] bg-gray-50 justify-between h-[340px]">
+    <article className="flex flex-col p-10  rounded-[30px] dark:bg-[#16131A] bg-gray-50 justify-between h-[340px]">
       <div className="flex flex-col gap-4">
         <h2 className="text-[32px] text-gray-900  dark:text-gray-50">{title}</h2>
         <p className="text-[#A4A0B9] text-justify">{paragraph}</p>
