@@ -9,20 +9,23 @@ export const Logo = () => {
     <>
         <Link href="/">
           <Image
-            className="cursor-pointer hidden dark:block"
+            className="cursor-pointer hidden dark:block w-[150px] h-auto"
             src={logowhithe}
             alt="logowhite"
-            width={150}
-            height={35}
-            priority
+            width={256}
+            height={51}
+            priority={true}
+            quality={95}
           />
           <Image 
-          className="cursor-pointer dark:hidden" 
+          className="cursor-pointer dark:hidden w-[150px] h-auto" 
           src={logodark} 
           alt="logodark" 
-          width={150} 
-          height={35} 
-          priority />
+          width={256} 
+          height={51} 
+          priority ={true}
+          quality={95}
+          />
         </Link>
 
     </>

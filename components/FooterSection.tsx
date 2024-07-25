@@ -14,6 +14,7 @@ export const FooterSection = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       className="flex flex-col items-center justify-center bg-white dark:bg-[#43435C] mt-32 py-8 px-8"
+      id="servicios"
     >
       <article>
         <Image className="dark:block hidden w-60 h-auto" src={logoWhite} alt="logowhite" width={150} height={35} priority />

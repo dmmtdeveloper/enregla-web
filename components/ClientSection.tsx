@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 export const ClientSection = () => {
   return (
-    <section className="pb-20 px-4">
+    <section className="pb-20 px-8">
       <div className={clsx("flex flex-col", "items-center", "gap-4 mt-10")}>
         <motion.p
           initial={{ y: -100, opacity: 0 }}
@@ -20,7 +20,7 @@ export const ClientSection = () => {
       </div>
       <div className="flex flex-col items-center justify-center gap-16 pt-10">
         <ClientsImage />
-        <motion.p className="text-[32px] dark:text-gray-100 text-gray-900  text-center">
+        <motion.p className="text-[32px] dark:text-gray-100 text-gray-900">
           "Auto en regla, auto seguro"
         </motion.p>
       </div>
