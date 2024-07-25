@@ -18,7 +18,7 @@ export const HeroPicture = () => {
             "gradient-mask-b-0",
             "rounded-xl",
             "border-2 border-green-400",
-            "w-[400px] h-auto",
+            "w-full h-auto",
 
             /*dark mode */
             "dark:border-purple-500"

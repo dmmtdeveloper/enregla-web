@@ -3,14 +3,17 @@ import Link from "next/link";
 
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
-import { useHandleNav } from "@/hooks/useHandleNav";
 import clsx from "clsx";
 
-export const LinksMenu = () => {
-  const { handleNav } = useHandleNav();
+type menuProps = {
+  onClick : () => void
+}
+
+export const LinksMenu:React.FC<menuProps> = ({onClick}) => {
+ 
   return (
     <>
-      <ul className="flex flex-col items-center gap-5 mt-10 dark:text-white text-2xl font-semibold">
+      <ul className="flex flex-col items-center gap-5 mt-10 dark:text-white text-2xl font-semibold mb-16">
         {links.map((link) => (
           <motion.li
             className="h-3/4 flex items-center justify-center"
@@ -27,7 +30,7 @@ export const LinksMenu = () => {
                 "transition"
               )}
               href={link.hash}
-              onClick={handleNav}
+              onClick={onClick}
             >
               {link.name}
             </Link>
