@@ -1,10 +1,10 @@
 "use client";
-import Image from "next/image";
 import { textStyles } from "../constants/theme";
+import { validate_password, validate_rut } from "@/utils/regexvalidations";
+import Image from "next/image";
 import CustomButton from "../ui/button";
 import CustomTextInput from "../ui/textinput";
 import useSession from "../hooks/useSession";
-import { validate_email, validate_password } from "@/utils/regexvalidations";
 
 const brand = require("@/assets/images/brand.png");
 
@@ -20,11 +20,11 @@ export default function Login() {
           </div>
           <div className="w-[40%] h-[40%] flex flex-col items-center">
             <CustomTextInput
-              value={form.email}
-              onChange={(e) => handleForm("email", e.target.value)}
-              placeholder="Email"
-              isInvalid={validate_email(form.email)}
-              errorMessage={"Porfavor ingrese un correo válido"}
+              value={form.rut}
+              onChange={(e) => handleForm("rut", e.target.value)}
+              placeholder="RUT"
+              isInvalid={validate_rut(form.rut)}
+              errorMessage={"Porfavor ingrese un RUT válido"}
             />
             <CustomTextInput
               value={form.password}

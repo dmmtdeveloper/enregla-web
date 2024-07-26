@@ -3,7 +3,7 @@ import { User } from "../types/user";
 import { GetUsers } from "../api/users";
 import useSession from "./useSession";
 
-const usersColumns = [
+const branchColumns = [
   { label: "Nombre", key: "name" },
   { label: "RUT", key: "rut" },
   { label: "Email", key: "email" },
@@ -12,7 +12,7 @@ const usersColumns = [
   { label: "Opciones", key: "options" },
 ];
 
-export default function useUsers() {
+export default function useBranch() {
   const { token, user } = useSession();
   const [users, setUsers] = useState<User[]>([]);
   const [totalUsers, setTotalUsers] = useState<number>(10);
@@ -66,7 +66,7 @@ export default function useUsers() {
   return {
     users,
     filteredUsers,
-    usersColumns,
+    branchColumns,
     userRows,
     handleUsersPage,
     handleUsersRows,

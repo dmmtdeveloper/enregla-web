@@ -8,15 +8,11 @@ import useSessionStore from "../store/session";
 
 export default function useSession() {
   const router = useRouter();
-  const { setToken, setUser } = useSessionStore();
+  const { token, user, setToken, setUser } = useSessionStore();
   const [loading, setLoading] = useState<boolean>(false);
   const [form, setform] = useState({
-    email: "",
+    rut: "",
     password: "",
-  });
-  const [session, setSession] = useState<Session>({
-    token: "",
-    user: defaultUser,
   });
 
   const notifyMessage = (message: string) => toast.success(message);
@@ -27,15 +23,15 @@ export default function useSession() {
   };
 
   const loginUser = async () => {
-    const { email, password } = form;
+    const { rut, password } = form;
     setLoading(true);
-    if (!email || !password) {
+    if (!rut || !password) {
       notifyError("Los campos son obligatorios");
       setLoading(false);
       return;
     }
 
-    const response = await LoginUser({ email, password });
+    const response = await LoginUser({ rut, password });
     if (response.error) {
       notifyError(response.error);
       setLoading(false);
@@ -49,11 +45,10 @@ export default function useSession() {
   };
 
   const logoutUser = async () => {
-    setSession({ token: "", user: defaultUser });
     setToken("");
     setUser(defaultUser);
     router.replace("/admin/login");
   };
 
-  return { session, form, handleForm, loginUser, logoutUser, loading };
+  return { token, user, form, handleForm, loginUser, logoutUser, loading };
 }

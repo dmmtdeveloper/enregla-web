@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
 import { navigationMenu } from "../constants/navigation";
+import { LogoutIcon } from "@/assets/icons/logout";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { LogoutIcon } from "@/assets/icons/logout";
 import useSession from "../hooks/useSession";
-import { usePathname } from "next/navigation";
 
 const enreglaLogo = require("@/assets/images/logo.png");
 const enreglaName = require("@/assets/images/enregla.png");

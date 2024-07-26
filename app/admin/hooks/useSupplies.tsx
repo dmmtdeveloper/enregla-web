@@ -3,17 +3,16 @@ import { User } from "../types/user";
 import { GetUsers } from "../api/users";
 import useSession from "./useSession";
 
-const usersColumns = [
-  { label: "Nombre", key: "name" },
-  { label: "RUT", key: "rut" },
-  { label: "Email", key: "email" },
-  { label: "Sucursal", key: "branch" },
-  { label: "Cargo", key: "role" },
+const suppliesColumns = [
+  { label: "Insumo", key: "supply" },
+  { label: "Categoría", key: "category" },
+  { label: "Cantidad", key: "quantity" },
+  { label: "Precio", key: "price" },
   { label: "Opciones", key: "options" },
 ];
 
-export default function useUsers() {
-  const { token, user } = useSession();
+export default function useSupplies() {
+  const { token } = useSession();
   const [users, setUsers] = useState<User[]>([]);
   const [totalUsers, setTotalUsers] = useState<number>(10);
   const [usersPage, setUsersPage] = useState<number>(1);
@@ -66,7 +65,7 @@ export default function useUsers() {
   return {
     users,
     filteredUsers,
-    usersColumns,
+    suppliesColumns,
     userRows,
     handleUsersPage,
     handleUsersRows,

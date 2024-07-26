@@ -2,6 +2,7 @@ import CustomDatePicker from "./datepicker";
 import { parseDate } from "@internationalized/date";
 import CustomTextInput from "./textinput";
 import useSessionStore from "../store/session";
+import { UserIcon } from "@/assets/icons/user";
 
 type Header = {
   title: string;
@@ -28,9 +29,14 @@ export default function Header({ title, searchedText, searchText, fromDate, toDa
             size="lg"
           />
         </div>
-        <div className="w-[14%] flex flex-col items-start justify-center">
-          <h3 className="text-[18px]">{user.name}</h3>
-          <p className="text-[12px]">{user.email}</p>
+        <div className="w-[14%] h-[74%] px-[8px] rounded-[8px] flex items-center justify-between bg-gradient-to-b from-slate-900 to-slate-700">
+          <div>
+            <h3 className="text-[18px]">{user.name}</h3>
+            <p className="text-[12px]">{user.email}</p>
+          </div>
+          <div>
+            <UserIcon color="#fff" w="32" h="32" />
+          </div>
         </div>
       </section>
     </>

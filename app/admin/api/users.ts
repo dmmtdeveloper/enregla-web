@@ -1,13 +1,13 @@
 import { endpoint } from "./endpoint";
 
-export const LoginUser = async ({ email, password }: { email: string; password: string }) => {
+export const LoginUser = async ({ rut, password }: { rut: string; password: string }) => {
   try {
     const options: RequestInit = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ rut, password }),
     };
     const response = await fetch(`${endpoint}/auth`, options);
     const data = await response.json();
@@ -18,6 +18,8 @@ export const LoginUser = async ({ email, password }: { email: string; password: 
 };
 
 export const GetUsers = async ({ token, query }: { token: string; query: string }) => {
+  console.log(token);
+
   try {
     const options: RequestInit = {
       method: "GET",
@@ -54,13 +56,13 @@ export const GetUser = async ({ token, id }: { token: string; id: string }) => {
 export const CreateUser = async ({
   token,
   name,
-  email,
+  rut,
   password,
   role,
 }: {
   token: string;
   name: string;
-  email: string;
+  rut: string;
   password: string;
   role: string;
 }) => {
@@ -71,7 +73,7 @@ export const CreateUser = async ({
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ name, email, password, role }),
+      body: JSON.stringify({ name, rut, password, role }),
     };
     const response = await fetch(`${endpoint}/user`, options);
     const data = await response.json();
@@ -85,14 +87,14 @@ export const EditUser = async ({
   token,
   id,
   name,
-  email,
+  rut,
   password,
   role,
 }: {
   token: string;
   id: string;
   name: string;
-  email: string;
+  rut: string;
   password: string;
   role: string;
 }) => {
@@ -103,7 +105,7 @@ export const EditUser = async ({
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ name, email, password, role }),
+      body: JSON.stringify({ name, rut, password, role }),
     };
     const response = await fetch(`${endpoint}/user/${id}`, options);
     const data = await response.json();
