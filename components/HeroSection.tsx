@@ -7,7 +7,10 @@ import { Button } from "@nextui-org/button";
 
 export const HeroSection = () => {
   return (
-    <section id="inicio" className="flex items-center text-center justify-center flex-col gap-16 px-8 pt-48 xl:pt-72">
+    <section
+      id="inicio"
+      className="w-full pb-[2rem] flex items-center text-center justify-center flex-col gap-16 px-8 pt-48 xl:pt-72 hero_background"
+    >
       <div className="flex flex-col gap-4">
         <div className="flex flex-col justify-center text-center items-center">
           <motion.p
@@ -43,10 +46,12 @@ export const HeroSection = () => {
             Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus vehículos.
           </p>
 
-          <Button className="bg-green-500 dark:bg-purple-500" size="lg">Contactanos</Button>
+          <Button className="bg-green-500 dark:bg-purple-500" size="lg">
+            Contactanos
+          </Button>
         </motion.div>
       </div>
-      <HeroPicture />
+      {/* <HeroPicture /> */}
     </section>
   );
 };
