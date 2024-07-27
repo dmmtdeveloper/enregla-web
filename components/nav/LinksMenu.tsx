@@ -24,7 +24,7 @@ export const LinksMenu: React.FC<menuProps> = ({ onClick }) => {
 
   return (
     <>
-      <ul className="flex flex-col items-center gap-5 mt-10 dark:text-white text-2xl font-semibold mb-16">
+      <ul className="flex flex-col items-center gap-2 mt-10 dark:text-white text-2xl font-semibold mb-16">
         {renderedLinks &&
           renderedLinks.map((link) => (
             <motion.li

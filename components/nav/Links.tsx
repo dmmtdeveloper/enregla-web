@@ -23,15 +23,17 @@ export const Links = () => {
     <>
       <motion.ul
         className={clsx(
-          "hidden sm:hidden md:block lg:flex lg:gap-0 lg:px-4",
+          "hidden lg:flex lg:gap-0 lg:px-4",
           "items-center justify-center",
-          "gap-4 bg-slate-200 bg-opacity-45",
+          "gap-4 bg-slate-300 bg-opacity-45",
           "py-1 px-10 rounded-full",
+          "font-semibold",
+          
 
           /*dark mode*/
           "dark:text-white",
-          "dark:bg-[#43435C]",
-          "dark:bg-opacity-45"
+          "dark:bg-[#525269]",
+          "dark:bg-opacity-90",
         )}
       >
         {renderedLinks &&

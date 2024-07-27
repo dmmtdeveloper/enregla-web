@@ -8,11 +8,19 @@ import clsx from "clsx";
 export const ClientSection = () => {
   return (
     <section className="pb-20 px-8">
-      <div className={clsx("flex flex-col", "items-center", "gap-4 mt-10", "px-8")}>
+      <div className={clsx("flex flex-col", "items-center", "gap-4 mt-10")}>
         <motion.p
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="text-gray-900 font-semibold text-[12px] dark:text-gray-400 text-center"
+          className={clsx(
+            "text-gray-900",
+            "font-semibold",
+            "text-[12px]",
+            "text-justify text-pretty",
+
+            /* dark mode*/
+            "dark:text-gray-400",
+          )}
         >
           AYUDANDO A LA GENTE A PROGER SUS VEHICULOS
         </motion.p>

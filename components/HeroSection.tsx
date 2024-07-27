@@ -8,7 +8,7 @@ export const HeroSection = () => {
   return (
     <section
       id="inicio"
-      className="z-[1] relative w-full pb-[2rem] flex items-center text-center justify-center flex-col gap-16 px-8 pt-48 xl:pt-72 hero_background"
+      className="z-[1] relative w-full md:pb-10rem  pb-[20rem] flex items-center text-center justify-center flex-col gap-16 px-8 pt-48 xl:pt-72 hero_background"
     >
       <div className="flex flex-col gap-4">
         <div className="flex flex-col justify-center text-center items-center">
@@ -42,13 +42,28 @@ export const HeroSection = () => {
           animate={{ y: 0, opacity: 1 }}
           className="flex items-center justify-center flex-col gap-6 "
         >
-          <p className="md:px-28 lg:px-60 text-center text-[16px] dark:text-[#CAC6DD] leading-7">
+          <p
+            className={clsx(
+              "md:px-28",
+              "lg:px-60",
+              "lg:text-[20px]",
+              "font-semibold",
+              "text-center",
+              "text-[16px]",
+              "dark:text-[#CAC6DD]",
+              "leading-7 drop-shadow-md"
+            )}
+          >
             Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus vehículos.
           </p>
-
-          <Button className="bg-green-500 dark:bg-purple-500" size="lg">
-            Contactanos
-          </Button>
+          <div className="flex  gap-5">
+            <Button className="w-44" size="lg" color="primary" variant="solid">
+              Contáctanos
+            </Button>
+            <Button className="w-44 hidden md:block" color="secondary" size="lg" variant="solid">
+              Ley 21.601
+            </Button>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -37,8 +37,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: fill;
-  /* opacity: 0.6; */
-  /* filter: blur(2px); */
+  filter: blur(1.5px);
   z-index: -1;
   mask-image: linear-gradient(black 70%, transparent);
 }
