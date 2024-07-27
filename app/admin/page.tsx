@@ -6,17 +6,17 @@ import { useRouter } from "next/navigation";
 
 export default function Auth() {
   const router = useRouter();
-  const { session } = useSession();
+  const { token } = useSession();
 
   useEffect(() => {
-    if (!session.token) {
+    if (!token) {
       setTimeout(() => {
         router.push("/admin/login");
       }, 2000);
     } else {
       router.push("/admin/dashboard");
     }
-  }, [session.token]);
+  }, [token]);
 
   return (
     <>

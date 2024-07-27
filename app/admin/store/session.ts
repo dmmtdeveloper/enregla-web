@@ -11,9 +11,9 @@ type sessionStore = {
 
 const useSessionStore = create<sessionStore>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       token: "",
-      setToken: (token) => set({ token: get().token || token }),
+      setToken: (token) => set({ token }),
       user: {} as User,
       setUser: (user) => set({ user }),
     }),

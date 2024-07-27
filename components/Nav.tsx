@@ -9,10 +9,13 @@ import { CloseButton } from "./nav/CloseButton";
 import { ThemeSwitch } from "./buttons/ThemeSwitch";
 import { useHandleNav } from "@/hooks/useHandleNav";
 import { LinksMenu } from "./nav/LinksMenu";
-
+import { usePathname } from "next/navigation";
 
 export const Nav = () => {
+  const path = usePathname();
   const { handleNav, menuOpen } = useHandleNav();
+
+  const isMenuVisible = path !== "/contact";
 
   return (
     <motion.nav
@@ -33,7 +36,7 @@ export const Nav = () => {
         <Logo />
         <Links />
         <div className="flex items-center justify-center gap-5">
-          <MenuButon onClick={handleNav} />
+          {isMenuVisible && <MenuButon onClick={handleNav} />}
           <div
             className={clsx(
               "fixed z-[9999] top-0",
