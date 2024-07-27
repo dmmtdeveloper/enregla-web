@@ -10,7 +10,7 @@ type ButtonProps = {
 export const MenuButon:React.FC<ButtonProps> = ({onClick}) => {
   return (
     <motion.div>
-      <button className="cursor:pointer" onClick={onClick}>
+      <button className="cursor:pointer flex items-center justify-center" onClick={onClick}>
         <IoMenu className="text-3xl lg:hidden md:block dark:text-purple-500  hover:text-green-400 transition-all" />
       </button>
     </motion.div>

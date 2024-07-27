@@ -1,17 +1,18 @@
 "use client";
+import React from "react";
 import clsx from "clsx";
-import { Logo } from "./nav/Logo";
-import { Links } from "./nav/Links";
+import { Input } from "@nextui-org/input";
+import { Logo } from "@/components/nav/Logo";
+import { Links } from "@/components/nav/Links";
 import { motion } from "framer-motion";
-import { Social } from "./social/Social";
-import { MenuButon } from "./nav/MenuButon";
-import { CloseButton } from "./nav/CloseButton";
-import { ThemeSwitch } from "./buttons/ThemeSwitch";
+import { Social } from "@/components/social/Social";
+import { MenuButon } from "@/components/nav/MenuButon";
+import { CloseButton } from "@/components/nav/CloseButton";
+import { ThemeSwitch } from "@/components/buttons/ThemeSwitch";
 import { useHandleNav } from "@/hooks/useHandleNav";
-import { LinksMenu } from "./nav/LinksMenu";
+import { LinksMenu } from "@/components/nav/LinksMenu";
 
-
-export const Nav = () => {
+export default function contact() {
   const { handleNav, menuOpen } = useHandleNav();
 
   return (
@@ -62,6 +63,16 @@ export const Nav = () => {
           <ThemeSwitch />
         </div>
       </motion.div>
+
+      <div className="pt-10 px-8">
+        <div className="flex flex-col gap-5">
+          <h2 className="text-2xl dark:text-white">Contactanos</h2>
+          <Input type="text" variant="bordered" label="Nombre" />
+          <Input type="text" variant="bordered" label="Apellido" />
+          <Input type="Email" variant="bordered" label="Email" />
+          <Input type="text" variant="bordered" label="Empresa" />
+        </div>
+      </div>
     </motion.nav>
   );
-};
+}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import informes from "@/public/assets/img/informes.jpg";
 import postImageenregla from "@/public/assets/img/post.png";
+import Link from "next/link";
 
 export const AppSection = () => {
   return (
@@ -24,8 +24,9 @@ export const AppSection = () => {
         <p className="dark:text-white text-gray-900 text-3xl ">Monitoreo de <span className="text-[#7ADB78] font-semibold">informes</span>  en tiempo real</p>
         <p className="text-gray-400 ">Control de grabados en tiempo real a través de nuestra plataforma tecnológica.</p>
       </div>
-        {/* <Image className="w-96 rounded-2xl h-auto" src={informes} alt="appenregla" width={256} height={171} priority /> */}
       </article>
+
+     <Link href="contact">contact</Link>
     </section>
   );
 };
