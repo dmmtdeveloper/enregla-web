@@ -11,7 +11,7 @@ export const Testimonials = () => {
     <motion.div
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="px-4 bg-white"
+      className="px-4 bg-white dark:bg-black-100"
     >
       <h1 className="heading dark:text-white text-black">Testimonio de <span className="text-blue-400">clientes satisfechos</span></h1>
       <div className="flex flex-col items-center mt-10">

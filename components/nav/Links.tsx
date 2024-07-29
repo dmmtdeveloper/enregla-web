@@ -49,7 +49,7 @@ export const Links = () => {
                   "flex w-full",
                   "items-center justify-center",
                   "px-3 py-3",
-                  "hover:text-cyan-200",
+                  "hover:text-blue-500",
                   "transition"
                 )}
                 href={link.hash}

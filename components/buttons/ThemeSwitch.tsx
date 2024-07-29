@@ -16,12 +16,12 @@ export const  ThemeSwitch = () => {
         "bottom-5 right-5",
         "text-[24px]",
         "text-dark-100",
-        // "w-[40px] h-[40px]",
-        // "bg-dark-100",
+        "w-[40px] h-[40px]",
+        // "bg-white-100",
         "bg-opacity-30",
         "backdrop-blur-[0.5rem]",
         "border-opacity-40",
-        // "shadow-2xl",
+        "shadow-2xl",
         "rounded-full",
         "flex",
         "items-center",
@@ -38,7 +38,7 @@ export const  ThemeSwitch = () => {
         // "dark:bg-gray-800",
         // "dark:bg-gray-100",
        
-        "text-cyan-400"
+        "text-blue-400"
       )}
       onClick={toggleTheme}
     >
