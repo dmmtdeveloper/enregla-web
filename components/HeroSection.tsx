@@ -1,70 +1,75 @@
-"use client";
-import clsx from "clsx";
 import React from "react";
-import { motion } from "framer-motion";
-import { Button } from "@nextui-org/button";
+import clsx from "clsx";
+import { Spotlight } from "./ui/Spotlight";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import MagicButton from "./ui/MagicButton";
+import { FaLocationArrow } from "react-icons/fa6";
+
 
 export const HeroSection = () => {
   return (
-    <section
-      id="inicio"
-      className="z-[1] relative w-full md:pb-10rem  pb-[20rem] flex items-center text-center justify-center flex-col gap-16 px-8 pt-48 xl:pt-72 hero_background"
-    >
-      <div className="flex flex-col gap-4">
-        <div className="flex flex-col justify-center text-center items-center">
-          <motion.p
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className={clsx(
-              "text-[48px]",
-              "md:text-5xl",
-              "lg:text-6xl",
-              "xl:text-7xl",
-              "xl:w-[900px]",
-              // "text-gray-900",
-              "drop-shadow-md",
-              "text-center",
-              "font-bold",
-              "leading-tight md:px-8",
-              "md:leading-tight",
-              "xl:leading-tight",
+    <section id="inicio" className="relative w-screen">
+      <div className="relative w-full min-h-screen bg-white dark:bg-black-100">
+        <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
+        <Spotlight className="top-20 left-full h-[80vh] w-[50vw]" fill="purple" />
+        <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
 
-              /* Dark Mode */
-              "dark:text-white"
-            )}
-          >
-            Solución integral en <span className="text-purple-300">Seguridad Automotriz</span> 
-          </motion.p>
-        </div>
-
-        <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          className="flex items-center justify-center flex-col gap-6 "
+        <div
+          className={clsx(
+            "h-full w-full",
+            "flex items-center justify-center",
+            "absolute inset-0 pt-10",
+            "bg-grid-black/[0.05]",
+            "dark:bg-grid-white/[0.03]",
+            "bg-white",
+            "dark:bg-black-100"
+          )}
         >
-          <p
+          <div
             className={clsx(
-              "md:px-28",
-              "lg:px-60",
-              "lg:text-[20px]",
-              "text-center",
-              "text-[16px]",
-              "dark:text-[#CAC6DD]",
-              "leading-7 drop-shadow-md"
+              "absolute pointer-events-none",
+              "inset-0 flex items-center",
+              "justify-center",
+              "bg-white",
+              "[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]",
+              "dark:bg-black-100"
             )}
-          >
-            Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus vehículos.
-          </p>
-          <div className="flex  gap-5">
-            <Button className="w-44" size="lg" color="primary" variant="solid">
-              Contáctanos
-            </Button>
-            <Button className="w-44 hidden md:block" color="secondary" size="lg" variant="solid">
-              Ley 21.601
-            </Button>
+          ></div>
+
+          <div
+      
+          className="flex justify-center relative my-20 z-10">
+            <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col items-center justify-center">
+              <h2
+                className={clsx(
+                  "uppercase tracking-widest",
+                  "text-xs text-center",
+                  "max-w-80",
+                  "text-black-100",
+                  "dark:text-blue-100"
+                )}
+              >
+                auto en regla auto seguro
+              </h2>
+              <TextGenerateEffect
+                className="text-center text-[40px] md:text-5xl lg:text-6xl"
+                words="Solución integral en Seguridad Automotriz"
+              />
+
+              <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl dark:text-blue-100 text-black-100">
+                Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus vehículos.
+              </p>
+              <a href="">
+                <MagicButton icon={<FaLocationArrow />} position="right" title="Contactanos" />
+              </a>
+   
+
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 };
+
+

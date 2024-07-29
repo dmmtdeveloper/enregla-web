@@ -25,14 +25,14 @@ export const Links = () => {
         className={clsx(
           "hidden lg:flex lg:gap-0 lg:px-4",
           "items-center justify-center",
-          "gap-4 bg-slate-300 bg-opacity-45",
+          "gap-4 bg-white-100 bg-opacity-45",
           "py-1 px-10 rounded-full",
-          "font-semibold",
+          
           
 
           /*dark mode*/
           "dark:text-white",
-          "dark:bg-[#525269]",
+          "dark:bg-black-200",
           "dark:bg-opacity-90",
         )}
       >
@@ -49,7 +49,7 @@ export const Links = () => {
                   "flex w-full",
                   "items-center justify-center",
                   "px-3 py-3",
-                  "hover:text-green-400",
+                  "hover:text-cyan-200",
                   "transition"
                 )}
                 href={link.hash}

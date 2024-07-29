@@ -14,10 +14,10 @@ export const  ThemeSwitch = () => {
       className={clsx(
         /* default */
         "bottom-5 right-5",
-        "text-[20px]",
-        "text-[#4cb34a]",
-        "w-[40px] h-[40px]",
-        "bg-[#7ADB78]",
+        "text-[24px]",
+        "text-dark-100",
+        // "w-[40px] h-[40px]",
+        // "bg-dark-100",
         "bg-opacity-30",
         "backdrop-blur-[0.5rem]",
         "border-opacity-40",
@@ -35,8 +35,10 @@ export const  ThemeSwitch = () => {
         
         /* dark-mode*/
         "dark:text-purple-500",
-        "dark:bg-gray-800",
-        "dark:bg-gray-100",
+        // "dark:bg-gray-800",
+        // "dark:bg-gray-100",
+       
+        "text-cyan-400"
       )}
       onClick={toggleTheme}
     >

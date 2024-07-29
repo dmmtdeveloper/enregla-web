@@ -27,11 +27,9 @@ export const LinksMenu: React.FC<menuProps> = ({ onClick }) => {
       <ul className="flex flex-col items-center gap-2 mt-10 dark:text-white text-2xl font-semibold mb-16">
         {renderedLinks &&
           renderedLinks.map((link) => (
-            <motion.li
+            <li
               className="h-3/4 flex items-center justify-center"
               key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
             >
               <Link
                 className={clsx(
@@ -39,14 +37,15 @@ export const LinksMenu: React.FC<menuProps> = ({ onClick }) => {
                   "items-center justify-center",
                   "px-3 py-3",
                   "hover:text-green-400",
-                  "transition"
+                  "transition",
+                  "hover:text-cyan-500"
                 )}
                 href={link.hash}
                 onClick={onClick}
               >
                 {link.name}
               </Link>
-            </motion.li>
+            </li>
           ))}
       </ul>
     </>
