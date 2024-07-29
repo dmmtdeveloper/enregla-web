@@ -33,7 +33,7 @@ export const HeroSection = () => {
               "dark:text-white"
             )}
           >
-            Solución integral en seguridad automotriz
+            Solución integral en <span className="text-purple-300">Seguridad Automotriz</span> 
           </motion.p>
         </div>
 
@@ -47,7 +47,6 @@ export const HeroSection = () => {
               "md:px-28",
               "lg:px-60",
               "lg:text-[20px]",
-              "font-semibold",
               "text-center",
               "text-[16px]",
               "dark:text-[#CAC6DD]",

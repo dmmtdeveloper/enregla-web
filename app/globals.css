@@ -21,7 +21,7 @@ body {
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-.hero_background {
+/* .hero_background {
   position: relative;
 }
 
@@ -40,7 +40,7 @@ body {
   filter: blur(1.5px);
   z-index: -1;
   mask-image: linear-gradient(black 70%, transparent);
-}
+} */
 
 @layer utilities {
   .text-balance {
