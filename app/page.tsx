@@ -9,6 +9,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { LawSection } from "@/components/LawSection";
 import MainLayout from "@/components/layout";
 import { ResponsabilitySection } from "@/components/ResponsabilitySection";
+import  Stats  from "@/components/Stats";
 import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
@@ -16,9 +17,10 @@ export default function Home() {
     <MainLayout>
       <HeroSection />
       <ClientSection />
+      <Stats/>
       {/* <CardSection/> */}
-      <Grid/>
-      <BenefitsSection />
+      {/* <Grid/> */}
+      {/* <BenefitsSection /> */}
       <AppSection />
       <Testimonials />
       <ContactSection />

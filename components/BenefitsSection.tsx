@@ -7,19 +7,29 @@ import { Benefits } from "./Benefits/Benefits";
 import { motion } from "framer-motion";
 import { ArticleContainer } from "./Benefits/Article";
 import { IoShieldCheckmark, IoShieldSharp } from "react-icons/io5";
+import clsx from "clsx";
 
 export const BenefitsSection = () => {
   return (
     <motion.div
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="flex flex-col px-8 xl:px-20 gap-14 lg:justify-center bg-white dark:bg-black-100 py-10"
+      className={clsx(
+        "flex flex-col px-8",
+        "xl:px-20 gap-14",
+        "lg:justify-center",
+        "py-10",
+        "bg-white",
+        "dark:bg-black-100"
+      )}
     >
-      <div className="flex sm:flex-col xl:flex gap-5 justify-between">
+      <div className="flex flex-col xl:flex gap-5 justify-between">
         <h3 className="text-5xl xl:text-7xl dark:text-white text-black-100 font-semibold w-full xl:w-[50vw]">
           Beneficios de grabar tu patente
         </h3>
-        <p className="text-black-100 dark:text-white gap-2  xl:text-2xl flex items-end">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <p className="text-black-100 dark:text-white gap-2  xl:text-2xl flex items-end">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
       </div>
       <div className=" scroll-mt-20 justify-center items-center flex flex-col gap-8 grid-cols-4 lg:auto-cols-auto lg:grid">
         <ArticleContainer>

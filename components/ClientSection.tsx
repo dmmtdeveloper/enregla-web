@@ -19,7 +19,7 @@ export const ClientSection = () => {
             "text-[12px]",
             "text-justify text-pretty",
             /* dark mode*/
-            "dark:text-gray-400",
+            "dark:text-gray-400"
           )}
         >
           AYUDANDO A LA GENTE A PROGER SUS VEHICULOS
@@ -31,11 +31,11 @@ export const ClientSection = () => {
         <motion.p className="text-2xl md:text-3xl lg:text-5xl text-center font-semibold text-black-100 dark:text-white">
           "Auto en regla, auto seguro"
         </motion.p>
-      {/* <LampContainer>
+
+        {/* <LampContainer>
         <LampDemo />
       </LampContainer> */}
       </div>
     </section>
   );
 };
-
