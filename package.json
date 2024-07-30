@@ -24,6 +24,7 @@
     "@nextui-org/table": "^2.0.36",
     "@nextui-org/theme": "^2.2.6",
     "@nextui-org/tooltip": "^2.0.36",
+    "@tabler/icons-react": "^3.11.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.19",
     "mini-svg-data-uri": "^1.4.4",
@@ -43,6 +44,7 @@
     "@types/node": "^20.14.8",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@types/react-lottie": "^1.2.10",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.5.2"

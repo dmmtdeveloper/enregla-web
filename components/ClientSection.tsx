@@ -26,7 +26,7 @@ export const ClientSection = () => {
         </motion.p>
         <Paragraph text="Nuestra tecnología en grabado de patentes es la elección preferida de los principales concesionarios y distribuidores automotrices." />
       </div>
-      <div className="flex flex-col items-center justify-center gap-16 pt-24">
+      <div className="flex flex-col  justify-around gap-20">
         <ClientsImage />
         <motion.p className="text-2xl md:text-3xl lg:text-5xl text-center font-semibold text-black-100 dark:text-white">
           "Auto en regla, auto seguro"
