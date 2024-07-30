@@ -25,6 +25,15 @@ const config = {
     },
 
     extend: {
+      boxShadow: {
+        'card-black': 'var(--card-shadow-black)',
+        'card-white': 'var(--card-shadow-white)',
+      },
+      backgroundImage: {
+        'black-gradient': 'var(--black-gradient)',
+        'white-gradient': 'var(--white-gradient)',
+      },
+      
       colors: {
         black: {
           DEFAULT: "#000",
@@ -83,11 +92,10 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
 
-      
       keyframes: {
-        'infinite-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
         },
 
         "accordion-down": {
@@ -168,10 +176,8 @@ const config = {
         scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
 
-      'infinite-scroll': 'infinite-scroll 25s linear infinite',
+      "infinite-scroll": "infinite-scroll 25s linear infinite",
     },
-
-    
   },
   plugins: [
     require("tailwindcss-animate"),

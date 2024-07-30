@@ -6,12 +6,10 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --black-gradient: linear-gradient(
-    144.39deg,
-    #ffffff -278.56%,
-    #6d6d6d -78.47%,
-    #11101d 91.61%
-  );
+  --black-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+  --white-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #f0f0f0 -78.47%, #e0e0e0 91.61%);
+  --card-shadow-black: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+  --card-shadow-white: 0px 20px 100px -10px rgba(255, 255, 255, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,7 +17,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+
   }
 }
 
@@ -44,79 +42,75 @@ body {
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
   }
-  
+
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 }
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
-    
+
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
-    
+
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
     --primary: 240 5.9% 10%;
     --primary-foreground: 0 0% 98%;
-    
+
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
-    
+
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
-    
+
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
-    
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    
+
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
-    
+
     --radius: 0.5rem;
   }
-  
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    
+
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
-    
+
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    
+
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
-    
+
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
-    
+
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    
+
     --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
-    
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    
+
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
 }
-
-
-
 
 /* .hero_background {
   position: relative;
@@ -145,17 +139,11 @@ body {
   }
 }
 
-
-
 /* Stats Section */
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
-    /* #efdefa 0.89%, */
-    /* #dcbef5 17.23%, */
-    /* #bd9df0 42.04%, */
-    /* #ba74e9 55.12%, */
-    #a35ce6 71.54%,
+    /* #efdefa 0.89%, */ /* #dcbef5 17.23%, */ /* #bd9df0 42.04%, */ /* #ba74e9 55.12%, */ #a35ce6 71.54%,
     #7c33cf 100%
   );
   -webkit-background-clip: text;
@@ -163,3 +151,27 @@ body {
   background-clip: text;
   /* text-fill-color: transparent; */
 }
+
+/* Button */
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
+
+/* Benefits  */
+/* .feature-card-black:hover {
+  background: var(--black-gradient);
+  box-shadow: var(--card-shadow-black);
+}
+
+.feature-card-white:hover {
+  background: var(--white-gradient);
+  box-shadow: var(--card-shadow-white);
+} */

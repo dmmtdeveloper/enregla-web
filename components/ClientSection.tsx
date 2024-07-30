@@ -22,20 +22,19 @@ export const ClientSection = () => {
             "dark:text-gray-400"
           )}
         >
-          AYUDANDO A LA GENTE A PROGER SUS VEHICULOS
+          AYUDANDO A LA GENTE A PROTEGER SUS VEHÍCULOS
         </motion.p>
         <Paragraph text="Nuestra tecnología en grabado de patentes es la elección preferida de los principales concesionarios y distribuidores automotrices." />
       </div>
-      <div className="flex flex-col  justify-around gap-20">
+      <div className="flex flex-col justify-around gap-20">
         <ClientsImage />
         <motion.p className="text-2xl md:text-3xl lg:text-5xl text-center font-semibold text-black-100 dark:text-white">
           "Auto en regla, auto seguro"
         </motion.p>
-
-        {/* <LampContainer>
-        <LampDemo />
-      </LampContainer> */}
       </div>
+     
+        <LampDemo />
+     
     </section>
   );
 };

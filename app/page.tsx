@@ -19,8 +19,8 @@ export default function Home() {
       <ClientSection />
       <Stats/>
       {/* <CardSection/> */}
+      <BenefitsSection />
       {/* <Grid/> */}
-      {/* <BenefitsSection /> */}
       <AppSection />
       <Testimonials />
       <ContactSection />
