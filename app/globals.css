@@ -175,3 +175,20 @@ body {
   background: var(--white-gradient);
   box-shadow: var(--card-shadow-white);
 } */
+
+
+.to {
+  --tw-gradient-to: #0072f5 var(--tw-gradient-to-position);
+}
+.from {
+  --tw-gradient-from: #5ea2ef var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(94,162,239,0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.text-transparent {
+  color: transparent;
+}

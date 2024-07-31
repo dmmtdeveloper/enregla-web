@@ -4,7 +4,8 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
-
+import { ButtonContact } from "./buttons/ContactButton";
+import { MovingBorderDemo } from "./buttons/ButtonMoving";
 
 export const HeroSection = () => {
   return (
@@ -36,9 +37,7 @@ export const HeroSection = () => {
             )}
           ></div>
 
-          <div
-      
-          className="flex justify-center relative my-20 z-10">
+          <div className="flex flex-col items-center justify-center relative my-20 z-10">
             <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col items-center justify-center">
               <h2
                 className={clsx(
@@ -52,24 +51,21 @@ export const HeroSection = () => {
                 auto en regla auto seguro
               </h2>
               <TextGenerateEffect
-                className="text-center text-[40px] md:text-5xl lg:text-6xl"
+                className="text-center text-[40px] md:text-5xl lg:text-6xl xl:text-7xl"
                 words="Solución integral en Seguridad Automotriz"
               />
 
-              <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl dark:text-blue-100 text-black-100">
+              <p className="text-center md:tracking-wider mb-8 text-sm md:text-lg lg:text-2xl dark:text-blue-100 text-black-100 xl:max-w-[700px]">
                 Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus vehículos.
               </p>
-              <a href="">
-                <MagicButton icon={<FaLocationArrow />} position="right" title="Contactanos" />
-              </a>
-   
 
+              {/* <MagicButton icon={<FaLocationArrow />} position="right" title="Contactanos" /> */}
+              {/* <ButtonContact/> */}
             </div>
+            <MovingBorderDemo title="Contactanos"></MovingBorderDemo>
           </div>
         </div>
       </div>
     </section>
   );
 };
-
-

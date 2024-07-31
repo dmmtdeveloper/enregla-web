@@ -2,11 +2,11 @@
 const styles = {
     boxWidth: "xl:max-w-[1280px] w-full",
   
-    heading2: "font-semibold xs:text-[48px] text-[40px] dark:text-white text-black-100 xs:leading-[76.8px] leading-[66.8px] w-full",
+    // heading2: "font-semibold xs:text-[48px] text-7xl dark:text-white text-black-100 xs:leading-[76.8px] leading-[66.8px] w-full",
     paragraph: "font-normal dark:text-white text-[18px] leading-[30.8px] text-black-100",
   
     flexCenter: "flex justify-center items-center",
-    flexStart: "flex justify-center items-start",
+    flexStart: "flex pt-10 items-start xl:mt-20",
   
     paddingX: "sm:px-16 px-6",
     paddingY: "sm:py-16 py-6",

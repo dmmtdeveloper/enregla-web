@@ -18,13 +18,13 @@ export default function Home() {
       <HeroSection />
       <ClientSection />
       <Stats/>
-      {/* <CardSection/> */}
       <BenefitsSection />
+      <LawSection />
+      {/* <CardSection/> */}
       {/* <Grid/> */}
       <AppSection />
       <Testimonials />
       <ContactSection />
-      <LawSection />
       <ResponsabilitySection />
       <FooterSection />
     </MainLayout>

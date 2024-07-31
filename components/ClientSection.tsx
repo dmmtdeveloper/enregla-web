@@ -8,7 +8,7 @@ import { LampContainer, LampDemo } from "./ui/LampSection";
 
 export const ClientSection = () => {
   return (
-    <section className="relative bg-white dark:bg-black-100 pb-28">
+    <section className="relative bg-white dark:bg-black-100 pb-36">
       <div className={clsx("flex flex-col", "items-center", "gap-4")}>
         <motion.p
           initial={{ y: -100, opacity: 0 }}
@@ -28,12 +28,14 @@ export const ClientSection = () => {
       </div>
       <div className="flex flex-col justify-around gap-20">
         <ClientsImage />
-        <motion.p className="text-2xl md:text-3xl lg:text-5xl text-center font-semibold text-black-100 dark:text-white">
+        {/* <motion.p className="text-2xl md:text-3xl lg:text-5xl text-center font-semibold text-black-100 dark:text-white">
           "Auto en regla, auto seguro"
-        </motion.p>
+        </motion.p> */}
       </div>
-     
+     <div className="mt-32">
+
         <LampDemo />
+     </div>
      
     </section>
   );

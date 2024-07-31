@@ -50,7 +50,9 @@ export const Links = () => {
                   "items-center justify-center",
                   "px-3 py-3",
                   "hover:text-blue-500",
-                  "transition"
+                  "text-black",
+                  "transition",
+                  "dark:text-white",
                 )}
                 href={link.hash}
               >
