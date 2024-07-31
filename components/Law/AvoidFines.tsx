@@ -1,7 +1,7 @@
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
-import multas from "@/public/assets/img/multas.png";
-import multasWhite from "@/public/assets/img/multasWhite.png";
+// import multas from "@/public/assets/img/multas.png";
+// import multasWhite from "@/public/assets/img/multasWhite.png";
 import { Subtitles } from "../Subtitles/Subtitles";
 export const AvoidFines = () => {
   return (
@@ -13,7 +13,7 @@ export const AvoidFines = () => {
         </p>
       </div>
 
-      <div className="flex items-center justify-center">
+      {/* <div className="flex items-center justify-center">
         <Image
           className="w-96 h-auto hidden dark:block"
           src={multas}
@@ -30,7 +30,7 @@ export const AvoidFines = () => {
           width={256}
           height={256}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

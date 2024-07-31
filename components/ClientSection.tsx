@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Paragraph } from "./text/Paragraph";
 import { ClientsImage } from "@/components/IconsImages/ClientsIcons";
 import clsx from "clsx";
-import { LampContainer, LampDemo } from "./ui/LampSection";
 
 export const ClientSection = () => {
   return (
@@ -32,11 +31,6 @@ export const ClientSection = () => {
           "Auto en regla, auto seguro"
         </motion.p> */}
       </div>
-     <div className="mt-32">
-
-        <LampDemo />
-     </div>
-     
     </section>
   );
 };

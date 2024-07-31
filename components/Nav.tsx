@@ -21,7 +21,7 @@ export const Nav = () => {
   return (
     <nav
       className={clsx(
-        "fixed w-full h-20 z-[99999]",
+        "fixed w-full h-20 z-[99999] xl:px-44",
         // "shadow-md",
   
         
@@ -36,7 +36,7 @@ export const Nav = () => {
         
       )}
     >
-      <div className="flex justify-between items-center h-full w-full px-4 xl:px-8">
+      <div className="flex justify-between items-center h-full w-full">
         <Logo />
         <Links />
         <div className="flex items-center justify-center gap-5">

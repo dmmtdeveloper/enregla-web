@@ -5,7 +5,7 @@ import React from "react";
 
 const Stats = () => {
   return (
-    <section className={`${styles.flexCenter} flex-row flex-wrap animation-scroll dark:bg-black-100 bg-white pb-20`}>
+    <section className="flex-row flex-wrap animation-scroll dark:bg-black-100 bg-white pb-20 items-center justify-center flex xl:px-16">
       {stats.map((stat) => (
         <div key={stat.id} className={`flex-1 flex justify-center items-center flex-row m-3 px-4 transform transition duration-300 hover:scale-[1.15] active:scale-105`}>
           <h4

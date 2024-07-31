@@ -6,8 +6,10 @@ import { ContactSection } from "@/components/ContactSection";
 import { FooterSection } from "@/components/FooterSection";
 import Grid from "@/components/Grid";
 import { HeroSection } from "@/components/HeroSection";
+import { LampSection } from "@/components/LampSection";
 import { LawSection } from "@/components/LawSection";
 import MainLayout from "@/components/layout";
+import { OurServices } from "@/components/OurServices";
 import { ResponsabilitySection } from "@/components/ResponsabilitySection";
 import  Stats  from "@/components/Stats";
 import { Testimonials } from "@/components/Testimonials";
@@ -16,9 +18,11 @@ export default function Home() {
   return (
     <MainLayout>
       <HeroSection />
+      <LampSection/>
       <ClientSection />
-      <Stats/>
       <BenefitsSection />
+      <OurServices/>
+      <Stats/>
       <LawSection />
       {/* <CardSection/> */}
       {/* <Grid/> */}

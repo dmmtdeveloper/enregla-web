@@ -2,9 +2,6 @@ import React from "react";
 import clsx from "clsx";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import MagicButton from "./ui/MagicButton";
-import { FaLocationArrow } from "react-icons/fa6";
-import { ButtonContact } from "./buttons/ContactButton";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
 
 export const HeroSection = () => {

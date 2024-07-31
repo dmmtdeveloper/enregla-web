@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import clsx from "clsx";
 
 export function LampDemo() {
   return (
@@ -14,7 +15,14 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+        className={clsx(
+          "mt-8 bg-gradient-to-br",
+          "from-slate-300 to-slate-500",
+          "py-4 bg-clip-text",
+          "text-center text-4xl",
+          "font-medium tracking-tight",
+          "text-transparent md:text-7xl"
+        )}
       >
         "Auto en regla <br /> auto seguro"
       </motion.h1>
@@ -22,20 +30,9 @@ export function LampDemo() {
   );
 }
 
-export const LampContainer = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
+export const LampContainer = ({ children, className }: { children: React.ReactNode; className?: string }) => {
   return (
-    <div
-      className={cn(
-        "relative flex min-h-screen flex-col dark:bg-black-100 bg-white w-full rounded-md",
-        className
-      )}
-    >
+    <div className={cn("relative flex min-h-screen flex-col dark:bg-black-100 bg-white w-full rounded-md", className)}>
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
@@ -94,9 +91,7 @@ export const LampContainer = ({
         ></motion.div>
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] dark:bg-black-100 "></div>
       </div>
-      <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">
-        {children}
-      </div>
+      <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">{children}</div>
     </div>
   );
 };
