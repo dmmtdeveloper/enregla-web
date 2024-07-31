@@ -22,12 +22,12 @@ export default function Home() {
       <ClientSection />
       <BenefitsSection />
       <OurServices/>
-      <Stats/>
       <LawSection />
+      <Stats/>
+      <Testimonials />
       {/* <CardSection/> */}
       {/* <Grid/> */}
       <AppSection />
-      <Testimonials />
       <ContactSection />
       <ResponsabilitySection />
       <FooterSection />

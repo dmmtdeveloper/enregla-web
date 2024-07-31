@@ -59,7 +59,7 @@ export const HeroSection = () => {
               {/* <MagicButton icon={<FaLocationArrow />} position="right" title="Contactanos" /> */}
               {/* <ButtonContact/> */}
             </div>
-            <MovingBorderDemo title="Contactanos"></MovingBorderDemo>
+            <MovingBorderDemo title="Contáctanos"></MovingBorderDemo>
           </div>
         </div>
       </div>

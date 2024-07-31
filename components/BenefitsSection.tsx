@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 import styles, { layout } from "@/lib/style";
 import { benefits } from "@/lib/Benefits";
-import Button from "./buttons/Button";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
 
 type BenefitsProps = {
@@ -20,8 +19,8 @@ const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, content, ind
       <div
         className={`flex flex-row p-6 rounded-[20px] gap-6  dark:hover:bg-black-300 hover:bg-blue-200 transition duration-300 items-start`}
       >
-        <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} dark:bg-slate-700 bg-blue-100`}>
-          <Icon className="icon w-[30px] h-[30px] object-contain text-blue-400" />
+        <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} dark:bg-slate-700 bg-gray-200`}>
+          <Icon className="icon w-[30px] h-[30px] object-contain text-green" />
         </div>
         <div className="flex-1 flex flex-col ml-3">
           <h4
@@ -55,16 +54,15 @@ export const BenefitsSection = () => {
     >
       <div className={layout.sectionInfo}>
         <h2 className="font-semibold text-[48px] xl:text-7xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-4">
-          Beneficios de{" "}
-          <span className="from-[#6FEE8D] to-[#17c964] bg-clip-text text-transparent bg-gradient-to-b">grabar</span> tu
-          patente
+          {" "}
+          <span className="from-[#6FEE8D] to-[#17c964] bg-clip-text text-transparent bg-gradient-to-b">Beneficios</span> de gravar tu patente
         </h2>
         <p className={`${styles.paragraph} max-w-[600px] mt-5 mb-8`}>
           Esta medida no solo cumple con la Ley 21.601, sino que también introduce cambios significativos en la forma en
           que identificamos nuestros vehículos.
         </p>
         {/* <Button styles="mt-10" /> */}
-        <MovingBorderDemo title="Contactanos"></MovingBorderDemo>
+        <MovingBorderDemo title="Contáctanos"></MovingBorderDemo>
       </div>
 
       <div className={`${layout.sectionImg} flex flex-col items-start`}>
