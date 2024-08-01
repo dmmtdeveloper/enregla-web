@@ -13,6 +13,7 @@ import { OurServices } from "@/components/OurServices";
 import { ResponsabilitySection } from "@/components/ResponsabilitySection";
 import  Stats  from "@/components/Stats";
 import { Testimonials } from "@/components/Testimonials";
+import { TestimonialSection } from "@/components/TestimonialSection";
 
 export default function Home() {
   return (
@@ -23,14 +24,15 @@ export default function Home() {
       <BenefitsSection />
       <OurServices/>
       <LawSection />
-      <Stats/>
-      <Testimonials />
+      <TestimonialSection/>
+      {/* <Stats/> */}
+      {/* <Testimonials /> */}
       {/* <CardSection/> */}
       {/* <Grid/> */}
-      <AppSection />
-      <ContactSection />
-      <ResponsabilitySection />
-      <FooterSection />
+      {/* <AppSection /> */}
+      {/* <ContactSection /> */}
+      {/* <ResponsabilitySection /> */}
+      {/* <FooterSection /> */}
     </MainLayout>
   );
 }

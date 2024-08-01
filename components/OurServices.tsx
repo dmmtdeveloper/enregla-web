@@ -1,9 +1,33 @@
-import React from "react";
+import React, { SVGProps } from "react";
 import styles, { layout } from "@/lib/style";
 import Image from "next/image";
 import radarImageWhite from "@/public/assets/img/radarappwhite.png";
 import radarImageBlack from "@/public/assets/img/radarappblack.png";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
+import { services } from "@/lib/OurServices";
+import clsx from "clsx";
+
+type OurServiceProps = {
+  title: string;
+  content: string;
+  index: number;
+  icon: React.ComponentType<SVGProps<SVGSVGElement>>;
+};
+
+const OurServicesCard: React.FC<OurServiceProps> = ({ icon: icon, title, content, index }) => {
+  return (
+    <div>
+      <div className="flex flex-col gap-2">
+        <h4 className={clsx("font-semibold", "dark:text-white", "text-black-100", "text-[24px]", "leading-[23px]")}>
+          {title}
+        </h4>
+        <p className={clsx("dark:text-slate-400", "text-black-100", "text-[16px]", "leading-[24px]", "mb-1", "xl:max-w-[600px]")}>
+          {content}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export const OurServices = () => {
   return (
@@ -11,16 +35,16 @@ export const OurServices = () => {
       <div className={`${layout.sectionImgReverse} `}>
         <Image
           className="hidden dark:block relative z-[5] w-[600px] h-auto"
-          width={600}
-          height={600}
+          width={640}
+          height={721}
           src={radarImageWhite}
           alt="enregla"
           priority={true}
         />
         <Image
           className="dark:hidden relative z-[5] w-[600px] h-auto"
-          width={600}
-          height={600}
+          width={640}
+          height={721}
           src={radarImageBlack}
           alt="enregla"
           priority={true}
@@ -32,20 +56,21 @@ export const OurServices = () => {
       </div>
 
       <div className={layout.sectionInfo}>
-        <h2 className="font-semibold text-[48px] xl:text-7xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-4">
-          ¿Por que {" "}
-          <span className="from-[#6FEE8D] to-[#17c964] bg-clip-text text-transparent bg-gradient-to-b">grabar</span>{" "}
-          tu patente con nosotros?
+        <h2 className="font-semibold text-[48px] xl:text-7xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-8">
+          ¿Por que{" "}
+          <span className="from-[#6FEE8D] to-[#17c964] bg-clip-text text-transparent bg-gradient-to-b">grabar</span> tu
+          patente con nosotros?
         </h2>
-        <p className={`${styles.paragraph} max-w-[700px] mt-5 mb-8`}>
-        Altos estándares de grabado, permitiéndole al cliente obtener una alta seguridad a su segundo bien más preciado.
-        </p>
 
-        <p className={`${styles.paragraph} max-w-[700px] mt-5 mb-8`}>Nuestra solución cuenta con una aplicación, que registra los grabados en tiempo real. Que facilita la lectura automática de patente sin necesidad de tipeo, asegurando un proceso de grabado sin errores. </p>
-
-        <p className={`${styles.paragraph} max-w-[700px] mt-5 mb-8`}>Poseemos precios competitivos acorde al bolsillo de nuestros clientes.</p>
+      <div className="flex flex-col gap-10">
+        {services.map((service, index) => (
+          <OurServicesCard key={service.id} {...service} index={index} />
+        ))}
         <MovingBorderDemo title="Acerca de"></MovingBorderDemo>
       </div>
+      
+      </div>
+
     </section>
   );
 };

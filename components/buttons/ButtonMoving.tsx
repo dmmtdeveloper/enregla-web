@@ -6,18 +6,18 @@ import clsx from "clsx";
 type buttonBorderProps = {
   title: string;
 };
-export function MovingBorderDemo({ title }): React.FC<buttonBorderProps> {
+export function MovingBorderDemo({ title }: buttonBorderProps): JSX.Element{
   return (
     <div>
       <Button
         borderRadius="3rem"
         className={clsx(
-          "bg-blue-200",
+          "bg-green",
           "border-neutral-200",
           "shadow-md text-[18px]",
           "dark:bg-slate-900",
           "dark:border-slate-800",
-          "text-black-100",
+          "text-white",
           "dark:text-gray-50"
         )}
       >

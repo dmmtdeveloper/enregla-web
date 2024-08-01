@@ -21,7 +21,7 @@ export const Nav = () => {
   return (
     <nav
       className={clsx(
-        "fixed w-full h-20 z-[99999] xl:px-44",
+        "fixed w-full h-20 z-[99999] xl:px-44 px-4",
         // "shadow-md",
   
         
