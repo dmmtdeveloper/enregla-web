@@ -7,7 +7,7 @@ import { MovingBorderDemo } from "./buttons/ButtonMoving";
 export const HeroSection = () => {
   return (
     <section id="inicio" className="relative w-screen">
-      <div className="relative w-full min-h-screen bg-white dark:bg-black-100">
+      <div className="relative w-full min-h-screen  dark:bg-black-100">
         <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
         <Spotlight className="top-20 left-full h-[80vh] w-[50vw]" fill="purple" />
         <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
@@ -17,9 +17,8 @@ export const HeroSection = () => {
             "h-full w-full",
             "flex items-center justify-center",
             "absolute inset-0 pt-10",
-            "bg-grid-black/[0.05]",
+            "bg-grid-black/[0.015]",
             "dark:bg-grid-white/[0.03]",
-            "bg-white",
             "dark:bg-black-100"
           )}
         >
@@ -28,7 +27,7 @@ export const HeroSection = () => {
               "absolute pointer-events-none",
               "inset-0 flex items-center",
               "justify-center",
-              "bg-white",
+              "",
               "[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]",
               "dark:bg-black-100"
             )}
@@ -48,7 +47,7 @@ export const HeroSection = () => {
                 auto en regla auto seguro
               </h2>
               <TextGenerateEffect
-                className="text-center text-[40px] md:text-5xl lg:text-6xl xl:text-7xl"
+                className="text-center text-[40px]  md:text-5xl lg:text-4xl xl:text-[68px]"
                 words="Solución integral en Seguridad Automotriz"
               />
 

@@ -1,17 +1,18 @@
 import clsx from "clsx";
-import React from "react";
+import React, { SVGProps } from "react";
 
 type buttonPropps = {
   title: string;
-  icon: React.ReactNode;
+  icon: React.ComponentType<SVGProps<SVGSVGElement>>;
   position: string;
   handleClick?: () => void;
   otherClasses?: string;
 };
 
-const MagicButton = ({ title, icon, position, handleClick, otherClasses }): React.FC<buttonPropps> => {
+const MagicButton: React.FC<buttonPropps> = ({title, icon, position, handleClick, otherClasses }) => {
   return (
     <button
+    onClick={handleClick}
       className={clsx(
         "relative w-full",
         "inline-flex h-12",
@@ -42,7 +43,6 @@ const MagicButton = ({ title, icon, position, handleClick, otherClasses }): Reac
         {position === "left" && icon}
         {title}
         {position === "right" && icon}
-        {handleClick}
       </span>
     </button>
   );

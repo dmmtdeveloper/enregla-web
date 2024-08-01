@@ -16,7 +16,7 @@ export const feedback:Feedback[] = [
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. In inventore omnis nam commodi laboriosam repudiandae", 
       name: "user1",
-      title: "Region Metropolitana",
+      title: "Difor - Automotora",
       img: user,
     },
     {
@@ -24,7 +24,7 @@ export const feedback:Feedback[] = [
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. In inventore omnis nam commodi laboriosam repudiandae",
       name: "user2",
-      title: "Region Metropolitana",
+      title: "Difor - Automotora",
       img: user,
     },
     {
@@ -32,15 +32,7 @@ export const feedback:Feedback[] = [
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. In inventore omnis nam commodi laboriosam repudiandae",
       name: "user3",
-      title: "Region Metropolitana",
-      img: user,
-    },
-    {
-      id: "feedback-3",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. In inventore omnis nam commodi laboriosam repudiandae",
-      name: "user4",
-      title: "Region Metropolitana",
+      title: "Sergio escobar - Automotora",
       img: user,
     },
   ];

@@ -3,6 +3,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 // import { CardSection } from "@/components/CardSection";
 import { ClientSection } from "@/components/ClientSection";
 import { ContactSection } from "@/components/ContactSection";
+import CTA from "@/components/CTA";
 import { FooterSection } from "@/components/FooterSection";
 import Grid from "@/components/Grid";
 import { HeroSection } from "@/components/HeroSection";
@@ -20,11 +21,12 @@ export default function Home() {
     <MainLayout>
       <HeroSection />
       <LampSection/>
-      <ClientSection />
       <BenefitsSection />
       <OurServices/>
       <LawSection />
+      <ClientSection />
       <TestimonialSection/>
+      <CTA/>
       {/* <Stats/> */}
       {/* <Testimonials /> */}
       {/* <CardSection/> */}

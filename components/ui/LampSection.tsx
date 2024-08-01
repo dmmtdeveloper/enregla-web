@@ -17,9 +17,10 @@ export function LampDemo() {
         }}
         className={clsx(
           "mt-8 bg-gradient-to-br",
-          "from-slate-300 to-slate-500",
+          "dark:from-slate-300 dark:to-slate-400",
+          "from-slate-700 to-slate-900",
           "py-4 bg-clip-text",
-          "text-center text-4xl",
+          "text-center text-5xl",
           "font-medium tracking-tight",
           "text-transparent md:text-7xl"
         )}
@@ -32,7 +33,7 @@ export function LampDemo() {
 
 export const LampContainer = ({ children, className }: { children: React.ReactNode; className?: string }) => {
   return (
-    <div className={cn("relative flex min-h-screen flex-col dark:bg-black-100 bg-white w-full rounded-md", className)}>
+    <div className={cn("relative flex min-h-screen flex-col dark:bg-black-100 w-full rounded-md", className)}>
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
@@ -45,10 +46,39 @@ export const LampContainer = ({ children, className }: { children: React.ReactNo
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
           }}
-          className="absolute inset-auto right-1/2 h-56 overflow-visible w-[30rem] bg-gradient-conic from-cyan-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
+          className={clsx(
+            "absolute inset-auto right-1/2",
+            "h-56 overflow-visible w-[30rem]",
+            "text-white",
+            "[--conic-position:from_70deg_at_center_top]",
+
+            //dark mode
+            "dark:bg-gradient-conic",
+            "dark:from-cyan-500",
+            "dark:via-transparent",
+            "dark:to-transparent"
+          )}
         >
-          <div className="absolute w-[100%] left-0 dark:bg-black-100 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
-          <div className="absolute w-40 h-[100%] left-0 dark:bg-black-100 bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
+          <div
+            className={clsx(
+              "absolute w-[100%]",
+              "left-0",
+              "h-40 bottom-0 z-20",
+              "[mask-image:linear-gradient(to_top,white,transparent)]",
+
+              //dark mode
+              "dark:bg-black-100"
+            )}
+          />
+          <div
+            className={clsx(
+              "absolute w-40 h-[100%]",
+              "left-0",
+              "dark:bg-black-100",
+              "bottom-0 z-20",
+              "[mask-image:linear-gradient(to_right,white,transparent)]"
+            )}
+          />
         </motion.div>
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
@@ -61,7 +91,7 @@ export const LampContainer = ({ children, className }: { children: React.ReactNo
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
           }}
-          className="absolute inset-auto left-1/2 h-56 w-[30rem] bg-gradient-conic from-transparent via-transparent to-cyan-500 text-white [--conic-position:from_290deg_at_center_top]"
+          className="absolute inset-auto left-1/2 h-56 w-[30rem] dark:bg-gradient-conic dark:from-transparent dark:via-transparent dark:to-cyan-500 text-white [--conic-position:from_290deg_at_center_top]"
         >
           <div className="absolute w-40 h-[100%] right-0 dark:bg-black-100 bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
           <div className="absolute w-[100%] right-0 dark:bg-black-100 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />

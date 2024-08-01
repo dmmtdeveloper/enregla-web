@@ -43,7 +43,8 @@ export const ButtonContact = () => {
           "disabled:shadow",
           
           /*----dark mode----*/
-        
+        "dark:bg-green",
+        "dark:text-black-100"
 
         )}
         // onClick={() => {

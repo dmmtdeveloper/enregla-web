@@ -20,7 +20,7 @@ const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, content, ind
         className={`flex flex-row p-6 gap-6 items-start`}
       >
         
-          <Icon className="icon w-[30px] h-[30px] object-contain text-green" />
+          <Icon className="icon w-[30px] h-[30px] object-contain dark:text-green  text-[#0072F5]" />
         
         <div className="flex-1 flex flex-col ml-3 gap-1">
           <h4
@@ -50,12 +50,12 @@ export const LawSection = () => {
       id="benefits"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="flex md:flex-row flex-col px-4 xl:px-44 sm:py-16 py-6 bg-white dark:bg-black-100"
+      className="flex md:flex-row flex-col px-4 xl:px-44 sm:py-16 py-6 dark:bg-black-100"
     >
       <div className={layout.sectionInfo}>
         <h2 className="font-semibold text-[48px] xl:text-7xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-4">
           Conoce más acerca de la{" "}
-          <span className="from-[#6FEE8D] to-[#17c964] bg-clip-text text-transparent bg-gradient-to-b">ley 21.601</span> 
+          <span className="dark:from-[#6FEE8D] dark:to-[#17c964] from-[#5EA2EF] to-[#0072F5] bg-clip-text text-transparent bg-gradient-to-b">ley 21.601</span> 
         </h2>
         <p className={clsx("dark:text-slate-400", "text-black-100", "text-[16px]", "leading-[24px]", "mb-1", "xl:max-w-[600px] mb-10")}>
         En septiembre del 2023 el Gobierno promulgó la ley 21.601. La ley busca prevenir la venta de vehículos robados y la venta de espejos retrovisores entre otros elementos de los vehículos venidos desde el mercado no autorizado.

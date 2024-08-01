@@ -17,7 +17,6 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-
   }
 }
 
@@ -112,27 +111,6 @@ body {
   }
 }
 
-/* .hero_background {
-  position: relative;
-}
-
-.hero_background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0 0 0/ 0.55), rgb(0 0 0/ 0.1)),url("../public/assets/img/HeroImage.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: fill;
-  filter: blur(1.5px);
-  z-index: -1;
-  mask-image: linear-gradient(black 70%, transparent);
-} */
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -176,15 +154,16 @@ body {
   box-shadow: var(--card-shadow-white);
 } */
 
-
 .to {
   --tw-gradient-to: #0072f5 var(--tw-gradient-to-position);
 }
 .from {
   --tw-gradient-from: #5ea2ef var(--tw-gradient-from-position);
-  --tw-gradient-to: rgba(94,162,239,0) var(--tw-gradient-to-position);
+  --tw-gradient-to: rgba(94, 162, 239, 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -198,14 +177,12 @@ body {
   filter: blur(750px);
 }
 
-.pink__gradient {
-  background: linear-gradient(90deg, #66e785  0%, #a8f0c7 100%);
-  filter: blur(900px);
-}
 
 .green__gradient {
   background: linear-gradient(180deg, #66e785 0%, #a8f0c7 100%);
   filter: blur(900px);
 }
 
-
+.background-cta {
+  background: linear-gradient(to right top, #000319, #003a5d, #007491, #00b19b, #12eb79);
+}
