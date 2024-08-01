@@ -17,10 +17,10 @@ const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, content, ind
   return (
     <div className="xl:px-24">
       <div
-        className={`flex flex-row p-6 rounded-[20px] gap-6  dark:hover:bg-black-300 hover:bg-blue-200 transition duration-300 items-start`}
+        className={`flex flex-row p-6 rounded-[20px] gap-6  transition duration-300 items-start`}
       >
-        <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} dark:bg-slate-700 bg-gray-200`}>
-          <Icon className="icon w-[30px] h-[30px] object-contain text-green" />
+        <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} dark:bg-slate-700 bg-slate-200`}>
+          <Icon className="icon w-[30px] h-[30px] object-contain text-green " />
         </div>
         <div className="flex-1 flex flex-col ml-3">
           <h4

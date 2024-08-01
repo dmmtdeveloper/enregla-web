@@ -27,9 +27,6 @@ export const ClientSection = () => {
       </div>
       <div className="flex flex-col justify-around gap-20">
         <ClientsImage />
-        {/* <motion.p className="text-2xl md:text-3xl lg:text-5xl text-center font-semibold text-black-100 dark:text-white">
-          "Auto en regla, auto seguro"
-        </motion.p> */}
       </div>
     </section>
   );
