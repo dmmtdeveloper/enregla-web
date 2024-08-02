@@ -22,7 +22,7 @@ const Stats = () => {
           </h4>
           <p
             className={clsx(
-              "xl:text-[20px]",
+              "xl:text-[25px]",
               "leading-[26px]",
               "text-[16px]",
               "font-normal",

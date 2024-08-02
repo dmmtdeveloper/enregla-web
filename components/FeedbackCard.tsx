@@ -19,14 +19,7 @@ export const FeedbackCard: React.FC<cardProps> = ({ content, name, title, img })
         "rounded-[20px] max-w-[370px]",
         "md:mr-10 sm:mr-5 mr-0 my-5",
         "transition duration-300",
-
-        /*hover efect*/
-        "hover:bg-slate-200",
-        "hover:scale-[1.15]",
-        "active:scale-105",
-        "transition",
-        "duration-300",
-
+        
         /* dark-mode*/
         "dark:hover:bg-gray-900"
       )}

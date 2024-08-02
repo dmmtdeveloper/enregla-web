@@ -1,34 +1,17 @@
+"use client";
 import React from "react";
-import { feedback } from "@/lib/testimonials";
-import styles from "@/lib/style";
-import { FeedbackCard } from "./FeedbackCard";
+import { motion } from "framer-motion";
+import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
+import { testimonials } from "@/lib/data";
 import clsx from "clsx";
 
-export const TestimonialSection = () => {
+export const TestimonialScroll = () => {
   return (
-    <section
-      id="clientes"
-      className={clsx(
-        "flex flex-col",
-        "md:flex-row xl:flex-col",
-        "px-4 xl:px-[44px]",
-        "sm:py-16",
-        "dark:bg-black-100",
-        "pt-40 mb-40"
-      )}
+    <motion.div
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      className="px-4  dark:bg-black-100 pb-32 z-[5]"
     >
-      {/* modificar gradients considerar modo dark y light mode */}
-      <div className="hidden ">
-        <div className="dark:absolute z-[1] -right-1/2 top-0 w-[20%] h-[20%] rounded-full white__gradient" />
-        <div className="dark:absolute z-[0] -right-1/2 bottom-0 w-[40%] h-[20%] rounded-full green__gradient" />
-      </div>
-
-      {/* modificar gradients */}
-      <div className="hidden">
-        <div className="dark:absolute z-[1] -right-1/2 top-0 w-[20%] h-[20%] rounded-full white__gradient" />
-        <div className="dark:absolute z-[0] -right-1/2 bottom-0 w-[40%] h-[20%] rounded-full green__gradient" />
-      </div>
-      
       <div
         className={clsx(
           "w-full flex justify-between",
@@ -62,7 +45,11 @@ export const TestimonialSection = () => {
         </div> */}
       </div>
 
-     
-    </section>
+      <div>
+        <div className="rounded-md flex flex-col antialiased items-center justify-center relative">
+          <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
+        </div>
+      </div>
+    </motion.div>
   );
 };

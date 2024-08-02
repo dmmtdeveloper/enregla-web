@@ -1,9 +1,12 @@
 "use client";
-import { cn } from "@/lib/utils";
-import React, { useEffect, useState } from "react";
-import { TestimonialCard } from "../TestimonialCard";
 
-export const InfiniteMovingCards = ({
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import client from "@/public/assets/img/client.jpg"
+import Stats from "../Stats";
+
+export const InfiniteMovingStats = ({
   items,
   direction = "left",
   speed = "fast",
@@ -105,7 +108,7 @@ export const InfiniteMovingCards = ({
             key={idx}
           >
             <blockquote>
-              <TestimonialCard/>
+              <Stats/>
               <div
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
+import { InfiniteMovingStats } from "./ui/InfiniteMovingStats";
 import { testimonials } from "@/lib/data";
 
 export const StatsSection = () => {
@@ -13,7 +13,7 @@ export const StatsSection = () => {
     >
       <div>
         <div className="h-[20vh]  rounded-md flex flex-col antialiased items-center justify-center relative">
-          <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
+          <InfiniteMovingStats items={testimonials} direction="right" speed="slow" />
         </div>
       </div>
     </motion.div>
