@@ -13,7 +13,6 @@ export const ButtonContact = () => {
         href="#contact"
         className={clsx(
           /*----default state----*/
-          "bg-blue-500",
           "text-white text-[18px]",
           "px-8 py-5 mt-6 leading-6",
           "rounded-full",
@@ -43,7 +42,7 @@ export const ButtonContact = () => {
           "disabled:shadow",
           
           /*----dark mode----*/
-        "dark:bg-green",
+        "bg-green",
         "dark:text-black-100"
 
         )}

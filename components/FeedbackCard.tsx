@@ -58,7 +58,7 @@ export const FeedbackCard: React.FC<cardProps> = ({ content, name, title, img })
 
         <div className="flex flex-col ml-4">
           <h4 className="font-semibold text-[20px] leading-[32px] dark:text-white text-black-100">{name}</h4>
-          <p className="text-sm leading-[24px] dark:text-green text-[#0072F5] text-black-200">{title}</p>
+          <p className="text-sm leading-[24px] text-green  text-black-200">{title}</p>
         </div>
       </div>
     </div>

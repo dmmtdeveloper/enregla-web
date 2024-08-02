@@ -13,19 +13,19 @@ export const Footer = () => {
           <Logoenregla />
         </div>
 
-        <div className={clsx("flex-[1.5]", "w-full flex flex-row", "justify-between", "flex-wrap", "md:mt-0", "mt-10")}>
+        <div className={clsx("flex-[1.5]", "w-full  flex flex-row", "justify-between", "flex-wrap", "md:mt-0", "mt-10")}>
           {footerLinks.map((footerLink, index) => (
             <div key={index} className="flex flex-col my-4 min-w-[150px]">
               <h4 className="text-black-100 dark:text-white-100 text-[18px] font-semibold leading-[27px]">
                 {footerLink.title}
               </h4>
-              <ul>
+              <ul className="">
                 {footerLink.links.map((link, name) => (
                   <li
                     key={name}
                     className="my-2 text-[16px] dark:text-white-200 text-black-200 leading-[24px] cursor-pointer hover:text-green dark:hover:text-green"
                   >
-                    <a href={link.link} target="_blank" rel="noopener noreferrer">
+                    <a href={link.name} target="_blank" rel="noopener noreferrer">
                       {link.name}
                     </a>
                   </li>

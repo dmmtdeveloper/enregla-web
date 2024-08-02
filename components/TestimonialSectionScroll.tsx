@@ -35,14 +35,12 @@ export const TestimonialScroll = () => {
           )}
         >
           ¿Que dicen nuestros{" "}
-          <span className="dark:from-[#6FEE8D] dark:to-[#17c964] from-[#5EA2EF] to-[#0072F5] bg-clip-text text-transparent bg-gradient-to-b">
+          <span className="from-[#6FEE8D] to-[#25D366]  bg-clip-text text-transparent bg-gradient-to-b">
             clientes
           </span>
           ?
         </h1>
-        {/* <div className="w-full md:mt-0 mt-6">
-          <p className={`${styles.paragraph} text-left max-w-[450px]`}>clientes satisfechos</p>
-        </div> */}
+     
       </div>
 
       <div>

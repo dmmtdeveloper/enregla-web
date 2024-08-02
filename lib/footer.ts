@@ -34,11 +34,11 @@ export const footerLinks = [
     links: [
       {
         name: "Lunes a domingo",
-        link: "https://www.hoobank.com/help-center/",
+        // link: "https://www.hoobank.com/help-center/",
       },
       {
         name: "09:00 a 19:00 hrs.",
-        link: "https://www.hoobank.com/partners/",
+        // link: "https://www.hoobank.com/partners/",
       },
       // {
       //   name: "Suggestions",
@@ -60,11 +60,11 @@ export const footerLinks = [
     links: [
       {
         name: "Preguntas frecuentes",
-        link: "https://www.hoobank.com/our-partner/",
+        // link: "https://www.hoobank.com/our-partner/",
       },
       {
         name: "enregla app",
-        link: "https://www.hoobank.com/become-a-partner/",
+        // link: "https://www.hoobank.com/become-a-partner/",
       },
     ],
   },
@@ -74,12 +74,12 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: FaWhatsapp,
-    link: "https://www.instagram.com/",
+    link: "https://www.whatsapp.com/",
   },
   {
     id: "social-media-2",
     icon: FaInstagram,
-    link: "https://www.facebook.com/",
+    link: "https://www.instagram.com/",
   },
   {
     id: "social-media-3",

@@ -24,7 +24,7 @@ const CTA = () => {
           "xl:flex-1 xl:justify-between",
           "xl:items-center gap-5",
           "xl:p-20 py-10 px-10",
-          "bg-slate-300 rounded-3xl xl:rounded-[5rem]",
+          "bg-white-300 rounded-3xl xl:rounded-[5rem]",
           "dark:bg-black-200"
         )}
       >
@@ -34,8 +34,8 @@ const CTA = () => {
               "font-semibold",
               "text-[32px] md:text-[40px]",
               "xl:text-7xl xl:max-w-[700px]",
-              "dark:text-white",
-              "text-black-100",
+              "text-white",
+              "text-black-400",
               "xl:leading-[76.8px]",
               "leading-[35px]",
               "w-full mb-4"

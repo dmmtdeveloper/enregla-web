@@ -20,7 +20,7 @@ const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, content, ind
         <div
           className={`w-[64px] h-[64px] rounded-full lg:flex justify-center items-center dark:bg-slate-700 bg-slate-200 hidden`}
         >
-          <Icon className="icon w-[30px] h-[30px] object-contain dark:text-green text-[#0072F5] " />
+          <Icon className="icon w-[30px] h-[30px] object-contain text-green" />
         </div>
         <div className="flex-1 flex flex-col ml-3">
           <h4
@@ -55,7 +55,7 @@ export const BenefitsSection = () => {
       <div className={layout.sectionInfo}>
         <h2 className="font-semibold text-[48px] xl:text-7xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-4">
           {" "}
-          <span className="dark:from-[#6FEE8D] dark:to-[#7ADB78] from-[#5EA2EF] to-[#0072F5] bg-clip-text text-transparent bg-gradient-to-b">
+          <span className="from-[#6FEE8D] to-[#25D366]  bg-clip-text text-transparent bg-gradient-to-b">
             Beneficios
           </span>{" "}
           de gravar tu patente

@@ -6,7 +6,6 @@ import { StatsSection} from "@/components/StatsSectionContainer";
 import { LampSection } from "@/components/LampSection";
 import { ClientSection } from "@/components/ClientSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
-import { TestimonialSection } from "@/components/TestimonialSection";
 import CTA from "@/components/CTA";
 import MainLayout from "@/components/layout";
 import { TestimonialScroll } from "@/components/TestimonialSectionScroll";
@@ -22,16 +21,8 @@ export default function Home() {
       <LawSection />
       <ClientSection />
       <TestimonialScroll/>
-      {/* <TestimonialSection/> */}
-
       <CTA/>
       <Footer/>
-      {/* <CardSection/> */}
-      {/* <Grid/> */}
-      {/* <AppSection /> */}
-      {/* <ContactSection /> */}
-      {/* <ResponsabilitySection /> */}
-      {/* <FooterSection /> */}
     </MainLayout>
   );
 }
