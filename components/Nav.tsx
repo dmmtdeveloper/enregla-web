@@ -11,6 +11,7 @@ import { useHandleNav } from "@/hooks/useHandleNav";
 import { LinksMenu } from "./nav/LinksMenu";
 import { usePathname } from "next/navigation";
 
+
 export const Nav = () => {
   const path = usePathname();
   const { handleNav, menuOpen } = useHandleNav();
@@ -18,21 +19,24 @@ export const Nav = () => {
   const isMenuVisible = path !== "/contact";
 
   return (
-    <motion.nav
+    <nav
       className={clsx(
-        "fixed w-full h-24",
-        "shadow-xl bg-white",
-        "backdrop-blur-[0.5rem]",
-        "bg-opacity-50",
-        "text-gray-900 z-[10]",
+        "fixed w-full h-20 z-[99999] xl:px-44 px-4",
+        // "shadow-md",
+  
+        
+        "backdrop-blur-[0.6rem]",
+        "text-gray-900 z-[20]",
 
         /*dark mode */
-        "dark:bg-[#0E0C15]",
-        "dark:border-gray-800",
-        "dark:bg-opacity-50"
+        // "dark:bg-[#43435C]",
+        // "dark:border-gray-800",
+        // "dark:bg-opacity-50",
+     
+        
       )}
     >
-      <motion.div className="flex justify-between items-center h-full w-full px-8">
+      <div className="flex justify-between items-center h-full w-full">
         <Logo />
         <Links />
         <div className="flex items-center justify-center gap-5">
@@ -41,10 +45,10 @@ export const Nav = () => {
             className={clsx(
               "fixed z-[9999] top-0",
               "w-[100%] h-screen",
-              "dark:bg-opacity-95",
               "p-8 ease-in-out duration-500",
+    
               {
-                "left-0 bg-[#ecf0f3] dark:bg-[#43435C]": menuOpen,
+                "left-0 bg-[#ecf0f3] dark:bg-black-100": menuOpen,
                 "left-[-100%]": !menuOpen,
               }
             )}
@@ -64,7 +68,7 @@ export const Nav = () => {
           </div>
           <ThemeSwitch />
         </div>
-      </motion.div>
-    </motion.nav>
+      </div>
+    </nav>
   );
 };

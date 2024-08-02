@@ -5,11 +5,11 @@ import { SergioEscobar } from "../icons/SergioEscobar";
 
 export const ClientsImage = () => {
   return (
-    <div className="flex items-center justify-center mt-10">
+    <div className="flex items-center justify-center">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="flex gap-16"
+        className="flex gap-20"
       >
         <a
           href="https://www.difor.cl/"

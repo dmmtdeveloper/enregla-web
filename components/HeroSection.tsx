@@ -1,57 +1,80 @@
-"use client";
-import clsx from "clsx";
 import React from "react";
-import { motion } from "framer-motion";
-import { HeroPicture } from "./IconsImages/HeroImage";
-import { Button } from "@nextui-org/button";
+import clsx from "clsx";
+import { Spotlight } from "./ui/Spotlight";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { MovingBorderDemo } from "./buttons/ButtonMoving";
 
 export const HeroSection = () => {
   return (
-    <section
-      id="inicio"
-      className="w-full pb-[2rem] flex items-center text-center justify-center flex-col gap-16 px-8 pt-48 xl:pt-72 hero_background"
-    >
-      <div className="flex flex-col gap-4">
-        <div className="flex flex-col justify-center text-center items-center">
-          <motion.p
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className={clsx(
-              "text-[38px]",
-              "md:text-5xl",
-              "lg:text-6xl",
-              "xl:text-7xl",
-              "xl:w-[900px]",
-              "text-gray-900",
-              "text-center",
-              "font-bold",
-              "leading-tight px-[30px] md:px-8",
-              "md:leading-tight",
-              "xl:leading-tight",
+    <section id="inicio" className="relative w-screen">
+      <div className="relative w-full min-h-screen  dark:bg-black-100">
+        <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
+        <Spotlight className="top-20 left-full h-[80vh] w-[50vw]" fill="purple" />
+        <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
 
-              /* Dark Mode */
-              "dark:text-white"
-            )}
-          >
-            Solución integral en seguridad automotriz
-          </motion.p>
-        </div>
-
-        <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          className="flex items-center justify-center flex-col gap-6 "
+        <div
+          className={clsx(
+            "h-full w-full",
+            "flex items-center justify-center",
+            "absolute inset-0 pt-10",
+            "bg-grid-black/[0.015]",
+            "dark:bg-grid-white/[0.03]",
+            "dark:bg-black-100"
+          )}
         >
-          <p className="md:px-28 lg:px-60 text-center text-[16px] text-gray-800 dark:text-[#CAC6DD] leading-7">
-            Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus vehículos.
-          </p>
+          <div
+            className={clsx(
+              "absolute pointer-events-none",
+              "inset-0 flex items-center",
+              "justify-center",
+              "",
+              "[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]",
+              "dark:bg-black-100"
+            )}
+          ></div>
 
-          <Button className="bg-green-500 dark:bg-purple-500" size="lg">
-            Contactanos
-          </Button>
-        </motion.div>
+          <div className="flex flex-col items-center justify-center relative my-20 z-10">
+            <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col items-center justify-center">
+              <h2
+                className={clsx(
+                  "uppercase tracking-widest",
+                  "text-xs text-center",
+                  "max-w-80",
+                  "text-black-100",
+                  "dark:text-blue-100"
+                )}
+              >
+                auto en regla auto seguro
+              </h2>
+              <TextGenerateEffect
+                className="text-center text-[50px] sm:text-6xl md:text-6xl lg:text-4xl xl:text-[68px]"
+                words="Solución integral en Seguridad Automotriz"
+              />
+
+              <p
+                className={clsx(
+                  "text-center",
+                  "md:tracking-wider",
+                  "mb-8 text-sm",
+                  "md:text-lg",
+                  "lg:text-2xl",
+                  "text-black-100",
+                  "xl:max-w-[700px]",
+
+                  //dark mode
+                  "dark:text-blue-100",
+                )}
+              >
+                Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus vehículos.
+              </p>
+
+              {/* <MagicButton icon={<FaLocationArrow />} position="right" title="Contactanos" /> */}
+              {/* <ButtonContact/> */}
+            </div>
+            <MovingBorderDemo title="Contáctanos"></MovingBorderDemo>
+          </div>
+        </div>
       </div>
-      {/* <HeroPicture /> */}
     </section>
   );
 };

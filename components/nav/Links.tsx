@@ -23,15 +23,17 @@ export const Links = () => {
     <>
       <motion.ul
         className={clsx(
-          "hidden sm:hidden md:block lg:flex lg:gap-0 lg:px-4",
+          "hidden lg:flex lg:gap-0 lg:px-4",
           "items-center justify-center",
-          "gap-4 bg-slate-200 bg-opacity-45",
+          "gap-4 bg-white-100 bg-opacity-45",
           "py-1 px-10 rounded-full",
+          
+          
 
           /*dark mode*/
           "dark:text-white",
-          "dark:bg-[#43435C]",
-          "dark:bg-opacity-45"
+          "dark:bg-black-200",
+          "dark:bg-opacity-90",
         )}
       >
         {renderedLinks &&
@@ -47,8 +49,10 @@ export const Links = () => {
                   "flex w-full",
                   "items-center justify-center",
                   "px-3 py-3",
-                  "hover:text-green-400",
-                  "transition"
+                  "hover:text-blue-500",
+                  "text-black",
+                  "transition",
+                  "dark:text-white",
                 )}
                 href={link.hash}
               >

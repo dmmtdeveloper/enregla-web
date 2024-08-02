@@ -13,15 +13,11 @@ export const  ThemeSwitch = () => {
     <button
       className={clsx(
         /* default */
-        "bottom-5 right-5",
-        "text-[20px]",
-        "text-[#4cb34a]",
+        "text-[24px]",
         "w-[40px] h-[40px]",
-        "bg-[#7ADB78]",
         "bg-opacity-30",
         "backdrop-blur-[0.5rem]",
-        "border-opacity-40",
-        // "shadow-2xl",
+        "shadow-2xl",
         "rounded-full",
         "flex",
         "items-center",
@@ -33,10 +29,21 @@ export const  ThemeSwitch = () => {
         "transition",
         "duration-300",
         
+        /*----focus statate----*/
+        "outline-none",
+        "ring-gray-900/70 ring-offset-2",
+        // "focus-visible:ring-2",
+        "focus:scale-[0.98]",
+
+        /*----disabled statate----*/
+        "disabled:bg-gray-900/50",
+        "disabled:cursor-not-allowed",
+        "disabled:shadow",
+
         /* dark-mode*/
-        "dark:text-purple-500",
-        "dark:bg-gray-800",
-        "dark:bg-gray-100",
+        "text-black-200",    
+        "dark:text-yellow-200",
+        
       )}
       onClick={toggleTheme}
     >

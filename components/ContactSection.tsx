@@ -1,10 +1,13 @@
 
 "use client"
 import React from "react";
-import { ButtonCtaHero } from "./buttons/CtaHero";
 import {motion} from "framer-motion"
+import { Button } from "@nextui-org/button";
+import { useRouter } from "next/navigation";
 
 export const ContactSection = () => {
+  const router = useRouter();
+
   return (
     <motion.div
     initial={{ y: -100, opacity: 0 }}
@@ -15,7 +18,11 @@ export const ContactSection = () => {
         <p className="text-center">Estamos aqui para ayudarte</p>
       </div>
 
-      <ButtonCtaHero title="Contactanos"/>
+      <Button 
+      size="lg"
+      variant="ghost" 
+      color="success"
+      onClick={() => router.push("/contact")}>Contacto</Button>
     </motion.div>
   );
 };

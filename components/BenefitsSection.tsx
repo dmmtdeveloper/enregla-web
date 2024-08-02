@@ -1,54 +1,77 @@
 "use client";
-import React from "react";
-import { RiPoliceBadgeFill } from "react-icons/ri";
-import { Subtitles } from "./Subtitles/Subtitles";
-import { AiFillSecurityScan } from "react-icons/ai";
-import { Benefits } from "./Benefits/Benefits";
+import React, { SVGProps } from "react";
 import { motion } from "framer-motion";
-import { ArticleContainer } from "./Benefits/Article";
-import { IoShieldCheckmark, IoShieldSharp } from "react-icons/io5";
+import clsx from "clsx";
+import styles, { layout } from "@/lib/style";
+import { benefits } from "@/lib/Benefits";
+import { MovingBorderDemo } from "./buttons/ButtonMoving";
 
+type BenefitsProps = {
+  title: string;
+  content: string;
+  index: number;
+  icon: React.ComponentType<SVGProps<SVGSVGElement>>;
+};
+
+const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, content, index }) => {
+  return (
+    <div className="xl:px-24">
+      <div className={`flex flex-row p-6 rounded-[20px] gap-6  transition duration-300 items-start`}>
+        <div
+          className={`w-[64px] h-[64px] rounded-full lg:flex justify-center items-center dark:bg-slate-700 bg-slate-200 hidden`}
+        >
+          <Icon className="icon w-[30px] h-[30px] object-contain dark:text-green text-[#0072F5] " />
+        </div>
+        <div className="flex-1 flex flex-col ml-3">
+          <h4
+            className={clsx(
+              "font-semibold",
+              "dark:text-white",
+              "text-black-100",
+              "text-[24px]",
+              "leading-[23px]",
+              "mb-1"
+            )}
+          >
+            {title}
+          </h4>
+          <p className={clsx("dark:text-white-200", "text-black-100", "text-[16px]", "leading-[24px]", "mb-1")}>
+            {content}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export const BenefitsSection = () => {
   return (
     <motion.div
+      id="benefits"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="flex flex-col items-center p-10 mt-10 px-8 gap-14 lg:justify-center"
+      className="flex md:flex-row flex-col px-4 xl:px-44 sm:py-16 py-6 dark:bg-black-100"
     >
-      <h3 className="text-3xl dark:text-gray-50 text-gray-900 font-semibold">Beneficios de grabar tu patente</h3>
-      <div className="md:items-center md:justify-center scroll-mt-20 flex flex-col gap-8 grid-cols-2 lg:auto-cols-auto lg:grid">
-        <ArticleContainer>
-          <IoShieldSharp className="text-4xl text-[#FF776F]" />
-          <Benefits
-            title="Disuasión contra el robo y la clonación"
-            paragraph="Los ladrones y clonadores son menos propensos a atacar un automóvil con una patente grabada en vidrios y espejos, lo que contribuye a reducir el robo de vehículos."
-          />
-        </ArticleContainer>
+      <div className={layout.sectionInfo}>
+        <h2 className="font-semibold text-[48px] xl:text-7xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-4">
+          {" "}
+          <span className="dark:from-[#6FEE8D] dark:to-[#7ADB78] from-[#5EA2EF] to-[#0072F5] bg-clip-text text-transparent bg-gradient-to-b">
+            Beneficios
+          </span>{" "}
+          de gravar tu patente
+        </h2>
+        <p className={`${styles.paragraph} max-w-[600px] mt-5 mb-8 dark:text-white-200`}>
+          Esta medida no solo cumple con la Ley 21.601, sino que también introduce cambios significativos en la forma en
+          que identificamos nuestros vehículos.
+        </p>
+        {/* <Button styles="mt-10" /> */}
+        <MovingBorderDemo title="Contáctanos"></MovingBorderDemo>
+      </div>
 
-        <ArticleContainer>
-          <IoShieldCheckmark className="text-4xl text-[#7ADB78]" />
-          <Benefits
-            title="Facilita identificación y recuperación"
-            paragraph="En caso de robo o accidente, el grabado permite una rápida identificación del vehículo. Las autoridades y los propietarios pueden verificar la autenticidad y tomar medidas adecuadas."
-          />
-        </ArticleContainer>
-
-        <ArticleContainer>
-          <RiPoliceBadgeFill className="text-4xl text-[#FFC876]" />
-          <Benefits
-            title="Cumplimiento legal y evita multas"
-            paragraph="Al grabar la patente según las especificaciones legales, los propietarios cumplen con la Ley de Tránsito. Evitar el incumplimiento es crucial para evitar multas y sanciones."
-          />
-        </ArticleContainer>
-
-        <ArticleContainer>
-          <AiFillSecurityScan className="text-4xl text-[#AC6AFF]" />
-          <Benefits
-            title="Contribuye a la seguridad vial"
-            paragraph="La medida de grabado mejora la seguridad vehicular en Chile. Al dificultar el robo y la clonación, se crea un entorno más seguro para todos los conductores y sus vehículos."
-          />
-        </ArticleContainer>
+      <div className={`${layout.sectionImg} flex flex-col items-start`}>
+        {benefits.map((benefit, index) => (
+          <BenefitsCard key={benefit.id} {...benefit} index={index} />
+        ))}
       </div>
     </motion.div>
   );
