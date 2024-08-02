@@ -1,19 +1,13 @@
-import { AppSection } from "@/components/AppSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
-// import { CardSection } from "@/components/CardSection";
 import { ClientSection } from "@/components/ClientSection";
-import { ContactSection } from "@/components/ContactSection";
 import CTA from "@/components/CTA";
-import { FooterSection } from "@/components/FooterSection";
-import Grid from "@/components/Grid";
+import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
 import { LampSection } from "@/components/LampSection";
 import { LawSection } from "@/components/LawSection";
 import MainLayout from "@/components/layout";
 import { OurServices } from "@/components/OurServices";
-import { ResponsabilitySection } from "@/components/ResponsabilitySection";
-import  Stats  from "@/components/Stats";
-import { Testimonials } from "@/components/Testimonials";
+import { StatsSection} from "@/components/Testimonials";
 import { TestimonialSection } from "@/components/TestimonialSection";
 
 export default function Home() {
@@ -23,12 +17,12 @@ export default function Home() {
       <LampSection/>
       <BenefitsSection />
       <OurServices/>
+      <StatsSection />
       <LawSection />
       <ClientSection />
       <TestimonialSection/>
       <CTA/>
-      {/* <Stats/> */}
-      {/* <Testimonials /> */}
+      <Footer/>
       {/* <CardSection/> */}
       {/* <Grid/> */}
       {/* <AppSection /> */}

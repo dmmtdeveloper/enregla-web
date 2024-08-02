@@ -7,7 +7,16 @@ import { ButtonContact } from "./buttons/ContactButton";
 const CTA = () => {
   return (
     <section
-      className={clsx(" z-[20] mx-4 xl:mx-32 relative xl:flex xl:items-center", "xl:justify-around", "dark:bg-black-100 rounded-3xl xl:rounded-[5rem]")}
+      className={clsx(
+        "z-[20] mx-4 xl:mx-32 relative",
+        "xl:flex xl:items-center",
+        "xl:justify-around",
+        "xl:rounded-[5rem]",
+        "rounded-3xl",
+
+        //dark mode
+        "dark:bg-black-100"
+      )}
     >
       <div
         className={clsx(
@@ -16,20 +25,22 @@ const CTA = () => {
           "xl:items-center gap-5",
           "xl:p-20 py-10 px-10",
           "bg-slate-300 rounded-3xl xl:rounded-[5rem]",
-          "dark:bg-black-200",
+          "dark:bg-black-200"
         )}
       >
         <div className="flex flex-col gap-4 xl:px-10">
-          <h2 className={clsx(
-            "font-semibold",
-            "text-[32px] md:text-[40px]",
-            "xl:text-7xl xl:max-w-[700px]",
-            "dark:text-white",
-            "text-black-100",
-            "xl:leading-[76.8px]",
-            "leading-[35px]",
-            "w-full mb-4"
-          )}>
+          <h2
+            className={clsx(
+              "font-semibold",
+              "text-[32px] md:text-[40px]",
+              "xl:text-7xl xl:max-w-[700px]",
+              "dark:text-white",
+              "text-black-100",
+              "xl:leading-[76.8px]",
+              "leading-[35px]",
+              "w-full mb-4"
+            )}
+          >
             ¿Interesado en nuestros sevicios?
           </h2>
           <p

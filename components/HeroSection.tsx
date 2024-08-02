@@ -47,11 +47,24 @@ export const HeroSection = () => {
                 auto en regla auto seguro
               </h2>
               <TextGenerateEffect
-                className="text-center text-[40px]  md:text-5xl lg:text-4xl xl:text-[68px]"
+                className="text-center text-[50px] sm:text-6xl md:text-6xl lg:text-4xl xl:text-[68px]"
                 words="Solución integral en Seguridad Automotriz"
               />
 
-              <p className="text-center md:tracking-wider mb-8 text-sm md:text-lg lg:text-2xl dark:text-blue-100 text-black-100 xl:max-w-[700px]">
+              <p
+                className={clsx(
+                  "text-center",
+                  "md:tracking-wider",
+                  "mb-8 text-sm",
+                  "md:text-lg",
+                  "lg:text-2xl",
+                  "text-black-100",
+                  "xl:max-w-[700px]",
+
+                  //dark mode
+                  "dark:text-blue-100",
+                )}
+              >
                 Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus vehículos.
               </p>
 

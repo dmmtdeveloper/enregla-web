@@ -55,7 +55,7 @@ export const BenefitsSection = () => {
       <div className={layout.sectionInfo}>
         <h2 className="font-semibold text-[48px] xl:text-7xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-4">
           {" "}
-          <span className="dark:from-[#6FEE8D] dark:to-[#17c964] from-[#5EA2EF] to-[#0072F5] bg-clip-text text-transparent bg-gradient-to-b">
+          <span className="dark:from-[#6FEE8D] dark:to-[#7ADB78] from-[#5EA2EF] to-[#0072F5] bg-clip-text text-transparent bg-gradient-to-b">
             Beneficios
           </span>{" "}
           de gravar tu patente

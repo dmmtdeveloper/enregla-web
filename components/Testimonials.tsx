@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
 import { testimonials } from "@/lib/data";
 
-export const Testimonials = () => {
+export const StatsSection = () => {
   return (
     <motion.div
       initial={{ y: -100, opacity: 0 }}
@@ -12,7 +12,7 @@ export const Testimonials = () => {
       className="px-4 bg-white dark:bg-black-100 "
     >
       <div>
-        <div className="h-[20vh] md:h-[30rem] rounded-md flex flex-col antialiased items-center relative">
+        <div className="h-[20vh]  rounded-md flex flex-col antialiased items-center justify-center relative">
           <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
         </div>
       </div>

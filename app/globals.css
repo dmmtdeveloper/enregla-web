@@ -121,8 +121,8 @@ body {
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
-    /* #efdefa 0.89%, */ /* #dcbef5 17.23%, */ /* #bd9df0 42.04%, */ /* #ba74e9 55.12%, */ #a35ce6 71.54%,
-    #7c33cf 100%
+    /* #efdefa 0.89%, */ /* #dcbef5 17.23%, */ /* #bd9df0 42.04%, */ /* #ba74e9 55.12%, */ #7ADB78.54%,
+    #7ADB78 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

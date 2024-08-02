@@ -14,7 +14,7 @@ export const TestimonialSection = () => {
         "px-4 xl:px-[44px]",
         "sm:py-16",
         "dark:bg-black-100",
-        "pt-40"
+        "pt-40 mb-40"
       )}
     >
       {/* modificar gradients considerar modo dark y light mode */}
@@ -34,9 +34,9 @@ export const TestimonialSection = () => {
           "w-full flex justify-between",
           "items-center md:flex-row",
           "xl:flex-row-reverse flex-col",
-          "sm:mb-16 mb-6",
+          "mb-16 md:mb-6",
           "relative z-[1]",
-          "xl:px-32"
+          "xl:px-32 md:flex-col"
         )}
       >
         <h1
@@ -57,12 +57,12 @@ export const TestimonialSection = () => {
           </span>
           ?
         </h1>
-        <div className="w-full md:mt-0 mt-6">
+        {/* <div className="w-full md:mt-0 mt-6">
           <p className={`${styles.paragraph} text-left max-w-[450px]`}>clientes satisfechos</p>
-        </div>
+        </div> */}
       </div>
 
-      <div className="flex flex-wrap justify-start xl:justify-center w-full relative z-[1] ">
+      <div className="flex flex-wrap justify-start xl:justify-center w-full relative z-[1]">
         {feedback.map((card, index) => (
           <FeedbackCard key={card.id} {...card} />
         ))}
