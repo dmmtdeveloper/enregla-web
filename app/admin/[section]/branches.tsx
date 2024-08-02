@@ -1,58 +1,51 @@
 import { Spinner } from "@nextui-org/spinner";
 import CustomTable from "../ui/table";
 import CustomPagination from "../ui/pagination";
+import Header from "../ui/header";
+import useBranch from "../hooks/useBranch";
 
-type ColumnProps = {
-  key: string;
-  label: string;
-};
-
-type SuppliesModule = {
-  loadingUsers: boolean;
-  usersColumns: ColumnProps[];
-  userRows: [];
-  handleEdit?: (id: number) => void;
-  handleDelete?: (id: number) => void;
-  usersPage: number;
-  usersRows: number;
-  totalUsers: number;
-  totalUsersPages: number;
-  handleUsersPage: (page: number) => void;
-  handleUsersRows: (rows: number) => void;
-};
-
-export default function BranchModule({
-  loadingUsers,
-  usersColumns,
-  userRows,
-  usersPage,
-  usersRows,
-  totalUsers,
-  totalUsersPages,
-  handleUsersPage,
-  handleUsersRows,
-  handleDelete,
-  handleEdit,
-}: SuppliesModule) {
+export default function BranchModule() {
+  const {
+    branches,
+    filteredBranches,
+    branchColumns,
+    rows,
+    handlePage,
+    handleRows,
+    totalPages,
+    totalBranches,
+    page,
+    branchRows,
+    loading,
+    handleSearch,
+    searched,
+  } = useBranch();
   return (
     <>
+      <Header
+        title="Sucursales"
+        fromDate={new Date().toISOString().slice(0, 10)}
+        toDate={new Date().toISOString().slice(0, 10)}
+        searchedText={searched}
+        searchText={handleSearch}
+      />
       <div className="w-full h-[70%]">
-        {loadingUsers ? (
+        {/* {loading ? (
           <div className="w-full h-full flex items-center justify-center">
             <Spinner size="md" color="default" />
           </div>
         ) : (
-          <CustomTable columns={usersColumns} rows={userRows} />
-        )}
+          <CustomTable columns={branchColumns} rows={branchRows} />
+        )} */}
       </div>
       <div className="w-full h-[5%]">
         <CustomPagination
-          page={usersPage}
-          rows={usersRows}
-          totalData={totalUsers}
-          totalpages={totalUsersPages}
-          handlePage={handleUsersPage}
-          handleRows={handleUsersRows}
+          page={page}
+          rows={rows}
+          totalData={totalBranches}
+          totalpages={totalPages}
+          handlePage={handlePage}
+          handleRows={handleRows}
         />
       </div>
     </>

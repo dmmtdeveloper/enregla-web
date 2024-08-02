@@ -1,81 +1,85 @@
 import { useEffect, useState } from "react";
-import { User } from "../types/user";
-import { GetUsers } from "../api/users";
+import { Branch } from "../types/branch";
+import { GetBranches } from "../api/branches";
 import useSession from "./useSession";
 
 const branchColumns = [
-  { label: "Nombre", key: "name" },
-  { label: "RUT", key: "rut" },
-  { label: "Email", key: "email" },
-  { label: "Sucursal", key: "branch" },
-  { label: "Cargo", key: "role" },
+  { label: "Consecionario", key: "agency" },
+  { label: "Ubicación", key: "location" },
+  { label: "Dirección", key: "address" },
+  { label: "Comuna", key: "municipality" },
+  { label: "Ciudad", key: "city" },
+  { label: "Teléfono", key: "phone" },
   { label: "Opciones", key: "options" },
 ];
 
 export default function useBranch() {
-  const { token, user } = useSession();
-  const [users, setUsers] = useState<User[]>([]);
-  const [totalUsers, setTotalUsers] = useState<number>(10);
-  const [usersPage, setUsersPage] = useState<number>(1);
-  const [usersRows, setUsersRows] = useState<number>(10);
-  const [loadingUsers, setLoadingUsers] = useState<boolean>(false);
-  const [searchedUser, setSearchedUser] = useState<string>("");
+  const { token } = useSession();
+  const [branches, setBranches] = useState<Branch[]>([]);
+  const [totalBranches, setTotalBranches] = useState<number>(10);
+  const [page, setPage] = useState<number>(1);
+  const [rows, setRows] = useState<number>(10);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [searched, setSearched] = useState<string>("");
 
   useEffect(() => {
-    fetchUsers();
-  }, [usersPage, usersRows]);
+    fetchBranches();
+  }, [page, rows]);
 
-  const fetchUsers = async () => {
-    setLoadingUsers(true);
-    const response = await GetUsers({ token, query: `?page=${usersPage}&rows=${usersRows}` });
+  const fetchBranches = async () => {
+    setLoading(true);
+    const response = await GetBranches({ token, query: `?page=${page}&rows=${rows}` });
     if (response.error) {
-      setLoadingUsers(false);
+      setLoading(false);
     } else {
-      setUsers(response.users);
-      setTotalUsers(response.count);
-      setLoadingUsers(false);
+      console.log("response: ", response);
+
+      setBranches(response.branches);
+      setTotalBranches(response.count);
+      setLoading(false);
     }
   };
 
-  const handleUsersPage = (usersPage: number) => setUsersPage(usersPage);
-  const handleUsersRows = (usersRows: number) => setUsersRows(usersRows);
+  const handlePage = (usersPage: number) => setPage(usersPage);
+  const handleRows = (usersRows: number) => setRows(usersRows);
 
-  const handleSearchUser = (text: string) => setSearchedUser(text);
+  const handleSearch = (text: string) => setSearched(text);
 
-  const totalUsersPages = Math.ceil(totalUsers / usersRows);
+  const totalPages = Math.ceil(totalBranches / rows);
 
-  const userRows = users.map((user) => ({
-    id: user.id,
-    name: user.name,
-    rut: user.rut,
-    email: user.email,
-    branch: user.branch.address,
-    role: user.role.name,
+  const branchRows = branches.map((branch) => ({
+    id: branch.id,
+    agency: branch.agency.name,
+    address: branch.address,
+    location: branch.location,
+    municipality: branch.municipality,
+    city: branch.city,
+    phone: branch.phone,
   }));
 
-  const filteredUsers = userRows.filter((user) => {
+  const filteredBranches = branchRows.filter((branch) => {
     return (
-      user.name.toLowerCase().includes(searchedUser.toLowerCase()) ||
-      user.rut.toLowerCase().includes(searchedUser.toLowerCase()) ||
-      user.email.toLowerCase().includes(searchedUser.toLowerCase()) ||
-      user.branch.toLowerCase().includes(searchedUser.toLowerCase()) ||
-      user.role.toLowerCase().includes(searchedUser.toLowerCase())
+      branch.agency.toLowerCase().includes(searched.toLowerCase()) ||
+      branch.address.toLowerCase().includes(searched.toLowerCase()) ||
+      branch.municipality.toLowerCase().includes(searched.toLowerCase()) ||
+      branch.city.toLowerCase().includes(searched.toLowerCase()) ||
+      branch.phone.toLowerCase().includes(searched.toLowerCase())
     );
   });
 
   return {
-    users,
-    filteredUsers,
+    branches,
+    filteredBranches,
     branchColumns,
-    userRows,
-    handleUsersPage,
-    handleUsersRows,
-    totalUsersPages,
-    totalUsers,
-    usersPage,
-    usersRows,
-    loadingUsers,
-    handleSearchUser,
-    searchedUser,
+    rows,
+    handlePage,
+    handleRows,
+    totalPages,
+    totalBranches,
+    page,
+    branchRows,
+    loading,
+    handleSearch,
+    searched,
   };
 }

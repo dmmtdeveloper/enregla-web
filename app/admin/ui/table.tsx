@@ -2,15 +2,18 @@ import { PenIcon } from "@/assets/icons/pen";
 import { TrashIcon } from "@/assets/icons/trash";
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@nextui-org/table";
 import { UserRows } from "../types/user";
+import { BranchRows } from "../types/branch";
 
 type ColumnProps = {
   key: string;
   label: string;
 };
 
+type Rows = UserRows[] | BranchRows[];
+
 type TableProps = {
   columns: ColumnProps[];
-  rows: UserRows[];
+  rows: Rows;
   handleEdit?: (id: number) => void;
   handleDelete?: (id: number) => void;
 };
