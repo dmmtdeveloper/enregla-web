@@ -15,7 +15,7 @@ type BenefitsProps = {
 
 const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, content, index }) => {
   return (
-    <div id="ley" className="xl:px-24">
+    <div id="ley" className="xl:px-24 scroll-m-64">
       <div
         className={`flex flex-row p-6 gap-6 items-start`}
       >
@@ -50,12 +50,12 @@ export const LawSection = () => {
       id="benefits"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="flex md:flex-row flex-col px-4 xl:px-44 sm:py-16 py-6 dark:bg-black-100"
+      className="flex md:flex-row flex-col px-4 xl:px-44 sm:py-16 py-6 dark:bg-black-100 mb-36"
     >
       <div className={layout.sectionInfo}>
         <h2 className="font-semibold text-[48px] xl:text-7xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-4">
           Conoce más acerca de la{" "}
-          <span className="from-[#6FEE8D] to-[#25D366] bg-clip-text text-transparent bg-gradient-to-b">ley 21.601</span> 
+          <span className="from-[#6FEE8D] to-green bg-clip-text text-transparent bg-gradient-to-b">ley 21.601</span> 
         </h2>
         <p className={clsx("dark:text-slate-400", "text-black-100", "text-[16px]", "leading-[24px]", "mb-1", "xl:max-w-[600px] mb-10")}>
         En septiembre del 2023 el Gobierno promulgó la ley 21.601. La ley busca prevenir la venta de vehículos robados y la venta de espejos retrovisores entre otros elementos de los vehículos venidos desde el mercado no autorizado.

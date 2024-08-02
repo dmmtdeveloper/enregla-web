@@ -49,7 +49,7 @@ export const Links = () => {
                   "flex w-full",
                   "items-center justify-center",
                   "px-3 py-3",
-                  "hover:text-blue-500",
+                  "hover:text-green",
                   "text-black",
                   "transition",
                   "dark:text-white",

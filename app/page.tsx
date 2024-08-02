@@ -17,10 +17,10 @@ export default function Home() {
       <LampSection/>
       <BenefitsSection />
       <OurServices/>
-      <StatsSection />
       <LawSection />
-      <ClientSection />
       <TestimonialScroll/>
+      <ClientSection />
+      <StatsSection />
       <CTA/>
       <Footer/>
     </MainLayout>

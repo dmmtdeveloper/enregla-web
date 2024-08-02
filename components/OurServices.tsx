@@ -40,10 +40,10 @@ const OurServicesCard: React.FC<OurServiceProps> = ({ icon: icon, title, content
 
 export const OurServices = () => {
   return (
-    <section id="products" className={`${layout.sectionReverse} dark:bg-black-100 flex-col-reverse px-4`}>
+    <section id="nosotros" className={`${layout.sectionReverse} dark:bg-black-100 flex-col-reverse px-4 scroll-mb-10 xl:scroll-mb-12`}>
       <div className={`${layout.sectionImgReverse} `}>
         <Image
-          className="hidden dark:block relative z-[5] w-[600px] h-auto"
+          className="hidden dark:block relative z-[5] w-[500px] h-auto"
           width={640}
           height={721}
           src={radarImageWhite}
@@ -51,7 +51,7 @@ export const OurServices = () => {
           priority={true}
         />
         <Image
-          className="dark:hidden relative z-[5] w-[600px] h-auto"
+          className="dark:hidden relative z-[5] w-[500px] h-auto"
           width={640}
           height={721}
           src={radarImageBlack}
@@ -70,13 +70,13 @@ export const OurServices = () => {
       <div className={layout.sectionInfo}>
         <h2 className="font-semibold text-[48px] xl:text-7xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-8">
           ¿Por que{" "}
-          <span className="dark:from-[#6FEE8D] dark:to-[#25D366] bg-clip-text text-transparent bg-gradient-to-b">
+          <span className="from-[#6FEE8D] to-green bg-clip-text text-transparent bg-gradient-to-b">
             grabar
           </span>{" "}
           tu patente con nosotros?
         </h2>
 
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-5">
           {services.map((service, index) => (
             <OurServicesCard key={service.id} {...service} index={index} />
           ))}

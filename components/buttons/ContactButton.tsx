@@ -27,12 +27,13 @@ export const ButtonContact = () => {
 
           /*----hover----*/
           "transition",
-          "hover:bg-blue-600",
+          "hover:bg-green2-100-",
           "hover:shadow-md",
+          "hover:bg-green2-100",
 
           /*----focus statate----*/
           "outline-none",
-          "ring-blue-400/70 ring-offset-2",
+          "ring-green2-100  ring-offset-2",
           "focus-visible:ring-2",
           "focus:scale-[0.98]",
 

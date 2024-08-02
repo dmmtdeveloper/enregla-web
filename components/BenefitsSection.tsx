@@ -47,18 +47,18 @@ const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, content, ind
 export const BenefitsSection = () => {
   return (
     <motion.div
-      id="benefits"
+      id="beneficios"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="flex md:flex-row flex-col px-4 xl:px-44 sm:py-16 py-6 dark:bg-black-100"
+      className="flex md:flex-row flex-col px-4 xl:px-44 sm:py-16 py-6 dark:bg-black-100 scroll-m-12 mb-32"
     >
       <div className={layout.sectionInfo}>
         <h2 className="font-semibold text-[48px] xl:text-7xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-4">
           {" "}
-          <span className="from-[#6FEE8D] to-[#25D366]  bg-clip-text text-transparent bg-gradient-to-b">
+          <span className="from-[#6FEE8D] to-green  bg-clip-text text-transparent bg-gradient-to-b">
             Beneficios
           </span>{" "}
-          de gravar tu patente
+          de grabar tu patente
         </h2>
         <p className={`${styles.paragraph} max-w-[600px] mt-5 mb-8 dark:text-white-200`}>
           Esta medida no solo cumple con la Ley 21.601, sino que también introduce cambios significativos en la forma en

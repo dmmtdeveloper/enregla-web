@@ -8,9 +8,10 @@ import clsx from "clsx";
 export const TestimonialScroll = () => {
   return (
     <motion.div
+      id="clientes"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="px-4  dark:bg-black-100 pb-32 z-[5]"
+      className="px-4  dark:bg-black-100 pb-32 z-[5] scroll-m-40"
     >
       <div
         className={clsx(

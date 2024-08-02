@@ -4,7 +4,7 @@ import React from "react";
 
 const Stats = () => {
   return (
-    <section className="flex-row flex-wrap animation-scroll dark:bg-black-100 bg-white  items-center justify-center flex">
+    <section className="flex-row flex-wrap animation-scroll dark:bg-black-100 items-center justify-center flex">
       {stats.map((stat) => (
         <div key={stat.id} className={`flex-2 flex justify-center items-center flex-row m-3 px-4 transform transition duration-300 hover:scale-[1.15] active:scale-105`}>
           <h4

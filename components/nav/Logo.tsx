@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 import React from 'react'
-import logodark from "@/public/assets/img/logo-negro.png";
-import logowhithe from "@/public/assets/img/logo-blanco.png";
+import logodark from "@/public/assets/svg/logo-dark.svg";
+import logowhithe from "@/public/assets/svg/logo-white.svg";
 import Link from 'next/link';
 import {motion} from "framer-motion"
 

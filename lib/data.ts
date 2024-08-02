@@ -7,29 +7,29 @@ export const links: NavItems = {
       hash: "#inicio",
     },
     {
-      name: "Servicios",
-      hash: "#servicios",
+      name: "Beneficios",
+      hash: "#beneficios",
     },
     {
       name: "Nosotros",
       hash: "#nosotros",
     },
-    {
-      name: "Productos",
-      hash: "#productos",
-    },
-    {
-      name: "App",
-      hash: "#App",
-    },
-    {
-      name: "FAQ",
-      hash: "#FAQ",
-    },
-
+    // {
+    //   name: "Productos",
+    //   hash: "#productos",
+    // },
+    // {
+    //   name: "Contacto",
+    //   hash: "#Contacto",
+    // },
+    
     {
       name: "Ley 21.601",
       hash: "#ley",
+    },
+    {
+      name: "Clientes",
+      hash: "#clientes",
     },
   ],
   products: [

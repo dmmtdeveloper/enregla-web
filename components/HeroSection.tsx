@@ -18,7 +18,7 @@ export const HeroSection = () => {
             "flex items-center justify-center",
             "absolute inset-0 pt-10",
             "bg-grid-black/[0.015]",
-            "dark:bg-grid-white/[0.03]",
+            "dark:bg-grid-white/[0.02]",
             "dark:bg-black-100"
           )}
         >

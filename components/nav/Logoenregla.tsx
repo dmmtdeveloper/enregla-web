@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 import React from 'react'
-import logodark from "@/public/assets/img/logo-negro-autoseguro.png";
-import logowhithe from "@/public/assets/img/logo-blanco-autoseguro.png";
+import logodark from "@/public/assets/svg/logo-dark-autoseguro.svg";
+import logowhite from "@/public/assets/svg/logo-white-autoseguro.svg";
 import Link from 'next/link';
 import {motion} from "framer-motion"
 
@@ -13,7 +13,7 @@ export const Logoenregla = () => {
         <Link href="#inicio">
           <Image
             className="cursor-pointer hidden dark:block w-[280px] h-auto"
-            src={logowhithe}
+            src={logowhite}
             alt="logowhite"
             width={256}
             height={51}

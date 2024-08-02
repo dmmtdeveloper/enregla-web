@@ -17,6 +17,6 @@ export const services = [
     id: "feature-2",
     icon:  PiShieldCheckFill,
     title: "App",
-    content: "Nuestra solución cuenta con una aplicación, que registra los grabados en tiempo real. Que facilita la lectura automática de patente sin necesidad de tipeo, asegurando un proceso de grabado sin errores.",
+    content: "Nuestra solución cuenta con una aplicación, que registra los grabados en tiempo real, facilita la lectura automática de patente y VIN sin necesidad de tipeo, asegurando un proceso de grabado sin errores.",
   },
 ];
