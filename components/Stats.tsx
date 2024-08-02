@@ -1,13 +1,12 @@
 import { stats } from "@/lib/stats";
-import styles from "@/lib/style";
 import clsx from "clsx";
 import React from "react";
 
 const Stats = () => {
   return (
-    <section className="flex-row flex-wrap animation-scroll dark:bg-black-100 bg-white justify-center items-center  flex xl:px-16 ">
+    <section className="flex-row flex-wrap animation-scroll dark:bg-black-100 bg-white  items-center justify-center flex">
       {stats.map((stat) => (
-        <div key={stat.id} className={`flex-1  flex justify-center items-center flex-row m-3 px-4 transform transition duration-300 hover:scale-[1.15] active:scale-105`}>
+        <div key={stat.id} className={`flex-2 flex justify-center items-center flex-row m-3 px-4 transform transition duration-300 hover:scale-[1.15] active:scale-105`}>
           <h4
             className={clsx(
               "font-semibold xs:text-[40px] text-[30px]",
@@ -23,16 +22,15 @@ const Stats = () => {
           </h4>
           <p
             className={clsx(
-              // "xl:text-[20px]",
+              "xl:text-[20px]",
               "leading-[26px]",
               "text-[16px]",
               "font-normal",
-              "leading-[25px]",
               "text-black-100",
               "text-gradient uppercase ml-3",
 
-              "xl:text-[30px]",
-              "max-w-[700px]",
+              // "xl:text-[30px]",
+              // "max-w-[700px]",
               
               /*dark mode */
               "dark:text-white"

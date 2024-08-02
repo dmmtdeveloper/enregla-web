@@ -1,14 +1,14 @@
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { ClientSection } from "@/components/ClientSection";
-import CTA from "@/components/CTA";
 import { Footer } from "@/components/Footer";
-import { HeroSection } from "@/components/HeroSection";
-import { LampSection } from "@/components/LampSection";
 import { LawSection } from "@/components/LawSection";
-import MainLayout from "@/components/layout";
+import { HeroSection } from "@/components/HeroSection";
 import { OurServices } from "@/components/OurServices";
 import { StatsSection} from "@/components/Testimonials";
+import { LampSection } from "@/components/LampSection";
+import { ClientSection } from "@/components/ClientSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
 import { TestimonialSection } from "@/components/TestimonialSection";
+import CTA from "@/components/CTA";
+import MainLayout from "@/components/layout";
 
 export default function Home() {
   return (
