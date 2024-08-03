@@ -1,6 +1,6 @@
 import { FaCar } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
-
+import { RiPoliceBadgeFill } from "react-icons/ri";
 
 export const law = [
   {
@@ -13,6 +13,12 @@ export const law = [
     id: "feature-4",
     icon:  FaCar,
     title: "Contribuye a la seguridad vial",
+    content: "La medida de grabado mejora la seguridad vehicular en Chile. Al dificultar el robo y la clonación, se crea un entorno más seguro para todos los conductores y sus vehículos.",
+  },
+  {
+    id: "feature-4",
+    icon:  RiPoliceBadgeFill ,
+    title: "Cumplimiento legal y evita multas",
     content: "La medida de grabado mejora la seguridad vehicular en Chile. Al dificultar el robo y la clonación, se crea un entorno más seguro para todos los conductores y sus vehículos.",
   },
 ];

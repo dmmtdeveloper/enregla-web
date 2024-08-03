@@ -9,7 +9,7 @@ export const StatsSection = () => {
     <motion.div
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="px-4  dark:bg-black-100 "
+      className="px-4  dark:bg-black-100 mb-64"
     >
       <div>
         <div className="h-[20vh]  rounded-md flex flex-col antialiased items-center justify-center relative">

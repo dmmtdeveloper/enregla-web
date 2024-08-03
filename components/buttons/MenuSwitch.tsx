@@ -16,7 +16,6 @@ export const MenuSwitch = () => {
           size="30"
           className={clsx(
             /*----default----*/
-            
             "text-[#4cb34a]",
             /*----hover----*/
             "hover:scale-[1.2]",

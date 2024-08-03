@@ -40,8 +40,11 @@ const OurServicesCard: React.FC<OurServiceProps> = ({ icon: icon, title, content
 
 export const OurServices = () => {
   return (
-    <section id="nosotros" className={`${layout.sectionReverse} dark:bg-black-100 flex-col-reverse px-4 scroll-mb-10 xl:scroll-mb-12`}>
-      <div className={`${layout.sectionImgReverse} `}>
+    <section
+      id="nosotros"
+      className={`${layout.sectionReverse} dark:bg-black-100 flex-col-reverse px-4 scroll-mb-10 scroll-mt-14 xl:scroll-mt-0 xl:px-32`}
+    >
+      <div className={`${layout.sectionImgReverse}`}>
         <Image
           className="hidden dark:block relative z-[5] w-[500px] h-auto"
           width={640}
@@ -61,26 +64,39 @@ export const OurServices = () => {
 
         {/* modificar gradient!!!!!  */}
 
-        <div className="dark:hidden">
+        {/* <div className="dark:hidden">
           <div className="absolute z-[1] -left-1/2 top-0 w-[20%] h-[20%] rounded-full white__gradient" />
           <div className="absolute z-[0] -left-1/2 bottom-0 w-[80%] h-[80%] rounded-full green__gradient" />
-        </div>
+        </div> */}
       </div>
 
-      <div className={layout.sectionInfo}>
-        <h2 className="font-semibold text-[48px] xl:text-7xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-8">
-          ¿Por que{" "}
-          <span className="from-[#6FEE8D] to-green bg-clip-text text-transparent bg-gradient-to-b">
-            grabar
-          </span>{" "}
-          tu patente con nosotros?
-        </h2>
+      <div>
+        <div className={` flex flex-col  justify-center p-10 xl:p-20  rounded-[60px] xl:rounded-[100px]  bg-[#E3FCF7] dark:bg-[#001E2B]`}>
+          <h2
+            className={clsx(
+              "font-normal text-[38px]",
+              "xl:text-6xl xl:max-w-[700px]",
+              "text-black-100",
+              "xl:leading-[76.8px] leading-[50px]",
+              "w-full mb-8",
 
-        <div className="flex flex-col gap-5">
-          {services.map((service, index) => (
-            <OurServicesCard key={service.id} {...service} index={index} />
-          ))}
-          <MovingBorderDemo title="Acerca de"></MovingBorderDemo>
+              //dark mode
+              "dark:text-white",
+            )}
+          >
+            ¿Por que grabar tu patente con{" "}
+            <span className="dark:text-green text-green font-semibold">
+              nosotros
+            </span>
+            ?
+          </h2>
+
+          <div className="flex flex-col gap-5">
+            {services.map((service, index) => (
+              <OurServicesCard key={service.id} {...service} index={index} />
+            ))}
+            <MovingBorderDemo title="Acerca de"></MovingBorderDemo>
+          </div>
         </div>
       </div>
     </section>

@@ -13,7 +13,6 @@ export const TextGenerateEffect = ({
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
   useEffect(() => {
-    console.log(wordsArray);
     animate(
       "span",
       {
@@ -34,7 +33,7 @@ export const TextGenerateEffect = ({
             <motion.span
               key={word + idx}
               // change here if idx is greater than 3
-              className={` ${idx > 2 ? "tracking-tight inline from-[#6FEE8D] to-[#25D366] bg-clip-text text-transparent bg-gradient-to-b" : "dark:text-white text-black"
+              className={` ${idx > 2 ? "tracking-tight inline from-[#6FEE8D] to-[#25D366] bg-clip-text text-transparent bg-gradient-to-b" : "dark:text-white text-black-100 font-normal"
                 } opacity-0`}
             >
               {word}{" "}

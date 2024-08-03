@@ -9,7 +9,7 @@
   --black-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
   --white-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #f0f0f0 -78.47%, #e0e0e0 91.61%);
   --card-shadow-black: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
-  --card-shadow-white: 0px 20px 100px -10px rgba(255, 255, 255, 0.3);
+  --card-shadow-white: 0px 20px 100px -10px #25D366;
 }
 
 @media (prefers-color-scheme: dark) {

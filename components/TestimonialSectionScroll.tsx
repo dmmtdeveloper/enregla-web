@@ -25,7 +25,7 @@ export const TestimonialScroll = () => {
       >
         <h1
           className={clsx(
-            "font-semibold",
+            "font-normal",
             "text-[48px]",
             "xl:text-7xl xl:max-w-[700px]",
             "dark:text-white",
@@ -36,7 +36,7 @@ export const TestimonialScroll = () => {
           )}
         >
           ¿Que dicen nuestros{" "}
-          <span className="from-[#6FEE8D] to-[#25D366]  bg-clip-text text-transparent bg-gradient-to-b">
+          <span className="from-[#6FEE8D] to-[#25D366]  bg-clip-text text-transparent bg-gradient-to-b font-semibold">
             clientes
           </span>
           ?

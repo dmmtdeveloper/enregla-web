@@ -36,9 +36,9 @@ export const LinksMenu: React.FC<menuProps> = ({ onClick }) => {
                   "flex w-full",
                   "items-center justify-center",
                   "px-3 py-3",
-                  "hover:text-green-400",
+                  "hover:text-green2-100",
                   "transition",
-                  "hover:text-cyan-500"
+                  "hover:text-green"
                 )}
                 href={link.hash}
                 onClick={onClick}
