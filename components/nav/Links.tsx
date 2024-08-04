@@ -53,6 +53,7 @@ export const Links = () => {
                   "text-black",
                   "transition",
                   "dark:text-white",
+                  "dark:hover:text-green"
                 )}
                 href={link.hash}
               >

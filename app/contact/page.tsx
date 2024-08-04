@@ -4,6 +4,7 @@ import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { useRouter } from "next/navigation";
 import MainLayout from "@/components/layout";
+import { AccordionSection } from "@/components/ui/Accordion";
 
 export default function contact() {
   const router = useRouter();
@@ -19,6 +20,11 @@ export default function contact() {
 
   return (
     <MainLayout>
+      <div className="pt-32">
+        <h2>Hablemos</h2>
+        <p>Utilice el formulario para contactarnos o envíenos un correo a contacto@enregla.cl</p>
+        <p>Nos comunicaremos con usted lo antes posible.</p>
+      </div>
       <div className="pt-10 px-8">
         <div className="flex flex-col gap-5">
           <h2 className="text-2xl dark:text-white">Contactanos</h2>
