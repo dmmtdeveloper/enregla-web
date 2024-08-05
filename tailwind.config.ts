@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const { nextui } = require("@nextui-org/theme");
 
 const svgToDataUri = require("mini-svg-data-uri");
 
@@ -11,6 +12,10 @@ const config = {
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
+    "./node_modules/@nextui-org/theme/dist/components/(button|input|table|badge|card|date-picker|dropdown|modal|pagination|select|switch|tooltip|spinner|ripple).js",
+    "./app/admin/**/*.{ts, tsx}",
+    "./app/admin/ui/*.{ts,tsx}",
+    "./app/admin/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
     "./data/**/*.{ts,tsx}",
   ],
@@ -26,14 +31,14 @@ const config = {
 
     extend: {
       boxShadow: {
-        'card-black': 'var(--card-shadow-black)',
-        'card-white': 'var(--card-shadow-white)',
+        "card-black": "var(--card-shadow-black)",
+        "card-white": "var(--card-shadow-white)",
       },
       backgroundImage: {
-        'black-gradient': 'var(--black-gradient)',
-        'white-gradient': 'var(--white-gradient)',
+        "black-gradient": "var(--black-gradient)",
+        "white-gradient": "var(--white-gradient)",
       },
-      
+
       colors: {
         black: {
           DEFAULT: "#000",
@@ -180,6 +185,15 @@ const config = {
     },
   },
   plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {
+            default: "#fff",
+          },
+        },
+      },
+    }),
     require("tailwindcss-animate"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
