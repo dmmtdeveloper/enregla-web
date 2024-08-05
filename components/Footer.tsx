@@ -6,7 +6,7 @@ import { Logoenregla } from "./nav/Logoenregla";
 export const Footer = () => {
   return (
     <section
-      className={clsx("py-8 md:py-6", "flex justify-center items-center", "flex-col px-4", "mt-64", "xl:px-32 xl:py-10 dark:bg-[#001E2B] bg-[#E3FCF7]")}
+      className={clsx("py-8 md:py-6", "flex justify-center items-center", "flex-col px-4", "xl:px-32 xl:py-10 dark:bg-[#001E2B] bg-[#E3FCF7]")}
     >
       <div className={clsx("flex  items-start", "md:flex-row flex-col", "mb-8 w-full")}>
         <div className="flex-1 flex-col justify-start mr-10 ">
