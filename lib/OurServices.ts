@@ -14,7 +14,7 @@ export const services = [
     content: "Poseemos seguro de responsabilidad civil, ante cualquier situación que pueda no dar conformidad a nuestro trabajo por parte de nuestros clientes.",
   },
   {
-    id: "feature-2",
+    id: "feature-3",
     icon:  PiShieldCheckFill,
     title: "App",
     content: "Nuestra solución cuenta con una aplicación, que registra los grabados en tiempo real, facilita la lectura automática de patente y VIN sin necesidad de tipeo, asegurando un proceso de grabado sin errores.",
