@@ -5,6 +5,8 @@ import clsx from "clsx";
 import styles, { layout } from "@/lib/style";
 import { law } from "@/lib/Law";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
+import { AnimatedBeamMultipleOutputUI } from "./ui/AnimatedBeamUI";
+import Link from "next/link";
 
 type BenefitsProps = {
   title: string;
@@ -47,11 +49,13 @@ export const LawSection = () => {
       id="ley"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="flex md:flex-row flex-col px-4 xl:px-44 py-16  dark:bg-black-100 mb-36 scroll-mt-24 xl:scroll-m-28"
+      className="px-4 flex md:flex-row flex-col  xl:px-44 py-16 dark:bg-black-100 scroll-mt-24 xl:scroll-m-28 xl:mb-32"
     >
-      <div>
-        <div className={`${layout.sectionInfo} dark:bg-[#001E2B] p-10 xl:p-20 rounded-[60px] xl:rounded-[100px] bg-[#E6FFDA] `}>
-          <h2 className="font-normal text-[38px] xl:text-6xl xl:max-w-[600px]  dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-4">
+      
+        <div
+          className={`${layout.sectionInfo} dark:bg-[#001E2B] p-10 xl:p-20 rounded-[60px] xl:rounded-[100px] bg-[#E6FFDA]`}
+        >
+          <h2 className="font-normal text-[38px] xl:text-6xl xl:max-w-[600px] dark:text-white text-black-100 xl:leading-[76.8px] leading-[50px] w-full mb-4">
             Conoce más acerca de la{" "}
             <span className="from-[#6FEE8D] to-green bg-clip-text text-transparent bg-gradient-to-b font-semibold">
               ley 21.601
@@ -72,15 +76,22 @@ export const LawSection = () => {
             mercado no autorizado.
           </p>
           {/* <Button styles="mt-10" /> */}
-          <MovingBorderDemo title="Conoce más"></MovingBorderDemo>
+          <Link href="/FAQ">
+            <MovingBorderDemo title="Conoce más" />
+          </Link>
         </div>
-      </div>
+      
 
-      <div className={`${layout.sectionImg} flex flex-col items-start pt-16`}>
-        {law.map((law, index) => (
-          <BenefitsCard key={law.id} {...law} index={index} />
-        ))}
+      <div className=" xl:w-1/2 flex flex-col items-center justify-center">
+        <AnimatedBeamMultipleOutputUI />
       </div>
     </motion.div>
   );
 };
+
+
+{/* <div className={`${layout.sectionImg} flex flex-col items-start pt-16`}>
+  {law.map((law, index) => (
+    <BenefitsCard key={law.id} {...law} index={index} />
+  ))}
+</div> */}

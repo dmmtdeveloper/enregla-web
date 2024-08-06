@@ -3,22 +3,20 @@ import React from "react";
 import { AcordionFaq } from "@/components/AcordionFaq";
 import { Footer } from "@/components/Footer";
 import MainLayout from "@/components/layout";
-import { Button } from "@nextui-org/button";
-import { useRouter } from "next/navigation";
 import { preguntasFrecuentes } from "@/lib/FAQ";
 
-const ProductsPage: React.FC = () => {
-  const router = useRouter();
+
+const FAQPage: React.FC = () => {
   return (
     <MainLayout>
       <div className="mt-32">
         <div>
           <h1 className="text-black dark:text-white text-center text-5xl font-semibold mb-10">Preguntas frecuentes</h1>
-          <Button onPress={() => router.replace("/")}>Go home</Button>
         </div>
         <div className="flex flex-col mb-20">
           {preguntasFrecuentes.map((faq, index) => (
             <AcordionFaq
+              id={faq.id}
               key={index}
               titulo={faq.titulo}
               titulo2={faq.titulo2}
@@ -39,4 +37,4 @@ const ProductsPage: React.FC = () => {
   );
 };
 
-export default ProductsPage;
+export default FAQPage;

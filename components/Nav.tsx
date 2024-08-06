@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import { Logo } from "./nav/Logo";
 import { Links } from "./nav/Links";
-import { motion } from "framer-motion";
 import { Social } from "./social/Social";
 import { MenuButon } from "./nav/MenuButon";
 import { CloseButton } from "./nav/CloseButton";
@@ -11,13 +10,15 @@ import { ThemeSwitch } from "./buttons/ThemeSwitch";
 import { useHandleNav } from "@/hooks/useHandleNav";
 import { LinksMenu } from "./nav/LinksMenu";
 import { usePathname } from "next/navigation";
+import { FaWhatsapp } from "react-icons/fa6";
+
 
 export const Nav = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showBorder, setShowBorder] = useState(false);
-  const path = usePathname();
   const { handleNav, menuOpen } = useHandleNav();
-  const isMenuVisible = path !== "/contact";
+  // const path = usePathname();
+  // const isMenuVisible = path !== "/contact";
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
@@ -38,7 +39,6 @@ export const Nav = () => {
     };
   }, [lastScrollY]);
 
-
   return (
     <nav
       className={clsx(
@@ -58,17 +58,12 @@ export const Nav = () => {
         <Logo />
         <Links />
         <div className="flex items-center justify-center gap-5">
-          {isMenuVisible && <MenuButon onClick={handleNav} />}
+          <MenuButon onClick={handleNav} />
           <div
-            className={clsx(
-              "fixed z-[9999] top-0",
-              "w-[100%] h-screen",
-              "p-8 ease-in-out duration-500",
-              {
-                "left-0 bg-[#ecf0f3] dark:bg-black-100": menuOpen,
-                "left-[-100%]": !menuOpen,
-              }
-            )}
+            className={clsx("fixed z-[9999] top-0", "w-[100%] h-screen", "p-8 ease-in-out duration-500", {
+              "left-0 bg-[#ecf0f3] dark:bg-black-100": menuOpen,
+              "left-[-100%]": !menuOpen,
+            })}
           >
             <div className="flex justify-between">
               <div className="flex items-center">
@@ -82,7 +77,10 @@ export const Nav = () => {
             <LinksMenu onClick={handleNav} />
             <Social />
           </div>
-          <ThemeSwitch />
+          <div className="flex items-center gap-2">
+            <FaWhatsapp className="text-green text-[24px]" />
+            <ThemeSwitch />
+          </div>
         </div>
       </div>
     </nav>

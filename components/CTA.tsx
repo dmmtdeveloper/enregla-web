@@ -7,8 +7,9 @@ import { ButtonContact } from "./buttons/ContactButton";
 const CTA = () => {
   return (
     <section
+    id="contacto"
       className={clsx(
-        "z-[20] mx-4 xl:mx-32 relative",
+        "z-[20] mx-4 xl:mx-32 relative mb-64 scroll-m-60",
         "xl:flex xl:items-center",
         "xl:justify-around",
         "xl:rounded-[5rem]",
@@ -24,7 +25,7 @@ const CTA = () => {
           "xl:flex-1 xl:justify-between",
           "xl:items-center gap-5",
           "xl:p-20 py-10 px-10",
-          "bg-white rounded-3xl xl:rounded-[5rem]",
+          "bg-white rounded-[60px] xl:rounded-[5rem]",
           "dark:bg-black-200"
         )}
       >

@@ -186,3 +186,18 @@ body {
 .background-cta {
   background: linear-gradient(to right top, #000319, #003a5d, #007491, #00b19b, #12eb79);
 }
+
+@layer utilities {
+  .animate-ripple {
+    animation: ripple var(--duration, 2s) ease calc(var(--i, 0) * 0.2s) infinite;
+  }
+}
+
+@keyframes ripple {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}

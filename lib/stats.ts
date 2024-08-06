@@ -11,7 +11,7 @@ export const stats = [
     },
     {
         id:"stats-3",
-        title:"capacitaciones realizadas",
+        title:"capacitaciones",
         value:"50+"
     },
     

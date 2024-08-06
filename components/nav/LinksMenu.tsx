@@ -3,25 +3,16 @@ import React from "react";
 import Link from "next/link";
 
 import { links } from "@/lib/data";
-import { motion } from "framer-motion";
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
-import { NavItems } from "@/lib/types";
+
 
 type menuProps = {
   onClick: () => void;
 };
 
 export const LinksMenu: React.FC<menuProps> = ({ onClick }) => {
-  const path = usePathname();
-
-  const renderLinks = () => {
-    if (path === "/") return links.home as NavItems["home"];
-    else if (path === "/products") return links.products as NavItems["products"];
-  };
-
-  const renderedLinks = renderLinks();
-
+ // Renderiza todos los enlaces sin importar la ruta actual
+ const renderedLinks = [...links.home];
   return (
     <>
       <ul className="flex flex-col items-center gap-2 mt-10 dark:text-white text-2xl font-semibold mb-16">

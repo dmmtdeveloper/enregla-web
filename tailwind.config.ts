@@ -1,9 +1,8 @@
 import type { Config } from "tailwindcss";
-
-const svgToDataUri = require("mini-svg-data-uri");
-
-const colors = require("tailwindcss/colors");
-const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+import { transform } from "next/dist/build/swc";
+import svgToDataUri from "mini-svg-data-uri";
+import colors from "tailwindcss/colors";
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 const config = {
   darkMode: ["class"],
@@ -23,17 +22,15 @@ const config = {
         "2xl": "1400px",
       },
     },
-
     extend: {
       boxShadow: {
-        'card-black': 'var(--card-shadow-black)',
-        'card-white': 'var(--card-shadow-white)',
+        "card-black": "var(--card-shadow-black)",
+        "card-white": "var(--card-shadow-white)",
       },
       backgroundImage: {
-        'black-gradient': 'var(--black-gradient)',
-        'white-gradient': 'var(--white-gradient)',
+        "black-gradient": "var(--black-gradient)",
+        "white-gradient": "var(--white-gradient)",
       },
-      
       colors: {
         black: {
           DEFAULT: "#000",
@@ -49,11 +46,10 @@ const config = {
           300: "#C1C2D3",
         },
         blue: {
-          "100": "#E4ECFF",
+          100: "#E4ECFF",
         },
-
-        green2:{
-          100: "#00b16f"
+        green2: {
+          100: "#00b16f",
         },
         green: "#25D366",
         purple: "#CBACF9",
@@ -91,19 +87,16 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-
       keyframes: {
         "infinite-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
         },
-
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -128,6 +121,14 @@ const config = {
           },
           to: {
             backgroundPosition: "-200% 0",
+          },
+        },
+        ripple: {
+          "0%, 100%": {
+            transform: "translate(-50%, -50%) scale(1)",
+          },
+          "50%": {
+            transform: "translate(-50%, -50%) scale(0.9)",
           },
         },
         moveHorizontal: {
@@ -170,6 +171,7 @@ const config = {
         },
       },
       animation: {
+        ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",
@@ -180,9 +182,8 @@ const config = {
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
         scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
-
-      "infinite-scroll": "infinite-scroll 25s linear infinite",
     },
   },
   plugins: [

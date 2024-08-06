@@ -20,10 +20,10 @@ export const AcordionFaq: React.FC<AcordionFaqProps> = ({
   };
 
   return (
-    <section className="w-full xl:w-1/2 xl:mx-auto shadow-xl bg-white dark:bg-[#000319] border rounded-2xl mb-4">
+    <section onClick={handleFaq} className="w-full xl:w-1/2 xl:mx-auto shadow-xl bg-white dark:bg-[#000319] border rounded-2xl mb-4">
       <div className="flex justify-between items-center h-16 px-4 2xl:px-10">
-        <p className="text-black text-left font-semibold text-[18px] dark:text-white">{titulo}</p>
-        <div onClick={handleFaq} className="cursor-pointer">
+        <p className="text-black text-left font-semibold text-[14px] xl:text-[18px] dark:text-white">{titulo}</p>
+        <div className="cursor-pointer">
           {open ? (
             <GoChevronUp className="h-[30px] w-[30px] text-black-100 dark:text-white" />
           ) : (
@@ -48,10 +48,10 @@ export const AcordionFaq: React.FC<AcordionFaqProps> = ({
             </div>
           )}
           {descripcion4 && (
-            <div className="mt-2 bg-slate-600 p-5 rounded-2xl">
-              {descripcion4.titulo && <p className="text-black text-left font-semibold dark:text-white">{descripcion4.titulo}</p>}
-              {descripcion4.texto && <p className="text-red-400 text-left mt-1">{descripcion4.texto}</p>}
-              {descripcion4.texto2 && <p className="text-red-400 text-left mt-1">{descripcion4.texto2}</p>}
+            <div className="mt-2 bg-slate-200 p-5 rounded-2xl">
+              {descripcion4.titulo && <p className="text-left font-semibold  text-black">{descripcion4.titulo}</p>}
+              {descripcion4.texto && <p className="text-red-600 text-left mt-1">{descripcion4.texto}</p>}
+              {descripcion4.texto2 && <p className="text-red-600 text-left mt-1">{descripcion4.texto2}</p>}
             </div>
           )}
           {descripcion5 && (

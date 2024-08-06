@@ -2,11 +2,13 @@ import { PreguntaFrecuente } from "@/lib/types";
 
 export const preguntasFrecuentes: PreguntaFrecuente[] = [
   {
+    id: 1,
     titulo: "¿Qué es la Ley 21.601?",
     description:
       "La Ley 21.601, fue publicada en el Diario Oficial y entró en vigencia el 01 de Septiembre del año 2023. El objetivo de esta ley es la modificación de la Ley del Tránsito (Ley Nº 18.290), para prevenir la venta de vehículos motorizados robados y reducir el robo de piezas",
   },
   {
+    id: 2,
     titulo: "¿A quiénes aplica la Ley 21.601?",
     description:
       "La Ley 21.601 aplica a todos los vehículos motorizados que circulen por las vías públicas de Chile, entendiéndose por vehículo motorizado aquel que se encuentre por su naturaleza destinado al transporte o traslado de personas o cosas y sujeto a la obligación de obtener permiso de circulación para transitar, incluyendo:",
@@ -21,6 +23,7 @@ export const preguntasFrecuentes: PreguntaFrecuente[] = [
     ],
   },
   {
+    id: 3,
     titulo: "¿Qué vehículos están exentos del grabado de patentes?",
     description: "Los siguientes vehículos están exentos del grabado de patentes:",
     vehicles: [
@@ -33,6 +36,7 @@ export const preguntasFrecuentes: PreguntaFrecuente[] = [
     ],
   },
   {
+    id: 4,
     titulo: "¿Cuál es el plazo para grabar las patentes?",
     description:
       "El plazo para grabar las patentes en Chile depende de la fecha en que tu vehículo fue inscrito en el Registro de Vehículos Motorizados:",
@@ -54,11 +58,13 @@ export const preguntasFrecuentes: PreguntaFrecuente[] = [
     },
   },
   {
+    id: 5,
     titulo: "¿Qué método de grabado utiliza Enregla?",
     description:
       "En Enregla, utilizamos un método de grabado único y patentado que cumple con todos los requisitos exigidos por la ley del tránsito y el reglamento que establece las características del grabado. Nuestro grabado es lineal, permanente, inalterable y resistente a las inclemencias del tiempo.",
   },
   {
+    id: 6,
     titulo: "¿Qué beneficios ofrece Enregla?",
     description: "Enregla te ofrece una serie de beneficios al grabar las patentes de tu vehículo:",
     descripcion2: {
@@ -80,45 +86,49 @@ export const preguntasFrecuentes: PreguntaFrecuente[] = [
     },
   },
   {
+    id: 7,
     titulo: "¿Cómo puedo obtener más información sobre el grabado de patentes en Enregla?",
     description:
       "Puedes obtener más información sobre el grabado de patentes en Enregla visitando nuestra página web www.enregla.cl, contactándonos a través de nuestro teléfono +56 951596668 o correo electrónico contacto@enregla.cl.",
   },
   {
+    id: 8,
     titulo: "¿Qué tipo de letra y tamaño debo usar para grabar la patente?",
     description:
       "Según la normativa vigente, la patente debe grabarse con una letra tipo sans serif, de altura mínima de 5 milímetros y ancho proporcional. Es importante que la letra sea legible y clara, para que pueda ser identificada fácilmente por las autoridades.",
   },
   {
+    id: 9,
     titulo: "¿En qué parte del vehículo debo grabar la patente?",
     titulo2:
-    "Las patentes deben grabarse en los vidrios y espejos laterales del vehículo, de manera visible y permanente. La ubicación específica varía según el tipo de vehículo:",
+      "Las patentes deben grabarse en los vidrios y espejos laterales del vehículo, de manera visible y permanente. La ubicación específica varía según el tipo de vehículo:",
 
     descripcion2: {
       titulo: "Automóviles:",
       texto:
-      "En los parabrisas delantero y trasero, en la parte inferior derecha, y en los vidrios laterales delanteros, en la esquina inferior izquierda.",
+        "En los parabrisas delantero y trasero, en la parte inferior derecha, y en los vidrios laterales delanteros, en la esquina inferior izquierda.",
     },
     descripcion3: {
       titulo: "Motocicletas:",
       texto:
-      "En el parabrisas delantero, en la parte inferior derecha, y en los espejos laterales, en la parte superior.",
+        "En el parabrisas delantero, en la parte inferior derecha, y en los espejos laterales, en la parte superior.",
     },
     descripcion5: {
       titulo: "Camiones y buses:",
       texto:
-      "En el parabrisas delantero, en la parte inferior derecha, y en los vidrios laterales delanteros, en la esquina inferior izquierda.",
+        "En el parabrisas delantero, en la parte inferior derecha, y en los vidrios laterales delanteros, en la esquina inferior izquierda.",
     },
   },
   {
+    id: 10,
     titulo: "¿Puedo grabar las patentes por mi cuenta?",
     description:
       "No es recomendable grabar las patentes por tu cuenta, ya que existen requisitos específicos de formato y ubicación que deben cumplirse para que el grabado sea válido. Es mejor acudir a una empresa o taller autorizado por el Ministerio de Transportes y Telecomunicaciones, como Enregla.",
   },
   {
+    id: 11,
     titulo: "¿Qué pasa si mi vehículo ya tiene un grabado de patentes antiguo?",
     description:
       "Si tu vehículo tiene un grabado de patentes anterior a la entrada en vigencia de la Ley 21.601, debes realizar un nuevo grabado que cumpla con los requisitos actuales.",
   },
- 
 ];

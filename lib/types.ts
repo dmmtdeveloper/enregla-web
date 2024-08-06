@@ -5,20 +5,18 @@ export type LinkItem = {
 
 export type NavItems = {
   home: LinkItem[];
-  products: LinkItem[];
 };
 
-// Definición del tipo de cada pregunta frecuente
+/// Interfaz PreguntaFrecuente
 export interface PreguntaFrecuente {
+  id: number; // ID de la pregunta
   titulo: string;
   description?: string;
   descripcion2?: {
     titulo?: string; // Título opcional
     texto?: string; // Texto opcional
   };
-
   titulo2?: string;
-
   descripcion3?: {
     titulo?: string; // Título opcional
     texto?: string; // Texto opcional
@@ -42,15 +40,14 @@ export interface PreguntaFrecuente {
 
 // Definición del tipo de las propiedades del componente AcordionFaq
 export interface AcordionFaqProps {
+  id: number; // ID de la pregunta
   titulo: string;
   description?: string;
   descripcion2?: {
     titulo?: string; // Título opcional
     texto?: string; // Texto opcional
   };
-
   titulo2?: string;
-
   descripcion3?: {
     titulo?: string; // Título opcional
     texto?: string; // Texto opcional

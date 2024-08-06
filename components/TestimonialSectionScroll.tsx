@@ -17,7 +17,7 @@ export const TestimonialScroll = () => {
         className={clsx(
           "w-full flex justify-between",
           "items-center md:flex-row",
-          "xl:flex-row-reverse flex-col",
+          "flex-col",
           "mb-16 md:mb-6",
           "relative z-[1]",
           "xl:px-32 md:flex-col"
@@ -26,8 +26,8 @@ export const TestimonialScroll = () => {
         <h1
           className={clsx(
             "font-normal",
-            "text-[48px]",
-            "xl:text-7xl xl:max-w-[700px]",
+            "text-[48px] xl:text-center",
+            "xl:text-7xl w-full",
             "dark:text-white",
             "text-black-100",
             "xl:leading-[76.8px]",

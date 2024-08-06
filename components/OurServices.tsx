@@ -6,6 +6,9 @@ import radarImageBlack from "@/public/assets/img/radarappblack.png";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
 import { services } from "@/lib/OurServices";
 import clsx from "clsx";
+import { RippleSection } from "./RippleSection";
+import Ripple from "./magicui/ripple";
+import { Auto } from "./nav/Auto";
 
 type OurServiceProps = {
   title: string;
@@ -42,36 +45,17 @@ export const OurServices = () => {
   return (
     <section
       id="nosotros"
-      className={`${layout.sectionReverse} dark:bg-black-100 flex-col-reverse px-4 scroll-mb-10 scroll-mt-14 xl:scroll-mt-0 xl:px-32`}
+      className={`${layout.sectionReverse} dark:bg-black-100 flex-col-reverse scroll-mb-10 scroll-mt-16 xl:scroll-mt-0 xl:px-32`}
     >
-      <div className={`${layout.sectionImgReverse}`}>
-        <Image
-          className="hidden dark:block relative z-[5] w-[500px] h-auto"
-          width={640}
-          height={721}
-          src={radarImageWhite}
-          alt="enregla"
-          priority={true}
-        />
-        <Image
-          className="dark:hidden relative z-[5] w-[500px] h-auto"
-          width={640}
-          height={721}
-          src={radarImageBlack}
-          alt="enregla"
-          priority={true}
-        />
-
-        {/* modificar gradient!!!!!  */}
-
-        {/* <div className="dark:hidden">
-          <div className="absolute z-[1] -left-1/2 top-0 w-[20%] h-[20%] rounded-full white__gradient" />
-          <div className="absolute z-[0] -left-1/2 bottom-0 w-[80%] h-[80%] rounded-full green__gradient" />
-        </div> */}
+      <div className="flex-1 md:mr-10 mr-0 md:mt-0 mt-10 relative flex justify-center items-center">
+        <div className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+          <Auto />
+          <Ripple />
+        </div>
       </div>
 
       <div>
-        <div className={` flex flex-col  justify-center p-10 xl:p-20  rounded-[60px] xl:rounded-[100px]  bg-[#E3FCF7] dark:bg-[#001E2B]`}>
+        <div className={` flex flex-col  justify-center p-10 xl:p-20  rounded-[60px] xl:rounded-[100px]`}>
           <h2
             className={clsx(
               "font-normal text-[38px]",
@@ -81,21 +65,17 @@ export const OurServices = () => {
               "w-full mb-8",
 
               //dark mode
-              "dark:text-white",
+              "dark:text-white"
             )}
           >
-            ¿Por que grabar tu patente con{" "}
-            <span className="dark:text-green text-green font-semibold">
-              nosotros
-            </span>
-            ?
+            ¿Por que grabar tu patente con <span className="dark:text-green text-green font-semibold">nosotros</span>?
           </h2>
 
           <div className="flex flex-col gap-5">
             {services.map((service, index) => (
               <OurServicesCard key={service.id} {...service} index={index} />
             ))}
-            <MovingBorderDemo title="Acerca de"></MovingBorderDemo>
+            <MovingBorderDemo title="Acerca de" />
           </div>
         </div>
       </div>
