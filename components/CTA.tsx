@@ -7,14 +7,11 @@ import { ButtonContact } from "./buttons/ContactButton";
 const CTA = () => {
   return (
     <section
-    id="contacto"
+      id="contacto"
       className={clsx(
-        "z-[20] mx-4 xl:mx-32 relative mb-64 scroll-m-60",
+        "z-[20] relative mb-64 scroll-m-60",
         "xl:flex xl:items-center",
         "xl:justify-around",
-        "xl:rounded-[5rem]",
-        "rounded-3xl",
-
         //dark mode
         "dark:bg-black-100"
       )}
@@ -24,21 +21,21 @@ const CTA = () => {
           "xl:flex shadow-card-white",
           "xl:flex-1 xl:justify-between",
           "xl:items-center gap-5",
-          "xl:p-20 py-10 px-10",
-          "bg-white rounded-[60px] xl:rounded-[5rem]",
+          "xl:py-14 xl:px-20 py-8 px-10",
+          "bg-white",
           "dark:bg-black-200"
         )}
       >
-        <div className="flex flex-col gap-4 xl:px-10">
+        <div className="flex flex-col  xl:px-10">
           <h2
             className={clsx(
               "font-normal",
               "text-[32px] md:text-[40px]",
-              "xl:text-7xl xl:max-w-[700px]",
+              "xl:text-6xl xl:max-w-[700px]",
               "text-balck-200",
               "text-black-400",
               "dark:text-white",
-              "xl:leading-[76.8px]",
+              "xl:leading-[70px]",
               "leading-[35px]",
               "w-full mb-4"
             )}

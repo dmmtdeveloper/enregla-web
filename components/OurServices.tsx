@@ -1,16 +1,34 @@
+"use client"
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
 import { services } from "@/lib/OurServices";
 import clsx from "clsx";
 import Ripple from "./magicui/ripple";
 import { Auto } from "./nav/Auto";
 import { OurServicesCard } from "./OurServices/CardServices";
-
+import {motion} from "framer-motion"
 
 export const OurServices = () => {
   return (
-    <section
+    <motion.section
+    initial={{
+      opacity: 0,
+    }}
+    whileInView={{
+      opacity: 1,
+    }}
+    transition={{
+      duration: 2,
+    }}
       id="nosotros"
-      className={` flex items-center justify-center md:flex-row dark:bg-black-100 flex-col-reverse scroll-mb-10 scroll-mt-16 xl:scroll-mt-0 xl:px-8`}
+      className={clsx(
+        "flex items-center justify-center",
+        "md:flex-row",
+        "dark:bg-black-100",
+        "flex-col-reverse",
+        "scroll-mb-10 scroll-mt-16",
+        "xl:scroll-mt-0",
+        "xl:px-8 xl:mb-32"
+      )}
     >
       <div className="xl:w-[50%] md:w-[50%] w-[100%] relative flex justify-center items-center">
         <div className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
@@ -26,7 +44,7 @@ export const OurServices = () => {
               "font-normal text-[38px]",
               "xl:text-6xl xl:max-w-[700px]",
               "text-black-100",
-              "xl:leading-[76.8px] leading-[50px]",
+              "xl:leading-[70px] leading-[50px]",
               "w-full mb-8",
 
               //dark mode
@@ -44,6 +62,6 @@ export const OurServices = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

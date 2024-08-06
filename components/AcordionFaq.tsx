@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 import { AcordionFaqProps } from "@/lib/types"; // Ajusta el path según tu estructura de proyecto
+import clsx from "clsx";
 
 export const AcordionFaq: React.FC<AcordionFaqProps> = ({
   titulo,
@@ -20,7 +21,18 @@ export const AcordionFaq: React.FC<AcordionFaqProps> = ({
   };
 
   return (
-    <section onClick={handleFaq} className="w-full xl:w-1/2 xl:mx-auto shadow-xl bg-white dark:bg-[#000319] border rounded-2xl mb-4">
+    <section
+      onClick={handleFaq}
+      className={clsx(
+        "w-full xl:w-1/2 xl:mx-auto",
+        "shadow-xl",
+        "rounded-2xl",
+        "mb-4",
+        "border",
+        "border-gray-950/[.1] bg-gray-950/[.01] ",
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10]"
+      )}
+    >
       <div className="flex justify-between items-center h-16 px-4 2xl:px-10">
         <p className="text-black text-left font-semibold text-[14px] xl:text-[18px] dark:text-white">{titulo}</p>
         <div className="cursor-pointer">
@@ -37,14 +49,22 @@ export const AcordionFaq: React.FC<AcordionFaqProps> = ({
           {descripcion2 && (
             <div className="">
               <p className="text-black font font-semibold text-left max-w-[800px] mb-5 dark:text-white">{titulo2}</p>
-              {descripcion2.titulo && <p className="text-black text-left font-semibold dark:text-white">{descripcion2.titulo}</p>}
-              {descripcion2.texto && <p className="text-slate-500 dark:text-slate-300 text-left mt-1">{descripcion2.texto}</p>}
+              {descripcion2.titulo && (
+                <p className="text-black text-left font-semibold dark:text-white">{descripcion2.titulo}</p>
+              )}
+              {descripcion2.texto && (
+                <p className="text-slate-500 dark:text-slate-300 text-left mt-1">{descripcion2.texto}</p>
+              )}
             </div>
           )}
           {descripcion3 && (
             <div className="mt-2">
-              {descripcion3.titulo && <p className="text-black text-left font-semibold dark:text-white">{descripcion3.titulo}</p>}
-              {descripcion3.texto && <p className="text-slate-500 dark:text-slate-300 text-left mt-1">{descripcion3.texto}</p>}
+              {descripcion3.titulo && (
+                <p className="text-black text-left font-semibold dark:text-white">{descripcion3.titulo}</p>
+              )}
+              {descripcion3.texto && (
+                <p className="text-slate-500 dark:text-slate-300 text-left mt-1">{descripcion3.texto}</p>
+              )}
             </div>
           )}
           {descripcion4 && (
@@ -56,14 +76,22 @@ export const AcordionFaq: React.FC<AcordionFaqProps> = ({
           )}
           {descripcion5 && (
             <div className="mt-2">
-              {descripcion5.titulo && <p className="text-black text-left font-semibold dark:text-white">{descripcion5.titulo}</p>}
-              {descripcion5.texto && <p className="text-slate-500 dark:text-slate-300 text-left mt-1">{descripcion5.texto}</p>}
+              {descripcion5.titulo && (
+                <p className="text-black text-left font-semibold dark:text-white">{descripcion5.titulo}</p>
+              )}
+              {descripcion5.texto && (
+                <p className="text-slate-500 dark:text-slate-300 text-left mt-1">{descripcion5.texto}</p>
+              )}
             </div>
           )}
           {descripcion6 && (
             <div className="mt-2">
-              {descripcion6.titulo && <p className="text-black text-left font-semibold dark:text-white">{descripcion6.titulo}</p>}
-              {descripcion6.texto && <p className="text-slate-500 dark:text-slate-300 text-left mt-1 ">{descripcion6.texto}</p>}
+              {descripcion6.titulo && (
+                <p className="text-black text-left font-semibold dark:text-white">{descripcion6.titulo}</p>
+              )}
+              {descripcion6.texto && (
+                <p className="text-slate-500 dark:text-slate-300 text-left mt-1 ">{descripcion6.texto}</p>
+              )}
             </div>
           )}
           {vehicles && (

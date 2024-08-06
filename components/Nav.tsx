@@ -9,7 +9,6 @@ import { CloseButton } from "./nav/CloseButton";
 import { ThemeSwitch } from "./buttons/ThemeSwitch";
 import { useHandleNav } from "@/hooks/useHandleNav";
 import { LinksMenu } from "./nav/LinksMenu";
-import { usePathname } from "next/navigation";
 import { FaWhatsapp } from "react-icons/fa6";
 
 

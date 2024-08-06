@@ -93,6 +93,10 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
         "infinite-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
@@ -171,6 +175,8 @@ const config = {
         },
       },
       animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

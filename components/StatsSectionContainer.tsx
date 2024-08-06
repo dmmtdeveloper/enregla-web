@@ -8,8 +8,15 @@ import Stats from "./Stats";
 export const StatsSection = () => {
   return (
     <motion.div
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+    initial={{
+      opacity: 0,
+    }}
+    whileInView={{
+      opacity: 1,
+    }}
+    transition={{
+      duration: 2,
+    }}
       className="px-4  dark:bg-black-100 mb-64"
     >
       <div>

@@ -6,14 +6,14 @@ type InputProps = {
   type: "text" | "number" | "password" | "email";
   value: string | number;
   placeholder?: string;
-  // onchange: (e: React.ChangeEvent<HTMLInputElement>) => void; 
+  onchange: (e: React.ChangeEvent<HTMLInputElement>) => void; 
 };
 
 export const CustomInput: React.FC<InputProps> = ({
   name,
   value,
   placeholder,
-  // onchange, 
+  onchange, 
   type,
 }) => {
   return (
@@ -24,7 +24,7 @@ export const CustomInput: React.FC<InputProps> = ({
         name={name}
         value={value}
         placeholder={placeholder}
-        // onChange={onchange} 
+        onChange={onchange} 
         className={clsx(
           "block w-[360px] py-3 pl-4",
           "container mx-auto",

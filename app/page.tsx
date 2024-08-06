@@ -5,21 +5,22 @@ import { OurServices } from "@/components/OurServices";
 import { StatsSection } from "@/components/StatsSectionContainer";
 import { ClientSection } from "@/components/ClientSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
-import { TestimonialScroll } from "@/components/TestimonialSectionScroll";
 import MainLayout from "@/components/layout";
 import CTA from "@/components/CTA";
+import { MarqueSection } from "@/components/MarqueSection";
+import { LampSection } from "@/components/LampSection";
 
 
 export default function Home() {
   return (
     <MainLayout>
       <HeroSection />
-      {/* <RippleSection /> */}
+      <LampSection/>
       <BenefitsSection />
       <OurServices />
       <LawSection />
       {/* <AnimatedBeams /> */}
-      <TestimonialScroll />
+      <MarqueSection/>
       <ClientSection />
       <StatsSection />
       <CTA />

@@ -1,43 +1,65 @@
 "use client";
-import React, { useState } from "react";
-import { Input } from "@nextui-org/input";
-import { Button } from "@nextui-org/button";
-import { useRouter } from "next/navigation";
 import MainLayout from "@/components/layout";
-import { AccordionSection } from "@/components/ui/Accordion";
-
+import { Footer } from "@/components/Footer";
+import { FaPaperPlane } from "react-icons/fa6";
+import clsx from "clsx";
+import { motion } from "framer-motion";
 export default function contact() {
-  const router = useRouter();
-  const [loading, setLoading] = useState<boolean>(false);
-
-  const sendEmail = async () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      router.replace("/");
-    }, 3000);
-  };
-
   return (
     <MainLayout>
-      <div className="pt-32">
-        <h2>Hablemos</h2>
-        <p>Utilice el formulario para contactarnos o envíenos un correo a contacto@enregla.cl</p>
-        <p>Nos comunicaremos con usted lo antes posible.</p>
-      </div>
-      <div className="pt-10 px-8">
-        <div className="flex flex-col gap-5">
-          <h2 className="text-2xl dark:text-white">Contactanos</h2>
-          <Input type="text" variant="bordered" label="Nombre" />
-          <Input type="text" variant="bordered" label="Apellido" />
-          <Input type="Email" variant="bordered" label="Email" />
-          <Input type="text" variant="bordered" label="Empresa" />
-        </div>
-        <Button onPress={() => router.replace("/")}>Ir a inicio</Button>
-        <Button onPress={sendEmail} isLoading={loading}>
-          Enviar
-        </Button>
-      </div>
+      <motion.section
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1,
+        }}
+        id="contact"
+        className=" w-full h-screen  flex flex-col justify-center items-center"
+      >
+        <h1 className="text-black text-2xl text-center">Contactanos</h1>
+        <p className="text-slate-700 text-center">
+          Por favor contactanos directamente{" "}
+          <a className="underline cursor-pointer" href="mailto:">
+            contacto@enregla.net
+          </a>{" "}
+          o atravez de este formulario
+        </p>
+
+        <form className="mt-10 flex flex-col w-1/2 text-black">
+          <input className="h-14 rounded-lg w-full border border-black/10 pl-2" placeholder="Nombre" type="email" />
+          <textarea placeholder="Escribe tu mensaje" className="h-52 w-full my-3 p-2"></textarea>
+          <button
+            className={clsx(
+              "group",
+              "text-white flex gap-2",
+              "h-[3rem] w-[8rem]",
+              "bg-gray-900 items-center",
+              "justify-center",
+              "transition-all",
+              "rounded-full",
+              "hover:scale-110 active:scale-105",
+              "hover:bg-gray-950",
+              "focus:scale-110"
+            )}
+          >
+            Submit{" "}
+            <FaPaperPlane
+              className={clsx(
+                "text-xs",
+                "opacity-70 transition-all",
+                "group-hover:translate-x-1",
+                "group-hover:-translate-y-1"
+              )}
+            />{" "}
+          </button>
+        </form>
+      </motion.section>
+
+      <Footer />
     </MainLayout>
   );
 }

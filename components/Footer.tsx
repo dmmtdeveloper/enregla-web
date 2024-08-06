@@ -12,10 +12,9 @@ export const Footer = () => {
         "flex justify-center items-center",
         "flex-col px-4",
         "xl:px-44",
-        "bg-white-100",
-        // "rounded-t-[75px]",
-        // "xl:rounded-t-[150px]",
-        "dark:bg-[#434655]"
+       "border",
+       "border-gray-950/[.1] bg-gray-950/[.05]",
+       "dark:border-gray-50/[.1] bg-gray-50/[.15]"
       )}
     >
       <div className={clsx("flex items-center xl:items-start", "md:flex-row flex-col", "mb-8 w-full")}>
