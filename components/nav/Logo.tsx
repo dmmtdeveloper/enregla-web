@@ -10,7 +10,7 @@ import {motion} from "framer-motion"
 export const Logo = () => {
   return (
     <motion.div>
-        <Link href="#inicio">
+        <Link href="/#inicio">
           <Image
             className="cursor-pointer hidden dark:block w-[150px] h-auto"
             src={logowhithe}
