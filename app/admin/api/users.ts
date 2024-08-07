@@ -1,5 +1,15 @@
 import { endpoint } from "./endpoint";
 
+type UserForm = {
+  id: number;
+  token: string;
+  name: string;
+  rut: string;
+  email: string;
+  branch_id: number;
+  role_id: number;
+};
+
 export const LoginUser = async ({ rut, password }: { rut: string; password: string }) => {
   try {
     const options: RequestInit = {
@@ -53,19 +63,7 @@ export const GetUser = async ({ token, id }: { token: string; id: string }) => {
   }
 };
 
-export const CreateUser = async ({
-  token,
-  name,
-  rut,
-  password,
-  role,
-}: {
-  token: string;
-  name: string;
-  rut: string;
-  password: string;
-  role: string;
-}) => {
+export const CreateUser = async ({ token, name, rut, email, branch_id, role_id }: Omit<UserForm, "id">) => {
   try {
     const options: RequestInit = {
       method: "POST",
@@ -73,7 +71,7 @@ export const CreateUser = async ({
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ name, rut, password, role }),
+      body: JSON.stringify({ name, rut, email, branch_id, role_id }),
     };
     const response = await fetch(`${endpoint}/user`, options);
     const data = await response.json();
@@ -83,21 +81,7 @@ export const CreateUser = async ({
   }
 };
 
-export const EditUser = async ({
-  token,
-  id,
-  name,
-  rut,
-  password,
-  role,
-}: {
-  token: string;
-  id: string;
-  name: string;
-  rut: string;
-  password: string;
-  role: string;
-}) => {
+export const EditUser = async ({ token, id, name, rut, email, branch_id, role_id }: UserForm) => {
   try {
     const options: RequestInit = {
       method: "PUT",
@@ -105,7 +89,7 @@ export const EditUser = async ({
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ name, rut, password, role }),
+      body: JSON.stringify({ name, rut, email, branch_id, role_id }),
     };
     const response = await fetch(`${endpoint}/user/${id}`, options);
     const data = await response.json();
@@ -115,7 +99,7 @@ export const EditUser = async ({
   }
 };
 
-export const DeleteUser = async ({ token, id }: { token: string; id: string }) => {
+export const DeleteUser = async ({ token, id }: { token: string; id: number }) => {
   try {
     const options: RequestInit = {
       method: "DELETE",

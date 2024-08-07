@@ -17,7 +17,7 @@ export default function CustomButton({
   ...rest
 }: Button) {
   const type = {
-    primary: "bg-green-700 text-white",
+    primary: "bg-emerald-800 text-white",
     secondary: "bg-slate-600 text-white",
   };
   return (

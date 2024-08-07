@@ -16,7 +16,7 @@ export default function Header({ title, searchedText, searchText, fromDate, toDa
   const { user } = useSessionStore();
   return (
     <>
-      <section className="w-full h-[80px] flex items-center justify-between mb-[2%]">
+      <section className="w-full h-[10%] flex items-center justify-between mb-[1%]">
         <h2 className="text-2xl w-[20%]">{title}</h2>
         <div className="w-[60%] h-full flex items-center justify-evenly">
           <CustomDatePicker label="Inicio" date={parseDate(fromDate)} onChange={() => {}} />
@@ -29,7 +29,7 @@ export default function Header({ title, searchedText, searchText, fromDate, toDa
             size="lg"
           />
         </div>
-        <div className="w-[14%] h-[74%] px-[8px] rounded-[8px] flex items-center justify-between bg-gradient-to-b from-slate-900 to-slate-700">
+        <div className="w-[14%] h-full px-[8px] rounded-[8px] flex items-center justify-between bg-gradient-to-b from-slate-900 to-slate-700">
           <div>
             <h3 className="text-[18px]">{user.name}</h3>
             <p className="text-[12px]">{user.email}</p>

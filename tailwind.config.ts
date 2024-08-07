@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-const { nextui } = require("@nextui-org/theme");
+import { nextui } from "@nextui-org/theme";
 
 const svgToDataUri = require("mini-svg-data-uri");
 
@@ -12,10 +12,8 @@ const config = {
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
+    "./app/admin/ui/*.tsx",
     "./node_modules/@nextui-org/theme/dist/components/(button|input|table|badge|card|date-picker|dropdown|modal|pagination|select|switch|tooltip|spinner|ripple).js",
-    "./app/admin/**/*.{ts, tsx}",
-    "./app/admin/ui/*.{ts,tsx}",
-    "./app/admin/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
     "./data/**/*.{ts,tsx}",
   ],

@@ -37,6 +37,7 @@ export default function CustomInput({
         label={placeholder}
         color="default"
         autoComplete="off"
+        className="h-[56px]"
         classNames={{
           input: "bg-transparent text-white",
           inputWrapper: "bg-transparent",

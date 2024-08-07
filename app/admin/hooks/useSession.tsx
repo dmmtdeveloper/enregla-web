@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Session } from "../types/session";
 import { defaultUser } from "../constants/user";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";

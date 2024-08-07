@@ -34,7 +34,13 @@ export default function Login() {
               isInvalid={validate_password(form.password)}
               errorMessage={"Porfavor ingrese una contraseña válida"}
             />
-            <CustomButton text="Iniciar sesión" style={{ marginTop: "16px" }} onClick={loginUser} isLoading={loading} />
+            <CustomButton
+              text="Iniciar sesión"
+              style={{ marginTop: "16px" }}
+              onClick={loginUser}
+              isLoading={loading}
+              buttonType="primary"
+            />
           </div>
         </div>
       </main>

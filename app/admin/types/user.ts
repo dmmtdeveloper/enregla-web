@@ -5,14 +5,7 @@ export type User = {
   rut: string;
   branch: {
     id: number;
-    location: string;
     address: string;
-    municipality: string;
-    telephone: string;
-    agency: {
-      id: number;
-      name: string;
-    };
   };
   role: { id: number; name: string };
 };
