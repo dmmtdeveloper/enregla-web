@@ -64,7 +64,7 @@ export default function contact() {
             name="message"
             maxLength={5000}
             required
-            className="h-52 w-full mb-4 p-4"
+            className="h-52 w-full mb-4 p-4 rounded-lg"
           ></textarea>
           <SubmitBtn />
         </form>
