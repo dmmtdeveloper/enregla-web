@@ -12,9 +12,9 @@ export const Footer = () => {
         "flex justify-center items-center",
         "flex-col px-4",
         "xl:px-44",
-       "border",
-       "border-gray-950/[.1] bg-gray-950/[.05]",
-       "dark:border-gray-50/[.1] bg-gray-50/[.15]"
+        "border",
+        "border-gray-950/[.1] bg-gray-950/[.05]",
+        "dark:border-gray-50/[.1] bg-gray-50/[.15]"
       )}
     >
       <div className={clsx("flex items-center xl:items-start", "md:flex-row flex-col", "mb-8 w-full")}>
@@ -43,12 +43,8 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] dark:border-t-white-100 border-t-black-200">
-        <small className="dark:text-white-200 text-black-200 text-center">
-          © Copyright 2024 - enregla - Todos los derechos reservados.
-        </small>
-
-        <div className="flex gap-10 flex-row md:mt-0 mt-6 ">
+      <div className="w-full md:flex-col flex justify-between items-center  flex-col pt-6 border-t-[1px] dark:border-t-white-100 border-t-black-200">
+        <div className="flex gap-10 flex-row md:mt-0">
           {socialMedia.map((social, index) => (
             <a
               href={social.link}
@@ -61,6 +57,12 @@ export const Footer = () => {
             </a>
           ))}
         </div>
+        <small className="dark:text-white-200 text-black-200 text-xs text-center mt-6">
+          © Copyright 2024 - enregla - Todos los derechos reservados.
+        </small>
+        <p className="text-xs text-center text-black-200">
+          <span>About this website:</span> built with React & Next.js(App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend.
+        </p>
       </div>
     </section>
   );

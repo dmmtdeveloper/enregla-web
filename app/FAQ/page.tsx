@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
 import { AcordionFaq } from "@/components/AcordionFaq";
-import { Footer } from "@/components/Footer";
 import MainLayout from "@/components/layout";
 import { preguntasFrecuentes } from "@/lib/FAQ";
-
 
 const FAQPage: React.FC = () => {
   return (
@@ -31,8 +29,6 @@ const FAQPage: React.FC = () => {
           ))}
         </div>
       </div>
-
-      <Footer />
     </MainLayout>
   );
 };

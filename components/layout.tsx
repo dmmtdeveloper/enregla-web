@@ -1,6 +1,8 @@
 import ThemeContextProvider from "@/context/theme-context";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Nav } from "./Nav";
+import { Footer } from "./Footer";
+import { ToastContainer } from "react-toastify";
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,6 +12,8 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           <ActiveSectionContextProvider>
             <Nav />
             {children}
+            <ToastContainer position="bottom-center"/>
+            <Footer/>
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </main>

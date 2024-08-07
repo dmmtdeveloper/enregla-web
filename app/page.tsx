@@ -24,7 +24,6 @@ export default function Home() {
       <ClientSection />
       <StatsSection />
       <CTA />
-      <Footer />
     </MainLayout>
   );
 }
