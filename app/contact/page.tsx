@@ -32,7 +32,7 @@ export default function contact() {
         </p>
 
         <form
-          className="mt-10 flex gap-2 flex-col w-1/2 text-black"
+          className="mt-10 flex gap-2 flex-col xl:px-0 px-8 w-full xl:w-1/2 text-black"
           action={async (FormData) => {
             await sendEmail(FormData);
           }}
