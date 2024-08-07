@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import React from "react";
-import MarqueeDemo from "./example/marquee-demo";
+import MarqueeDemo from "@/components/ui/marquee-demo";
 
 export const MarqueSection = () => {
   return (

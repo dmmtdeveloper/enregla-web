@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { InfiniteMovingStats } from "./ui/InfiniteMovingStats";
-import { testimonials } from "@/lib/data";
 import Stats from "./Stats";
 
 export const StatsSection = () => {

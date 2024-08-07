@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import { layout } from "@/lib/style";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
 import { AnimatedBeamMultipleOutputUI } from "./ui/AnimatedBeamUI";
 import Link from "next/link";

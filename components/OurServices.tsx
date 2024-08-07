@@ -2,7 +2,7 @@
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
 import { services } from "@/lib/OurServices";
 import clsx from "clsx";
-import Ripple from "./magicui/ripple";
+import Ripple from "@/components/ui/ripple";
 import { Auto } from "./nav/Auto";
 import { OurServicesCard } from "./OurServices/CardServices";
 import {motion} from "framer-motion"
