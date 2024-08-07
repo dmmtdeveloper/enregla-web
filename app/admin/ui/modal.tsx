@@ -7,10 +7,19 @@ type ModalProps = {
   onClose: () => void;
   children: React.ReactNode;
   title: string;
-  save: () => void;
+  action: () => void;
+  actionTitle?: string;
 };
 
-export default function CustomModal({ isOpen, size = "4xl", onClose, children, title, save }: ModalProps) {
+export default function CustomModal({
+  isOpen,
+  size = "4xl",
+  onClose,
+  children,
+  title,
+  action,
+  actionTitle = "Guardar",
+}: ModalProps) {
   return (
     <>
       <Modal
@@ -18,7 +27,7 @@ export default function CustomModal({ isOpen, size = "4xl", onClose, children, t
         size={size}
         isOpen={isOpen}
         onClose={onClose}
-        className="bg-gradient-to-b from-slate-900 to-slate-700 min-h-[400px]"
+        className="bg-gradient-to-b from-slate-900 to-slate-700"
       >
         <ModalContent>
           {(onClose) => (
@@ -26,7 +35,7 @@ export default function CustomModal({ isOpen, size = "4xl", onClose, children, t
               <ModalHeader className="text-white">{title}</ModalHeader>
               <ModalBody className="w-full h-full">{children}</ModalBody>
               <ModalFooter>
-                <CustomButton text="Guardar" onClick={save} buttonType="primary" />
+                <CustomButton text={actionTitle} onClick={action} buttonType="primary" />
                 <CustomButton text="Cerrar" onClick={onClose} buttonType="secondary" />
               </ModalFooter>
             </>

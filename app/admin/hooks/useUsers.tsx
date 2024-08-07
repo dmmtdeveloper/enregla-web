@@ -132,6 +132,12 @@ export default function useUsers() {
   const confirmDelete = async () => {
     const response = await DeleteUser({ token, id: user.id });
     console.log(response);
+    if (response.error) notifyError(response.error);
+    else {
+      notifyMessage(response.message);
+      closeConfirmModal();
+      fetchUsers();
+    }
   };
 
   const deleteUser = async (user_id: number) => {
@@ -170,5 +176,6 @@ export default function useUsers() {
     confirmDelete,
     closeConfirmModal,
     edit,
+    confirmModal,
   };
 }

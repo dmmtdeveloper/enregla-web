@@ -33,6 +33,7 @@ export default function UsersModule() {
     deleteUser,
     confirmDelete,
     closeConfirmModal,
+    confirmModal,
     edit,
   } = useUsers();
   return (
@@ -76,9 +77,22 @@ export default function UsersModule() {
           isOpen={showModal}
           onClose={closeModal}
           title={edit ? "Editar usuario" : "Nuevo usuario"}
-          save={saveUser}
+          action={saveUser}
         >
           <UserForm branches={branches} user={user} handleUser={handleUser} roles={userRoles} />
+        </CustomModal>
+      )}
+      {confirmModal && (
+        <CustomModal
+          isOpen={confirmModal}
+          onClose={closeConfirmModal}
+          title="Eliminar usuario"
+          action={confirmDelete}
+          actionTitle="Eliminar"
+        >
+          <div className="w-full h-fit">
+            <h4 className="text-lg font-semibold">Realmente desea eliminar a {user.name}</h4>
+          </div>
         </CustomModal>
       )}
     </>
