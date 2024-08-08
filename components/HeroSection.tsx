@@ -3,14 +3,17 @@ import clsx from "clsx";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
+import { Pointer } from "lucide-react";
+import { ButtonContactHero } from "./buttons/ContactButtonHero";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
     <section id="inicio" className="relative w-screen">
       <div className="relative w-full min-h-screen  dark:bg-black-100">
-        <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
-        <Spotlight className="top-20 left-full h-[80vh] w-[50vw]" fill="purple" />
-        <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
+        <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="#E6FFDA" />
+        <Spotlight className="top-20 left-full h-[80vh] w-[50vw]" fill="#00ED64" />
+        <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="#014E3D" />
 
         <div
           className={clsx(
@@ -18,7 +21,7 @@ export const HeroSection = () => {
             "flex items-center justify-center",
             "absolute inset-0 pt-10",
             "bg-grid-black/[0.015]",
-            "dark:bg-grid-white/[0.03]",
+            "dark:bg-grid-white/[0.02]",
             "dark:bg-black-100"
           )}
         >
@@ -62,7 +65,7 @@ export const HeroSection = () => {
                   "xl:max-w-[700px]",
 
                   //dark mode
-                  "dark:text-blue-100",
+                  "dark:text-blue-100"
                 )}
               >
                 Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus vehículos.
@@ -71,7 +74,12 @@ export const HeroSection = () => {
               {/* <MagicButton icon={<FaLocationArrow />} position="right" title="Contactanos" /> */}
               {/* <ButtonContact/> */}
             </div>
-            <MovingBorderDemo title="Contáctanos"></MovingBorderDemo>
+            <div className="flex gap-8 items-center justify-center">
+              <Link href="/contact">
+                <MovingBorderDemo title="Contáctanos" />
+              </Link>
+              <ButtonContactHero />
+            </div>
           </div>
         </div>
       </div>

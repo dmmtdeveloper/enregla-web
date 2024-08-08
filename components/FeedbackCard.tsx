@@ -19,14 +19,7 @@ export const FeedbackCard: React.FC<cardProps> = ({ content, name, title, img })
         "rounded-[20px] max-w-[370px]",
         "md:mr-10 sm:mr-5 mr-0 my-5",
         "transition duration-300",
-
-        /*hover efect*/
-        "hover:bg-slate-200",
-        "hover:scale-[1.15]",
-        "active:scale-105",
-        "transition",
-        "duration-300",
-
+        
         /* dark-mode*/
         "dark:hover:bg-gray-900"
       )}
@@ -65,7 +58,7 @@ export const FeedbackCard: React.FC<cardProps> = ({ content, name, title, img })
 
         <div className="flex flex-col ml-4">
           <h4 className="font-semibold text-[20px] leading-[32px] dark:text-white text-black-100">{name}</h4>
-          <p className="text-sm leading-[24px] dark:text-green text-[#0072F5] text-black-200">{title}</p>
+          <p className="text-sm leading-[24px] text-green  text-black-200">{title}</p>
         </div>
       </div>
     </div>

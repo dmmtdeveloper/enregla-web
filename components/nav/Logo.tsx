@@ -2,17 +2,17 @@
 
 import Image from 'next/image'
 import React from 'react'
-import logodark from "@/public/assets/img/logo-negro.png";
-import logowhithe from "@/public/assets/img/logo-blanco.png";
+import logodark from "@/public/assets/svg/logo-dark.svg";
+import logowhithe from "@/public/assets/svg/logo-white.svg";
 import Link from 'next/link';
 import {motion} from "framer-motion"
 
 export const Logo = () => {
   return (
     <motion.div>
-        <Link href="#inicio">
+        <Link href="/#inicio">
           <Image
-            className="cursor-pointer hidden dark:block w-[150px] h-auto"
+            className="cursor-pointer hidden dark:block w-[140px] h-auto"
             src={logowhithe}
             alt="logowhite"
             width={256}
@@ -21,7 +21,7 @@ export const Logo = () => {
             quality={95}
           />
           <Image 
-          className="cursor-pointer dark:hidden w-[150px] h-auto" 
+          className="cursor-pointer dark:hidden w-[140px] h-auto" 
           src={logodark} 
           alt="logodark" 
           width={256} 

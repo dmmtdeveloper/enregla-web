@@ -9,7 +9,7 @@
   --black-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
   --white-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #f0f0f0 -78.47%, #e0e0e0 91.61%);
   --card-shadow-black: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
-  --card-shadow-white: 0px 20px 100px -10px rgba(255, 255, 255, 0.3);
+  --card-shadow-white: 0px 20px 100px -10px #25D366;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -185,4 +185,19 @@ body {
 
 .background-cta {
   background: linear-gradient(to right top, #000319, #003a5d, #007491, #00b19b, #12eb79);
+}
+
+@layer utilities {
+  .animate-ripple {
+    animation: ripple var(--duration, 2s) ease calc(var(--i, 0) * 0.2s) infinite;
+  }
+}
+
+@keyframes ripple {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 }

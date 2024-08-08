@@ -1,10 +1,7 @@
 "use client";
-
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import client from "@/public/assets/img/client.jpg"
-import Stats from "../Stats";
+import { TestimonialCard } from "../TestimonialCard";
 
 export const InfiniteMovingCards = ({
   items,
@@ -86,7 +83,7 @@ export const InfiniteMovingCards = ({
         ref={scrollerRef}
         className={cn(
           // change gap-16
-          " flex min-w-full items-center justify-center shrink-0 gap-16 py-4 w-max flex-nowrap",
+          " flex min-w-full items-center justify-center shrink-0 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
@@ -108,7 +105,7 @@ export const InfiniteMovingCards = ({
             key={idx}
           >
             <blockquote>
-              <Stats/>
+              <TestimonialCard/>
               <div
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"

@@ -25,7 +25,7 @@ export function Button({
 }) {
   return (
     <Component
-      className={cn("bg-transparent relative text-xl  h-16 w-[210px] p-[1px] overflow-hidden ", containerClassName)}
+      className={cn("bg-transparent relative text-xl  h-16 w-[210px] p-[1px] overflow-hidden", containerClassName)}
       style={{
         borderRadius: borderRadius,
       }}
@@ -36,7 +36,7 @@ export function Button({
           <div
             className={cn(
               "h-20 w-20 opacity-[0.8]",
-              "bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]",
+              "bg-[radial-gradient(var(--black)_40%,transparent_60%)]",
               "dark:bg-[radial-gradient(var(--green)_40%,transparent_60%)]",
               borderClassName
             )}
