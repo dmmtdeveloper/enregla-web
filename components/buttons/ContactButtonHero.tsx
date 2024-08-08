@@ -7,7 +7,7 @@ export const ButtonContactHero = () => {
   return (
     <React.Fragment>
       <Link
-        href="/contact"
+        href="#nosotros"
         className={clsx(
           /*----default state----*/
           "group hidden  xl:flex",
@@ -41,7 +41,7 @@ export const ButtonContactHero = () => {
 
           /*----dark mode----*/
           "dark:border-green border-2",
-          "border-black text-black",
+          "border-black text-black-200",
           "dark:text-green"
         )}
         // onClick={() => {

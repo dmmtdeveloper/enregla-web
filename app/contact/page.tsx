@@ -20,7 +20,7 @@ export default function contact() {
           duration: 1,
         }}
         id="contact"
-        className=" w-full h-screen  flex flex-col justify-center items-center"
+        className="w-full h-screen flex flex-col justify-center items-center mt-20"
       >
         <h1 className="text-black dark:text-white text-2xl  md:text-3xl lg:5xl xl:text-6xl text-center font-semibold">
           Contáctanos
@@ -54,7 +54,7 @@ export default function contact() {
           />
 
           <input
-            className="h-14 rounded-lg w-full border border-black/10 p-4"
+            className="h-14 rounded-lg bg-white w-full border border-black/10 p-4"
             name="senderEmail"
             placeholder="Email"
             required
@@ -62,11 +62,11 @@ export default function contact() {
             type="email"
           />
           <textarea
+            className="h-52 w-full bg-white mb-4 p-4 rounded-lg"
             placeholder="Escribe tu mensaje"
             name="message"
             maxLength={5000}
             required
-            className="h-52 w-full mb-4 p-4 rounded-lg"
           ></textarea>
           <SubmitBtn />
         </form>

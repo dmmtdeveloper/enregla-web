@@ -54,6 +54,10 @@ export const footerLinks = [
         name: "Preguntas frecuentes",
         link: "FAQ",
       },
+      {
+        name: "Quienes somos",
+        link: "us",
+      },
     ],
   },
 ];
