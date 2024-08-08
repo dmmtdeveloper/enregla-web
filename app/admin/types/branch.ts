@@ -3,8 +3,9 @@ export type Branch = {
   agency: { id: number; name: string };
   location: string;
   address: string;
-  city: string;
-  phone: string;
+  telephone: string;
+  labels: [];
+  users: [];
 };
 
 export type BranchRows = {
@@ -12,6 +13,7 @@ export type BranchRows = {
   agency: string;
   location: string;
   address: string;
-  city: string;
-  phone: string;
+  telephone: string;
+  labels: number;
+  users: number;
 };

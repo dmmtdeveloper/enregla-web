@@ -48,7 +48,19 @@ export const GetBranch = async ({ token, id }: { token: string; id: number }) =>
   }
 };
 
-export const CreateBranch = async ({ token }: { token: string }) => {
+export const CreateBranch = async ({
+  token,
+  agency_id,
+  address,
+  location,
+  telephone,
+}: {
+  token: string;
+  agency_id: number;
+  address: string;
+  location: string;
+  telephone: string;
+}) => {
   try {
     const options: RequestInit = {
       method: "POST",
@@ -56,6 +68,7 @@ export const CreateBranch = async ({ token }: { token: string }) => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
+      body: JSON.stringify({ agency_id, address, location, telephone }),
     };
     const response = await fetch(`${endpoint}/branch`, options);
     const data = await response.json();
@@ -65,7 +78,21 @@ export const CreateBranch = async ({ token }: { token: string }) => {
   }
 };
 
-export const UpdateBranch = async ({ token, id }: { token: string; id: number }) => {
+export const UpdateBranch = async ({
+  token,
+  id,
+  agency_id,
+  address,
+  location,
+  telephone,
+}: {
+  token: string;
+  id: number;
+  agency_id: number;
+  address: string;
+  location: string;
+  telephone: string;
+}) => {
   try {
     const options: RequestInit = {
       method: "PUT",
@@ -73,6 +100,7 @@ export const UpdateBranch = async ({ token, id }: { token: string; id: number })
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
+      body: JSON.stringify({ agency_id, address, location, telephone }),
     };
     const response = await fetch(`${endpoint}/branch/${id}`, options);
     const data = await response.json();

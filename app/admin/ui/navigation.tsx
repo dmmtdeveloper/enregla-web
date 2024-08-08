@@ -20,7 +20,7 @@ export default function Navigation() {
   return (
     <header className="relative w-[60px] h-screen text-[#fff]">
       <nav
-        className={`w-[60px] h-screen flex flex-col items-center justify-between py-[16px] bg-gradient-to-b from-slate-900 to-slate-700 absolute top-0 left-0 z-40`}
+        className={`w-[60px] h-screen flex flex-col items-center justify-between py-[16px] bg-gradient-to-b from-slate-900/40 to-slate-700/40 backdrop-blur-lg absolute top-0 left-0 z-40`}
       >
         <div
           onClick={toggle}

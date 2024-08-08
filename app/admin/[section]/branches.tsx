@@ -5,6 +5,7 @@ import Header from "../ui/header";
 import useBranch from "../hooks/useBranch";
 import CustomButton from "../ui/button";
 import CustomModal from "../ui/modal";
+import BranchForm from "../ui/forms/branchform";
 
 export default function BranchModule() {
   const {
@@ -32,6 +33,7 @@ export default function BranchModule() {
     handleSearchBranch,
     saveBranch,
     edit,
+    agencies,
   } = useBranch();
   return (
     <>
@@ -76,7 +78,7 @@ export default function BranchModule() {
           title={edit ? "Editar sucursal" : "Nueva sucursal"}
           action={saveBranch}
         >
-          <div>jhasjas</div>
+          <BranchForm branch={branch} agencies={agencies} handleBranch={handleBranch} />
         </CustomModal>
       )}
       {confirmModal && (
