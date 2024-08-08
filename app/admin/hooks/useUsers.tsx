@@ -56,16 +56,15 @@ export default function useUsers() {
 
   const fetchBranches = async () => {
     const response = await GetAllBranches({ token });
-    console.log(response);
-    setBranches(response.branches);
+    if (response.error) notifyError(response.error);
+    else setBranches(response.branches);
   };
 
   const fetchUsers = async () => {
     setLoadingUsers(true);
     const response = await GetUsers({ token, query: `?page=${usersPage}&rows=${usersRows}` });
-    if (response.error) {
-      setLoadingUsers(false);
-    } else {
+    if (response.error) notifyError(response.error), setLoadingUsers(false);
+    else {
       setUsers(response.users);
       setTotalUsers(response.count);
       setLoadingUsers(false);
@@ -131,7 +130,6 @@ export default function useUsers() {
 
   const confirmDelete = async () => {
     const response = await DeleteUser({ token, id: user.id });
-    console.log(response);
     if (response.error) notifyError(response.error);
     else {
       notifyMessage(response.message);
@@ -146,8 +144,6 @@ export default function useUsers() {
   };
 
   const closeConfirmModal = () => setConfirmModal(false);
-
-  console.log("USER: ", user);
 
   return {
     users,
