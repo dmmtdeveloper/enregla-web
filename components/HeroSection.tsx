@@ -5,6 +5,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
 import { Pointer } from "lucide-react";
 import { ButtonContactHero } from "./buttons/ContactButtonHero";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -74,9 +75,10 @@ export const HeroSection = () => {
               {/* <ButtonContact/> */}
             </div>
             <div className="flex gap-8 items-center justify-center">
-
-            <MovingBorderDemo title="Contáctanos"/>
-            <ButtonContactHero/>
+              <Link href="/contact">
+                <MovingBorderDemo title="Contáctanos" />
+              </Link>
+              <ButtonContactHero />
             </div>
           </div>
         </div>
