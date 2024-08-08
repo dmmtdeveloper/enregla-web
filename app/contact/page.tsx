@@ -22,7 +22,9 @@ export default function contact() {
         id="contact"
         className=" w-full h-screen  flex flex-col justify-center items-center"
       >
-        <h1 className="text-black dark:text-white text-2xl  md:text-3xl lg:5xl xl:text-6xl text-center font-semibold">Contáctanos</h1>
+        <h1 className="text-black dark:text-white text-2xl  md:text-3xl lg:5xl xl:text-6xl text-center font-semibold">
+          Contáctanos
+        </h1>
         <p className="text-slate-700 dark:text-slate-400 text-center">
           Por favor contactanos directamente{" "}
           <a className="underline cursor-pointer" href="mailto:">
@@ -36,14 +38,14 @@ export default function contact() {
           action={async (FormData) => {
             const { data, error } = await sendEmail(FormData);
             if (error) {
-              toast.error(error)
+              toast.error(error);
               return;
             }
-            toast.success("Correo enviado!")
+            toast.success("Correo enviado!");
           }}
         >
           <input
-            className="h-14 rounded-lg w-full border border-black/10 p-4"
+            className="h-14 rounded-lg bg-white w-full border border-black/10 p-4"
             name="senderName"
             placeholder="Nombre"
             required
