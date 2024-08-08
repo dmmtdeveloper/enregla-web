@@ -22,7 +22,7 @@ export default function contact() {
         id="contact"
         className=" w-full h-screen  flex flex-col justify-center items-center"
       >
-        <h1 className="text-black dark:text-white text-3xl text-center">Contáctanos</h1>
+        <h1 className="text-black dark:text-white text-2xl  md:text-3xl lg:5xl xl:text-6xl text-center font-semibold">Contáctanos</h1>
         <p className="text-slate-700 dark:text-slate-400 text-center">
           Por favor contactanos directamente{" "}
           <a className="underline cursor-pointer" href="mailto:">

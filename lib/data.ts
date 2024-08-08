@@ -24,7 +24,7 @@ export const links: NavItems = {
     },
     {
       name: "Contacto",
-      hash: "contact", // Ruta absoluta
+      hash: "/contact", // Ruta absoluta
     },
   ],
 };

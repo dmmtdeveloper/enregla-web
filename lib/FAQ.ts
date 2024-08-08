@@ -89,7 +89,7 @@ export const preguntasFrecuentes: PreguntaFrecuente[] = [
     id: 7,
     titulo: "¿Cómo puedo obtener más información sobre el grabado de patentes en Enregla?",
     description:
-      "Puedes obtener más información sobre el grabado de patentes en Enregla visitando nuestra página web www.enregla.cl, contactándonos a través de nuestro teléfono +56 951596668 o correo electrónico contacto@enregla.cl.",
+      "Puedes obtener más información sobre el grabado de patentes en Enregla visitando nuestra página web www.enregla.cl, contactándonos a través de nuestro teléfono +56 951596668 o correo electrónico contacto@enregla.net.",
   },
   {
     id: 8,
@@ -132,3 +132,5 @@ export const preguntasFrecuentes: PreguntaFrecuente[] = [
       "Si tu vehículo tiene un grabado de patentes anterior a la entrada en vigencia de la Ley 21.601, debes realizar un nuevo grabado que cumpla con los requisitos actuales.",
   },
 ];
+
+

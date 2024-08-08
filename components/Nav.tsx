@@ -9,7 +9,10 @@ import { CloseButton } from "./nav/CloseButton";
 import { ThemeSwitch } from "./buttons/ThemeSwitch";
 import { useHandleNav } from "@/hooks/useHandleNav";
 import { LinksMenu } from "./nav/LinksMenu";
+import { IoMdContact } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa6";
+import { ButtonContactNav } from "./buttons/ContactButtonNav";
+import Link from "next/link";
 
 
 export const Nav = () => {
@@ -76,8 +79,12 @@ export const Nav = () => {
             <LinksMenu onClick={handleNav} />
             <Social />
           </div>
-          <div className="flex items-center gap-2">
-            <FaWhatsapp className="text-green text-[24px]" />
+          <div className="flex items-center justify-center gap-2 md:gap-8 xl:gap-4">
+            <Link href="/contact">
+              <IoMdContact className="text-[24px] dark:text-green cursor-pointer hidden md:block xl:block" />
+            </Link>
+            {/* <ButtonContactNav/> */}
+            <FaWhatsapp className="dark:text-green text-[24px] cursor-pointer hidden md:block xl:block" />
             <ThemeSwitch />
           </div>
         </div>

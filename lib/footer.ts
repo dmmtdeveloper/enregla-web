@@ -1,7 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaCar } from "react-icons/fa6";
+
 
 export const footerLinks = [
   {
@@ -67,31 +67,12 @@ export const socialMedia = [
   {
     id: "social-media-2",
     icon: FaInstagram,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/enregla_oficial?igsh=MTl2a2R5dzFvaGR3NA==",
   },
   {
     id: "social-media-3",
     icon: FaXTwitter,
     link: "https://www.twitter.com/",
-  },
-];
-
-export const clients = [
-  {
-    id: "client-1",
-    logo: FaCar,
-  },
-  {
-    id: "client-2",
-    logo: FaCar,
-  },
-  {
-    id: "client-3",
-    logo: FaCar,
-  },
-  {
-    id: "client-4",
-    logo: FaCar,
   },
 ];
 

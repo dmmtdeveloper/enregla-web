@@ -2,13 +2,14 @@
 import React from "react";
 import { Button } from "@/components/ui/moving-border";
 import clsx from "clsx";
+import Link from "next/link";
 
 type buttonBorderProps = {
   title: string;
 };
 export function MovingBorderDemo({ title }: buttonBorderProps): JSX.Element {
   return (
-    <div>
+    <Link href="/contact">
       <Button
         borderRadius="3rem"
         className={clsx(
@@ -18,12 +19,11 @@ export function MovingBorderDemo({ title }: buttonBorderProps): JSX.Element {
           "shadow-md text-[18px]",
           // "dark:bg-[#014E3D]",
           "dark:border-slate-800",
-          "dark:text-black-100",
-         
+          "dark:text-black-100"
         )}
       >
         {title}
       </Button>
-    </div>
+    </Link>
   );
 }

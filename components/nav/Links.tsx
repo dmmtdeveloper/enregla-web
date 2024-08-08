@@ -33,7 +33,7 @@ export const Links = () => {
         >
           <Link
             className={clsx(
-              "flex w-full",
+              "flex w-full cursor-pointer",
               "items-center justify-center",
               "px-3 py-3",
               "hover:text-green",

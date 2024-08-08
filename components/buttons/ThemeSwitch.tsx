@@ -14,7 +14,6 @@ export const  ThemeSwitch = () => {
       className={clsx(
         /* default */
         "text-[24px]",
-        "w-[40px] h-[40px]",
         "bg-opacity-30",
         "backdrop-blur-[0.5rem]",
         "shadow-2xl",

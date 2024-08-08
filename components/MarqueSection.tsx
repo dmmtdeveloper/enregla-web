@@ -37,7 +37,7 @@ export const MarqueSection = () => {
             "text-black-100",
             "xl:leading-[76.8px]",
             "leading-[50px]",
-            "w-full mb-4"
+            "w-full"
           )}
         >
           ¿Que dicen nuestros{" "}

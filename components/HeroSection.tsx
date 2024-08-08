@@ -3,6 +3,8 @@ import clsx from "clsx";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
+import { Pointer } from "lucide-react";
+import { ButtonContactHero } from "./buttons/ContactButtonHero";
 
 export const HeroSection = () => {
   return (
@@ -62,7 +64,7 @@ export const HeroSection = () => {
                   "xl:max-w-[700px]",
 
                   //dark mode
-                  "dark:text-blue-100",
+                  "dark:text-blue-100"
                 )}
               >
                 Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus vehículos.
@@ -71,7 +73,11 @@ export const HeroSection = () => {
               {/* <MagicButton icon={<FaLocationArrow />} position="right" title="Contactanos" /> */}
               {/* <ButtonContact/> */}
             </div>
-            <MovingBorderDemo title="Contáctanos"></MovingBorderDemo>
+            <div className="flex gap-8 items-center justify-center">
+
+            <MovingBorderDemo title="Contáctanos"/>
+            <ButtonContactHero/>
+            </div>
           </div>
         </div>
       </div>

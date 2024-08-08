@@ -12,7 +12,7 @@ export const Logo = () => {
     <motion.div>
         <Link href="/#inicio">
           <Image
-            className="cursor-pointer hidden dark:block w-[150px] h-auto"
+            className="cursor-pointer hidden dark:block w-[140px] h-auto"
             src={logowhithe}
             alt="logowhite"
             width={256}
@@ -21,7 +21,7 @@ export const Logo = () => {
             quality={95}
           />
           <Image 
-          className="cursor-pointer dark:hidden w-[150px] h-auto" 
+          className="cursor-pointer dark:hidden w-[140px] h-auto" 
           src={logodark} 
           alt="logodark" 
           width={256} 

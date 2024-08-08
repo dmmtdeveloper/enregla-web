@@ -12,15 +12,23 @@ export const SubmitBtn = () => {
         "group",
         "text-white flex gap-2",
         "h-[3rem] w-[8rem]",
-        "bg-gray-900 items-center",
         "justify-center",
         "transition-all",
         "rounded-full",
+        
+        //hover
         "hover:scale-110 active:scale-105",
-        "hover:bg-gray-950",
+        "hover:bg-green/70",
+        
+        //focus state
         "focus:scale-110",
         "disabled:scale-100",
-        "disabled:bg-opacity-65"
+        "disabled:bg-opacity-65",
+        
+        //dark mode
+        "dark:bg-gray-800 items-center",
+        "dark:hover:bg-gray-900",
+        "bg-green"
       )}
       disabled={pending}
     >
