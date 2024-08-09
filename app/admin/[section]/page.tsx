@@ -6,6 +6,7 @@ import UsersModule from "./users";
 import SuppliesModule from "./supplies";
 import BranchModule from "./branches";
 import Login from "./login";
+import VehiclesModule from "./vehicles";
 
 export default function Dashboard() {
   const path = usePathname();
@@ -20,6 +21,7 @@ export default function Dashboard() {
           {path === "/admin/operators" && <UsersModule />}
           {path === "/admin/supplies" && <SuppliesModule />}
           {path === "/admin/branches" && <BranchModule />}
+          {path === "/admin/vehicles" && <VehiclesModule />}
         </Layout>
       )}
     </>

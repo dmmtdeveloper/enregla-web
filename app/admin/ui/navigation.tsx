@@ -20,7 +20,7 @@ export default function Navigation() {
   return (
     <header className="relative w-[60px] h-screen text-[#fff]">
       <nav
-        className={`w-[60px] h-screen flex flex-col items-center justify-between py-[16px] bg-gradient-to-b from-slate-900/40 to-slate-700/40 backdrop-blur-lg absolute top-0 left-0 z-40`}
+        className={`w-[60px] h-screen flex flex-col items-center justify-between py-[16px] bg-gradient-to-b from-slate-900 to-slate-700 backdrop-blur-lg absolute top-0 left-0 z-40`}
       >
         <div
           onClick={toggle}
@@ -49,7 +49,7 @@ export default function Navigation() {
         </div>
       </nav>
       <aside
-        className={`w-[120px] h-screen px-[4px] flex flex-col items-center justify-between py-[16px]  bg-gradient-to-b from-slate-900 to-slate-700
+        className={`w-[120px] h-screen px-[4px] flex flex-col items-center justify-between py-[16px] bg-gradient-to-b from-slate-900 to-slate-700 backdrop-blur-lg
           ${
             isOpen ? "translate-x-[0px]" : "-translate-x-[180px]"
           } transition-transform duration-500 absolute top-0 left-[60px] z-30
@@ -68,7 +68,9 @@ export default function Navigation() {
           ))}
         </ul>
         <div className="w-full h-[42px] flex items-center justify-center">
-          <span className="text-[14px] hover:text-rose-600/90 transition-all duration-300 ease-in-out">Salir</span>
+          <span className="text-[14px] hover:text-rose-600/90 transition-all duration-300 ease-in-out cursor-pointer">
+            Salir
+          </span>
         </div>
       </aside>
     </header>
