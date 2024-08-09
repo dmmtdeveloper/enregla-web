@@ -1,8 +1,8 @@
 import MainLayout from "@/components/layout";
-import { Auto } from "@/components/nav/Auto";
-import Ripple from "@/components/ui/ripple";
 import clsx from "clsx";
 import React from "react";
+import { TbTargetArrow } from "react-icons/tb";
+import { HiOutlineLightBulb } from "react-icons/hi";
 
 export const usPage = () => {
   return (
@@ -37,19 +37,22 @@ export const usPage = () => {
           </article>
 
           <article className="flex flex-col gap-4">
-            <h2
-              className={clsx(
-                "font-semibold",
-                "text-[38px] xl:text-5xl",
-                "xl:max-w-[700px]",
-                "dark:text-white",
-                "text-black-100",
-                "xl:leading-[70px] leading-[50px]",
-                "w-full"
-              )}
-            >
-              Misión:
-            </h2>
+            <div>
+              <TbTargetArrow className="text-4xl text-green" />
+              <h2
+                className={clsx(
+                  "font-semibold",
+                  "text-[38px] xl:text-5xl",
+                  "xl:max-w-[700px]",
+                  "dark:text-white",
+                  "text-black-100",
+                  "xl:leading-[70px] leading-[50px]",
+                  "w-full"
+                )}
+              >
+                Misión:
+              </h2>
+            </div>
             <p className="text-black dark:text-white text-justify">
               Entregar una solución de manera integral en seguridad a nuestros clientes, enfocados 100% en el servicio y
               acompañamiento a cada uno, entregando lo mejor de nosotros como empresa.
@@ -57,26 +60,28 @@ export const usPage = () => {
           </article>
 
           <article className="flex flex-col gap-2">
-            <h2
-              className={clsx(
-                "font-semibold",
-                "text-[38px] xl:text-5xl",
-                "xl:max-w-[700px]",
-                "dark:text-white",
-                "text-black-100",
-                "xl:leading-[70px] leading-[50px]",
-                "w-full"
-              )}
-            >
-              Visión:
-            </h2>
+            <div>
+              <HiOutlineLightBulb className="text-4xl text-green" />
+              <h2
+                className={clsx(
+                  "font-semibold",
+                  "text-[38px] xl:text-5xl",
+                  "xl:max-w-[700px]",
+                  "dark:text-white",
+                  "text-black-100",
+                  "xl:leading-[70px] leading-[50px]",
+                  "w-full"
+                )}
+              >
+                Visión:
+              </h2>
+            </div>
             <p className="text-black dark:text-white text-justify">
               Ser una de las mejores empresas de seguridad automotriz en Chile, con enfoque en servicio y calidad de
               productos.
             </p>
           </article>
         </div>
-
       </section>
     </MainLayout>
   );

@@ -1,24 +1,25 @@
-"use client"
+"use client";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
 import { services } from "@/lib/OurServices";
 import clsx from "clsx";
 import Ripple from "@/components/ui/ripple";
 import { Auto } from "./nav/Auto";
 import { OurServicesCard } from "./OurServices/CardServices";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const OurServices = () => {
   return (
     <motion.section
-    initial={{
-      opacity: 0,
-    }}
-    whileInView={{
-      opacity: 1,
-    }}
-    transition={{
-      duration: 2,
-    }}
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 2,
+      }}
       id="nosotros"
       className={clsx(
         "flex items-center justify-center",
@@ -58,7 +59,9 @@ export const OurServices = () => {
             {services.map((service, index) => (
               <OurServicesCard key={service.id} {...service} index={index} />
             ))}
-            <MovingBorderDemo title="Acerca de" />
+            <Link href="/aplicacion">
+              <MovingBorderDemo title="Acerca de" />
+            </Link>
           </div>
         </div>
       </div>

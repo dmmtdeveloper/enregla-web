@@ -1,15 +1,21 @@
+"use client";
 import React from "react";
 import clsx from "clsx";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
-import { Pointer } from "lucide-react";
+import { motion } from "framer-motion";
 import { ButtonContactHero } from "./buttons/ContactButtonHero";
 import Link from "next/link";
 
 export const HeroSection = () => {
   return (
-    <section id="inicio" className="relative w-screen">
+    <motion.section
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      id="inicio"
+      className="relative w-screen"
+    >
       <div className="relative w-full min-h-screen  dark:bg-black-100">
         <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="#E6FFDA" />
         <Spotlight className="top-20 left-full h-[80vh] w-[50vw]" fill="#00ED64" />
@@ -83,6 +89,6 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

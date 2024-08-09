@@ -11,6 +11,7 @@ import { MarqueSection } from "@/components/MarqueSection";
 import { LampSection } from "@/components/LampSection";
 
 
+
 export default function Home() {
   return (
     <MainLayout>

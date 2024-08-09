@@ -11,9 +11,8 @@ import { useHandleNav } from "@/hooks/useHandleNav";
 import { LinksMenu } from "./nav/LinksMenu";
 import { IoMdContact } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa6";
-import { ButtonContactNav } from "./buttons/ContactButtonNav";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 
 export const Nav = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -42,7 +41,9 @@ export const Nav = () => {
   }, [lastScrollY]);
 
   return (
-    <nav
+    <motion.nav
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       className={clsx(
         "fixed w-full h-20 z-[99999] xl:px-16 px-4",
         // "shadow-md",
@@ -89,6 +90,6 @@ export const Nav = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };

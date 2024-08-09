@@ -6,6 +6,7 @@ import React from "react";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (FormData: FormData) => {
+  console.log(FormData);
   const senderName = FormData.get("senderName");
   const senderEmail = FormData.get("senderEmail");
   const message = FormData.get("message");
@@ -33,7 +34,7 @@ export const sendEmail = async (FormData: FormData) => {
   try {
     data = await resend.emails.send({
       from: "Formulario de contacto <onboarding@resend.dev>",
-      to: "dmmtapia.ux@gmail.com",
+      to: ["dmmtapia.ux@gmail.com"],
       subject: "Mensaje desde formulario de contacto enregla",
       reply_to: senderEmail as string,
       react: React.createElement(ContactFormEmail, {
@@ -42,6 +43,8 @@ export const sendEmail = async (FormData: FormData) => {
         senderName: senderName as string,
       }),
     });
+
+    console.log(data);
   } catch (error: unknown) {
     return {
       error: getErrorMessage(error),

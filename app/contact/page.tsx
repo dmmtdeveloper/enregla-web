@@ -45,7 +45,7 @@ export default function contact() {
           }}
         >
           <input
-            className="h-14 rounded-lg bg-white w-full border border-black/10 p-4"
+            className="h-14 rounded-lg bg-[#ffff] w-full border border-black/10 p-4"
             name="senderName"
             placeholder="Nombre"
             required
@@ -54,7 +54,7 @@ export default function contact() {
           />
 
           <input
-            className="h-14 rounded-lg bg-white w-full border border-black/10 p-4"
+            className="h-14 rounded-lg bg-[#ffff] w-full border border-black/10 p-4"
             name="senderEmail"
             placeholder="Email"
             required
@@ -62,7 +62,7 @@ export default function contact() {
             type="email"
           />
           <textarea
-            className="h-52 w-full bg-white mb-4 p-4 rounded-lg"
+            className="h-52 w-full bg-[#ffff] mb-4 p-4 rounded-lg"
             placeholder="Escribe tu mensaje"
             name="message"
             maxLength={5000}

@@ -39,6 +39,10 @@ export const footerLinks = [
     title: "Información",
     links: [
       {
+        name: "Contacto",
+        link: "contact",
+      },
+      {
         name: "Inicio",
         link: "/#inicio",
       },
@@ -57,6 +61,10 @@ export const footerLinks = [
       {
         name: "Quienes somos",
         link: "us",
+      },
+      {
+        name: "App",
+        link: "aplicacion",
       },
     ],
   },

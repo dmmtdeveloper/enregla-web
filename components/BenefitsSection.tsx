@@ -5,8 +5,6 @@ import { benefits } from "@/lib/Benefits";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
 import { BenefitsCard } from "./Benefits/Card";
 
-
-
 export const BenefitsSection = () => {
   return (
     <motion.div
@@ -23,9 +21,7 @@ export const BenefitsSection = () => {
       className=" flex-grow xl:flex px-4 xl:px-32  scroll-m-12 xl:mb-32"
     >
       <div className="xl:w-1/2">
-        <div
-          className={` flex flex-col justify-center xl:p-20 p-12 rounded-[60px] xl:rounded-[100px]`}
-        >
+        <div className={` flex flex-col justify-center xl:p-20 p-12 rounded-[60px] xl:rounded-[100px]`}>
           <h2 className="font-normal text-[38px] xl:text-6xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[70px] leading-[50px] w-full mb-4">
             {" "}
             <span className="font-semibold text-[#25D366]">Beneficios</span> de grabar tu patente
