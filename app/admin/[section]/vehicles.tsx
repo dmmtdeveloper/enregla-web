@@ -26,6 +26,11 @@ export default function VehiclesModule() {
     deleteVehicle,
     handlePage,
     handleRows,
+    filteredVehicles,
+    vehicleRows,
+    vehicle,
+    closeConfirmModal,
+    confirmDelete,
   } = useVehicle();
   return (
     <>
@@ -45,7 +50,12 @@ export default function VehiclesModule() {
             <Spinner size="md" color="default" />
           </div>
         ) : (
-          <CustomTable columns={vehicleColumns} rows={[]} handleEdit={selectVehicle} handleDelete={deleteVehicle} />
+          <CustomTable
+            columns={vehicleColumns}
+            rows={searched !== "" ? filteredVehicles : vehicleRows}
+            handleEdit={selectVehicle}
+            handleDelete={deleteVehicle}
+          />
         )}
       </div>
       <div className="w-full h-[5%]">
@@ -68,19 +78,19 @@ export default function VehiclesModule() {
           <UserForm branches={branches} user={user} handleUser={handleUser} roles={userRoles} />
         </CustomModal>
       )} */}
-      {/* {confirmModal && (
-        <CustomModal
-          isOpen={confirmModal}
-          onClose={closeConfirmModal}
-          title="Eliminar usuario"
-          action={confirmDelete}
-          actionTitle="Eliminar"
-        >
-          <div className="w-full h-fit">
-            <h4 className="text-lg font-semibold">Realmente desea eliminar a {user.name}</h4>
-          </div>
-        </CustomModal>
-      )} */}
+      <CustomModal
+        isOpen={confirmModal}
+        onClose={closeConfirmModal}
+        title="Eliminar usuario"
+        action={confirmDelete}
+        actionTitle="Eliminar"
+      >
+        <div className="w-full h-fit">
+          <h4 className="text-lg font-semibold">
+            Realmente desea eliminar {vehicle.brand} - {vehicle.model}
+          </h4>
+        </div>
+      </CustomModal>
     </>
   );
 }

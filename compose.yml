@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: enregla-web
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"

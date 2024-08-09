@@ -3,13 +3,14 @@ import { TrashIcon } from "@/assets/icons/trash";
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@nextui-org/table";
 import { UserRows } from "../types/user";
 import { BranchRows } from "../types/branch";
+import { VehicleRows } from "../types/vehicle";
 
 type ColumnProps = {
   key: string;
   label: string;
 };
 
-type Rows = UserRows[] | BranchRows[];
+type Rows = UserRows[] | BranchRows[] | VehicleRows[];
 
 type TableProps = {
   columns: ColumnProps[];

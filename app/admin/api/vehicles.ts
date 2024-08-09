@@ -1,5 +1,19 @@
 import { endpoint } from "./endpoint";
 
+export const GetVehicles = async ({ token, query }: { token: string; query: string }) => {
+  try {
+    const options: RequestInit = {
+      method: "GET",
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+    };
+    const response = await fetch(`${endpoint}/vehicle${query}`, options);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error(`Error al intentar obtener los vehículos: ${error}`);
+  }
+};
+
 export const GetVehicleBrands = async ({ token, query }: { token: string; query: string }) => {
   try {
     const options: RequestInit = {
