@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 import { nextui } from "@nextui-org/theme";
 import svgToDataUri from "mini-svg-data-uri";
-const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette")
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
   darkMode: ["class"],
@@ -32,7 +32,7 @@ const config = {
         "black-gradient": "var(--black-gradient)",
         "white-gradient": "var(--white-gradient)",
       },
-      
+
       colors: {
         black: {
           DEFAULT: "#000",
@@ -95,6 +95,14 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        orbit: {
+          "0%": {
+            transform: "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
         marquee: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc(-100% - var(--gap)))" },
@@ -177,6 +185,7 @@ const config = {
         },
       },
       animation: {
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
