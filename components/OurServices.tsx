@@ -28,7 +28,7 @@ export const OurServices = () => {
         "flex-col-reverse",
         "scroll-mb-10 scroll-mt-16",
         "xl:scroll-mt-0",
-        "xl:px-8 xl:mb-32"
+        "xl:px-8 mb-0 xl:mb-32"
       )}
     >
       <div className="xl:w-[50%] md:w-[50%] w-[100%] relative flex justify-center items-center">

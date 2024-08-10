@@ -40,7 +40,7 @@ export const footerLinks = [
     links: [
       {
         name: "Contacto",
-        link: "contact",
+        link: "/#contact",
       },
       {
         name: "Inicio",

@@ -1,4 +1,3 @@
-
 import CTA from "@/components/CTA";
 import MainLayout from "@/components/layout";
 import { LawSection } from "@/components/LawSection";
@@ -10,22 +9,22 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { MarqueSection } from "@/components/MarqueSection";
 import { LampSection } from "@/components/LampSection";
 import { OrbitingCirclesDemo } from "@/components/ui/OrbitingCirclesComponent";
-
-
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
     <MainLayout>
       <HeroSection />
-      <OrbitingCirclesDemo/>
+      <OrbitingCirclesDemo />
       {/* <LampSection/> */}
       <BenefitsSection />
       <OurServices />
       <LawSection />
-      <MarqueSection/>
+      <MarqueSection />
       <ClientSection />
       <StatsSection />
-      <CTA />
+      {/* <CTA /> */}
+      <Contact />
     </MainLayout>
   );
 }

@@ -18,7 +18,7 @@ export const LawSection = () => {
       transition={{
         duration: 2,
       }}
-      className="px-4 flex md:flex-row flex-col  xl:px-32  dark:bg-black-100 scroll-mt-24 xl:scroll-m-28 xl:mb-32"
+      className="px-4 flex md:flex-row flex-col mt-0 xl:px-32  dark:bg-black-100 scroll-mt-24 xl:scroll-m-28 xl:mb-32"
     >
       <div
         className={clsx(

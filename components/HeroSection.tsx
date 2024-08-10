@@ -81,7 +81,7 @@ export const HeroSection = () => {
               {/* <ButtonContact/> */}
             </div>
             <div className="flex gap-8 items-center justify-center">
-              <Link href="/contact">
+              <Link href="/#contact">
                 <MovingBorderDemo title="Contáctanos" />
               </Link>
               <ButtonContactHero />
