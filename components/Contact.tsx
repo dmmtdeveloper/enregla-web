@@ -1,6 +1,5 @@
 "use client";
 "react-dom";
-import MainLayout from "@/components/layout";
 import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
 import { SubmitBtn } from "@/components/buttons/Submit-btn";

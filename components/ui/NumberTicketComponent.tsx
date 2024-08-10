@@ -35,19 +35,17 @@ export default function NumberTickerComponent({
     () =>
       springValue.on("change", (latest) => {
         if (ref.current) {
-          ref.current.textContent = Intl.NumberFormat("en-US").format(
-            latest.toFixed(0),
-          );
+          ref.current.textContent = Intl.NumberFormat("en-US").format(Number(latest.toFixed(0)));
         }
       }),
-    [springValue],
+    [springValue]
   );
 
   return (
     <span
       className={cn(
         "tabular-nums text-4xl text-center flex  items-center text-black dark:text-white tracking-wider",
-        className,
+        className
       )}
       ref={ref}
     />
