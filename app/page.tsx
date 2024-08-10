@@ -7,7 +7,6 @@ import { StatsSection } from "@/components/StatsSectionContainer";
 import { ClientSection } from "@/components/ClientSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { MarqueSection } from "@/components/MarqueSection";
-import { LampSection } from "@/components/LampSection";
 import { OrbitingCirclesDemo } from "@/components/ui/OrbitingCirclesComponent";
 import Contact from "@/components/Contact";
 
@@ -16,14 +15,12 @@ export default function Home() {
     <MainLayout>
       <HeroSection />
       <OrbitingCirclesDemo />
-      {/* <LampSection/> */}
       <BenefitsSection />
       <OurServices />
       <LawSection />
       <MarqueSection />
       <ClientSection />
       <StatsSection />
-      {/* <CTA /> */}
       <Contact />
     </MainLayout>
   );

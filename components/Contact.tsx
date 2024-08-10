@@ -55,7 +55,7 @@ const Contact = () => {
         <input
           className="h-14 rounded-lg bg-[#ffff] w-full border border-black/10 p-4"
           name="senderEmail"
-          placeholder="Email"
+          placeholder="Correo electrónico"
           required
           maxLength={500}
           type="email"

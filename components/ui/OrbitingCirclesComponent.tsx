@@ -10,18 +10,19 @@ export function OrbitingCirclesDemo() {
       </span>
 
       {/* Inner Circles */}
-      <OrbitingCircles className="size-[30px] border-none bg-transparent" duration={20} delay={20} radius={80}>
+      <OrbitingCircles className="size-[30px] border-none bg-none" duration={20} delay={20} radius={80}>
         <Icons.whatsapp />
       </OrbitingCircles>
-      <OrbitingCircles className="size-[30px] border-none bg-transparent" duration={20} delay={10} radius={80}>
+      <OrbitingCircles className="size-[40px] border-none bg-none" duration={20} delay={10} radius={80}>
         <Icons.notion />
       </OrbitingCircles>
 
       {/* Outer Circles (reverse) */}
-      <OrbitingCircles className="size-[50px] border-none bg-transparent" radius={190} duration={20} reverse>
+      <OrbitingCircles className="size-[60px] border-none bg-none" radius={190} duration={20} reverse>
         <Icons.googleDrive />
       </OrbitingCircles>
-      <OrbitingCircles className="size-[50px] border-none bg-transparent" radius={190} duration={20} delay={20} reverse>
+
+      <OrbitingCircles className="size-[80px] border-none bg-none" radius={190} duration={20} delay={20} reverse>
         <Icons.gitHub />
       </OrbitingCircles>
     </div>

@@ -36,7 +36,6 @@ export const HeroSection = () => {
               "absolute pointer-events-none",
               "inset-0 flex items-center",
               "justify-center",
-              "",
               "[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]",
               "dark:bg-black-100"
             )}
