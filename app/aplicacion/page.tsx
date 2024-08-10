@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import MainLayout from "@/components/layout";
 import React from "react";
 import app from "@/public/assets/img/app.png";
@@ -13,7 +13,7 @@ const fadeIn = {
   transition: { duration: 2 },
 };
 
-export const aplicacion = () => {
+export const Application = () => {
   return (
     <MainLayout>
       <motion.section
@@ -87,4 +87,4 @@ export const aplicacion = () => {
   );
 };
 
-export default aplicacion;
+export default Application;
