@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    RESEND_API_KEY: "re_XfGMa5Kt_3MRCNeiSmq7sj32d5ARrkJFn",
+    RESEND_API_KEY: "re_hoeRqihy_FnUeCGBmbmdJeb59wo52rvi3",
   },
 };
 

@@ -10,9 +10,9 @@ export const Footer = () => {
       className={clsx(
         "pt-10 pb-5",
         "flex justify-center items-center",
-        "flex-col px-4",
+        "flex-col px-5",
         "xl:px-44",
-        "border",
+        "border-t-1",
         "border-gray-950/[.1] bg-gray-950/[.05]",
         "dark:border-gray-50/[.1] bg-gray-50/[.15]"
       )}
@@ -43,7 +43,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full md:flex-col flex justify-between items-center  flex-col pt-6 border-t-[1px] dark:border-t-white-100 border-t-black-200">
+      <div className="w-full md:flex-col flex justify-between items-center  flex-col pt-6 border-t-[1px] dark:border-t-white-200 border-t-black-200">
         <div className="flex gap-10 flex-row md:mt-0">
           {socialMedia.map((social, index) => (
             <a

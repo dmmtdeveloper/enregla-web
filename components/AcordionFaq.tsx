@@ -25,11 +25,11 @@ export const AcordionFaq: React.FC<AcordionFaqProps> = ({
       onClick={handleFaq}
       className={clsx(
         "w-full xl:w-1/2 xl:mx-auto",
-        "shadow-xl",
+        "shadow-sm",
         "rounded-2xl",
         "mb-4",
         "border",
-        "border-gray-950/[.1] bg-gray-950/[.01] ",
+        "bg-white",
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10]"
       )}
     >
