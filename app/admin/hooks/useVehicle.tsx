@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { GetVehicleBrands, GetVehicleModels, GetVehicles } from "../api/vehicles";
+import { GetVehicleBrands, GetVehicleModels, GetVehicles, SaveVehicle, UpdateVehicle } from "../api/vehicles";
 import { Brand, Model, Vehicle, VehicleRows } from "../types/vehicle";
 import useSession from "./useSession";
 
@@ -14,7 +14,6 @@ const defaultVehicle: VehicleRows = {
 const vehicleColumns = [
   { label: "Marca", key: "brand" },
   { label: "Modelo", key: "model" },
-  { label: "Logo", key: "logo" },
   { label: "Opciones", key: "options" },
 ];
 
@@ -25,12 +24,7 @@ export default function useVehicle() {
   const [vehicleModels, setVehicleModels] = useState<Model[]>([]);
   const [totalModels, setTotalModels] = useState<number>(0);
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
-  const [vehicle, setVehicle] = useState<VehicleRows>({
-    id: 0,
-    brand: "",
-    logo: "",
-    model: "",
-  });
+  const [vehicle, setVehicle] = useState<VehicleRows>(defaultVehicle);
   const [page, setPage] = useState<number>(1);
   const [rows, setRows] = useState<number>(10);
   const [totalPages, setTotalPages] = useState<number>(1);
@@ -45,15 +39,21 @@ export default function useVehicle() {
 
   useEffect(() => {
     fetchVehicles();
-    fetchVehicleBrands();
-    fetchVehicleModels();
   }, []);
+
+  useEffect(() => {
+    fetchVehicleBrands();
+  }, []);
+
+  useEffect(() => {
+    if (vehicle.brand) {
+      fetchVehicleModels();
+    }
+  }, [vehicle.brand]);
 
   const fetchVehicles = async () => {
     setLoading(true);
     const response = await GetVehicles({ token, query: `?page=${page}&rows=${rows}` });
-    console.log("RES", response);
-
     if (response.error) notifyError(response.error), setLoading(false);
     else {
       setLoading(false);
@@ -64,9 +64,7 @@ export default function useVehicle() {
 
   const fetchVehicleBrands = async () => {
     setLoading(true);
-    const response = await GetVehicleBrands({ token, query: `?page=${page}&rows=${rows}` });
-    console.log(response);
-
+    const response = await GetVehicleBrands({ token });
     if (response.error) notifyError(response.error), setLoading(false);
     else {
       setLoading(false);
@@ -76,9 +74,12 @@ export default function useVehicle() {
   };
 
   const fetchVehicleModels = async () => {
-    if (vehicle.id) {
+    if (vehicle.brand) {
       setLoading(true);
-      const response = await GetVehicleModels({ token, query: `?brand_id=${vehicle.id}&page=${page}&rows=${rows}` });
+      const findId = vehicleBrands.find((brand) => brand.brand === vehicle.brand)?.id;
+      const response = await GetVehicleModels({ token, brand_id: findId as number });
+      console.log(response);
+
       if (response.error) notifyError(response.error), setLoading(false);
       else {
         setLoading(false);
@@ -94,6 +95,8 @@ export default function useVehicle() {
     )
     .flat(1);
 
+  console.log(vehicleRows);
+
   const filteredVehicles = vehicleRows.filter((vehicle) => {
     return (
       vehicle.brand.toLowerCase().includes(searched.toLowerCase()) ||
@@ -106,7 +109,10 @@ export default function useVehicle() {
   };
   const handleSearch = (text: string) => setSearched(text);
 
-  const selectVehicle = (vehicle_id: number) => {};
+  const selectVehicle = (vehicle_id: number) => {
+    const find = vehicles.find((vehicle) => vehicle.id === vehicle_id);
+    console.log(find);
+  };
   const confirmDelete = () => {};
   const deleteVehicle = () => {};
   const openModal = () => setShowModal(true);
@@ -116,6 +122,22 @@ export default function useVehicle() {
 
   const handlePage = (page: number) => setPage(page);
   const handleRows = (rows: number) => setRows(rows);
+
+  const saveVehicle = async () => {
+    setLoading(true);
+    const response = edit ? await UpdateVehicle({ token, vehicle }) : await SaveVehicle({ token, vehicle });
+    console.log("RES", response);
+
+    if (response.error) notifyError(response.error), setLoading(false);
+    else {
+      setLoading(false);
+      notifyMessage(response.message);
+      fetchVehicles();
+      fetchVehicleBrands();
+      setVehicle(defaultVehicle);
+      closeModal();
+    }
+  };
 
   return {
     vehicleBrands,
@@ -144,5 +166,6 @@ export default function useVehicle() {
     filteredVehicles,
     closeConfirmModal,
     confirmDelete,
+    saveVehicle,
   };
 }

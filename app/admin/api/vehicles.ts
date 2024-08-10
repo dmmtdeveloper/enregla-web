@@ -1,3 +1,4 @@
+import { VehicleRows } from "../types/vehicle";
 import { endpoint } from "./endpoint";
 
 export const GetVehicles = async ({ token, query }: { token: string; query: string }) => {
@@ -14,7 +15,7 @@ export const GetVehicles = async ({ token, query }: { token: string; query: stri
   }
 };
 
-export const GetVehicleBrands = async ({ token, query }: { token: string; query: string }) => {
+export const GetVehicleBrands = async ({ token }: { token: string }) => {
   try {
     const options: RequestInit = {
       method: "GET",
@@ -23,7 +24,7 @@ export const GetVehicleBrands = async ({ token, query }: { token: string; query:
         Authorization: `Bearer ${token}`,
       },
     };
-    const response = await fetch(`${endpoint}/vehicle/brand${query}`, options);
+    const response = await fetch(`${endpoint}/vehicle/brand`, options);
     const data = await response.json();
     return data;
   } catch (error) {
@@ -31,7 +32,7 @@ export const GetVehicleBrands = async ({ token, query }: { token: string; query:
   }
 };
 
-export const GetVehicleModels = async ({ token, query }: { token: string; query: string }) => {
+export const GetVehicleModels = async ({ token, brand_id }: { token: string; brand_id: number }) => {
   try {
     const options: RequestInit = {
       method: "GET",
@@ -40,7 +41,7 @@ export const GetVehicleModels = async ({ token, query }: { token: string; query:
         Authorization: `Bearer ${token}`,
       },
     };
-    const response = await fetch(`${endpoint}/vehicle/model${query}`, options);
+    const response = await fetch(`${endpoint}/vehicle/model?brand_id=${brand_id}`, options);
     const data = await response.json();
     return data;
   } catch (error) {
@@ -48,136 +49,46 @@ export const GetVehicleModels = async ({ token, query }: { token: string; query:
   }
 };
 
-export const SaveVehicleBrand = async ({ token, brand, logo }: { token: string; brand: string; logo: string }) => {
+export const SaveVehicle = async ({ token, vehicle }: { token: string; vehicle: VehicleRows }) => {
   try {
     const options: RequestInit = {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({ brand, logo }),
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+      body: JSON.stringify({ vehicle }),
     };
-    const response = await fetch(`${endpoint}/vehicle/brand`, options);
+    const response = await fetch(`${endpoint}/vehicle`, options);
     const data = await response.json();
     return data;
   } catch (error) {
-    throw new Error(`Error al intentar guardar la marca de vehículo: ${error}`);
+    throw new Error(`Error al intentar guardar el vehículo: ${error}`);
   }
 };
 
-export const SaveVehicleModel = async ({
-  token,
-  brand_id,
-  model,
-}: {
-  token: string;
-  brand_id: number;
-  model: string;
-}) => {
-  try {
-    const options: RequestInit = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({ brand_id, model }),
-    };
-    const response = await fetch(`${endpoint}/vehicle/model`, options);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    throw new Error(`Error al intentar guardar el modelo de vehículo: ${error}`);
-  }
-};
-
-export const UpdateVehicleBrand = async ({
-  token,
-  brand_id,
-  brand,
-  logo,
-}: {
-  token: string;
-  brand_id: number;
-  brand: string;
-  logo: string;
-}) => {
+export const UpdateVehicle = async ({ token, vehicle }: { token: string; vehicle: VehicleRows }) => {
   try {
     const options: RequestInit = {
       method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({ brand, logo }),
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+      body: JSON.stringify({ vehicle }),
     };
-    const response = await fetch(`${endpoint}/vehicle/brand/${brand_id}`, options);
+    const response = await fetch(`${endpoint}/vehicle`, options);
     const data = await response.json();
     return data;
   } catch (error) {
-    throw new Error(`Error al intentar actualizar la marca de vehículo: ${error}`);
+    throw new Error(`Error al intentar actualizar el vehículo: ${error}`);
   }
 };
 
-export const UpdateVehicleModel = async ({
-  token,
-  model_id,
-  brand_id,
-  model,
-}: {
-  token: string;
-  model_id: number;
-  brand_id: number;
-  model: string;
-}) => {
-  try {
-    const options: RequestInit = {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({ brand_id, model }),
-    };
-    const response = await fetch(`${endpoint}/vehicle/model/${model_id}`, options);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    throw new Error(`Error al intentar actualizar el modelo de vehículo: ${error}`);
-  }
-};
-
-export const DeleteVehicleBrand = async ({ token, brand_id }: { token: string; brand_id: number }) => {
+export const DeleteVehicle = async ({ token, id }: { token: string; id: number }) => {
   try {
     const options: RequestInit = {
       method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
     };
-    const response = await fetch(`${endpoint}/vehicle/brand/${brand_id}`, options);
+    const response = await fetch(`${endpoint}/vehicle/${id}`, options);
     const data = await response.json();
     return data;
   } catch (error) {
-    throw new Error(`Error al intentar eliminar la marca de vehículo: ${error}`);
-  }
-};
-
-export const DeleteVehicleModel = async ({ token, model_id }: { token: string; model_id: number }) => {
-  try {
-    const options: RequestInit = {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    };
-    const response = await fetch(`${endpoint}/vehicle/model/${model_id}`, options);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    throw new Error(`Error al intentar eliminar el modelo de vehículo: ${error}`);
+    throw new Error(`Error al intentar eliminar el vehículo: ${error}`);
   }
 };

@@ -3,7 +3,8 @@ import { TrashIcon } from "@/assets/icons/trash";
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@nextui-org/table";
 import { UserRows } from "../types/user";
 import { BranchRows } from "../types/branch";
-import { VehicleRows } from "../types/vehicle";
+import { Vehicle, VehicleRows } from "../types/vehicle";
+import Image from "next/image";
 
 type ColumnProps = {
   key: string;

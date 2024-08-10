@@ -1,12 +1,11 @@
 import { Spinner } from "@nextui-org/spinner";
 import CustomTable from "../ui/table";
 import CustomPagination from "../ui/pagination";
-import useUsers from "../hooks/useUsers";
 import Header from "../ui/header";
 import CustomButton from "../ui/button";
 import CustomModal from "../ui/modal";
-import UserForm from "../ui/forms/userform";
 import useVehicle from "../hooks/useVehicle";
+import VehicleForm from "../ui/forms/vehicleform";
 
 export default function VehiclesModule() {
   const {
@@ -31,6 +30,10 @@ export default function VehiclesModule() {
     vehicle,
     closeConfirmModal,
     confirmDelete,
+    handleVehicle,
+    vehicleBrands,
+    vehicleModels,
+    saveVehicle,
   } = useVehicle();
   return (
     <>
@@ -68,16 +71,19 @@ export default function VehiclesModule() {
           handleRows={handleRows}
         />
       </div>
-      {/* {showModal && (
-        <CustomModal
-          isOpen={showModal}
-          onClose={closeModal}
-          title={edit ? "Editar vehículo" : "Nuevo vehículo"}
-          action={saveUser}
-        >
-          <UserForm branches={branches} user={user} handleUser={handleUser} roles={userRoles} />
-        </CustomModal>
-      )} */}
+      <CustomModal
+        isOpen={showModal}
+        onClose={closeModal}
+        title={edit ? "Editar vehículo" : "Nuevo vehículo"}
+        action={saveVehicle}
+      >
+        <VehicleForm
+          vehicle={vehicle}
+          vehicleBrands={vehicleBrands}
+          vehicleModels={vehicleModels}
+          handleVehicle={handleVehicle}
+        />
+      </CustomModal>
       <CustomModal
         isOpen={confirmModal}
         onClose={closeConfirmModal}
