@@ -4,7 +4,7 @@ import React from "react";
 import { TbTargetArrow } from "react-icons/tb";
 import { HiOutlineLightBulb } from "react-icons/hi";
 
-export const usPage = () => {
+const usPage = () => {
   return (
     <MainLayout>
       <section id="us" className="flex justify-center items-center  min-h-screen  px-8  py-36">
