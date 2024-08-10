@@ -144,16 +144,6 @@ body {
   );
 }
 
-/* Benefits  */
-/* .feature-card-black:hover {
-  background: var(--black-gradient);
-  box-shadow: var(--card-shadow-black);
-}
-
-.feature-card-white:hover {
-  background: var(--white-gradient);
-  box-shadow: var(--card-shadow-white);
-} */
 
 .to {
   --tw-gradient-to: #0072f5 var(--tw-gradient-to-position);

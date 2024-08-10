@@ -1,4 +1,3 @@
-import CTA from "@/components/CTA";
 import MainLayout from "@/components/layout";
 import { LawSection } from "@/components/LawSection";
 import { HeroSection } from "@/components/HeroSection";
