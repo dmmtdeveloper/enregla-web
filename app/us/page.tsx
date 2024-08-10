@@ -1,9 +1,91 @@
-import React from 'react'
+import MainLayout from "@/components/layout";
+import clsx from "clsx";
+import React from "react";
+import { TbTargetArrow } from "react-icons/tb";
+import { HiOutlineLightBulb } from "react-icons/hi";
 
-export const Uspage = () => {
+const usPage = () => {
   return (
-    <div>
-        
-    </div>
-  )
-}
+    <MainLayout>
+      <section id="us" className="flex justify-center items-center  min-h-screen  px-8  py-36">
+        <div className="flex flex-col gap-10 w-full xl:w-[55%]">
+          <article className="flex flex-col gap-5">
+            <h2
+              className={clsx(
+                "font-semibold",
+                "text-[38px] xl:text-6xl",
+                "xl:max-w-[700px]",
+                "dark:text-white",
+                "text-black-100",
+                "xl:leading-[70px] leading-[50px]",
+                "w-full"
+              )}
+            >
+              ¿Quiénes Somos?
+            </h2>
+            <div className="flex flex-col gap-4">
+              <p className="text-black dark:text-white text-justify">
+                Somos una empresa que nace hace 9 años, como grupo simplifica y nos dedicamos a SERVICIOS INTEGRALES.
+                Contamos con 3 años en el rubro automotriz donde contamos con experiencia en servicios de láminas de
+                seguridad, pulidos y grabados sobre todo en centros comerciales como Mall plaza, también clientes como
+                Difor y Sergio Escobar. Nos ubicamos en zonas estratégicas de Chile, tales como la quinta, Región
+                Metropolitana y Octava región.
+              </p>
+              <p className="text-black dark:text-white text-justify">
+                Nos ubicamos en zonas estratégicas de Chile, tales como la quinta, Región Metropolitana y Octava región.
+              </p>
+            </div>
+          </article>
+
+          <article className="flex flex-col gap-4">
+            <div>
+              <TbTargetArrow className="text-4xl text-green" />
+              <h2
+                className={clsx(
+                  "font-semibold",
+                  "text-[38px] xl:text-5xl",
+                  "xl:max-w-[700px]",
+                  "dark:text-white",
+                  "text-black-100",
+                  "xl:leading-[70px] leading-[50px]",
+                  "w-full"
+                )}
+              >
+                Misión:
+              </h2>
+            </div>
+            <p className="text-black dark:text-white text-justify">
+              Entregar una solución de manera integral en seguridad a nuestros clientes, enfocados 100% en el servicio y
+              acompañamiento a cada uno, entregando lo mejor de nosotros como empresa.
+            </p>
+          </article>
+
+          <article className="flex flex-col gap-2">
+            <div>
+              <HiOutlineLightBulb className="text-4xl text-green" />
+              <h2
+                className={clsx(
+                  "font-semibold",
+                  "text-[38px] xl:text-5xl",
+                  "xl:max-w-[700px]",
+                  "dark:text-white",
+                  "text-black-100",
+                  "xl:leading-[70px] leading-[50px]",
+                  "w-full"
+                )}
+              >
+                Visión:
+              </h2>
+            </div>
+            <p className="text-black dark:text-white text-justify">
+              Ser una de las mejores empresas de seguridad automotriz en Chile, con enfoque en servicio y calidad de
+              productos.
+            </p>
+          </article>
+        </div>
+      </section>
+    </MainLayout>
+  );
+};
+
+export default usPage;

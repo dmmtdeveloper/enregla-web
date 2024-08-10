@@ -11,7 +11,11 @@ export const links: NavItems = {
       hash: "/#beneficios", // Ruta absoluta
     },
     {
-      name: "Nosotros",
+      name: "Clientes",
+      hash: "/#clientes", // Ruta absoluta
+    },
+    {
+      name: "Servicio",
       hash: "/#nosotros", // Ruta absoluta
     },
     {
@@ -19,12 +23,8 @@ export const links: NavItems = {
       hash: "/#ley", // Ruta absoluta
     },
     {
-      name: "Clientes",
-      hash: "/#clientes", // Ruta absoluta
-    },
-    {
-      name: "Contacto",
-      hash: "/contact", // Ruta absoluta
+      name: "Misión",
+      hash: "/us", // Ruta absoluta
     },
   ],
 };

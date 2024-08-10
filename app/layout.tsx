@@ -3,7 +3,6 @@ import { Sora } from "next/font/google";
 import type { Metadata } from "next";
 import Providers from "./providers";
 
-
 const sora = Sora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
