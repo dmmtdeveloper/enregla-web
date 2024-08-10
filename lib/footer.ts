@@ -59,7 +59,7 @@ export const footerLinks = [
         link: "FAQ",
       },
       {
-        name: "Quienes somos",
+        name: "Quiénes somos",
         link: "us",
       },
       {

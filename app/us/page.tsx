@@ -26,12 +26,13 @@ export const usPage = () => {
             <div className="flex flex-col gap-4">
               <p className="text-black dark:text-white text-justify">
                 Somos una empresa que nace hace 9 años, como grupo simplifica y nos dedicamos a SERVICIOS INTEGRALES.
-                Contamos con 3 años en el rubro automotriz donde contamos con experiencia en servicios de laminas de
-                seguridad, pulidos y grabados sobre todo en centros comerciales como Mall plaza, tambien clientes como
-                Difor y Sergio Escobar.
+                Contamos con 3 años en el rubro automotriz donde contamos con experiencia en servicios de láminas de
+                seguridad, pulidos y grabados sobre todo en centros comerciales como Mall plaza, también clientes como
+                Difor y Sergio Escobar. Nos ubicamos en zonas estratégicas de Chile, tales como la quinta, Región
+                Metropolitana y Octava región.
               </p>
               <p className="text-black dark:text-white text-justify">
-                Nos ubicamos en zonas estrategicas de Chile, tales como la quinta, Región Metropolitana y Octava región.
+                Nos ubicamos en zonas estratégicas de Chile, tales como la quinta, Región Metropolitana y Octava región.
               </p>
             </div>
           </article>
