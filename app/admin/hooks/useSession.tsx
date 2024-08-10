@@ -1,9 +1,21 @@
 import { useState } from "react";
-import { defaultUser } from "../constants/user";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { LoginUser } from "../api/users";
 import useSessionStore from "../store/session";
+import { User } from "../types/user";
+
+const defaultUserSession: User = {
+  id: 0,
+  name: "",
+  email: "",
+  rut: "",
+  branch: {
+    id: 0,
+    address: "",
+  },
+  role: { id: 0, name: "" },
+};
 
 export default function useSession() {
   const router = useRouter();
@@ -45,7 +57,7 @@ export default function useSession() {
 
   const logoutUser = async () => {
     setToken("");
-    setUser(defaultUser);
+    setUser(defaultUserSession);
     router.replace("/admin/login");
   };
 
