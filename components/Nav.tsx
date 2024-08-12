@@ -81,7 +81,7 @@ export const Nav = () => {
             <Social />
           </div>
           <div className="flex items-center justify-center gap-2 md:gap-8 xl:gap-4">
-            <Link href="/contact">
+            <Link href="#contact">
               <IoMdContact className="text-[24px] dark:text-green cursor-pointer hidden md:block xl:block" />
             </Link>
             {/* <ButtonContactNav/> */}
