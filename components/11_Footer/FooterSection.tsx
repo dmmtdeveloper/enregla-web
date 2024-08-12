@@ -1,10 +1,10 @@
 import React from "react";
 import clsx from "clsx";
 import { footerLinks, socialMedia } from "@/lib/footer";
-import { Logoenregla } from "./nav/Logoenregla";
+import { Logoenregla } from "@/components/ui/Logoenregla";
 import Link from "next/link";
 
-export const Footer = () => {
+export const FooterSection = () => {
   return (
     <section
       className={clsx(

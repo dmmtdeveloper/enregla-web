@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
-import { ClientsImage } from "@/components/IconsImages/ClientsIcons";
 import clsx from "clsx";
+import { motion } from "framer-motion";
+import { ClientsImage } from "@/components/ui/ClientsIcons";
 
 export const ClientSection = () => {
   return (

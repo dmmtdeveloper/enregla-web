@@ -2,10 +2,10 @@
 "react-dom";
 import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
-import { SubmitBtn } from "@/components/buttons/Submit-btn";
+import { SubmitBtn } from "@/components/ui/buttons/Submit-btn";
 import { toast } from "react-toastify";
 
-const Contact = () => {
+const ContactSection = () => {
   return (
     <motion.section
       initial={{
@@ -72,4 +72,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactSection;

@@ -2,7 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/moving-border";
 import clsx from "clsx";
-import Link from "next/link";
+
 
 type buttonBorderProps = {
   title: string;

@@ -1,7 +1,7 @@
 import { stats } from "@/lib/stats";
 import clsx from "clsx";
 import React from "react";
-import NumberTickerComponent from "./ui/NumberTicketComponent";
+import NumberTickerComponent from "@/components/ui/NumberTicketComponent";
 
 const Stats = () => {
   return (

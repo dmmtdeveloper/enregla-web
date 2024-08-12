@@ -1,14 +1,14 @@
 "use client";
-import { MovingBorderDemo } from "./buttons/ButtonMoving";
-import { services } from "@/lib/OurServices";
+import Link from "next/link";
 import clsx from "clsx";
 import Ripple from "@/components/ui/ripple";
-import { Auto } from "./nav/Auto";
-import { OurServicesCard } from "./OurServices/CardServices";
+import { MovingBorderDemo } from "@/components/ui/buttons/ButtonMoving";
+import { OurServicesCard } from "@/components/04_OurServices/CardServices";
+import { services } from "@/lib/OurServices";
+import { Auto } from "@/components/ui/Auto";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
-export const OurServices = () => {
+export const OurServiceSection = () => {
   return (
     <motion.section
       initial={{

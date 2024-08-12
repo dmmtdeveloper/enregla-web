@@ -1,7 +1,7 @@
 import OrbitingCircles from "@/components/ui/orbiting-circles";
 import clsx from "clsx";
 
-export function OrbitingCirclesDemo() {
+export function OrbitingCirclesSection() {
   return (
     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  xl:mb-32 ">
       <span

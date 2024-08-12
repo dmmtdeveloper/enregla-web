@@ -1,9 +1,10 @@
 "use client";
-import { motion } from "framer-motion";
-import clsx from "clsx";
-import { MovingBorderDemo } from "./buttons/ButtonMoving";
-import { AnimatedBeamMultipleOutputUI } from "./ui/AnimatedBeamUI";
 import Link from "next/link";
+import clsx from "clsx";
+
+import { motion } from "framer-motion";
+import { MovingBorderDemo } from "@/components/ui/buttons/ButtonMoving";
+import { AnimatedBeamMultipleOutputUI } from "@/components/ui/AnimatedBeamUI";
 
 export const LawSection = () => {
   return (
@@ -26,7 +27,7 @@ export const LawSection = () => {
           "flex-1 flex-col",
           "p-10 xl:p-20",
           "rounded-[60px]",
-          "xl:rounded-[100px]",
+          "xl:rounded-[100px]"
           // "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] border",
           // "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
         )}

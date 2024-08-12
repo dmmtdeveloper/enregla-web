@@ -1,13 +1,11 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import clsx from "clsx";
-import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { MovingBorderDemo } from "./buttons/ButtonMoving";
+import { CTA } from "@/components/ui/buttons/CTA";
+import { Spotlight } from "@/components/ui/Spotlight";
+import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { motion } from "framer-motion";
-import { ButtonContactHero } from "./buttons/ContactButtonHero";
-import Link from "next/link";
-import { CTA } from "./buttons/CTA";
 
 export const HeroSection = () => {
   return (
@@ -81,11 +79,9 @@ export const HeroSection = () => {
               {/* <ButtonContact/> */}
             </div>
             <div className="flex gap-8 items-center justify-center">
-              <Link href="/#contact">
-                {/* <MovingBorderDemo title="Contáctanos" /> */}
-              </Link>
+              <Link href="/#contact">{/* <MovingBorderDemo title="Contáctanos" /> */}</Link>
               {/* <ButtonContactHero /> */}
-              <CTA/>
+              <CTA />
             </div>
           </div>
         </div>

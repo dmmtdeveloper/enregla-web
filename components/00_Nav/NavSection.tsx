@@ -1,20 +1,20 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import clsx from "clsx";
-import { Logo } from "./nav/Logo";
-import { Links } from "./nav/Links";
-import { Social } from "./social/Social";
-import { MenuButon } from "./nav/MenuButon";
-import { CloseButton } from "./nav/CloseButton";
-import { ThemeSwitch } from "./buttons/ThemeSwitch";
+import { Logo } from "@/components/ui/Logo";
+import { Links } from "@/components/00_Nav/Links";
+import { Social } from "@/components/ui/Social";
+import { MenuButon } from "@/components/ui/buttons/MenuButon";
+import { CloseButton } from "@/components/ui/buttons/CloseButton";
+import { ThemeSwitch } from "@/components/ui/buttons/ThemeSwitch";
 import { useHandleNav } from "@/hooks/useHandleNav";
-import { LinksMenu } from "./nav/LinksMenu";
+import { LinksMenu } from "@/components/00_Nav/LinksMenu";
 import { IoMdContact } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa6";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export const Nav = () => {
+export const NavSection = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showBorder, setShowBorder] = useState(false);
   const { handleNav, menuOpen } = useHandleNav();

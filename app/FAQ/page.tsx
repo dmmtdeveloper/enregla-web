@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { AcordionFaq } from "@/components/AcordionFaq";
+import { AcordionFaq } from "@/components/ui/AcordionFaq";
 import MainLayout from "@/components/layout";
 import { preguntasFrecuentes } from "@/lib/FAQ";
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Difor } from "../icons/Difor";
-import { SergioEscobar } from "../icons/SergioEscobar";
+import { Difor } from "./icons/Difor";
+import { SergioEscobar } from "./icons/SergioEscobar";
 
 
 export const ClientsImage = () => {

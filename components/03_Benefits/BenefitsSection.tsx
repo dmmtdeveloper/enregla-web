@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 import styles, { layout } from "@/lib/style";
 import { benefits } from "@/lib/Benefits";
-import { MovingBorderDemo } from "./buttons/ButtonMoving";
-import { BenefitsCard } from "./Benefits/Card";
+import { MovingBorderDemo } from "@/components/ui/buttons/ButtonMoving";
+import { BenefitsCard } from "@/components/03_Benefits/Card";
 
 export const BenefitsSection = () => {
   return (

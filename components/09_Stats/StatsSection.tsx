@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Stats from "./Stats";
+import Stats from "@/components/09_Stats/Stats";
 
 export const StatsSection = () => {
   return (
