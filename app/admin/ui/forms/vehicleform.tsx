@@ -1,16 +1,14 @@
 import Image from "next/image";
-import { Brand, Model, VehicleRows } from "../../types/vehicle";
+import { VehicleRows } from "../../types/vehicle";
 import CustomSelect from "../select";
 import CustomInput from "../textinput";
 
 type FormProps = {
-  vehicleBrands: Brand[];
-  vehicleModels: Model[];
   vehicle: VehicleRows;
   handleVehicle: (field: string, value: string) => void;
 };
 
-export default function VehicleForm({ vehicle, vehicleBrands, vehicleModels, handleVehicle }: FormProps) {
+export default function VehicleForm({ vehicle, handleVehicle }: FormProps) {
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -27,22 +25,6 @@ export default function VehicleForm({ vehicle, vehicleBrands, vehicleModels, han
     <>
       <div className="w-[90%] h-full flex mx-auto justify-between">
         <div className="w-[45%] h-full flex flex-col items-center justify-between">
-          <div className="w-full flex items-center justify-between">
-            <CustomSelect
-              options={vehicleBrands.map((el) => ({ key: el.brand, label: el.brand }))}
-              value={[]}
-              onChange={(e) => handleVehicle("brand", e.target.value)}
-              placeholder="Marcas"
-              size="sm"
-            />
-            <CustomSelect
-              options={vehicleModels.map((el) => ({ key: el.model, label: el.model }))}
-              value={[]}
-              onChange={(e) => handleVehicle("model", e.target.value)}
-              placeholder="Modelos"
-              size="sm"
-            />
-          </div>
           <CustomInput
             value={vehicle.brand}
             onChange={(e) => handleVehicle("brand", e.target.value)}

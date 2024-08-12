@@ -1,12 +1,14 @@
 "use client";
 import { usePathname } from "next/navigation";
+import dynamic from "next/dynamic";
 import Layout from "../ui/layout";
-import DashboardModule from "./dashboard";
-import UsersModule from "./users";
-import SuppliesModule from "./supplies";
-import BranchModule from "./branches";
 import Login from "./login";
-import VehiclesModule from "./vehicles";
+import DashboardModule from "./dashboard";
+
+const UsersModule = dynamic(() => import("./users"), { ssr: false });
+const SuppliesModule = dynamic(() => import("./supplies"), { ssr: false });
+const BranchModule = dynamic(() => import("./branches"), { ssr: false });
+const VehiclesModule = dynamic(() => import("./vehicles"), { ssr: false });
 
 export default function Dashboard() {
   const path = usePathname();

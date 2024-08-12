@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { GetVehicleBrands, GetVehicleModels, GetVehicles, SaveVehicle, UpdateVehicle } from "../api/vehicles";
+import { GetVehicles, SaveVehicle, UpdateVehicle } from "../api/vehicles";
 import { Brand, Model, Vehicle, VehicleRows } from "../types/vehicle";
 import useSession from "./useSession";
 
@@ -19,10 +19,6 @@ const vehicleColumns = [
 
 export default function useVehicle() {
   const { token } = useSession();
-  const [vehicleBrands, setVehicleBrands] = useState<Brand[]>([]);
-  const [totalBrands, setTotalBrands] = useState<number>(0);
-  const [vehicleModels, setVehicleModels] = useState<Model[]>([]);
-  const [totalModels, setTotalModels] = useState<number>(0);
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [vehicle, setVehicle] = useState<VehicleRows>(defaultVehicle);
   const [page, setPage] = useState<number>(1);
@@ -41,16 +37,6 @@ export default function useVehicle() {
     fetchVehicles();
   }, []);
 
-  useEffect(() => {
-    fetchVehicleBrands();
-  }, []);
-
-  useEffect(() => {
-    if (vehicle.brand) {
-      fetchVehicleModels();
-    }
-  }, [vehicle.brand]);
-
   const fetchVehicles = async () => {
     setLoading(true);
     const response = await GetVehicles({ token, query: `?page=${page}&rows=${rows}` });
@@ -59,33 +45,6 @@ export default function useVehicle() {
       setLoading(false);
       setVehicles(response.vehicles);
       setTotalPages(response.totalPages);
-    }
-  };
-
-  const fetchVehicleBrands = async () => {
-    setLoading(true);
-    const response = await GetVehicleBrands({ token });
-    if (response.error) notifyError(response.error), setLoading(false);
-    else {
-      setLoading(false);
-      setVehicleBrands(response.brands);
-      setTotalBrands(response.count);
-    }
-  };
-
-  const fetchVehicleModels = async () => {
-    if (vehicle.brand) {
-      setLoading(true);
-      const findId = vehicleBrands.find((brand) => brand.brand === vehicle.brand)?.id;
-      const response = await GetVehicleModels({ token, brand_id: findId as number });
-      console.log(response);
-
-      if (response.error) notifyError(response.error), setLoading(false);
-      else {
-        setLoading(false);
-        setVehicleModels(response.models);
-        setTotalModels(response.count);
-      }
     }
   };
 
@@ -133,17 +92,12 @@ export default function useVehicle() {
       setLoading(false);
       notifyMessage(response.message);
       fetchVehicles();
-      fetchVehicleBrands();
       setVehicle(defaultVehicle);
       closeModal();
     }
   };
 
   return {
-    vehicleBrands,
-    vehicleModels,
-    totalBrands,
-    totalModels,
     vehicle,
     page,
     rows,
