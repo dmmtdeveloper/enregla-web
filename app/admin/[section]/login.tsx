@@ -15,7 +15,7 @@ export default function Login() {
       <main className="w-screen h-screen flex bg-gradient-to-br from-slate-950 to-[#0E0C15]">
         <div className="w-full h-full flex flex-col items-center justify-center">
           <div className="h-[20%] flex flex-col items-center">
-            <Image src={brand} alt="Enregla" width={300} className="mb-[12px]" />
+            <Image src={brand} alt="Enregla" className="mb-[12px] w-1/3 h-auto" priority />
             <h2 className={textStyles.title}>Administración</h2>
           </div>
           <div className="w-[40%] h-[40%] flex flex-col items-center">

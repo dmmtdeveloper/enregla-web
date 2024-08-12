@@ -1,11 +1,13 @@
+import dynamic from "next/dynamic";
 import { Spinner } from "@nextui-org/spinner";
 import CustomTable from "../ui/table";
 import CustomPagination from "../ui/pagination";
 import Header from "../ui/header";
 import CustomButton from "../ui/button";
-import CustomModal from "../ui/modal";
 import useVehicle from "../hooks/useVehicle";
-import VehicleForm from "../ui/forms/vehicleform";
+
+const CustomModal = dynamic(() => import("@/app/admin/ui/modal"), { loading: () => <p>Cargando...</p> });
+const VehicleForm = dynamic(() => import("@/app/admin/ui/forms/vehicleform"), { loading: () => <p>Cargando...</p> });
 
 export default function VehiclesModule() {
   const {
@@ -31,19 +33,11 @@ export default function VehiclesModule() {
     closeConfirmModal,
     confirmDelete,
     handleVehicle,
-    vehicleBrands,
-    vehicleModels,
     saveVehicle,
   } = useVehicle();
   return (
     <>
-      <Header
-        title="Vehículos"
-        fromDate={new Date().toISOString().slice(0, 10)}
-        toDate={new Date().toISOString().slice(0, 10)}
-        searchedText={searched}
-        searchText={handleSearch}
-      />
+      <Header title="Vehículos" searchedText={searched} searchText={handleSearch} />
       <div className="w-full h-[10%] flex items-center justify-end mb-[1%]">
         <CustomButton text="Nuevo" onClick={openModal} />
       </div>
@@ -77,12 +71,7 @@ export default function VehiclesModule() {
         title={edit ? "Editar vehículo" : "Nuevo vehículo"}
         action={saveVehicle}
       >
-        <VehicleForm
-          vehicle={vehicle}
-          vehicleBrands={vehicleBrands}
-          vehicleModels={vehicleModels}
-          handleVehicle={handleVehicle}
-        />
+        <VehicleForm vehicle={vehicle} handleVehicle={handleVehicle} />
       </CustomModal>
       <CustomModal
         isOpen={confirmModal}
