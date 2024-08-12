@@ -1,11 +1,23 @@
 import OrbitingCircles from "@/components/ui/orbiting-circles";
-import { FaGithub } from "react-icons/fa6";
-import { RiPoliceBadgeFill } from "react-icons/ri";
+import clsx from "clsx";
 
 export function OrbitingCirclesDemo() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  xl:mb-32">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-4xl md:text-6xl xl:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  xl:mb-32 ">
+      <span
+        className={clsx(
+          "pointer-events-none",
+          "whitespace-pre-wrap",
+          "bg-gradient-to-b",
+          "from-black to-gray-300",
+          "bg-clip-text text-center",
+          "text-4xl md:text-6xl",
+          "xl:text-8xl font-semibold",
+          "leading-none text-transparent",
+          "dark:from-white",
+          "dark:to-black"
+        )}
+      >
         "Auto en regla auto seguro"
       </span>
 

@@ -40,9 +40,9 @@ export const ButtonContactHero = () => {
           "disabled:shadow",
 
           /*----dark mode----*/
-          "dark:border-green border-2",
-          "border-black text-black-200",
-          "dark:text-green"
+          "border-green border-2",
+          // "border-black text-black-200",
+          "text-green"
         )}
         // onClick={() => {
         //   setActiveSection("Contact");

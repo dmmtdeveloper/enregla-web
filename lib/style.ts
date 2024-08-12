@@ -3,7 +3,7 @@ const styles = {
     boxWidth: "xl:max-w-[1280px] w-full",
   
     heading2: "font-semibold text-[36px] xl:text-7xl dark:text-white text-black-100 leading-[76.8px] xl:leading-[66.8px] w-full",
-    paragraph: "font-normal dark:text-white text-[18px] leading-[30.8px] text-black-100",
+    paragraph: "font-normal dark:text-white text-[18px] leading-[30.8px] text-black-100 text-justify",
   
     flexCenter: "flex justify-center items-center",
     flexStart: "flex pt-10 items-start xl:mt-20",

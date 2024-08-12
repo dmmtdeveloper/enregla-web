@@ -8,6 +8,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { MarqueSection } from "@/components/MarqueSection";
 import { OrbitingCirclesDemo } from "@/components/ui/OrbitingCirclesComponent";
 import Contact from "@/components/Contact";
+import { MaximumTerm } from "@/components/MaximumTerm";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <OrbitingCirclesDemo />
       <BenefitsSection />
       <OurServices />
+      <MaximumTerm/>
       <LawSection />
       <MarqueSection />
       <ClientSection />

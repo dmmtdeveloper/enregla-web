@@ -21,7 +21,7 @@ type OurServiceProps = {
               "text-black-100",
               "text-[16px]",
               "leading-[24px]",
-              "mb-1",
+              "mb-1 text-justify",
               "xl:max-w-[600px]"
             )}
           >
