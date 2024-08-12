@@ -6,8 +6,8 @@ export function OrbitingCirclesDemo() {
     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  xl:mb-32 ">
       <span
         className={clsx(
-          "pointer-events-none",
-          "whitespace-pre-wrap",
+          // "pointer-events-none",
+          // "whitespace-pre-wrap",
           "bg-gradient-to-b",
           "from-black to-gray-300",
           "bg-clip-text text-center",

@@ -4,6 +4,7 @@ import styles, { layout } from "@/lib/style";
 import { maximumTerm } from "@/lib/Benefits";
 import { MovingBorderDemo } from "./buttons/ButtonMoving";
 import { MaximumCard } from "./Benefits/MaximumCard";
+import Link from "next/link";
 
 export const MaximumTerm = () => {
   return (
@@ -30,14 +31,13 @@ export const MaximumTerm = () => {
             Según establece la ley 21.601 que regula el grabado de patentes en Chile y su reglamento publicado el 14 de
             mayo, los plazos para hacer este procedimiento varían según el tipo de vehículo:
           </p>
-          {/* <Button styles="mt-10" /> */}
-          <MovingBorderDemo title="Conoce más"></MovingBorderDemo>
+          <Link href="FAQ">
+            <MovingBorderDemo title="Conoce más"></MovingBorderDemo>
+          </Link>
         </div>
       </div>
 
-      <div
-        className={` flex flex-col items-start  mt-10 relative`}
-      >
+      <div className={` flex flex-col items-start  mt-10 relative`}>
         {maximumTerm.map((term, index) => (
           <MaximumCard key={term.id} {...term} index={index} />
         ))}

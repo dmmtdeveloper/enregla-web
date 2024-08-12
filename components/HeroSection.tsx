@@ -7,6 +7,7 @@ import { MovingBorderDemo } from "./buttons/ButtonMoving";
 import { motion } from "framer-motion";
 import { ButtonContactHero } from "./buttons/ContactButtonHero";
 import Link from "next/link";
+import { CTA } from "./buttons/CTA";
 
 export const HeroSection = () => {
   return (
@@ -81,9 +82,10 @@ export const HeroSection = () => {
             </div>
             <div className="flex gap-8 items-center justify-center">
               <Link href="/#contact">
-                <MovingBorderDemo title="Contáctanos" />
+                {/* <MovingBorderDemo title="Contáctanos" /> */}
               </Link>
-              <ButtonContactHero />
+              {/* <ButtonContactHero /> */}
+              <CTA/>
             </div>
           </div>
         </div>
