@@ -1,11 +1,11 @@
 "use client";
-import Link from "next/link";
 import React from "react";
 import clsx from "clsx";
 import { CTA } from "@/components/ui/buttons/CTA";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { motion } from "framer-motion";
+
 
 export const HeroSection = () => {
   return (
@@ -40,9 +40,9 @@ export const HeroSection = () => {
             )}
           ></div>
 
-          <div className="flex flex-col items-center justify-center relative my-20 z-10">
+          <div className="flex flex-col items-center justify-center relative  z-10">
             <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col items-center justify-center">
-              <h2
+              <p
                 className={clsx(
                   "uppercase tracking-widest",
                   "text-xs text-center",
@@ -52,7 +52,7 @@ export const HeroSection = () => {
                 )}
               >
                 auto en regla auto seguro
-              </h2>
+              </p>
               <TextGenerateEffect
                 className="text-center text-[50px] sm:text-6xl md:text-6xl lg:text-4xl xl:text-[68px]"
                 words="Solución integral en Seguridad Automotriz"
@@ -72,16 +72,12 @@ export const HeroSection = () => {
                   "dark:text-blue-100"
                 )}
               >
-                Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus vehículos.
+                Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus
+                vehículos.
               </p>
 
-              {/* <MagicButton icon={<FaLocationArrow />} position="right" title="Contactanos" /> */}
-              {/* <ButtonContact/> */}
-            </div>
-            <div className="flex gap-8 items-center justify-center">
-              <Link href="/#contact">{/* <MovingBorderDemo title="Contáctanos" /> */}</Link>
-              {/* <ButtonContactHero /> */}
               <CTA />
+        
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ export const OurServiceSection = () => {
         <div className={` flex flex-col  justify-center p-10 xl:p-20  rounded-[60px] xl:rounded-[100px]`}>
           <h2
             className={clsx(
-              "font-normal text-[38px]",
+              "font-normal text-4xl",
               "xl:text-6xl xl:max-w-[700px]",
               "text-black-100",
               "xl:leading-[70px] leading-[50px]",

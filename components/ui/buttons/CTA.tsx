@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
 import React from "react";
-import { BsArrowRight } from "react-icons/bs";
 
 export const CTA = () => {
   return (
@@ -12,8 +11,8 @@ export const CTA = () => {
           /*----default state----*/
           "group",
           "text-white text-[18px]",
-          "px-10 py-5 mt-6 leading-6",
-          "rounded-[16px]",
+          "px-10 py-5 leading-6",
+          "rounded-full",
           "font-semibold tracking-wide",
           "cursor-pointer",
           "inline-flex",
@@ -45,8 +44,8 @@ export const CTA = () => {
         )}
    
       >
-        Contáctanos{" "}
-        <BsArrowRight className={clsx("text-[20px]", "opacity-70 transition-all", "group-hover:translate-x-2")} />
+        Contáctanos
+       
       </Link>
     </React.Fragment>
   );

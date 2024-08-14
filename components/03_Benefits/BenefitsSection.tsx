@@ -1,9 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-import styles, { layout } from "@/lib/style";
+import { layout } from "@/lib/style";
 import { benefits } from "@/lib/Benefits";
 import { MovingBorderDemo } from "@/components/ui/buttons/ButtonMoving";
 import { BenefitsCard } from "@/components/03_Benefits/Card";
+import { Title } from "@/components/ui/titles/Title";
+import { ParagraphSection } from "@/components/ui/paragraph/ParagraphSection";
+import clsx from "clsx";
+import { paragrapsBenefits } from "@/lib/data";
 
 export const BenefitsSection = () => {
   return (
@@ -18,19 +22,21 @@ export const BenefitsSection = () => {
       transition={{
         duration: 2,
       }}
-      className=" flex-grow xl:flex px-4 xl:px-32  scroll-m-12 xl:mb-32"
+      className=" flex-grow xl:flex px-8 xl:px-32  scroll-m-12 xl:mb-32 pt-8 pb-8"
     >
       <div className="xl:w-1/2">
-        <div className={` flex flex-col justify-center xl:p-20 p-12 rounded-[60px] xl:rounded-[100px]`}>
-          <h2 className="font-normal text-[38px] xl:text-6xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[70px] leading-[50px] w-full mb-4">
-            {" "}
-            <span className="font-semibold text-[#25D366]">Beneficios</span> de grabar tu patente
-          </h2>
-          <p className={`${styles.paragraph} max-w-[600px] mt-5 mb-8 dark:text-white-200`}>
-            Esta medida no solo cumple con la Ley 21.601, sino que también introduce cambios significativos en la forma
-            en que identificamos nuestros vehículos.
-          </p>
-          {/* <Button styles="mt-10" /> */}
+        <div
+          className={clsx(
+            "flex",
+            "flex-col",
+            "justify-center",
+            "xl:p-20",
+            "rounded-[60px]",
+            "xl:rounded-[100px]"
+          )}
+        >
+          <Title text="Beneficios" title="de grabar tu patente" />
+          <ParagraphSection paragraph={paragrapsBenefits.paragraph} />
           <MovingBorderDemo title="Contáctanos"></MovingBorderDemo>
         </div>
       </div>
