@@ -26,7 +26,8 @@ export const CTA = () => {
           "hover:bg-green2-100-",
           "hover:shadow-md",
           "hover:scale-110 active:scale-105",
-          "hover:bg-[#03FF94]",
+          "dark:hover:bg-[#03FF94]",
+          "hover:bg-[#393d3b]",
 
           /*----focus statate----*/
           "focus:scale-110",
@@ -39,13 +40,12 @@ export const CTA = () => {
           "disabled:shadow",
 
           /*----dark mode----*/
-          "bg-green",
+          "bg-black",
+          "dark:bg-[#25D366]",
           "dark:text-black-100"
         )}
-   
       >
         Contáctanos
-       
       </Link>
     </React.Fragment>
   );

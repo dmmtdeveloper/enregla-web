@@ -1,22 +1,55 @@
-"use client";
-"react-dom";
+"use client"
 import { motion } from "framer-motion";
-import { sendEmail } from "@/actions/sendEmail";
 import { SubmitBtn } from "@/components/ui/buttons/Submit-btn";
-import { toast } from "react-toastify";
+import { useState } from "react";
+import { sendContactForm } from "@/lib/api";
+interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const initValues: ContactFormData = {
+  name: "",
+  email: "",
+  message: "",
+};
+
+const initState = { values: initValues, isLoading: false };
 
 const ContactSection = () => {
+  const [state, setState] = useState(initState);
+  const { values } = state;
+
+  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }));
+
+  const onSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
+
+    await sendContactForm(values);
+    console.log(values);
+
+    setState((prev) => ({
+      ...prev,
+      isLoading: false,
+    }));
+  };
+
   return (
     <motion.section
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
       id="contact"
       className="w-full h-screen flex flex-col justify-center items-center"
     >
@@ -31,42 +64,39 @@ const ContactSection = () => {
         o atravez de este formulario
       </p>
 
-      <form
-        className="mt-10 flex gap-2 flex-col xl:px-0 px-8 w-full xl:w-1/2 text-black"
-        action={async (FormData) => {
-          const { data, error } = await sendEmail(FormData);
-          if (error) {
-            toast.error(error);
-            return;
-          }
-          toast.success("Correo enviado!");
-        }}
-      >
+      <form className="mt-10 flex gap-2 flex-col xl:px-0 px-8 w-full xl:w-1/2 text-black">
         <input
           className="h-14 rounded-lg bg-[#ffff] w-full border border-black/10 p-4"
-          name="senderName"
+          name="name"
+          type="text"
           placeholder="Nombre"
           required
           maxLength={30}
-          type="text"
+          value={values.name}
+          onChange={handleChange}
         />
 
         <input
           className="h-14 rounded-lg bg-[#ffff] w-full border border-black/10 p-4"
-          name="senderEmail"
+          name="email"
+          type="email"
           placeholder="Correo electrónico"
           required
           maxLength={500}
-          type="email"
+          value={values.email}
+          onChange={handleChange}
         />
         <textarea
           className="h-52 w-full bg-[#ffff] mb-4 p-4 rounded-lg"
-          placeholder="Escribe tu mensaje"
           name="message"
+          placeholder="Escribe tu mensaje"
           maxLength={5000}
           required
+          value={values.message}
+          onChange={handleChange}
         ></textarea>
-        <SubmitBtn />
+
+        <SubmitBtn onClick={onSubmit} />
       </form>
     </motion.section>
   );

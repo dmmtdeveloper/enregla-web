@@ -78,7 +78,7 @@ const Application = () => {
               </h2>
             </div>
             <motion.div {...fadeIn} className="flex flex-col items-center order-1 md:order-2">
-              <Image className="w-[400px] h-auto" width={345} height={370} alt="" priority={true} src={post} />
+              <Image className="w-[400px] h-auto" width={345} height={370} alt="post" priority={true} src={post} />
             </motion.div>
           </motion.article>
         </motion.div>

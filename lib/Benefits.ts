@@ -2,21 +2,21 @@ import { HiShieldCheck } from "react-icons/hi2";
 import { IoIosTimer } from "react-icons/io";
 export const benefits = [
   {
-    id: "feature-3",
+    id: "feature-1",
     icon: HiShieldCheck ,
     title: "Cumplimiento legal y evita multas",
     content:
       "Al grabar la patente según las especificaciones legales, los propietarios cumplen con la Ley de Tránsito. Evitar el incumplimiento es crucial para evitar multas y sanciones.",
   },
   {
-    id: "feature-1",
+    id: "feature-2",
     icon: HiShieldCheck ,
     title: "Disuasión contra el robo y la clonación",
     content:
       "Los ladrones y clonadores son menos propensos a atacar un automóvil con una patente grabada en vidrios y espejos, lo que contribuye a reducir el robo de vehículos.",
   },
   {
-    id: "feature-2",
+    id: "feature-3",
     icon: HiShieldCheck ,
     title: "Facilita identificación y recuperación",
     content:
@@ -28,21 +28,21 @@ export const benefits = [
 
 export const maximumTerm = [
   {
-    id: "feature-3",
+    id: "feature-1",
     icon: IoIosTimer ,
     title: "Vehículos nuevos vendidos hasta el 15 de agosto de 2024",
     content:
       "Tienen cuatro meses para grabar sus vidrios desde que se publicó el reglamento. Vale decir, a partir del 14 de septiembre de 2024, las automotoras deberán entregar el vehículo con la patente ya grabada a sus clientes.",
   },
   {
-    id: "feature-1",
+    id: "feature-2",
     icon: IoIosTimer ,
     title: "Vehículos comercializados antes del 11 de noviembre de 2023",
     content:
       "Tienen doce meses para grabar sus vidrios desde publicado el reglamento, es decir, hasta el 14 de mayo de 2025.  El reglamento establece que no se consideran como vehículos nuevos los que fueron y serán comercializados entre 11 de noviembre de 2023 y el 14 de agosto de 2024, por lo que también tendrán el plazo hasta el 14 de mayo.",
   },
   {
-    id: "feature-1",
+    id: "feature-3",
     icon: IoIosTimer ,
     title: "¿Qué pasa con los autos que ya grabaron la patente?",
     content:
