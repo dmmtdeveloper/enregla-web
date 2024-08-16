@@ -1,17 +1,20 @@
 "use client";
 import Link from "next/link";
 import clsx from "clsx";
-
 import { motion } from "framer-motion";
 import { MovingBorderDemo } from "@/components/ui/buttons/ButtonMoving";
 import { AnimatedBeamMultipleOutputUI } from "@/components/ui/AnimatedBeamUI";
 import { ParagraphSection } from "../ui/paragraph/ParagraphSection";
 import { paragrapsLaw } from "@/lib/data";
 import { TitleLaw } from "../ui/titles/TitleLaw";
+import { useSectionInView } from "@/hooks/useSectionInView";
 
 export const LawSection = () => {
+  const { ref } = useSectionInView("Ley 21.601", 0.5);
+
   return (
     <motion.div
+      ref={ref}
       id="ley"
       initial={{
         opacity: 0,

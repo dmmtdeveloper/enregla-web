@@ -1,17 +1,20 @@
 "use client";
 import { motion } from "framer-motion";
-import styles from "@/lib/style";
 import { maximumTerm } from "@/lib/Benefits";
 import { MovingBorderDemo } from "@/components/ui/buttons/ButtonMoving";
 import { MaximumCard } from "@/components/05_MaximumTerm/MaximumCard";
 import Link from "next/link";
 import { ParagraphSection } from "../ui/paragraph/ParagraphSection";
 import { paragrapsMaximumTerm } from "@/lib/data";
+import { useSectionInView } from "@/hooks/useSectionInView";
 
 export const MaximumTerm = () => {
+  const { ref } = useSectionInView("Plazos", 0.5);
+
   return (
     <motion.div
-      id="beneficios"
+      ref={ref}
+      id="plazo"
       initial={{
         opacity: 0,
       }}

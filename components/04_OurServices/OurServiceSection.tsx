@@ -7,10 +7,14 @@ import { OurServicesCard } from "@/components/04_OurServices/CardServices";
 import { services } from "@/lib/OurServices";
 import { Auto } from "@/components/ui/Auto";
 import { motion } from "framer-motion";
+import { useSectionInView } from "@/hooks/useSectionInView";
 
 export const OurServiceSection = () => {
+  const { ref } = useSectionInView("Nosotros", 0.5);
+
   return (
     <motion.section
+      ref={ref}
       initial={{
         opacity: 0,
       }}
@@ -39,7 +43,9 @@ export const OurServiceSection = () => {
       </div>
 
       <div>
-        <div className={` flex flex-col  justify-center p-10 xl:p-20  rounded-[60px] xl:rounded-[100px]`}>
+        <div
+          className={` flex flex-col  justify-center p-10 xl:p-20  rounded-[60px] xl:rounded-[100px]`}
+        >
           <h2
             className={clsx(
               "font-normal text-4xl",
@@ -52,7 +58,8 @@ export const OurServiceSection = () => {
               "dark:text-white"
             )}
           >
-            ¿Por que grabar tu patente con <span className="dark:text-green text-green font-semibold">nosotros</span>?
+            ¿Por que grabar tu patente con{" "}
+            <span className="dark:text-green text-green font-semibold">nosotros</span>?
           </h2>
 
           <div className="flex flex-col gap-5">

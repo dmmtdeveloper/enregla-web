@@ -2,7 +2,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-
 export const footerLinks = [
   {
     title: "Contacto",
@@ -66,6 +65,10 @@ export const footerLinks = [
         name: "App",
         link: "aplicacion",
       },
+      {
+        name: "Misión",
+        link: "/us",
+      },
     ],
   },
 ];
@@ -87,4 +90,3 @@ export const socialMedia = [
     link: "https://www.twitter.com/",
   },
 ];
-

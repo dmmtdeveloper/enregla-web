@@ -18,9 +18,6 @@ export const NavSection = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showBorder, setShowBorder] = useState(false);
   const { handleNav, menuOpen } = useHandleNav();
-  // const path = usePathname();
-  // const isMenuVisible = path !== "/contact";
-
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY) {
@@ -46,15 +43,9 @@ export const NavSection = () => {
       animate={{ y: 0, opacity: 1 }}
       className={clsx(
         "fixed w-full h-20 z-[99999] xl:px-16 px-4",
-        // "shadow-md",
         "backdrop-blur-[1rem]",
         "text-gray-900 z-[20]",
         { "border-b-[1px] border-slate-200 dark:border-slate-900": showBorder }
-
-        /*dark mode */
-        // "dark:bg-[#43435C]",
-        // "dark:border-gray-800",
-        // "dark:bg-opacity-50",
       )}
     >
       <div className="flex justify-between items-center h-full w-full">

@@ -8,11 +8,15 @@ import { Title } from "@/components/ui/titles/Title";
 import { ParagraphSection } from "@/components/ui/paragraph/ParagraphSection";
 import clsx from "clsx";
 import { paragrapsBenefits } from "@/lib/data";
+import { useSectionInView } from "@/hooks/useSectionInView";
 
 export const BenefitsSection = () => {
+  const { ref } = useSectionInView("Beneficios", 0.8);
+
   return (
     <motion.div
       id="beneficios"
+      ref={ref}
       initial={{
         opacity: 0,
       }}

@@ -7,6 +7,10 @@ export type NavItems = {
   home: LinkItem[];
 };
 
+import { links } from "./data";
+export type SectionName = (typeof links)[number]["name"];
+
+
 /// Interfaz PreguntaFrecuente
 export interface PreguntaFrecuente {
   id: number; // ID de la pregunta

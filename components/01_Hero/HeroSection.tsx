@@ -6,10 +6,13 @@ import { Spotlight } from "@/components/ui/Spotlight";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { motion } from "framer-motion";
 import { CTAUS } from "../ui/buttons/CTA-US";
+import { useSectionInView } from "@/hooks/useSectionInView";
 
 export const HeroSection = () => {
+  const {ref} = useSectionInView("Inicio", 0.5)
   return (
     <motion.section
+      ref={ref}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       id="inicio"
