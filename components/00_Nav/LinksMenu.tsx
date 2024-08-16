@@ -4,23 +4,17 @@ import Link from "next/link";
 import { links } from "@/lib/data";
 import clsx from "clsx";
 
-
 type menuProps = {
   onClick: () => void;
 };
 
 export const LinksMenu: React.FC<menuProps> = ({ onClick }) => {
- // Renderiza todos los enlaces sin importar la ruta actual
-
   return (
     <>
       <ul className="flex flex-col items-center gap-2 mt-10 dark:text-white text-2xl font-semibold mb-16">
         {links &&
           links.map((link) => (
-            <li
-              className="h-3/4 flex items-center justify-center"
-              key={link.hash}
-            >
+            <li className="h-3/4 flex items-center justify-center" key={link.hash}>
               <Link
                 className={clsx(
                   "flex w-full",

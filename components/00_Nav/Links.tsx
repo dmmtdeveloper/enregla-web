@@ -57,7 +57,7 @@ export const Links = () => {
                 transition={{
                   type: "spring",
                   stiffness: 380,
-                  damping: 20,
+                  damping: 25,
                 }}
               ></motion.span>
             )}
