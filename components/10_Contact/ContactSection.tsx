@@ -1,32 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import { SubmitBtn } from "@/components/ui/buttons/Submit-btn";
-// import { POST } from "@/app/api/email/route";
+import { useForm } from "@/utils/handleSubmit";
 
 const ContactSection = () => {
-  async function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const APIKEY = process.env.API_KEY as string
-
-    formData.append("access_key", APIKEY);
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: json
-    });
-    const result = await response.json();
-    if (result.success) {
-        console.log(result);
-    }
-}
+  const { formRef, handleSubmit } = useForm();
 
   return (
     <motion.section
@@ -39,15 +17,16 @@ const ContactSection = () => {
       <h1 className="text-black dark:text-white text-4xl lg:5xl xl:text-6xl text-center font-semibold mb-4">
         Contáctanos
       </h1>
-      <p className="text-slate-700 dark:text-slate-400  px-10  xl:text-center">
-        Por favor contactanos directamente{" "}
-        <a className="underline cursor-pointer" href="mailto:">
+      <p className="text-slate-700 dark:text-slate-400 px-10 xl:text-center">
+        Por favor contáctanos directamente{" "}
+        <a className="underline cursor-pointer" href="mailto:contacto@enregla.net">
           contacto@enregla.net
         </a>{" "}
-        o atravez de este formulario
+        o a través de este formulario
       </p>
 
       <form
+        ref={formRef}
         onSubmit={handleSubmit}
         className="mt-10 flex gap-2 flex-col xl:px-0 px-8 w-full xl:w-1/2 text-black"
       >
