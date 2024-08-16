@@ -6,7 +6,7 @@ export const CTA = () => {
   return (
     <React.Fragment>
       <Link
-        href="#contact"
+        href="#contacto"
         className={clsx(
           /*----default state----*/
           "group",

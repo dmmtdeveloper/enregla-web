@@ -54,11 +54,11 @@ export const Links = () => {
               <motion.span
                 className="dark:bg-slate-700 bg-slate-300 rounded-full absolute inset-0 -z-10 text-green"
                 layoutId="activeSection"
-                // transition={{
-                //   type: "spring",
-                //   stiffness: 380,
-                //   damping: 30,
-                // }}
+                transition={{
+                  type: "spring",
+                  stiffness: 380,
+                  damping: 20,
+                }}
               ></motion.span>
             )}
           </Link>
