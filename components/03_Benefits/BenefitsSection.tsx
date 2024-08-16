@@ -22,7 +22,7 @@ export const BenefitsSection = () => {
       transition={{
         duration: 2,
       }}
-      className=" flex-grow xl:flex px-8 xl:px-32  scroll-m-12 xl:mb-32 pt-8 pb-8"
+      className=" flex-grow xl:flex px-8 xl:px-32  scroll-m-32 xl:mb-32 pt-8 pb-8"
     >
       <div className="xl:w-1/2">
         <div

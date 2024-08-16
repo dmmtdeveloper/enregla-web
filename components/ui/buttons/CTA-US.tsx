@@ -2,16 +2,16 @@ import clsx from "clsx";
 import Link from "next/link";
 import React from "react";
 
-export const CTA = () => {
+export const CTAUS = () => {
   return (
     <React.Fragment>
       <Link
-        href="#contact"
+        href="#nosotros"
         className={clsx(
           /*----default state----*/
           "group",
-          "text-white text-[18px]",
-          "px-10 py-5 leading-6",
+          "text-green text-[18px]",
+          "px-14 py-5 leading-6",
           "rounded-full",
           "font-semibold tracking-wide",
           "cursor-pointer",
@@ -19,16 +19,17 @@ export const CTA = () => {
           "items-center",
           "justify-center",
           "relative shadow",
-          "gap-2 border-2 border-black",
+          "border-1 border-green border-offset-2",
+          // "gap-2 bg-white",
 
           /*----hover----*/
           "transition",
-          "hover:bg-green2-100-",
-          "hover:shadow-md",
-          "hover:scale-110 active:scale-105",
-          "dark:hover:bg-[#03FF94]",
-          "hover:bg-[#393d3b]",
-          "hover:border-[#393d3b]",
+          "hover:shadow-xl",
+          "dark:hover:shadow-green",
+          "dark:shadow-md",
+          // "hover:scale-110 active:scale-105", 
+          // "dark:hover:bg-[#03FF94]",
+          // "hover:bg-[#393d3b]",
 
           /*----focus statate----*/
           "focus:scale-110",
@@ -41,12 +42,12 @@ export const CTA = () => {
           "disabled:shadow",
 
           /*----dark mode----*/
-          "bg-black",
-          "dark:bg-[#25D366]",
-          "dark:text-black-100"
+          // "dark:bg-[#25D366]",
+          "dark:text-white",
+          "dark:border-white"
         )}
       >
-        Contáctanos
+        Nosotros
       </Link>
     </React.Fragment>
   );

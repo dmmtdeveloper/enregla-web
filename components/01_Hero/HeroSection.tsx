@@ -5,7 +5,7 @@ import { CTA } from "@/components/ui/buttons/CTA";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { motion } from "framer-motion";
-
+import { CTAUS } from "../ui/buttons/CTA-US";
 
 export const HeroSection = () => {
   return (
@@ -75,9 +75,10 @@ export const HeroSection = () => {
                 Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus
                 vehículos.
               </p>
-
-              <CTA />
-        
+              <div className="flex flex-col sm:flex-col xl:flex-row items-center justify-center gap-2 xl:gap-8">
+                <CTA />
+                <CTAUS />
+              </div>
             </div>
           </div>
         </div>
