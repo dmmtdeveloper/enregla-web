@@ -2,16 +2,19 @@
 import { motion } from "framer-motion";
 import { SubmitBtn } from "@/components/ui/buttons/Submit-btn";
 import { useForm } from "@/hooks/useHandleSubmit";
+import { useSectionInView } from "@/hooks/useSectionInView";
 
 const ContactSection = () => {
   const { formRef, handleSubmit } = useForm();
+  const { ref } = useSectionInView("Contacto", 0.5);
 
   return (
     <motion.section
+      ref={ref}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      id="contact"
+      id="contacto"
       className="w-full h-screen flex flex-col justify-center items-center"
     >
       <h1 className="text-black dark:text-white text-4xl lg:5xl xl:text-6xl text-center font-semibold mb-4">

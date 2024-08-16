@@ -23,6 +23,10 @@ export const links = [
     name: "Clientes",
     hash: "/#clientes", // Ruta absoluta
   },
+  {
+    name: "Contacto",
+    hash: "/#contacto", // Ruta absoluta
+  },
 ] as const;
 
 
