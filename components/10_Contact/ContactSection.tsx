@@ -1,49 +1,32 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 import { SubmitBtn } from "@/components/ui/buttons/Submit-btn";
-import { useState } from "react";
-import { sendContactForm } from "@/lib/api";
-interface ContactFormData {
-  name: string;
-  email: string;
-  message: string;
-}
-
-const initValues: ContactFormData = {
-  name: "",
-  email: "",
-  message: "",
-};
-
-const initState = { values: initValues, isLoading: false };
+// import { POST } from "@/app/api/email/route";
 
 const ContactSection = () => {
-  const [state, setState] = useState(initState);
-  const { values } = state;
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const APIKEY = process.env.API_KEY as string
 
-  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setState((prev) => ({
-      ...prev,
-      values: {
-        ...prev.values,
-        [target.name]: target.value,
-      },
-    }));
+    formData.append("access_key", APIKEY);
 
-  const onSubmit = async () => {
-    setState((prev) => ({
-      ...prev,
-      isLoading: true,
-    }));
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
-    await sendContactForm(values);
-    console.log(values);
-
-    setState((prev) => ({
-      ...prev,
-      isLoading: false,
-    }));
-  };
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+    });
+    const result = await response.json();
+    if (result.success) {
+        console.log(result);
+    }
+}
 
   return (
     <motion.section
@@ -64,7 +47,10 @@ const ContactSection = () => {
         o atravez de este formulario
       </p>
 
-      <form className="mt-10 flex gap-2 flex-col xl:px-0 px-8 w-full xl:w-1/2 text-black">
+      <form
+        onSubmit={handleSubmit}
+        className="mt-10 flex gap-2 flex-col xl:px-0 px-8 w-full xl:w-1/2 text-black"
+      >
         <input
           className="h-14 rounded-lg bg-[#ffff] w-full border border-black/10 p-4"
           name="name"
@@ -72,8 +58,6 @@ const ContactSection = () => {
           placeholder="Nombre"
           required
           maxLength={30}
-          value={values.name}
-          onChange={handleChange}
         />
 
         <input
@@ -83,8 +67,6 @@ const ContactSection = () => {
           placeholder="Correo electrónico"
           required
           maxLength={500}
-          value={values.email}
-          onChange={handleChange}
         />
         <textarea
           className="h-52 w-full bg-[#ffff] mb-4 p-4 rounded-lg"
@@ -92,11 +74,9 @@ const ContactSection = () => {
           placeholder="Escribe tu mensaje"
           maxLength={5000}
           required
-          value={values.message}
-          onChange={handleChange}
         ></textarea>
 
-        <SubmitBtn onClick={onSubmit} />
+        <SubmitBtn />
       </form>
     </motion.section>
   );
