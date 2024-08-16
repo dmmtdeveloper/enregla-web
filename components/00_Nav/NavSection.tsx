@@ -15,27 +15,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export const NavSection = () => {
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [showBorder, setShowBorder] = useState(false);
   const { handleNav, menuOpen } = useHandleNav();
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY) {
-      // Desplazamiento hacia abajo
-      setShowBorder(true);
-    } else {
-      // Desplazamiento hacia arriba o en la parte superior
-      setShowBorder(false);
-    }
-    setLastScrollY(currentScrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
 
   return (
     <motion.nav
@@ -45,7 +25,6 @@ export const NavSection = () => {
         "fixed w-full h-20 z-[99999] xl:px-16 px-4",
         "backdrop-blur-[1rem]",
         "text-gray-900 z-[20]",
-        { "border-b-[1px] border-slate-200 dark:border-slate-900": showBorder }
       )}
     >
       <div className="flex justify-between items-center h-full w-full">
