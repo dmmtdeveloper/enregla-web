@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { SubmitBtn } from "@/components/ui/buttons/Submit-btn";
-import { useForm } from "@/utils/handleSubmit";
+import { useForm } from "@/hooks/useHandleSubmit";
 
 const ContactSection = () => {
   const { formRef, handleSubmit } = useForm();
@@ -40,7 +40,7 @@ const ContactSection = () => {
         />
 
         <input
-          className="h-14 rounded-lg bg-[#ffff] w-full border border-black/10 p-4"
+          className="h-14 rounded-lg bg-[#ffff]  border border-black/10 p-4"
           name="email"
           type="email"
           placeholder="Correo electrónico"
