@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import { toast } from "react-toastify";
 
 export function useForm() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -27,10 +28,11 @@ export function useForm() {
         },
         body: json,
       });
+
       const result = await response.json();
       if (result.success) {
         console.log(result);
-        // Reset form fields after successful submission
+        toast.success("Mensaje enviado");
         if (formRef.current) {
           formRef.current.reset();
         }
