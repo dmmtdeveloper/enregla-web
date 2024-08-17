@@ -72,19 +72,22 @@ export const NavSection = () => {
               />
             </Link>
             {/* <ButtonContactNav/> */}
-            <FaWhatsapp
-              className={clsx(
-                "text-[24px]",
-                "dark:text-green",
-                "cursor-pointer",
-                "hidden md:block",
-                "xl:block",
-                "hover:scale-[1.15]",
-                "active:scale-105",
-                "transition",
-                "duration-300"
-              )}
-            />
+
+            <Link href="https://web.whatsapp.com/send?phone=+56951596668" target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp
+                className={clsx(
+                  "text-[24px]",
+                  "dark:text-green",
+                  "cursor-pointer",
+                  "hidden md:block",
+                  "xl:block",
+                  "hover:scale-[1.15]",
+                  "active:scale-105",
+                  "transition",
+                  "duration-300"
+                )}
+              />
+            </Link>
             <ThemeSwitch />
           </div>
         </div>
