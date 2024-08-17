@@ -61,7 +61,7 @@ export const FooterSection = () => {
           © Copyright 2024 - enregla - Todos los derechos reservados.
         </small>
         <p className="text-xs text-center dark:text-white-200 text-black-200 ">
-          <span>About this website:</span> built with React & Next.js(App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend.
+          <span>About this website:</span> built with React & Next.js, TypeScript, Tailwind CSS, Framer Motion.
         </p>
       </div>
     </section>
