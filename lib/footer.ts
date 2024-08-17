@@ -1,6 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaTiktok} from "react-icons/fa6";
+
 
 export const footerLinks = [
   {
@@ -77,7 +78,7 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: FaWhatsapp,
-    link: "https://www.whatsapp.com/",
+    link: "https://web.whatsapp.com/send?phone=+56951596668",
   },
   {
     id: "social-media-2",
@@ -85,8 +86,9 @@ export const socialMedia = [
     link: "https://www.instagram.com/enregla_oficial?igsh=MTl2a2R5dzFvaGR3NA==",
   },
   {
-    id: "social-media-3",
-    icon: FaXTwitter,
+    id: "https://www.tiktok.com/@enreglaoficial?_t=8iLHvxI40m5&amp;_r=1",
+    icon: FaTiktok,
     link: "https://www.twitter.com/",
   },
 ];
+
