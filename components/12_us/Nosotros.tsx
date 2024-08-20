@@ -19,12 +19,12 @@ export const Nosotros = () => {
           <h2
             className={clsx(
               "font-semibold",
-              "text-[38px] xl:text-6xl",
+              "text-4xl xl:text-6xl",
               "xl:max-w-[700px]",
               "dark:text-white",
               "text-black-100",
-              "xl:leading-[70px] leading-[50px]",
-              "w-full"
+              "xl:leading-[70px] leading-[60px]",
+              "w-[800px]"
             )}
           >
             ¿Quiénes Somos?
@@ -47,7 +47,7 @@ export const Nosotros = () => {
             <h2
               className={clsx(
                 "font-semibold",
-                "text-[38px] xl:text-5xl",
+                "text-4xl xl:text-5xl",
                 "xl:max-w-[700px]",
                 "dark:text-white",
                 "text-black-100",
@@ -71,7 +71,7 @@ export const Nosotros = () => {
             <h2
               className={clsx(
                 "font-semibold",
-                "text-[38px] xl:text-5xl",
+                "text-4xl xl:text-5xl",
                 "xl:max-w-[700px]",
                 "dark:text-white",
                 "text-black-100",

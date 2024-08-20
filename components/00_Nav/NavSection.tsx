@@ -13,6 +13,7 @@ import { IoMdContact } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa6";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { FaInstagram } from "react-icons/fa";
 
 export const NavSection = () => {
   const { handleNav, menuOpen } = useHandleNav();
@@ -56,31 +57,16 @@ export const NavSection = () => {
             <Social />
           </div>
           <div className="flex items-center justify-center gap-2 md:gap-8 xl:gap-4">
-            <Link href="/#contacto">
-              <IoMdContact
-                className={clsx(
-                  "text-[24px]",
-                  "dark:text-green",
-                  "cursor-pointer",
-                  "hidden md:block",
-                  "xl:block",
-                  "hover:scale-[1.15]",
-                  "active:scale-105",
-                  "transition",
-                  "duration-300"
-                )}
-              />
-            </Link>
-            {/* <ButtonContactNav/> */}
-
-            <Link href="https://web.whatsapp.com/send?phone=+56951596668" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://web.whatsapp.com/send?phone=+56951596668"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaWhatsapp
                 className={clsx(
                   "text-[24px]",
-                  "dark:text-green",
+                  "text-green",
                   "cursor-pointer",
-                  "hidden md:block",
-                  "xl:block",
                   "hover:scale-[1.15]",
                   "active:scale-105",
                   "transition",
@@ -88,7 +74,28 @@ export const NavSection = () => {
                 )}
               />
             </Link>
-            <ThemeSwitch />
+
+            <Link
+              href="https://www.instagram.com/enregla_oficial?igsh=MTl2a2R5dzFvaGR3NA=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram
+                className={clsx(
+                  "text-[24px] hidden xl:block md:block",
+                  "dark:text-white",
+                  "text-black",
+                  "cursor-pointer",
+                  "hover:scale-[1.15]",
+                  "active:scale-105",
+                  "transition",
+                  "duration-300"
+                )}
+              />
+            </Link>
+            <div className=" border-l-2 border-slate-400 xl:pl-4 pl-4">
+              <ThemeSwitch />
+            </div>
           </div>
         </div>
       </div>

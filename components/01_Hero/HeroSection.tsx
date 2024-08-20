@@ -7,6 +7,7 @@ import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { motion } from "framer-motion";
 import { CTAUS } from "../ui/buttons/CTA-US";
 import { useSectionInView } from "@/hooks/useSectionInView";
+import { ButtonContact } from "../ui/buttons/ContactButton";
 
 export const HeroSection = () => {
   const {ref} = useSectionInView("Inicio", 0.5)
@@ -78,9 +79,9 @@ export const HeroSection = () => {
                 Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus
                 vehículos.
               </p>
-              <div className="flex flex-col sm:flex-col xl:flex-row items-center justify-center gap-2 xl:gap-8">
+              <div className="flex flex-col sm:flex-col xl:flex-row items-center justify-center gap-2 xl:gap-4">
                 <CTA />
-                <CTAUS />
+                <ButtonContact/>
               </div>
             </div>
           </div>

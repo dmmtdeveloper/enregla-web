@@ -59,16 +59,12 @@ export const footerLinks = [
         link: "FAQ",
       },
       {
-        name: "Quiénes somos",
-        link: "us",
-      },
-      {
         name: "App",
         link: "aplicacion",
       },
       {
-        name: "Misión",
-        link: "/us",
+        name: "Quiénes somos",
+        link: "us",
       },
     ],
   },
