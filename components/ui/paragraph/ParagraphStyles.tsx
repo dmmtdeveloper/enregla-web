@@ -3,7 +3,7 @@ import React from "react";
 
 type paragrapProps = {
   paragraph: string;
-  customStyles?: string
+  customStyles?: string;
 };
 
 export const ParagraphStyles: React.FC<paragrapProps> = ({ paragraph, customStyles }) => {
@@ -21,14 +21,15 @@ export const ParagraphStyles: React.FC<paragrapProps> = ({ paragraph, customStyl
 
         // xl
         "xl:max-w-[600px]",
+        // lg
+        "lg:max-w-[430px]",
 
         // dark mode
         "dark:text-white-200",
-        {customStyles}
+        { customStyles }
       )}
     >
       {paragraph}
-
     </p>
   );
 };

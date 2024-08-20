@@ -24,13 +24,13 @@ export const MaximumTerm = () => {
       transition={{
         duration: 2,
       }}
-      className=" flex-grow xl:flex px-4 xl:px-32  scroll-m-12 xl:mb-32"
+      className=" flex-grow lg:flex xl:flex px-4 xl:px-32  scroll-m-12 xl:mb-32 lg:mb-32"
     >
       <div className="xl:w-1/2">
         <div
           className={` flex flex-col justify-center px-8 xl:p-20 p-12 rounded-[60px] xl:rounded-[100px]`}
         >
-          <h2 className="font-normal text-[38px] xl:text-6xl xl:max-w-[700px]  dark:text-white text-black-100 xl:leading-[70px] leading-[50px] w-full mb-4">
+          <h2 className="font-normal text-[38px] xl:text-6xl xl:max-w-[700px] lg:text-5xl lg:max-w-[780px] lg:leading-[60px]  dark:text-white text-black-100 xl:leading-[70px] leading-[50px] w-full mb-4">
             ¿Hasta cuando hay
             <span className="font-semibold text-[#25D366]"> plazo para el grabado</span> de patente?
           </h2>

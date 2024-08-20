@@ -10,7 +10,7 @@ import { useSectionInView } from "@/hooks/useSectionInView";
 import { ButtonContact } from "../ui/buttons/ContactButton";
 
 export const HeroSection = () => {
-  const {ref} = useSectionInView("Inicio", 0.5)
+  const { ref } = useSectionInView("Inicio", 0.5);
   return (
     <motion.section
       ref={ref}
@@ -58,7 +58,7 @@ export const HeroSection = () => {
                 auto en regla auto seguro
               </p>
               <TextGenerateEffect
-                className="text-center text-[50px] sm:text-6xl md:text-6xl lg:text-4xl xl:text-[68px]"
+                className="text-center text-5xl md:text-4xl lg:text-6xl 2xl:text-7xl xl:text-5xl"
                 words="Solución integral en Seguridad Automotriz"
               />
 
@@ -68,7 +68,8 @@ export const HeroSection = () => {
                   "md:tracking-wider",
                   "mb-8 text-sm",
                   "md:text-lg",
-                  "lg:text-2xl",
+                  "lg:text-1xl",
+                  "xl:text-2xl",
                   "text-black-100",
                   "xl:max-w-[700px]",
 
@@ -79,9 +80,9 @@ export const HeroSection = () => {
                 Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus
                 vehículos.
               </p>
-              <div className="flex flex-col sm:flex-col xl:flex-row items-center justify-center gap-2 xl:gap-4">
+              <div className="flex flex-col sm:flex-col lg:flex-row xl:flex-row items-center justify-center gap-2 xl:gap-4">
                 <CTA />
-                <ButtonContact/>
+                <ButtonContact />
               </div>
             </div>
           </div>

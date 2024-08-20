@@ -45,7 +45,7 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-bold", className)}>
+    <div className={cn("font-bold w-[800px]", className)}>
       {/* mt-4 to my-4 */}
       <div className="my-4">
         {/* remove  text-2xl from the original */}

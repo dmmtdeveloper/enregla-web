@@ -22,6 +22,11 @@ export const TitleResponsability: React.FC<titleProps> = ({ title, text, customS
         "xl:text-6xl",
         "xl:leading-[70px]",
 
+        // lg
+        "lg:text-5xl",
+        "lg:leading-[70px]",
+        "lg:text-center",
+
         // dark mode
         "dark:text-white",
         customStyles

@@ -23,6 +23,11 @@ export const TitleLaw: React.FC<titleProps> = ({ title, text, customStyles }) =>
         "xl:leading-[70px]",
         "xl:max-w-[700px]",
 
+        // lg
+        "lg:text-5xl",
+        "lg:leading-[70px]",
+        "lg:max-w-[500px]",
+
         // dark mode
         "dark:text-white",
         customStyles

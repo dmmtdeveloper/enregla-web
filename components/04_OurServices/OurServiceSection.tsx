@@ -32,10 +32,12 @@ export const OurServiceSection = () => {
         "flex-col-reverse",
         "scroll-mb-10 scroll-mt-16",
         "xl:scroll-mt-0",
-        "xl:px-8 mb-0 xl:mb-32"
+        "xl:px-8 mb-0 xl:mb-32",
+        "xl:flex-row",
+        "lg:flex-col lg:mb-32"
       )}
     >
-      <div className="xl:w-[50%] md:w-[50%] w-[100%] relative flex justify-center items-center">
+      <div className="xl:w-[50%] lg:w-[100%] md:w-[50%] w-[100%] relative flex justify-center items-center">
         <div className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
           <Auto />
           <Ripple />
@@ -44,7 +46,7 @@ export const OurServiceSection = () => {
 
       <div>
         <div
-          className={` flex flex-col  justify-center p-10 xl:p-20  rounded-[60px] xl:rounded-[100px]`}
+          className={` flex flex-col xl:items-start lg:items-center lg:justify-center p-10 xl:p-20  rounded-[60px] xl:rounded-[100px]`}
         >
           <h2
             className={clsx(
@@ -52,17 +54,20 @@ export const OurServiceSection = () => {
               "xl:text-6xl xl:max-w-[700px]",
               "text-black-100",
               "xl:leading-[70px] leading-[50px]",
-              "w-full mb-8",
+              "w-full mb-8 xl:text-left",
+              
+              "lg:max-w-[700px] lg:text-center",
+              "lg:text-6xl lg:leading-[70px]",
 
               //dark mode
               "dark:text-white"
             )}
           >
             ¿Por que grabar tu patente con{" "}
-            <span className="dark:text-green text-green font-semibold">nosotros</span>?
+            <span className="dark:text-green text-green font-semibold">nosotros?</span>
           </h2>
 
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 lg:max-w-[700px]">
             {services.map((service, index) => (
               <OurServicesCard key={service.id} {...service} index={index} />
             ))}

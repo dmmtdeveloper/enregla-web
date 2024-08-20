@@ -12,7 +12,7 @@ export const Links = () => {
   return (
     <motion.ul
       className={clsx(
-        "hidden lg:flex lg:gap-0 lg:px-4",
+        "hidden xl:flex lg:gap-0 lg:px-4",
         "items-center justify-center",
         "gap-4 bg-white-100 bg-opacity-45",
         "py-2 px-10 rounded-full",

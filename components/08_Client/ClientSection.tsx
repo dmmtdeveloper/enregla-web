@@ -33,7 +33,7 @@ export const ClientSection = () => {
             "text-center",
             "md:tracking-wider",
             "text-sm md:text-lg",
-            "lg:text-2xl",
+            "lg:text-2xl lg:max-w-[700px]",
             "dark:text-blue-100",
             "text-black-100 mb-20",
             "max-w-[80vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col items-center justify-center"

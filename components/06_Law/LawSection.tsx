@@ -25,7 +25,7 @@ export const LawSection = () => {
       transition={{
         duration: 2,
       }}
-      className="px-8 flex md:flex-row flex-col mt-0 xl:px-32  dark:bg-black-100 scroll-mt-24 xl:scroll-m-28 xl:mb-32"
+      className="px-8 flex lg:flex-row md:flex-row flex-col mt-0 xl:px-32  dark:bg-black-100 scroll-mt-24 xl:scroll-m-28 xl:mb-32 lg:mb-32"
     >
       <div
         className={clsx(
@@ -44,7 +44,7 @@ export const LawSection = () => {
         </Link>
       </div>
 
-      <div className=" xl:w-1/2 flex flex-col items-center justify-center">
+      <div className=" lg:w-1/2 xl:w-1/2 flex flex-col items-center justify-center">
         <AnimatedBeamMultipleOutputUI />
       </div>
     </motion.div>

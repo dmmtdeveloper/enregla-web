@@ -9,7 +9,6 @@ import { CloseButton } from "@/components/ui/buttons/CloseButton";
 import { ThemeSwitch } from "@/components/ui/buttons/ThemeSwitch";
 import { useHandleNav } from "@/hooks/useHandleNav";
 import { LinksMenu } from "@/components/00_Nav/LinksMenu";
-import { IoMdContact } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa6";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -23,7 +22,7 @@ export const NavSection = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       className={clsx(
-        "fixed w-full h-20 z-[99999] xl:px-16 px-4",
+        "fixed w-full h-20 z-[99999] xl:px-16 px-4 lg:px-8",
         "backdrop-blur-[1rem]",
         "text-gray-900 z-[20]"
       )}
@@ -56,7 +55,7 @@ export const NavSection = () => {
             <LinksMenu onClick={handleNav} />
             <Social />
           </div>
-          <div className="flex items-center justify-center gap-2 md:gap-8 xl:gap-4">
+          <div className="flex items-center justify-center gap-2 md:gap-4 xl:gap-4">
             <Link
               href="https://web.whatsapp.com/send?phone=+56951596668"
               target="_blank"
@@ -83,8 +82,7 @@ export const NavSection = () => {
               <FaInstagram
                 className={clsx(
                   "text-[24px] hidden xl:block md:block",
-                  "dark:text-white",
-                  "text-black",
+                  "text-green",
                   "cursor-pointer",
                   "hover:scale-[1.15]",
                   "active:scale-105",

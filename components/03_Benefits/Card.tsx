@@ -10,7 +10,7 @@ type BenefitsProps = {
 
 export const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, content, index }) => {
   return (
-    <div className={`flex flex-col  pt-6 rounded-[20px] gap-2  transition duration-300 items-start`}>
+    <div className={`flex flex-col pt-6 gap-2 items-start`}>
       <Icon className="w-[30px] h-[30px] text-[#00ED64]" />
       <div className=" flex flex-col gap-3">
         <h4
@@ -19,8 +19,7 @@ export const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, conte
             "dark:text-white",
             "text-black-100",
             "text-[20px]",
-            "leading-[23px]",
-            
+            "leading-[23px]"
           )}
         >
           {title}
@@ -32,6 +31,8 @@ export const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, conte
             "text-[16px]",
             "leading-[24px]",
             "max-w-[600px]",
+
+            "lg:max-w-[500px]",
 
             "text-justify"
           )}

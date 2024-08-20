@@ -31,7 +31,7 @@ const ContactSection = () => {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="mt-10 flex gap-2 flex-col xl:px-0 px-8 w-full xl:w-1/2 text-black"
+        className="mt-10 flex gap-2 flex-col xl:px-0 px-8 w-full lg:w-3/4 xl:w-1/2 text-black"
       >
         <input type="hidden" name="subject" value="Nuevo mensaje desde enregla.cl" />
         <input
