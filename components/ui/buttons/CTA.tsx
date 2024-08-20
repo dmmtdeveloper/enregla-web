@@ -19,7 +19,7 @@ export const CTA = () => {
           "items-center",
           "justify-center",
           "relative shadow",
-          "gap-2 border-2 border-black",
+          "gap-2",
 
           /*----hover----*/
           "transition",
@@ -27,8 +27,8 @@ export const CTA = () => {
           "hover:shadow-md",
           "hover:scale-110 active:scale-105",
           "dark:hover:bg-[#03FF94]",
-          "hover:bg-[#393d3b]",
-          "hover:border-[#393d3b]",
+          "hover:bg-black",
+          
 
           /*----focus statate----*/
           "focus:scale-110",
@@ -41,7 +41,7 @@ export const CTA = () => {
           "disabled:shadow",
 
           /*----dark mode----*/
-          "bg-black",
+          "bg-black-100",
           "dark:bg-[#25D366]",
           "dark:text-black-100"
         )}

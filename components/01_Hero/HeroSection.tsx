@@ -3,11 +3,10 @@ import React from "react";
 import clsx from "clsx";
 import { CTA } from "@/components/ui/buttons/CTA";
 import { Spotlight } from "@/components/ui/Spotlight";
-import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { motion } from "framer-motion";
-import { CTAUS } from "../ui/buttons/CTA-US";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import { ButtonContact } from "../ui/buttons/ContactButton";
+import { HeroTitle } from "./HeroTitle";
 
 export const HeroSection = () => {
   const { ref } = useSectionInView("Inicio", 0.5);
@@ -57,11 +56,7 @@ export const HeroSection = () => {
               >
                 auto en regla auto seguro
               </p>
-              <TextGenerateEffect
-                className="text-center text-5xl md:text-4xl lg:text-6xl 2xl:text-7xl xl:text-5xl"
-                words="Solución integral en Seguridad Automotriz"
-              />
-
+              <HeroTitle />
               <p
                 className={clsx(
                   "text-center",

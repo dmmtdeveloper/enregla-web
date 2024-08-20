@@ -55,16 +55,16 @@ export const footerLinks = [
         link: "/#nosotros",
       },
       {
-        name: "Preguntas frecuentes",
-        link: "FAQ",
-      },
-      {
         name: "App",
         link: "aplicacion",
       },
       {
         name: "Quiénes somos",
         link: "us",
+      },
+      {
+        name: "Preguntas frecuentes",
+        link: "FAQ",
       },
     ],
   },

@@ -17,12 +17,16 @@ export const FooterSection = () => {
         "dark:border-gray-50/[.1] bg-gray-50/[.15]"
       )}
     >
-      <div className={clsx("flex items-center xl:items-start", "md:flex-row flex-col", "mb-8 w-full")}>
-        <div className="flex-1 flex-col justify-center items-center xl:justify-start mr-10 ">
+      <div
+        className={clsx("flex items-center lg:items-start xl:items-start", "md:flex-row flex-col", "mb-8 w-full")}
+      >
+        <div className="flex-1 flex-col justify-center items-center xl:justify-start lg:justify-start mr-10 ">
           <Logoenregla />
         </div>
 
-        <div className={clsx("flex-[2]", "w-full flex xl:flex-row", "justify-between", "flex-wrap")}>
+        <div
+          className={clsx("flex-[2]", "w-full flex xl:flex-row", "justify-between", "flex-wrap")}
+        >
           {footerLinks.map((footerLink, index) => (
             <div key={index} className="flex flex-col my-4 min-w-[150px]">
               <h4 className="dark:text-white text-black text-[18px] font-semibold leading-[27px]">
@@ -34,7 +38,11 @@ export const FooterSection = () => {
                     key={linkIndex}
                     className="my-2 text-[16px] dark:text-white-100 text-black-200 leading-[24px] cursor-pointer hover:text-green dark:hover:text-green"
                   >
-                    {link.link ? <Link href={link.link}>{link.name}</Link> : <span>{link.name}</span>}
+                    {link.link ? (
+                      <Link href={link.link}>{link.name}</Link>
+                    ) : (
+                      <span>{link.name}</span>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -61,7 +69,8 @@ export const FooterSection = () => {
           © Copyright 2024 - enregla - Todos los derechos reservados.
         </small>
         <p className="text-xs text-center dark:text-white-200 text-black-200 ">
-          <span>About this website:</span> built with React & Next.js, TypeScript, Tailwind CSS, Framer Motion.
+          <span>About this website:</span> built with React & Next.js, TypeScript, Tailwind CSS,
+          Framer Motion, Web3Forms.
         </p>
       </div>
     </section>

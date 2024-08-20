@@ -14,7 +14,7 @@ export const Nosotros = () => {
       animate={{ y: 0, opacity: 1 }}
       className="flex justify-center items-center  min-h-screen  px-8  py-36"
     >
-      <div className="flex flex-col gap-10 w-full xl:w-[55%]">
+      <div className="flex flex-col gap-10 w-full lg:w-3/4 xl:w-[55%]">
         <article className="flex flex-col gap-5">
           <h2
             className={clsx(

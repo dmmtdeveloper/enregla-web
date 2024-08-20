@@ -24,8 +24,8 @@ export const AcordionFaq: React.FC<AcordionFaqProps> = ({
     <section
       onClick={handleFaq}
       className={clsx(
-        "w-full xl:w-1/2 xl:mx-auto",
-        "shadow-sm",
+        "w-full lg:w-3/4 lg:mx-auto xl:w-1/2 xl:mx-auto",
+        "shadow-sm transition-all duration-300",
         "rounded-2xl",
         "mb-4",
         "border",
@@ -35,7 +35,7 @@ export const AcordionFaq: React.FC<AcordionFaqProps> = ({
     >
       <div className="flex justify-between items-center h-16 px-4 2xl:px-10">
         <p className="text-black text-left font-semibold text-[14px] xl:text-[18px] dark:text-white">{titulo}</p>
-        <div className="cursor-pointer">
+        <div className="cursor-pointer ">
           {open ? (
             <GoChevronUp className="h-[30px] w-[30px] text-black-100 dark:text-white" />
           ) : (
@@ -43,7 +43,7 @@ export const AcordionFaq: React.FC<AcordionFaqProps> = ({
           )}
         </div>
       </div>
-      <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-[500px]" : "max-h-0"}`}>
+      <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-[600px]" : "max-h-0"}`}>
         <div className="pl-10 pb-4 pr-5 flex flex-col gap-4">
           <p className="text-black text-left max-w-[800px] dark:text-slate-300">{description}</p>
           {descripcion2 && (

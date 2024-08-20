@@ -55,9 +55,9 @@ export const OurServiceSection = () => {
               "text-black-100",
               "xl:leading-[70px] leading-[50px]",
               "w-full mb-8 xl:text-left",
-              
-              "lg:max-w-[700px] lg:text-center",
-              "lg:text-6xl lg:leading-[70px]",
+
+              "lg:max-w-[700px] lg:text-left",
+              "lg:text-5xl lg:leading-[70px]",
 
               //dark mode
               "dark:text-white"

@@ -36,9 +36,7 @@ export const Links = () => {
               "items-center justify-center",
               "px-4 py-3",
               "hover:text-slate-900",
-              "text-slate-500",
               "transition",
-              "dark:text-white",
               "dark:hover:text-green",
               { "dark:text-[#25D366] text-slate-900": activeSection === link.name }
             )}
