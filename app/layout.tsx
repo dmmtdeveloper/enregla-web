@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "./providers";
 import { Sora } from "next/font/google";
-import { generateMetadata as generateMetadataCustom } from "@/metadata";
 
-// Configuración de la fuente Sora con soporte para el subset "latin"
 const sora = Sora({ subsets: ["latin"] });
 
-// Generación de la metadata utilizando una función personalizada
-export const generateMetadata = (): Metadata => generateMetadataCustom();
+export const metadata: Metadata = {
+  title: "Enregla",
+  description: "Solución definitiva para el grabado de patentes en espejos y vidrios, protegiendo tu vehículo de manera integral.",
+  keywords: "grabado de patentes, protección vehicular, espejos, vidrios, seguridad automotriz",
+  authors: [{ name: "Enregla", url: "https://www.enregla.cl" }],
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

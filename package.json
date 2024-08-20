@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "email": "email dev"
+    "lint": "next lint"
   },
   "dependencies": {
     "@nextui-org/accordion": "^2.0.38",
@@ -46,7 +45,6 @@
     "react-apexcharts": "^1.4.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18",
-    "react-email": "2.1.6",
     "react-hot-toast": "^2.4.1",
     "react-icon-cloud": "^4.1.4",
     "react-icons": "^5.2.1",
@@ -54,10 +52,8 @@
     "react-spring": "^9.7.4",
     "react-toastify": "^10.0.5",
     "react-tweet": "^3.2.1",
-    "resend": "^3.5.0",
     "sharp": "^0.33.4",
     "swr": "^2.2.5",
-    "tailwind-gradient-mask-image": "^1.2.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "zustand": "^4.5.4"

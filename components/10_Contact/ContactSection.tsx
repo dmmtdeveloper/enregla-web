@@ -41,6 +41,7 @@ const ContactSection = () => {
           placeholder="Nombre"
           required
           maxLength={30}
+          autoComplete="true"
         />
 
         <input
@@ -50,6 +51,7 @@ const ContactSection = () => {
           placeholder="Correo electrónico"
           required
           maxLength={500}
+          autoComplete="true"
         />
         <textarea
           className="h-52 w-full bg-[#ffff] mb-4 p-4 rounded-lg"
