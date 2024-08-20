@@ -9,6 +9,7 @@ import { ParagraphSection } from "@/components/ui/paragraph/ParagraphSection";
 import clsx from "clsx";
 import { paragrapsBenefits } from "@/lib/data";
 import { useSectionInView } from "@/hooks/useSectionInView";
+import Link from "next/link";
 
 export const BenefitsSection = () => {
   const { ref } = useSectionInView("Beneficios", 0.8);
@@ -41,7 +42,9 @@ export const BenefitsSection = () => {
         >
           <Title text="Beneficios" title="de grabar tu patente" />
           <ParagraphSection paragraph={paragrapsBenefits.paragraph} />
-          <MovingBorderDemo title="Contáctanos"></MovingBorderDemo>
+          <Link href="/FAQ">
+            <MovingBorderDemo title="Contáctanos"></MovingBorderDemo>
+          </Link>
         </div>
       </div>
 

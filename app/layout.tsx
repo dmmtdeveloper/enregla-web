@@ -1,23 +1,19 @@
-import "./globals.css";
-import { Sora } from "next/font/google";
 import type { Metadata } from "next";
+import "./globals.css";
 import Providers from "./providers";
+import { Sora } from "next/font/google";
+import { generateMetadata as generateMetadataCustom } from "@/metadata";
 
+// Configuración de la fuente Sora con soporte para el subset "latin"
 const sora = Sora({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "enregla webSite",
-  description: "Solucion definitiva para tu grabado de patentes",
-};
+// Generación de la metadata utilizando una función personalizada
+export const generateMetadata = (): Metadata => generateMetadataCustom();
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body suppressHydrationWarning={true} className={`${sora.className}`}>
+      <body suppressHydrationWarning className={sora.className}>
         <Providers>{children}</Providers>
       </body>
     </html>

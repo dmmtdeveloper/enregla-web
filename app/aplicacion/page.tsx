@@ -13,7 +13,7 @@ const fadeIn = {
   transition: { duration: 2 },
 };
 
-const Application = () => {
+const aplicacion = () => {
   return (
     <MainLayout>
       <motion.section
@@ -87,4 +87,4 @@ const Application = () => {
   );
 };
 
-export default Application;
+export default aplicacion;

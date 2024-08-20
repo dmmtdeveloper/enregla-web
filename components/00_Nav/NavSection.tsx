@@ -56,7 +56,7 @@ export const NavSection = () => {
             <Social />
           </div>
           <div className="flex items-center justify-center gap-2 md:gap-8 xl:gap-4">
-            <Link href="#contact">
+            <Link href="/#contacto">
               <IoMdContact
                 className={clsx(
                   "text-[24px]",
