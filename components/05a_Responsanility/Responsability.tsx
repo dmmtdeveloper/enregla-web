@@ -60,9 +60,9 @@ export const Responsability = () => {
             className="w-[1000px] h-auto pt-10"
             width={500}
             height={500}
-            src={autos}
             alt="autos"
             priority={true}
+            src={autos}
           />
         </div>
       </div>

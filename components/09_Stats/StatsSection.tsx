@@ -20,7 +20,7 @@ export const StatsSection = () => {
       <div>
         <div className="h-[20vh]  rounded-md flex flex-col antialiased items-center justify-center relative">
           <Stats/>
-          {/* <InfiniteMovingStats items={testimonials} direction="right" speed="slow" /> */}
+       
         </div>
       </div>
     </motion.div>

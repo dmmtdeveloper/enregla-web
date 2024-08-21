@@ -21,14 +21,7 @@ const Stats = () => {
               "leading-[26px]",
               "text-[16px]",
               "font-normal",
-              // "text-black-100",
               "text-[#25D366] uppercase ml-3"
-
-              // "xl:text-[30px]",
-              // "max-w-[700px]",
-
-              /*dark mode */
-              // "dark:text-white"
             )}
           >
             {stat.title}
