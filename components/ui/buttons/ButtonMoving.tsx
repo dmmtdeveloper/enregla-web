@@ -13,12 +13,12 @@ export function MovingBorderDemo({ title }: buttonBorderProps): JSX.Element {
       borderRadius="3rem"
       className={clsx(
         //#3b82fb
-        "bg-[#00ED64]",
+        "bg-[#25D366]",
         "border-neutral-200",
         "shadow-md text-[18px]",
         // "dark:bg-[#014E3D]",
         "dark:border-slate-800",
-        "dark:text-black-100"
+        "text-black-100"
       )}
     >
       {title}

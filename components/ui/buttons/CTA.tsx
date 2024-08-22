@@ -10,7 +10,7 @@ export const CTA = () => {
         className={clsx(
           /*----default state----*/
           "group",
-          "text-white text-[18px]",
+          "text-black-100 text-[18px]",
           "px-10 py-5 leading-6",
           "rounded-full",
           "font-semibold tracking-wide",
@@ -26,8 +26,8 @@ export const CTA = () => {
           "hover:bg-green2-100-",
           "hover:shadow-md",
           "hover:scale-110 active:scale-105",
-          "dark:hover:bg-[#03FF94]",
-          "hover:bg-black",
+          "hover:bg-[#2ee672]",
+          // "hover:bg-black",
           
 
           /*----focus statate----*/
@@ -41,9 +41,9 @@ export const CTA = () => {
           "disabled:shadow",
 
           /*----dark mode----*/
-          "bg-black-100",
-          "dark:bg-[#25D366]",
-          "dark:text-black-100"
+          // "bg-black-100",
+          "bg-[#00ED64]",
+          // "dark:text-black-100"
         )}
       >
         Contáctanos

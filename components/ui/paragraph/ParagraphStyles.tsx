@@ -15,14 +15,15 @@ export const ParagraphStyles: React.FC<paragrapProps> = ({ paragraph, customStyl
         "text-[18px]",
         "leading-[30.8px]",
         "text-black-100",
-        "text-justify",
-        "w-full",
+        "w-full text-center",
         "mt-5 mb-8",
 
+        // 2xl
+        "2xl:max-w-[800px]",
         // xl
         "xl:max-w-[600px]",
         // lg
-        "lg:max-w-[430px]",
+        "lg:max-w-[730px]",
 
         // dark mode
         "dark:text-white-200",

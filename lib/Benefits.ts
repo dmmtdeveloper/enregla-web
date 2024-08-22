@@ -22,6 +22,13 @@ export const benefits = [
     content:
       "En caso de robo o accidente, el grabado permite rápida identificación del vehículo Las autoridades y los propietarios pueden verificar la autenticidad y tomar medidas adecuadas.",
   },
+  {
+    id: "feature-3",
+    icon: HiShieldCheck ,
+    title: "Contribuye a la seguridad vial",
+    content:
+      "La medida de grabado mejora la seguridad vehicular en Chile. Al dificultar el robo y la clonación, se crea un entorno más seguro para todos los conductores y sus vehículos.",
+  },
 ];
 
 

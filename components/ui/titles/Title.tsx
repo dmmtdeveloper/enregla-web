@@ -15,17 +15,17 @@ export const Title: React.FC<titleProps> = ({ title, text, customStyles }) => {
         "text-black-100",
         "leading-[40px]",
         "font-normal",
-        "text-4xl",
+        "text-4xl text-center",
         "w-full",
 
         // xl
         "xl:text-6xl",
         "xl:leading-[70px]",
-        "xl:max-w-[700px]",
+        "2xl:max-w-[1000px]",
 
         // lg
         "lg:text-5xl",
-        "lg:max-w-[500px]",
+        
 
         // dark mode
         "dark:text-white",
