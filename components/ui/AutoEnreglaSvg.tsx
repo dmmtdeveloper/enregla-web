@@ -2,7 +2,7 @@ import React from 'react'
 
 export const AutoEnreglaSvg = () => {
   return (
-    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="90" height="90" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M33.2898 34.8955C33.3049 35.5781 32.7619 36.1325 32.083 36.1325H14.7998L16.2517 33.7227H32.0303C32.6902 33.7227 33.271 34.2356 33.2898 34.8955Z"
       className="fill-slate-900 dark:fill-white"

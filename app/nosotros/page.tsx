@@ -1,11 +1,12 @@
 import React from "react";
 import MainLayout from "@/components/layout";
-import { Aplicacion } from "@/components/14_Aplicacion/Aplicacion";
+import { Nosotros } from "@/components/12_us/Nosotros";
+
 
 const page = () => {
   return (
     <MainLayout>
-      <Aplicacion />
+      <Nosotros />
     </MainLayout>
   );
 };

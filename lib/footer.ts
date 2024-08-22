@@ -60,11 +60,11 @@ export const footerLinks = [
       },
       {
         name: "Quiénes somos",
-        link: "us",
+        link: "nosotros",
       },
       {
         name: "Preguntas frecuentes",
-        link: "FAQ",
+        link: "faq-grabado-patentes",
       },
     ],
   },

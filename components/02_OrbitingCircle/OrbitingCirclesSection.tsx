@@ -21,7 +21,7 @@ export function OrbitingCirclesSection() {
 
       {/* Inner Circles */}
       <OrbitingCircles
-        className="size-[80px] border-none bg-none"
+        className="w-[100px] h-auto border-none bg-none"
         radius={190}
         duration={20}
         delay={20}
@@ -63,7 +63,7 @@ export function OrbitingCirclesSection() {
 
 const Icons = {
   autoEnregla: () => <AutoEnreglaSvg />,
-  shield1: () => <ShieldSvg fillColor="#25D366" height="100" width="100" />,
-  shield2: () => <ShieldSvg fillColor="#25D366" height="100" width="100" />,
-  shiled3: () => <ShieldSvg fillColor="#25D366" height="100" width="100" />,
+  shield1: () => <ShieldSvg fillColor="none" height="100" width="100" />,
+  shield2: () => <ShieldSvg fillColor="none" height="100" width="100" />,
+  shiled3: () => <ShieldSvg fillColor="none" height="100" width="100" />,
 };

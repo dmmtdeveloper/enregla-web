@@ -1,11 +1,11 @@
 import React from "react";
 import MainLayout from "@/components/layout";
-import { Aplicacion } from "@/components/14_Aplicacion/Aplicacion";
+import { FAQuestions } from "@/components/13_FAQuestions/FAQuestions";
 
 const page = () => {
   return (
     <MainLayout>
-      <Aplicacion />
+      <FAQuestions />
     </MainLayout>
   );
 };

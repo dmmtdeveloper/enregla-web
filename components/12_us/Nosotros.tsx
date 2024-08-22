@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export const Nosotros = () => {
   return (
     <motion.section
-      id="us"
+      id="nosotros"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       className="flex justify-center items-center  min-h-screen  px-8  py-36"
