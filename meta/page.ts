@@ -8,22 +8,7 @@ export const pagesMetadataList: Array<Metadata & { route: string }> = [
     keywords: "FAQ grabado patentes, Dudas comunes Enregla, Preguntas ley 21.601",
     authors: [{ name: "Enregla", url: "https://www.enregla.cl/FAQ" }],
 
-    openGraph: {
-      title: 'Mi Título en OpenGraph',
-      description: 'Descripción en OpenGraph',
-      url: 'https://mi-sitio.com',
-      siteName: 'Mi Sitio',
-      images: [
-        {
-          url: '/public/images/imagen-og.png',
-          width: 800,
-          height: 600,
-          alt: 'Imagen de ejemplo',
-        },
-      ],
-      locale: 'es_ES',
-      type: 'website',
-    },
+
   },
 
 
@@ -51,17 +36,27 @@ export const pagesMetadataList: Array<Metadata & { route: string }> = [
 
 
 export const defaultMetadata: Metadata = {
-  title: "Enregla, grabado de patents",
-  description: "Grabado de patentes de vehículos",
+  title: "Enregla - Líderes en Grabado de Patentes | Seguridad Vehicular  | Ley 21.601 | Graba tu patente",
+  description: "Enregla, somos expertos en el grabado de patentes en Chile. Cumple con la ley 21.601 y protege tu vehículo con nuestra tecnología de punta. ¡Contáctanos hoy!",
   // icons: {
   //   icon: "/app/favicon.ico",
   // },
   keywords: "grabado de patentes, protección vehicular, espejos, vidrios, seguridad automotriz",
   authors: [{ name: "Enregla", url: "https://www.enregla.cl" }],
   openGraph: {
-    title: "Solución definitiva para el grabado de patentes",
-    description: "Grabado de patentes de vehículos",
-    url: "https://www.enregla.cl/inicio",
-    type: "website",
+    title: 'Mi Título en OpenGraph',
+    description: 'Descripción en OpenGraph',
+    url: 'https://www.enregla.cl',
+    siteName: 'enregla',
+    images: [
+      {
+        url: 'public/assets/svg/auto-white.svg',
+        width: 800,
+        height: 600,
+        alt: 'Imagen de ejemplo',
+      },
+    ],
+    locale: 'es_ES',
+    type: 'website',
   },
 };
