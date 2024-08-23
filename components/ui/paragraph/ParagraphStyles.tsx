@@ -15,7 +15,7 @@ export const ParagraphStyles: React.FC<paragrapProps> = ({ paragraph, customStyl
         "text-[18px]",
         "leading-[30.8px]",
         "text-black-100",
-        "w-full text-center",
+        "w-full text-justify",
         "mt-5 mb-8",
 
         // 2xl

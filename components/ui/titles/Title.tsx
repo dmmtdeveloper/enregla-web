@@ -15,7 +15,7 @@ export const Title: React.FC<titleProps> = ({ title, text, customStyles }) => {
         "text-black-100",
         "leading-[40px]",
         "font-normal",
-        "text-4xl text-center",
+        "text-4xl xl:text-center",
         "w-full",
 
         // xl
