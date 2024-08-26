@@ -3,7 +3,7 @@ import React from "react";
 export const TimeSvg = () => {
   return (
     <div className="dark:bg-black-200  bg-gray-200 py-5 px-5 rounded-[44px] border-2 z-10 dark:fill-green fill-slate-600">
-      <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 24 24">
+      <svg xmlns="http://www.w3.org/2000/svg" width={100} height={100} viewBox="0 0 24 24">
         <path
          
           className="dark:fill-green fill-slate-600"

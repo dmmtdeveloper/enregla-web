@@ -29,7 +29,7 @@ export const OurServiceSection = () => {
         "flex-col-reverse",
         "scroll-mb-10 scroll-mt-16",
         "xl:scroll-mt-0",
-        "xl:px-8 mb-0 xl:mb-32",
+        "xl:px-8 mb-32 xl:mb-32",
         "xl:flex-row",
         "lg:flex-col lg:mb-32"
       )}

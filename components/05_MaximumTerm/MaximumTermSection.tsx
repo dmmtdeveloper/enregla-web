@@ -56,32 +56,16 @@ export const MaximumTerm = () => {
       <article className="w-full">
         <div className="flex flex-col">
           <h2 className=" font-styling font-display mb-2 text-center text-[3rem] md:text-[3.5rem] tracking-tight leading-[120%] font-gradient dark:text-gray-50  text-black-100">
-            ¿hasta cuando tengo plazo para{" "}
+            Plazos para{" "}
             <span className="inline leading-[0] bg-gradient-to-br bg-clip-text text-transparent from-[#E131F3] via-[#59B2EA] to-[#A7FC8F]">
-              grabar mi patente?
+              grabar mi patente
             </span>
           </h2>
         </div>
         <p className="dark:text-gray-200 text-black-100 mx-auto mb-12 max-w-5xl text-center text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
-          Esta medida no solo cumple con la Ley 21.601, sino que también introduce cambios
-          significativos en la forma en que identificamos nuestros vehículos
+         {paragrapsMaximumTerm.paragraph}
         </p>
       </article>
-
-      {/* <div className="xl:w-1/2">
-        <div
-          className={` flex flex-col justify-center px-8 xl:p-20 p-12 rounded-[60px] xl:rounded-[100px]`}
-        >
-          <h2 className="font-normal text-[38px] xl:text-6xl xl:max-w-[700px] lg:text-5xl lg:max-w-[780px] lg:leading-[60px]  dark:text-white text-black-100 xl:leading-[70px] leading-[50px] w-full mb-4">
-            ¿Hasta cuando hay
-            <span className="font-semibold text-[#25D366]"> plazo para el grabado</span> de patente?
-          </h2>
-          <ParagraphSection paragraph={paragrapsMaximumTerm.paragraph} />
-          <Link href="FAQ">
-            <MovingBorderDemo title="Conoce más"></MovingBorderDemo>
-          </Link>
-        </div>
-      </div> */}
 
       <div className={` flex flex-col items-start  mt-10 relative`}>
         {maximumTerm.map((term, index) => (
