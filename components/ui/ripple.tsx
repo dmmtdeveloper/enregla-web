@@ -1,4 +1,5 @@
 import React, { CSSProperties } from "react";
+import { Auto } from "./Auto";
 
 interface RippleProps {
   mainCircleSize?: number;
@@ -12,7 +13,7 @@ const Ripple = React.memo(function Ripple({
   numCircles = 8,
 }: RippleProps) {
   return (
-    <div className="absolute inset-0 flex items-center justify-center">
+    <div className="inset-0 flex items-center justify-center">
       {Array.from({ length: numCircles }, (_, i) => {
         const size = mainCircleSize + i * 68;
         const opacity = mainCircleOpacity - i * 0.03;
@@ -23,7 +24,7 @@ const Ripple = React.memo(function Ripple({
         return (
           <div
             key={i}
-            className={`absolute  animate-ripple rounded-full bg-green shadow-xl border [--i:${i}] `}
+            className={`absolute animate-ripple rounded-full bg-green shadow-xl border [--i:${i}] flex items-center justify-center`}
             style={
               {
                 width: `${size}px`,
@@ -41,6 +42,9 @@ const Ripple = React.memo(function Ripple({
           />
         );
       })}
+      <div className="flex items-center justify-center pl-[60px] pt-[80px]">
+        <Auto width="60px" height="80px" />
+      </div>
     </div>
   );
 });

@@ -19,7 +19,7 @@ export const HeroSection = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       id="inicio"
-      className="relative w-screen 2xl:mb-0 mb-80"
+      className="relative w-screen 2xl:mb-0 lg:mb-10 mb-80"
     >
       <section className="relative w-full min-h-screen  dark:bg-black-100">
         <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="#014E3D" />
@@ -28,21 +28,21 @@ export const HeroSection = () => {
 
         <div
           className={clsx(
-            "w-full 2xl:mt-0 mt-32",
-            "2xl:flex 2xl:px-80  lg:px-10 items-center",
+            "w-full 2xl:mt-0 mt-32 lg:mt-0",
+            "2xl:flex lg:flex 2xl:px-80  lg:px-10 items-center",
             "absolute inset-0 pt-10",
             "bg-grid-black/[0.028]",
             "dark:bg-grid-white/[0.02]",
             "dark:bg-black-100"
           )}
         >
-          <div className="flex flex-col  relative  z-10  items-center justify-center 2xl:items-start">
-            <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col 2xl:items-start items-center justify-center">
+          <div className="flex flex-col  relative  z-10  items-center justify-center lg:items-start md:items-start xl:items-start 2xl:items-start">
+            <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col lg:items-start 2xl:items-start items-center justify-center">
               <ButtonHeroSmall />
               <HeroTitle />
               <ParagraphHero />
             </div>
-            <div className="flex flex-col sm:flex-col lg:flex-row xl:flex-row w-full 2xl:px-0 px-8  gap-4 xl:gap-4">
+            <div className="flex flex-col sm:flex-col lg:flex-row xl:flex-row w-full 2xl:px-0 lg:px-0 px-8  gap-4 xl:gap-4">
               <CTA />
               <ButtonContact />
             </div>

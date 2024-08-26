@@ -4,6 +4,10 @@ export const links = [
     hash: "/#inicio", // Ruta absoluta
   },
   {
+    name: "Clientes",
+    hash: "/#clientes", // Ruta absoluta
+  },
+  {
     name: "Beneficios",
     hash: "/#beneficios", // Ruta absoluta
   },
@@ -18,10 +22,6 @@ export const links = [
   {
     name: "Ley 21.601",
     hash: "/#ley", // Ruta absoluta
-  },
-  {
-    name: "Clientes",
-    hash: "/#clientes", // Ruta absoluta
   },
   {
     name: "Contacto",

@@ -16,6 +16,7 @@ export default function Home() {
     <MainLayout>
       <HeroSection />
       <ClientSection />
+      <StatsSection />
       <BenefitsSection />
       <OrbitingCirclesSection />
       <OurServiceSection />
@@ -23,7 +24,6 @@ export default function Home() {
       <Responsability/>
       <LawSection />
       <MarqueSection />
-      <StatsSection />
       <ContactSection />
     </MainLayout>
   );

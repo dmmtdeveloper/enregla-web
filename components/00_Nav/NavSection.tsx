@@ -22,7 +22,7 @@ export const NavSection = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       className={clsx(
-        "fixed w-full h-20 z-[99999] xl:px-16 px-4 lg:px-8",
+        "fixed w-full h-20 z-[99999] 2xl:px-32 xl:px-16 px-4 lg:px-8",
         "backdrop-blur-[1rem]",
         "text-gray-900 z-[20]"
       )}

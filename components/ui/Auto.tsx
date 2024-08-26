@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import React from 'react'
 import logodark from "@/public/assets/svg/auto-black.svg";
-import logowhithe from "@/public/assets/svg/auto-white.svg";
+import logowhite from "@/public/assets/svg/auto-white.svg";
 import Link from 'next/link';
 import { motion } from "framer-motion"
 
@@ -14,11 +14,11 @@ type AutoProps = {
 
 export const Auto: React.FC<AutoProps> = ({ width, height }) => {
   return (
-    <motion.div className='z-20'>
+    <motion.div className='z-20 flex items-center justify-center animate-ripple'>
       <Link href="#inicio">
         <Image
           className="cursor-pointer hidden dark:block"
-          src={logowhithe}
+          src={logowhite}
           alt="logowhite"
           style={{ width, height }} // Pasar width y height como estilos
           priority={true}
