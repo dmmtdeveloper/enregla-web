@@ -1,7 +1,5 @@
 "use client";
-import Link from "next/link";
 import clsx from "clsx";
-import { MovingBorderDemo } from "@/components/ui/buttons/ButtonMoving";
 import { OurServicesCard } from "@/components/04_OurServices/CardServices";
 import { services } from "@/lib/OurServices";
 import { motion } from "framer-motion";
@@ -54,9 +52,6 @@ export const OurServiceSection = () => {
             {services.map((service, index) => (
               <OurServicesCard key={service.id} {...service} index={index} />
             ))}
-            {/* <Link href="/aplicacion">
-              <MovingBorderDemo title="Acerca de" />
-              </Link> */}
           </div>
         </div>
 
