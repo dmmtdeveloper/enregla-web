@@ -36,7 +36,7 @@ export function OrbitingCirclesSection() {
         delay={20}
         radius={80}
       >
-        <Icons.shield1 />
+        {/* <Icons.shield1 /> */}
       </OrbitingCircles>
 
       <OrbitingCircles
@@ -45,7 +45,7 @@ export function OrbitingCirclesSection() {
         delay={10}
         radius={80}
       >
-        <Icons.shield2 />
+        {/* <Icons.shield2 /> */}
       </OrbitingCircles>
 
       {/* Outer Circles (reverse) */}
@@ -55,15 +55,15 @@ export function OrbitingCirclesSection() {
         duration={20}
         reverse
       >
-        <Icons.shiled3 />
+        {/* <Icons.shiled3 /> */}
       </OrbitingCircles>
     </div>
   );
 }
 
 const Icons = {
+  // shield1: () => <ShieldSvg fillColor="none" height="100" width="100" />,
+  // shield2: () => <ShieldSvg fillColor="none" height="100" width="100" />,
+  // shiled3: () => <ShieldSvg fillColor="none" height="100" width="100" />,
   autoEnregla: () => <AutoEnreglaSvg />,
-  shield1: () => <ShieldSvg fillColor="none" height="100" width="100" />,
-  shield2: () => <ShieldSvg fillColor="none" height="100" width="100" />,
-  shiled3: () => <ShieldSvg fillColor="none" height="100" width="100" />,
 };

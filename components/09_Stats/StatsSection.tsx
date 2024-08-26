@@ -15,12 +15,11 @@ export const StatsSection = () => {
     transition={{
       duration: 2,
     }}
-      className="px-4  dark:bg-black-100 mb-32"
+      className="px-4  dark:bg-black-100 2xl:mb-64 mb-32"
     >
       <div>
-        <div className="h-[20vh]  rounded-md flex flex-col antialiased items-center justify-center relative">
+        <div className="flex flex-col antialiased items-center justify-center relative">
           <Stats/>
-       
         </div>
       </div>
     </motion.div>

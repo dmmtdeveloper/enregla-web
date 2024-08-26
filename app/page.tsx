@@ -18,7 +18,7 @@ export default function Home() {
       <ClientSection />
       <StatsSection />
       <BenefitsSection />
-      <OrbitingCirclesSection />
+      {/* <OrbitingCirclesSection /> */}
       <OurServiceSection />
       <MaximumTerm/>
       <Responsability/>

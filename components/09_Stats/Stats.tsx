@@ -9,9 +9,9 @@ const Stats = () => {
       {stats.map((stat) => (
         <div
           key={stat.id}
-          className={`flex-2 flex justify-center items-center flex-row m-3 px-4 transform transition duration-300 hover:scale-[1.15] active:scale-105`}
+          className={`flex-2 flex justify-center items-center flex-row m-3 px-4`}
         >
-          <p className="whitespace-pre-wrap text-8xl font-medium tracking-tighter text-black dark:text-white">
+          <p className="whitespace-pre-wrap text-8xl font-medium tracking-tighte">
             <NumberTickerComponent value={stat.value} />
           </p>
 
@@ -21,7 +21,7 @@ const Stats = () => {
               "leading-[26px]",
               "text-[16px]",
               "font-normal",
-              "text-[#25D366] uppercase ml-3"
+              "text-black-100 dark:text-white-100 uppercase ml-3"
             )}
           >
             {stat.title}

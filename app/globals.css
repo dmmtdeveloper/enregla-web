@@ -193,6 +193,21 @@ body {
   }
 }
 
+@layer utilities {
+  .animate-ripple-icon {
+    animation: ripple-icon var(--duration, 2s) ease calc(var(--i, 0) * 0.2s) infinite;
+  }
+}
+@keyframes ripple-icon {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
 .rainbowBorder {
   border-radius: 9999px;
   background: linear-gradient(90deg, #02fcef70, #ffb52b70 50%, #a02bfe70);

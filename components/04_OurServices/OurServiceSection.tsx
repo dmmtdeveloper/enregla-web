@@ -1,13 +1,12 @@
 "use client";
 import Link from "next/link";
 import clsx from "clsx";
-import Ripple from "@/components/ui/ripple";
 import { MovingBorderDemo } from "@/components/ui/buttons/ButtonMoving";
 import { OurServicesCard } from "@/components/04_OurServices/CardServices";
 import { services } from "@/lib/OurServices";
-import { Auto } from "@/components/ui/Auto";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/useSectionInView";
+import { Auto } from "../ui/Auto";
 
 export const OurServiceSection = () => {
   const { ref } = useSectionInView("Nosotros", 0.5);
@@ -26,7 +25,7 @@ export const OurServiceSection = () => {
       }}
       id="nosotros"
       className={clsx(
-        "flex items-center justify-center",
+        "flex 2xl:px-64",
         "md:flex-row",
         "dark:bg-black-100",
         "flex-col-reverse",
@@ -37,44 +36,40 @@ export const OurServiceSection = () => {
         "lg:flex-col lg:mb-32"
       )}
     >
-      <div className="xl:w-[50%] lg:w-[100%] md:w-[50%] w-[100%] relative flex justify-center items-center">
-        <div className="relative flex h-[800px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
-          <Auto />
-          <Ripple />
-        </div>
-      </div>
-
       <div>
         <div
-          className={` flex flex-col xl:items-start lg:items-center lg:justify-center p-10 xl:p-20  rounded-[60px] xl:rounded-[100px]`}
+          className={` flex flex-col xl:items-start lg:items-center lg:justify-center lg:px-10 `}
         >
-          <h2
+          <div>
+            <h2 className="2xl:max-w-[500px] 2xl:text-left  font-display mb-2 text-center text-[3rem] md:text-[3.5rem] tracking-tight leading-[120%] text-black-100 dark:text-slate-200 font-gradient-white ">
+              Graba tu patente con nosotros
+            </h2>
+          </div>
+
+          <div
             className={clsx(
-              "font-normal text-4xl",
-              "xl:text-6xl xl:max-w-[700px]",
-              "text-black-100",
-              "xl:leading-[70px] leading-[50px]",
-              "w-full mb-8 xl:text-left",
-
-              "lg:max-w-[700px] lg:text-left",
-              "lg:text-5xl lg:leading-[70px]",
-
-              //dark mode
-              "dark:text-white"
+              "relative z-20 mt-12 grid w-full grid-cols-1 gap-12 sm:grid-cols-2 md:flex-row md:gap-20 lg:grid-cols"
             )}
           >
-            ¿Por que grabar tu patente con{" "}
-            <span className="dark:text-green text-green font-semibold">nosotros?</span>
-          </h2>
-
-          <div className="flex flex-col gap-5 lg:max-w-[700px]">
             {services.map((service, index) => (
               <OurServicesCard key={service.id} {...service} index={index} />
             ))}
-            <Link href="/aplicacion">
+            {/* <Link href="/aplicacion">
               <MovingBorderDemo title="Acerca de" />
-            </Link>
+              </Link> */}
           </div>
+        </div>
+
+        <div className="flex items-center justify-center flex-col mt-20">
+          <div className="border-slate-6 dark:border-slate-800 border-t 2xl:w-1/2 flex mb-10 items-center justify-center"></div>
+
+          <div className="flex items-center justify-center pl-[60px] pt-[80px]">
+            <Auto width="60px" height="80px" />
+          </div>
+          <p className="dark:text-gray-100 text-black-200 text-sm 2xl:text-[1.5rem] leading-[1.5] text-slate-12 font-medium text-center 2xl:max-w-[850px]">
+            Enregla, se posiciona en el mercado por una necesidad real para todos los vehículos y
+            automovilistas de Chile, bajo la nueva ley 21.601 que modifica la ley de tránsito.{" "}
+          </p>
         </div>
       </div>
     </motion.section>

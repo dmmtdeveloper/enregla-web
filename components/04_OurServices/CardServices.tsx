@@ -10,27 +10,18 @@ type OurServiceProps = {
 
 export const OurServicesCard: React.FC<OurServiceProps> = ({ icon: icon, title, content }) => {
   return (
-    <div>
-      <div className="flex flex-col gap-2">
+    <div >
+      <div className="flex w-full flex-col gap-3 md:gap-2">
         <h4
           className={clsx(
-            "font-semibold",
-            "dark:text-white",
-            "text-black-100",
-            "text-[24px]",
-            "leading-[23px]"
+           "font-styling font-display leading-[32px] md:leading-none text-xl 2xl:leading-[130%] dark:text-slate-200 text-black-100"
           )}
         >
           {title}
         </h4>
         <p
           className={clsx(
-            "dark:text-slate-400",
-            "text-black-100",
-            "text-[16px]",
-            "leading-[24px]",
-            "mb-1 text-justify",
-            "xl:max-w-[600px]"
+           "text-sm leading-[1.6] dark:text-slate-300 font-normal text-black-200"
           )}
         >
           {content}

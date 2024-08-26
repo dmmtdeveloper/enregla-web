@@ -14,37 +14,24 @@ export const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, conte
   return (
     <div
       className={clsx(
-        "flex flex-col items-center gap-8 dark:bg-[#0D0D22] bg-[white] shadow-green  px-8 py-10 drop-shadow-lg  w-full h-full 2xl:h-[420px] lg:h-[350px]  rounded-[30px] justify-between"
+        "flex flex-col items-center gap-8 dark:bg-[#0D0D22] bg-[white] shadow-green  px-8 py-10 drop-shadow-lg  w-full h-full  rounded-[30px] justify-between"
       )}
     >
       <div className=" flex flex-col">
         <div className="flex items-center justify-center pb-10">
-          <Icon className="icon w-[40px] h-auto object-contain text-[#00ED64]" />
+          <Icon className="icon w-[40px] h-auto object-contain dark:text-white-300 text-slate-500" />
         </div>
 
         <h4
           className={clsx(
-            "font-semibold",
-            "dark:text-white",
-            "text-black-100",
-            "text-[20px]",
-            "leading-[23px] pb-4"
+            "font-styling font-display leading-[32px] md:leading-none text-xl 2xl:leading-[130%] dark:text-slate-200 text-black-100"
           )}
         >
           {title}
         </h4>
         <p
           className={clsx(
-            "dark:text-[#A0A0A0]",
-            "text-black-100",
-            "text-[16px] font-light",
-
-            // "leading-[24px]",
-            // "max-w-[600px]",
-
-            // "lg:max-w-[500px]",
-
-            "text-justify"
+            "text-sm leading-[1.6] dark:text-slate-300 font-normal text-black-200 text-justify"
           )}
         >
           {content}

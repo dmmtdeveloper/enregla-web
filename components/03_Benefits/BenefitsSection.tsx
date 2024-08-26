@@ -1,12 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import { benefits } from "@/lib/Benefits";
-import { Title } from "@/components/ui/titles/Title";
 import clsx from "clsx";
-import { paragrapsBenefits } from "@/lib/data";
 import { useSectionInView } from "@/hooks/useSectionInView";
-// import { BackgroundGradientDemo } from "../ui/BackgroundGradientDemo";
+import { BackgroundGradientDemo } from "../ui/BackgroundGradientDemo";
 import { BenefitsCard } from "./Card";
+import { ShieldSvg } from "../ui/ShieldSvg";
 
 export const BenefitsSection = () => {
   const { ref } = useSectionInView("Beneficios", 0.8);
@@ -26,10 +25,10 @@ export const BenefitsSection = () => {
       }}
       className={clsx(
         "flex-col",
-        "gap-4",
+        "gap-4 2xl:px-64",
 
         // lg: 1024px
-        "lg:flex",
+        "lg:flex lg:pb-32",
         "lg:px-8 lg:mt-16",
 
         // xl: 1280px
@@ -39,18 +38,24 @@ export const BenefitsSection = () => {
 
         // md: 768px
         "md:px-16",
-        "scroll-m-32",
+        "scroll-m-32"
         // "pt-8 pb-8"
       )}
     >
+      <div className="flex text-center items-center justify-center 2xl:pb-8 pb-4">
+        <BackgroundGradientDemo/>
+      </div>
       <article className="w-full">
         <div className="flex flex-col">
-          <h2 className="2xl:text-6xl leading-[120%] text-[3rem] lg:text-8xl   font-semibold"> <span className="text-green">Beneficios</span> de grabar tu patente</h2>
-       
+          <h2 className=" font-styling font-display mb-2 text-center text-[3rem] md:text-[3.5rem] tracking-tight leading-[120%] font-gradient dark:text-gray-50  text-black-100">
+            Beneficios de{" "}
+            <span className="inline leading-[0] bg-gradient-to-br bg-clip-text text-transparent from-[#E131F3] via-[#59B2EA] to-[#A7FC8F]">
+              grabar tu patente
+            </span>
+          </h2>
         </div>
-     
+        <p className="dark:text-gray-200 text-black-100 mx-auto mb-12 max-w-5xl text-center text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">Esta medida no solo cumple con la Ley 21.601, sino que también introduce cambios significativos en la forma en que identificamos nuestros vehículos</p>
       </article>
-         
 
       <div
         className={clsx(
@@ -58,10 +63,6 @@ export const BenefitsSection = () => {
           "justify-center",
           "gap-4 flex flex-col",
 
-          // "md:grid-cols-2",
-          // "md:grid",
-          // "md:flex",
-          // "md:gap-8",
 
           "xl:grid-cols-2",
           "xl:gap-2",
@@ -69,7 +70,7 @@ export const BenefitsSection = () => {
           "lg:grid-cols-2",
           "lg:grid",
 
-          "2xl:grid-cols-4",
+          "2xl:grid-cols-2",
           "2xl:gap-4"
         )}
       >
