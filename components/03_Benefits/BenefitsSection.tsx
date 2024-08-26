@@ -5,7 +5,6 @@ import clsx from "clsx";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import { BackgroundGradientDemo } from "../ui/BackgroundGradientDemo";
 import { BenefitsCard } from "./Card";
-import { ShieldSvg } from "../ui/ShieldSvg";
 
 export const BenefitsSection = () => {
   const { ref } = useSectionInView("Beneficios", 0.8);

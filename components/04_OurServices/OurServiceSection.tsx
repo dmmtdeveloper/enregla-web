@@ -56,9 +56,9 @@ export const OurServiceSection = () => {
         </div>
 
         <div className="flex items-center justify-center flex-col mt-20">
-          <div className="border-slate-6 dark:border-slate-800 border-t 2xl:w-1/2 flex mb-10 items-center justify-center"></div>
+          <div className="border-slate-6 dark:border-slate-800 border-t 2xl:w-1/2  w-3/4 flex mb-10 items-center justify-center"></div>
 
-          <div className="flex items-center justify-center pl-[60px] pt-[80px]">
+          <div className="flex items-center justify-center pl-[60px] 2xl:pt-[80px]">
             <Auto width="60px" height="80px" />
           </div>
           <p className="dark:text-gray-100 text-black-200 text-sm 2xl:text-[1.5rem] leading-[1.5] text-slate-12 font-medium text-center 2xl:max-w-[850px]">
