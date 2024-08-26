@@ -8,42 +8,7 @@ export const CTA = () => {
       <Link
         href="#contacto"
         className={clsx(
-          /*----default state----*/
-          "group",
-          "text-black-100 text-[18px]",
-          "px-10 py-5 leading-6",
-          "rounded-full",
-          "font-semibold tracking-wide",
-          "cursor-pointer",
-          "inline-flex",
-          "items-center",
-          "justify-center",
-          "relative shadow",
-          "gap-2",
-
-          /*----hover----*/
-          "transition",
-          "hover:bg-green2-100-",
-          "hover:shadow-md",
-          "hover:scale-110 active:scale-105",
-          "hover:bg-[#2ee672]",
-          // "hover:bg-black",
-          
-
-          /*----focus statate----*/
-          "focus:scale-110",
-          "disabled:scale-100",
-          "disabled:bg-opacity-65",
-
-          /*----disabled statate----*/
-          "disabled:bg-blue-4 00/50",
-          "disabled:cursor-not-allowed",
-          "disabled:shadow",
-
-          /*----dark mode----*/
-          // "bg-black-100",
-          "bg-[#00ED64]",
-          // "dark:text-black-100"
+     "text-base h-12 px-5  gap-0 font-semibold bg-white text-black hover:bg-white/90 focus-visible:ring-4 focus-visible:ring-white/30 focus-visible:outline-none focus-visible:bg-white/90 disabled:hover:bg-white inline-flex items-center border justify-center select-none rounded-full disabled:cursor-not-allowed disabled:opacity-70 transition ease-in-out duration-200"
         )}
       >
         Contáctanos

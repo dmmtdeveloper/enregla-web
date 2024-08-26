@@ -8,11 +8,11 @@ export function OrbitingCirclesSection() {
     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  xl:mb-32 ">
       <span
         className={clsx(
-          "dark:text-slate-300",
+          "dark:text-slate-100",
           "text-slate-700",
           "text-center",
           "text-4xl md:text-6xl",
-          "xl:text-8xl font-semibold",
+          "xl:text-7xl font-semibold",
           "leading-none"
         )}
       >
@@ -21,7 +21,7 @@ export function OrbitingCirclesSection() {
 
       {/* Inner Circles */}
       <OrbitingCircles
-        className="w-[100px] h-auto border-none bg-none"
+        className="w-[70px] h-auto border-none bg-none"
         radius={190}
         duration={20}
         delay={20}

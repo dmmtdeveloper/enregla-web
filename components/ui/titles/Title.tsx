@@ -25,6 +25,7 @@ export const Title: React.FC<titleProps> = ({ title, text, customStyles }) => {
 
         // lg
         "lg:text-5xl",
+        "lg:text-center",
         
 
         // dark mode

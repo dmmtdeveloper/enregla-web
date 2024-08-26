@@ -15,14 +15,14 @@ export default function Home() {
   return (
     <MainLayout>
       <HeroSection />
-      <OrbitingCirclesSection />
+      <ClientSection />
       <BenefitsSection />
+      <OrbitingCirclesSection />
       <OurServiceSection />
       <MaximumTerm/>
       <Responsability/>
       <LawSection />
       <MarqueSection />
-      <ClientSection />
       <StatsSection />
       <ContactSection />
     </MainLayout>

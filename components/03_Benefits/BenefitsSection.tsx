@@ -5,7 +5,8 @@ import { Title } from "@/components/ui/titles/Title";
 import clsx from "clsx";
 import { paragrapsBenefits } from "@/lib/data";
 import { useSectionInView } from "@/hooks/useSectionInView";
-import { BackgroundGradientDemo } from "../ui/BackgroundGradientDemo";
+// import { BackgroundGradientDemo } from "../ui/BackgroundGradientDemo";
+import { BenefitsCard } from "./Card";
 
 export const BenefitsSection = () => {
   const { ref } = useSectionInView("Beneficios", 0.8);
@@ -25,7 +26,7 @@ export const BenefitsSection = () => {
       }}
       className={clsx(
         "flex-col",
-        "gap-16",
+        "gap-4",
 
         // lg: 1024px
         "lg:flex",
@@ -33,44 +34,23 @@ export const BenefitsSection = () => {
 
         // xl: 1280px
         "xl:flex px-8",
-        "xl:px-8",
+        "xl:px-32",
         "xl:mb-32",
 
         // md: 768px
         "md:px-16",
         "scroll-m-32",
-        "pt-8 pb-8"
+        // "pt-8 pb-8"
       )}
     >
-      <div className="w-full">
-        <div className={clsx("flex items-center justify-center", "flex-col", "lg:pt-10")}>
-          <Title text="Beneficios" title="de grabar tu patente" />
-          <p
-            className={clsx(
-              // default styles
-              "font-normal",
-              "text-[18px]",
-              "leading-[30.8px]",
-              "text-black-100",
-              "w-full xl:text-center text-justify",
-              "mt-5 mb-8",
-
-              // 2xl
-              "2xl:max-w-[800px]",
-              // xl
-              "xl:max-w-[600px]",
-              // lg
-              "lg:max-w-[730px]",
-
-              // dark mode
-              "dark:text-white-200"
-            )}
-          >
-            {paragrapsBenefits.paragraph}
-          </p>
-    
+      <article className="w-full">
+        <div className="flex flex-col">
+          <h2 className="2xl:text-6xl leading-[120%] text-[3rem] lg:text-8xl   font-semibold"> <span className="text-green">Beneficios</span> de grabar tu patente</h2>
+       
         </div>
-      </div>
+     
+      </article>
+         
 
       <div
         className={clsx(
@@ -83,20 +63,19 @@ export const BenefitsSection = () => {
           // "md:flex",
           // "md:gap-8",
 
-          
           "xl:grid-cols-2",
           "xl:gap-2",
-          
+
           "lg:grid-cols-2",
           "lg:grid",
 
           "2xl:grid-cols-4",
-          "2xl:gap-4",
+          "2xl:gap-4"
         )}
       >
         {benefits.map((benefit, index) => (
-          <BackgroundGradientDemo key={benefit.id} {...benefit} index={index} />
-          // <BenefitsCard key={benefit.id} {...benefit} index={index} />
+          // <BackgroundGradientDemo key={benefit.id} {...benefit} index={index} />
+          <BenefitsCard key={benefit.id} {...benefit} index={index} />
         ))}
       </div>
     </motion.div>

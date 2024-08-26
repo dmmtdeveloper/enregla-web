@@ -14,7 +14,7 @@ type AutoProps = {
 
 export const Auto: React.FC<AutoProps> = ({ width, height }) => {
   return (
-    <motion.div className='z-10'>
+    <motion.div className='z-20'>
       <Link href="#inicio">
         <Image
           className="cursor-pointer hidden dark:block"

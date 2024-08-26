@@ -7,82 +7,52 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import { ButtonContact } from "../ui/buttons/ContactButton";
 import { HeroTitle } from "./HeroTitle";
+import { RippleSection } from "./RippleSection";
+import { ButtonHeroSmall } from "./ButtonHeroSmall";
+import { ParagraphHero } from "./ParagraphHero";
 
 export const HeroSection = () => {
   const { ref } = useSectionInView("Inicio", 0.5);
   return (
-    <motion.section
+    <motion.div
       ref={ref}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       id="inicio"
-      className="relative w-screen"
+      className="relative w-screen 2xl:mb-0 mb-80"
     >
-      <div className="relative w-full min-h-screen  dark:bg-black-100">
-        <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="#E6FFDA" />
-        <Spotlight className="top-20 left-full h-[80vh] w-[50vw]" fill="#00ED64" />
+      <section className="relative w-full min-h-screen  dark:bg-black-100">
         <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="#014E3D" />
+        <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="#E6FFDA" />
+        <Spotlight className="top-20 -rigth-full h-[80vh] w-[50vw]" fill="#00ED64" />
 
         <div
           className={clsx(
-            "h-full w-full",
-            "flex items-center justify-center",
+            "w-full 2xl:mt-0 mt-32",
+            "2xl:flex 2xl:px-80  lg:px-10 items-center",
             "absolute inset-0 pt-10",
             "bg-grid-black/[0.028]",
             "dark:bg-grid-white/[0.02]",
             "dark:bg-black-100"
           )}
         >
-          <div
-            className={clsx(
-              "absolute pointer-events-none",
-              "inset-0 flex items-center",
-              "justify-center",
-              "[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]",
-              "dark:bg-black-100"
-            )}
-          ></div>
-
-          <div className="flex flex-col items-center justify-center relative  z-10">
-            <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col items-center justify-center">
-              <p
-                className={clsx(
-                  "uppercase tracking-widest",
-                  "text-xs text-center",
-                  "max-w-80",
-                  "text-black-100",
-                  "dark:text-blue-100"
-                )}
-              >
-                auto en regla auto seguro
-              </p>
+          <div className="flex flex-col  relative  z-10  items-center justify-center 2xl:items-start">
+            <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col 2xl:items-start items-center justify-center">
+              <ButtonHeroSmall />
               <HeroTitle />
-              <p
-                className={clsx(
-                  "text-center",
-                  "md:tracking-wider",
-                  "mb-8 text-sm",
-                  "md:text-lg",
-                  "lg:text-1xl",
-                  "xl:text-2xl",
-                  "text-black-100",
-                  "xl:max-w-[700px]",
-
-                  //dark mode
-                  "dark:text-blue-100"
-                )}
-              >
-                Compromiso en otorgar soluciones integrales que protejan a nuestros clientes y sus
-                vehículos.
-              </p>
-              <div className="flex flex-col sm:flex-col lg:flex-row xl:flex-row items-center justify-center gap-2 xl:gap-4">
-                <CTA />
-                <ButtonContact />
-              </div>
+              <ParagraphHero />
+            </div>
+            <div className="flex flex-col sm:flex-col lg:flex-row xl:flex-row w-full 2xl:px-0 px-8  gap-4 xl:gap-4">
+              <CTA />
+              <ButtonContact />
             </div>
           </div>
+       
+          <RippleSection />
+        
         </div>
-      </div>
-    </motion.section>
+
+      </section>
+    </motion.div>
   );
 };

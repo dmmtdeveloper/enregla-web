@@ -34,7 +34,7 @@ export const Links = () => {
             className={clsx(
               "flex w-full cursor-pointer",
               "items-center justify-center",
-              "px-4 py-3",
+              "px-4 py-3 text-[14px]",
               "hover:text-slate-900",
               "transition",
               "dark:hover:text-green",

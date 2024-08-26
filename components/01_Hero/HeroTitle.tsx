@@ -6,25 +6,9 @@ export const HeroTitle = () => {
   return (
     <TextGenerateEffect
       className={clsx(
-        "text-center",
-        "text-5xl",
-        "max-w-[300px]",
-
-        // md
-        "md:text-4xl",
-
-        // lg
-        "lg:max-w-[700px]",
-        "lg:text-6xl",
-
-        // xl
-        "xl:text-5xl",
-        "xl:max-w-[900px]",
-
-        // 2xl
-        "2xl:text-7xl"
+       " md:text-left text-[50px] max-w-[290px] flex justify-center items-center text-center md:text-7xl leading-[4.35rem] md:leading-[5rem] tracking-tight 2xl:max-w-[32rem]"
       )}
-      words="Solución integral en Seguridad Automotriz"
+      words="Grabado de patentes"
     />
   );
 };

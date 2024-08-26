@@ -11,8 +11,8 @@ export const ButtonContact = () => {
         className={clsx(
           /*----default state----*/
           "group",
-          "text-black text-[18px]",
-          "px-8 py-5 leading-6",
+          "text-black text-base",
+          "px-8  leading-6",
           "rounded-full",
           "font-semibold tracking-wide",
           "cursor-pointer",
@@ -37,7 +37,7 @@ export const ButtonContact = () => {
 
           /*----dark mode----*/
           // "bg-green",
-          "dark:text-white"
+          "dark:text-green"
         )}
 
       >

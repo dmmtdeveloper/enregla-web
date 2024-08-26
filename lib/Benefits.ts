@@ -4,28 +4,28 @@ export const benefits = [
   {
     id: "feature-1",
     icon: HiShieldCheck ,
-    title: "Cumplimiento legal y evita multas",
+    title: "Cumplimiento legal",
     content:
       "Al grabar la patente según las especificaciones legales, los propietarios cumplen con la Ley de Tránsito. Evitar el incumplimiento es crucial para evitar multas y sanciones.",
   },
   {
     id: "feature-2",
     icon: HiShieldCheck ,
-    title: "Disuasión contra el robo y la clonación",
+    title: "Disuasión contra el robo",
     content:
       "Los ladrones y clonadores son menos propensos a atacar un automóvil con una patente grabada en vidrios y espejos, lo que contribuye a reducir el robo de vehículos.",
   },
   {
     id: "feature-3",
     icon: HiShieldCheck ,
-    title: "Facilita identificación y recuperación",
+    title: "Facilita identificación",
     content:
       "En caso de robo o accidente, el grabado permite rápida identificación del vehículo Las autoridades y los propietarios pueden verificar la autenticidad y tomar medidas adecuadas.",
   },
   {
     id: "feature-3",
     icon: HiShieldCheck ,
-    title: "Contribuye a la seguridad vial",
+    title: "Seguridad vial",
     content:
       "La medida de grabado mejora la seguridad vehicular en Chile. Al dificultar el robo y la clonación, se crea un entorno más seguro para todos los conductores y sus vehículos.",
   },

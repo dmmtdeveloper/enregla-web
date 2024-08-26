@@ -9,7 +9,7 @@ export const ClientSection = () => {
   const {ref} = useSectionInView("Clientes", 0.5)
 
   return (
-    <section ref={ref} className="relative dark:bg-black-100 xl:pt-40  pt-20 px-4 mb-32">
+    <section ref={ref} className="relative xl:pt-40  pt-28 px-4 mb-32">
       <div className={clsx("flex flex-col", "items-center", "gap-4")}>
         <motion.p
           initial={{ y: -100, opacity: 0 }}
@@ -33,7 +33,7 @@ export const ClientSection = () => {
             "text-center",
             "md:tracking-wider",
             "text-sm md:text-lg",
-            "lg:text-2xl lg:max-w-[700px]",
+            "lg:text-1xl lg:max-w-[700px]",
             "dark:text-blue-100",
             "text-black-100 mb-20",
             "max-w-[80vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col items-center justify-center"
