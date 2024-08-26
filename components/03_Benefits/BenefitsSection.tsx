@@ -24,7 +24,7 @@ export const BenefitsSection = () => {
         duration: 2,
       }}
       className={clsx(
-        "flex-col",
+        "flex-col mb-32",
         "gap-4 2xl:px-64",
 
         // lg: 1024px

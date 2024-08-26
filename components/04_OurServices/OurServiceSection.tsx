@@ -25,7 +25,7 @@ export const OurServiceSection = () => {
       }}
       id="nosotros"
       className={clsx(
-        "flex 2xl:px-64",
+        "flex 2xl:px-64 px-10",
         "md:flex-row",
         "dark:bg-black-100",
         "flex-col-reverse",
@@ -41,7 +41,7 @@ export const OurServiceSection = () => {
           className={` flex flex-col xl:items-start lg:items-center lg:justify-center lg:px-10 `}
         >
           <div>
-            <h2 className="2xl:max-w-[500px] 2xl:text-left  font-display mb-2 text-center text-[3rem] md:text-[3.5rem] tracking-tight leading-[120%] text-black-100 dark:text-slate-200 font-gradient-white ">
+            <h2 className=" text-left 2xl:max-w-[500px] 2xl:text-left  font-display mb-2 text-[3rem] md:text-[3.5rem] tracking-tight leading-[120%] text-black-100 dark:text-slate-200 font-gradient-white ">
               Graba tu patente con nosotros
             </h2>
           </div>
