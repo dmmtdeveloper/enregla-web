@@ -27,7 +27,7 @@ export const ClientSection = () => {
             "text-[12px]",
             "text-center text-pretty",
             /* dark mode*/
-            "dark:text-gray-400"
+            "dark:text-white-200"
           )}
         >
           AYUDANDO A LA GENTE A PROTEGER SUS VEHÍCULOS

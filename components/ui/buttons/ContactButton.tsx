@@ -7,7 +7,7 @@ export const ButtonContact = () => {
   return (
     <React.Fragment>
       <Link
-        href="/us"
+        href="/nosotros"
         className={clsx(
           /*----default state----*/
           "group",

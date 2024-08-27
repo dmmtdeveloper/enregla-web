@@ -2,7 +2,7 @@
 import { BackgroundGradient } from "../ui/background-gradient";
 import { motion } from "framer-motion";
 import { ShieldSvg } from "./ShieldSvg";
-export const BackgroundGradientDemo = ({}) => {
+export const BackgroundGradientDemo = () => {
   return (
     <motion.div
       initial={{

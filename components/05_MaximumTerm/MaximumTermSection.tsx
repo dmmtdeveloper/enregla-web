@@ -1,16 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import { maximumTerm } from "@/lib/Benefits";
-import { MovingBorderDemo } from "@/components/ui/buttons/ButtonMoving";
 import { MaximumCard } from "@/components/05_MaximumTerm/MaximumCard";
-import Link from "next/link";
-import { ParagraphSection } from "../ui/paragraph/ParagraphSection";
 import { paragrapsMaximumTerm } from "@/lib/data";
 import { useSectionInView } from "@/hooks/useSectionInView";
-import { BackgroundGradientDemo } from "../ui/BackgroundGradientDemo";
 import clsx from "clsx";
 import { BackgroundGradient } from "../ui/background-gradient";
-import { ShieldSvg } from "../ui/ShieldSvg";
 import { TimeSvg } from "../ui/TimeSvg";
 
 export const MaximumTerm = () => {
@@ -67,7 +62,7 @@ export const MaximumTerm = () => {
         </p>
       </article>
 
-      <div className={` flex flex-col items-start  mt-10 relative`}>
+      <div className="relative z-20 mt-12 grid w-full grid-cols-1 gap-12 sm:grid-cols-2 md:flex-row md:gap-20 lg:grid-cols">
         {maximumTerm.map((term, index) => (
           <MaximumCard key={term.id} {...term} index={index} />
         ))}

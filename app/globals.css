@@ -198,15 +198,17 @@ body {
     animation: ripple-icon var(--duration, 2s) ease calc(var(--i, 0) * 0.2s) infinite;
   }
 }
+
 @keyframes ripple-icon {
   0%,
   100% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1);
   }
   50% {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: scale(0.8);
   }
 }
+
 
 .rainbowBorder {
   border-radius: 9999px;
@@ -225,4 +227,3 @@ body {
   height: calc(32px - 2px);
   /* background-color: #0b0e14; */
 }
-

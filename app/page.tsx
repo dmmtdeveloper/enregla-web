@@ -21,7 +21,7 @@ export default function Home() {
       {/* <OrbitingCirclesSection /> */}
       <OurServiceSection />
       <MaximumTerm/>
-      <Responsability/>
+      {/* <Responsability/> */}
       <LawSection />
       <MarqueSection />
       <ContactSection />

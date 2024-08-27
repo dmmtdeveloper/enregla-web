@@ -54,6 +54,6 @@ export const services = [
     id: "feature-3",
     icon:  FaHandshake,
     title: "Confianza",
-    content: "Más de 10,000 clientes satisfechos avalan nuestro compromiso con la seguridad vehicular. Nuestra empresa se enorgullece de contar con una tasa de retención del 95%.",
+    content: "Más de 900 clientes satisfechos avalan nuestro compromiso con la seguridad vehicular.",
   },
 ];

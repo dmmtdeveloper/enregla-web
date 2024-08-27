@@ -10,27 +10,22 @@ type BenefitsProps = {
 
 export const MaximumCard: React.FC<BenefitsProps> = ({ icon: Icon, title, content, index }) => {
   return (
-    <div className={`flex flex-col  p-6 rounded-[20px] gap-2  transition duration-300 items-start`}>
-      {/* <div className={`w-[64px] h-[64px] rounded-full lg:flex justify-center items-center`}> */}
-      <Icon className="w-[30px] object-contain h-[30px] text-[#00ED64]" />
-      {/* </div> */}
-      <div className=" flex flex-col gap-3">
-        <h4 className={clsx("font-semibold", "dark:text-white", "text-black-100", "text-[20px]", "leading-[23px]")}>
-          {title}
-        </h4>
-        <p
+    <div>
+    <div className="flex w-full flex-col gap-3 md:gap-2">
+      <div className="flex-col items-center gap-4 2xl:flex-col 2xl:items-start 2xl:gap-2 lg:flex-col">
+        <Icon className="w-[30px] object-contain h-[30px] text-gray-500" />
+        <h4
           className={clsx(
-            "dark:text-white-200",
-            "text-black-100",
-            "text-[16px]",
-            "leading-[24px]",
-            "max-w-[600px]",
-            "text-justify"
+            "font-styling font-display leading-[32px] md:leading-none text-xl 2xl:leading-[130%] dark:text-slate-200 text-black-100"
           )}
         >
-          {content}
-        </p>
+          {title}
+        </h4>
       </div>
+      <p className={clsx("text-sm leading-[1.6] dark:text-slate-300 font-normal text-black-200")}>
+        {content}
+      </p>
     </div>
+  </div>
   );
 };

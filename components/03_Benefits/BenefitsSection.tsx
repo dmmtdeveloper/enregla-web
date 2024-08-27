@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import { benefits } from "@/lib/Benefits";
 import clsx from "clsx";
 import { useSectionInView } from "@/hooks/useSectionInView";
-import { BackgroundGradientDemo } from "../ui/BackgroundGradientDemo";
 import { BenefitsCard } from "./Card";
+import { BackgroundGradient } from "../ui/background-gradient";
+import { ShieldSvg } from "../ui/ShieldSvg";
+
 
 export const BenefitsSection = () => {
   const { ref } = useSectionInView("Beneficios", 0.8);
@@ -42,7 +44,10 @@ export const BenefitsSection = () => {
       )}
     >
       <div className="flex text-center items-center justify-center 2xl:pb-8 pb-4">
-        <BackgroundGradientDemo/>
+      <BackgroundGradient>
+        <ShieldSvg />
+      </BackgroundGradient>
+       
       </div>
       <article className="w-full">
         <div className="flex flex-col">
