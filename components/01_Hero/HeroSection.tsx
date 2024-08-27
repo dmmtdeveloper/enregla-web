@@ -47,7 +47,7 @@ export const HeroSection = () => {
             <div className="flex flex-col sm:flex-col lg:flex-row xl:flex-row w-full 2xl:px-0 lg:px-0 px-8  gap-4 xl:gap-4">
               {/* <CTA /> */}
               <Link href="/#contacto">
-                <MovingBorderDemo title="Contactanos" />
+                <MovingBorderDemo title="Contáctanos" />
               </Link>
               <ButtonContact />
             </div>

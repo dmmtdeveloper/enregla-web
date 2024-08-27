@@ -57,7 +57,7 @@ export const MaximumTerm = () => {
             </span>
           </h2>
         </div>
-        <p className="dark:text-gray-200 2xl:max-w-4xl text-black-100 mx-auto mb-12 max-w-5xl text-center text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
+        <p className="dark:text-gray-200 2xl:max-w-4xl lg:max-w-3xl text-black-100 mx-auto mb-12 max-w-5xl text-center text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
          {paragrapsMaximumTerm.paragraph}
         </p>
       </article>

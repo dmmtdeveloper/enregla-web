@@ -45,7 +45,7 @@ export const MarqueSection = () => {
             </span>
           </h2>
         </div>
-        <p className="dark:text-gray-200 text-black-100 mx-auto mb-12 max-w-5xl text-center text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal 2xl:max-w-3xl">
+        <p className="dark:text-gray-200 text-black-100 mx-auto mb-12 lg:max-w-3xl max-w-5xl text-center text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal 2xl:max-w-3xl">
           Nos enorgullece contar con la confianza de una amplia gama de clientes que buscan proteger
           sus vehículos con un servicio de grabado de patentes seguro y efectivo.
         </p>

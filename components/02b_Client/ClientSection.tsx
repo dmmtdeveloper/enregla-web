@@ -23,7 +23,7 @@ export const ClientSection = () => {
           className={clsx(
             "text-gray-900",
             "font-semibold",
-            "xl:text-2xl",
+            "xl:text-2xl lg:text-2xl",
             "text-small",
             "text-center text-pretty",
             /* dark mode*/
