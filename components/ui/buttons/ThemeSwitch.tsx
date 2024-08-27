@@ -40,8 +40,8 @@ export const  ThemeSwitch = () => {
         "disabled:shadow",
 
         /* dark-mode*/
-        "text-black-200",    
-        "dark:text-yellow-200",
+        "text-slate-500",    
+        "dark:text-slate-100",
         
       )}
       onClick={toggleTheme}

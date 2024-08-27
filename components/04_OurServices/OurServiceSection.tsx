@@ -38,11 +38,9 @@ export const OurServiceSection = () => {
         <div
           className={` flex flex-col xl:items-start lg:items-center lg:justify-center lg:px-10 `}
         >
-          <div>
-            <h2 className=" text-left 2xl:max-w-[500px] 2xl:text-left  font-display mb-2 text-[3rem] md:text-[3.5rem] tracking-tight leading-[120%] text-black-100 dark:text-slate-200 font-gradient-white ">
-              Graba tu patente con nosotros
-            </h2>
-          </div>
+          <h2 className=" text-left 2xl:max-w-[500px] 2xl:text-left  font-display mb-2 text-[3rem] md:text-[3.5rem] tracking-tight leading-[120%] text-black-100 dark:text-slate-200 font-gradient-white ">
+            Graba tu patente con nosotros
+          </h2>
 
           <div
             className={clsx(
@@ -58,10 +56,10 @@ export const OurServiceSection = () => {
         <div className="flex items-center justify-center flex-col mt-20">
           <div className="border-slate-6 dark:border-slate-800 border-t 2xl:w-1/2  w-3/4 flex mb-10 items-center justify-center"></div>
 
-          <div className="flex items-center justify-center pl-[60px] 2xl:pt-[80px]">
+          <div className="flex items-center justify-center pl-[60px] 2xl:pt-10 lg:pt-10">
             <Auto width="60px" height="80px" />
           </div>
-          <p className="dark:text-gray-100 text-black-200 text-sm 2xl:text-[1.5rem] leading-[1.5] text-slate-12 font-medium text-center 2xl:max-w-[850px]">
+          <p className="dark:text-gray-100 text-black-200 text-sm 2xl:text-[1.5rem] lg:text-[1.5rem] leading-[1.5] text-slate-12 font-medium text-center 2xl:max-w-[850px] lg:max-w-[750px]">
             Enregla, se posiciona en el mercado por una necesidad real para todos los vehículos y
             automovilistas de Chile, bajo la nueva ley 21.601 que modifica la ley de tránsito.{" "}
           </p>

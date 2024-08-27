@@ -14,7 +14,7 @@ export const CloseButton: React.FC<ButtonProps> = ({onclick}) => {
       className="cursor-pointer">
 
         <IoClose 
-        className="text-3xl dark:text-white dark:hover:text-red-400 hover:text-red-400" />
+        className="text-3xl dark:text-white dark:hover:text-green hover:text-green" />
       </button>
     </>
   );

@@ -91,7 +91,7 @@ export const NavSection = () => {
                 )}
               />
             </Link>
-            <div className=" border-l-2 border-slate-400 xl:pl-4 pl-4">
+            <div className=" border-l-2 dark:border-slate-800 border-slate-300 xl:pl-4 pl-4">
               <ThemeSwitch />
             </div>
           </div>

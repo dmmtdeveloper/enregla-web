@@ -45,7 +45,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ img, name, username, body }) =>
 
 export default function MarqueeDemo() {
   return (
-    <div className="relative flex h-[450px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+    <div className="relative flex h-[350px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />

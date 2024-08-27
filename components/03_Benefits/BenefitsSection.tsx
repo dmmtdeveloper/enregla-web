@@ -29,7 +29,7 @@ export const BenefitsSection = () => {
         "gap-4 2xl:px-64",
 
         // lg: 1024px
-        "lg:flex lg:pb-32",
+        "lg:flex lg:pb-20",
         "lg:px-8 lg:mt-16",
 
         // xl: 1280px
@@ -58,7 +58,7 @@ export const BenefitsSection = () => {
             </span>
           </h2>
         </div>
-        <p className="dark:text-gray-200 text-black-100 mx-auto mb-12 max-w-5xl text-center text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">Esta medida no solo cumple con la Ley 21.601, sino que también introduce cambios significativos en la forma en que identificamos nuestros vehículos</p>
+        <p className="dark:text-gray-200 text-black-100 mx-auto mb-12 2xl:max-w-4xl max-w-5xl text-center text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">Esta medida no solo cumple con la Ley 21.601, sino que también introduce cambios significativos en la forma en que identificamos nuestros vehículos</p>
       </article>
 
       <div

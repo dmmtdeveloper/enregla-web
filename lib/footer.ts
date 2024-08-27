@@ -55,6 +55,10 @@ export const footerLinks = [
         link: "/#nosotros",
       },
       {
+        name: "Clientes",
+        link: "/#clientes",
+      },
+      {
         name: "App",
         link: "aplicacion",
       },
@@ -82,9 +86,9 @@ export const socialMedia = [
     link: "https://www.instagram.com/enregla_oficial?igsh=MTl2a2R5dzFvaGR3NA==",
   },
   {
-    id: "https://www.tiktok.com/@enreglaoficial?_t=8iLHvxI40m5&amp;_r=1",
+    id: "social-media-3",
     icon: FaTiktok,
-    link: "https://www.twitter.com/",
+    link: "https://www.tiktok.com/@enreglaoficial?_t=8iLHvxI40m5&_r=1",
   },
 ];
 

@@ -23,14 +23,14 @@ export const ClientSection = () => {
           className={clsx(
             "text-gray-900",
             "font-semibold",
-            "xl:text-[16px]",
-            "text-[12px]",
+            "xl:text-2xl",
+            "text-small",
             "text-center text-pretty",
             /* dark mode*/
             "dark:text-white-200"
           )}
         >
-          AYUDANDO A LA GENTE A PROTEGER SUS VEHÍCULOS
+          Ayudando a la gente a proteger sus vehículos
         </motion.p>
         <motion.p
           initial={{ y: -100, opacity: 0 }}

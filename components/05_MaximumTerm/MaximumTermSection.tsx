@@ -25,11 +25,11 @@ export const MaximumTerm = () => {
         duration: 2,
       }}
       className={clsx(
-        "flex-col mb-32",
+        "flex-col mb-10",
         "gap-4 2xl:px-64",
 
         // lg: 1024px
-        "lg:flex lg:pb-32",
+        "lg:flex lg:pb-20",
         "lg:px-8 lg:mt-16",
 
         // xl: 1280px
@@ -57,7 +57,7 @@ export const MaximumTerm = () => {
             </span>
           </h2>
         </div>
-        <p className="dark:text-gray-200 text-black-100 mx-auto mb-12 max-w-5xl text-center text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
+        <p className="dark:text-gray-200 2xl:max-w-4xl text-black-100 mx-auto mb-12 max-w-5xl text-center text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal">
          {paragrapsMaximumTerm.paragraph}
         </p>
       </article>

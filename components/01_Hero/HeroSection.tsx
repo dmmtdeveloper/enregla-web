@@ -10,6 +10,8 @@ import { HeroTitle } from "./HeroTitle";
 import { RippleSection } from "./RippleSection";
 import { ButtonHeroSmall } from "./ButtonHeroSmall";
 import { ParagraphHero } from "./ParagraphHero";
+import Link from "next/link";
+import { MovingBorderDemo } from "../ui/buttons/ButtonMoving";
 
 export const HeroSection = () => {
   const { ref } = useSectionInView("Inicio", 0.5);
@@ -22,9 +24,9 @@ export const HeroSection = () => {
       className="relative w-screen 2xl:mb-0 lg:mb-10 mb-80"
     >
       <section className="relative w-full min-h-screen  dark:bg-black-100">
-        <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="#014E3D" />
-        <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="#E6FFDA" />
-        <Spotlight className="top-20 -rigth-full h-[80vh] w-[50vw]" fill="#00ED64" />
+        {/* <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="#014E3D" /> */}
+        {/* <Spotlight className="top-40 left-10 md:left-32 md:top-20 h-screen" fill="#E6FFDA" /> */}
+        {/* <Spotlight className="top-10 rigth-full h-[80vh] w-[50vw]" fill="#00ED64" /> */}
 
         <div
           className={clsx(
@@ -43,15 +45,16 @@ export const HeroSection = () => {
               <ParagraphHero />
             </div>
             <div className="flex flex-col sm:flex-col lg:flex-row xl:flex-row w-full 2xl:px-0 lg:px-0 px-8  gap-4 xl:gap-4">
-              <CTA />
+              {/* <CTA /> */}
+              <Link href="/#contacto">
+                <MovingBorderDemo title="Contactanos" />
+              </Link>
               <ButtonContact />
             </div>
           </div>
-       
-          <RippleSection />
-        
-        </div>
 
+          <RippleSection />
+        </div>
       </section>
     </motion.div>
   );
