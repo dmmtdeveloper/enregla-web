@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import clsx from "clsx";
 import { Logo } from "@/components/ui/Logo";
 import { Links } from "@/components/00_Nav/Links";
@@ -19,14 +19,21 @@ export const NavSection = () => {
 
   return (
     <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      className={clsx(
-        "fixed w-full h-20 z-[99999] 2xl:px-32 xl:px-16 px-4 lg:px-8",
-        "backdrop-blur-[1rem]",
-        "text-gray-900 z-[20]"
-      )}
-    >
+    variants={{
+      hidden: { opacity: 0, y: 75 },
+      visible: { opacity: 1, y: 0 },
+    }}
+    initial="hidden"
+    animate="visible"
+    transition={{ duration: 0.5, delay: 0.25 }}
+
+
+    className={clsx(
+      "fixed w-full h-20 z-[99999] 2xl:px-32 xl:px-16 px-4 lg:px-8",
+      "backdrop-blur-[1rem]",
+      "text-gray-900 z-[20]"
+    )}
+  >
       <div className="flex justify-between items-center h-full w-full">
         <Logo />
         <Links />

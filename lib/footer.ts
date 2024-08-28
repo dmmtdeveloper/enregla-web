@@ -60,8 +60,8 @@ export const footerLinks = [
         link: "/#clientes",
       },
       {
-        name: "App",
-        link: "aplicacion",
+        name: "Concesionarios",
+        link: "concesionarios",
       },
       {
         name: "Quiénes somos",

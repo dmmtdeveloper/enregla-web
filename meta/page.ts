@@ -11,12 +11,12 @@ export const pagesMetadataList: Array<Metadata & { route: string }> = [
   },
 
   {
-    route: "/aplicacion",
+    route: "/consecionarios",
     title: "enregla app",
     description:
       "Aplicación que registra los grabados en tiempo real, facilita la lectura automática de patente y VIN sin necesidad de tipeo, asegurando un proceso de grabado sin errores.",
     keywords: "lectura automática, grabado sin errores, patente, VIN, app, aplicación",
-    authors: [{ name: "Enregla", url: "https://www.enreglaintegral.cl/aplicacion" }],
+    authors: [{ name: "Enregla", url: "https://www.enreglaintegral.cl/concesionarios" }],
   },
 
   {

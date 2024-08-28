@@ -9,39 +9,42 @@ export interface Review {
   // Define the array of reviews
   export const reviews: Review[] = [
     {
-      name: "Jack",
-      username: "@jack",
-      body: "I've never seen anything like this before. It's amazing. I love it.",
+      name: "Agustin Garrido",
+      username: "@Agustin",
+      body: "Excelente trabajo. El grabado de la patente quedó impecable y cumple con la ley chilena.",
       img: "/assets/img/jack.png", // Ruta relativa desde la carpeta public
     },
     {
-      name: "Jill",
-      username: "@jill",
-      body: "I don't know what to say. I'm speechless. This is amazing.",
+      name: "Edgard Saéz",
+      username: "@Edgard",
+      body: "El grabado de la patente me ha dado mucha más seguridad. Estoy muy satisfecha.",
       img: "/assets/img/jill.png",
     },
     {
-      name: "John",
-      username: "@john",
-      body: "I'm at a loss for words. This is amazing. I love it.",
+      name: "Rodrigo",
+      username: "@rodrigo",
+      body: "Atención al cliente excelente. Explicaron todo el proceso claramente.",
       img: "/assets/img/john.png",
     },
     {
-      name: "Jane",
-      username: "@jane",
-      body: "I'm at a loss for words. This is amazing. I love it.",
+      name: "Isidora",
+      username: "@isidora",
+      body: "El grabado de la patente vale la pena. Cumple con la normativa chilena.",
       img: "/assets/img/jane.png",
     },
     {
-      name: "Jenny",
-      username: "@jenny",
-      body: "I'm at a loss for words. This is amazing. I love it.",
+      name: "Valentina",
+      username: "@valentina",
+      body: "Increíble servicio. Estoy encantada con el resultado.",
       img: "/assets/img/jenny.png",
     },
     {
-      name: "James",
-      username: "@james",
-      body: "I'm at a loss for words. This is amazing. I love it.",
+      name: "Mateo",
+      username: "@mateo",
+      body: "El grabado quedó perfecto. Estoy muy contento con el servicio.",
       img: "/assets/img/james.png",
     },
   ];
+  
+
+  
