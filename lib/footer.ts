@@ -1,6 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaTiktok} from "react-icons/fa6";
+import { IoLogoTiktok } from "react-icons/io5";
+import { FaYoutubeSquare} from "react-icons/fa";
 
 
 export const footerLinks = [
@@ -86,8 +87,13 @@ export const socialMedia = [
     link: "https://www.instagram.com/enregla_oficial?igsh=MTl2a2R5dzFvaGR3NA==",
   },
   {
+    id: "social-media-4",
+    icon: FaYoutubeSquare,
+    link: "https://www.youtube.com/watch?v=WJmduq-Aojg",
+  },
+  {
     id: "social-media-3",
-    icon: FaTiktok,
+    icon: IoLogoTiktok ,
     link: "https://www.tiktok.com/@enreglaoficial?_t=8iLHvxI40m5&_r=1",
   },
 ];

@@ -15,7 +15,6 @@ export const pagesMetadataList: Array<Metadata & { route: string }> = [
     title: "enregla app",
     description:
       "Aplicación que registra los grabados en tiempo real, facilita la lectura automática de patente y VIN sin necesidad de tipeo, asegurando un proceso de grabado sin errores.",
-
     keywords: "lectura automática, grabado sin errores, patente, VIN, app, aplicación",
     authors: [{ name: "Enregla", url: "https://www.enreglaintegral.cl/aplicacion" }],
   },
@@ -46,7 +45,7 @@ export const defaultMetadata: Metadata = {
       "Enregla, somos expertos en el grabado de patentes en Chile. Cumple con la ley 21.601 y protege tu vehículo con nuestra tecnología de punta. ¡Contáctanos hoy!",
     url: "https://www.enreglaintegral.cl",
     siteName: "enregla",
-    images: "assets/images/brand.png",
+    images: "https://www.enreglaintegral.cl/assets/images/brand.png",
     locale: "es_ES",
     type: "website",
   },
