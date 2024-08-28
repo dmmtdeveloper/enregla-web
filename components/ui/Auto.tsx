@@ -17,7 +17,7 @@ export const Auto: React.FC<AutoProps> = ({ width, height }) => {
     <motion.div className='z-20 flex items-center justify-center animate-ripple'>
       <Link href="#inicio">
         <Image
-          className="cursor-pointer hidden dark:block"
+          className="cursor-pointer hidden dark:block w-[80px] h-auto"
           src={logowhite}
           alt="logowhite"
           style={{ width, height }} // Pasar width y height como estilos
@@ -25,7 +25,7 @@ export const Auto: React.FC<AutoProps> = ({ width, height }) => {
           quality={95}
         />
         <Image
-          className="cursor-pointer dark:hidden"
+          className="cursor-pointer dark:hidden  w-[80px] h-auto"
           src={logodark}
           alt="logodark"
           style={{ width, height }} // Pasar width y height como estilos

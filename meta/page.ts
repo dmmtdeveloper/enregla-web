@@ -4,14 +4,11 @@ export const pagesMetadataList: Array<Metadata & { route: string }> = [
   {
     route: "/faq-grabado-patentes",
     title: "FAQ Grabado Patentes | Dudas Comunes Enregla | Preguntas Ley 21.601 | Graba tu patente",
-    description: "Resolvemos sus dudas sobre el grabado de patentes. FAQ grabado patentes Enregla, cumplimiento de la Ley 21.601 y seguridad vehicular. Encuentre respuestas aquí.",
+    description:
+      "Resolvemos sus dudas sobre el grabado de patentes. FAQ grabado patentes Enregla, cumplimiento de la Ley 21.601 y seguridad vehicular. Encuentre respuestas aquí.",
     keywords: "FAQ grabado patentes, Dudas comunes Enregla, Preguntas ley 21.601",
     authors: [{ name: "Enregla", url: "https://www.enreglaintegral.cl/FAQ" }],
-
-
   },
-
-
 
   {
     route: "/aplicacion",
@@ -32,31 +29,25 @@ export const pagesMetadataList: Array<Metadata & { route: string }> = [
   },
 ];
 
-
-
-
 export const defaultMetadata: Metadata = {
-  title: "Enregla - Líderes en Grabado de Patentes | Seguridad Vehicular  | Ley 21.601 | Graba tu patente",
-  description: "Enregla, somos expertos en el grabado de patentes en Chile. Cumple con la ley 21.601 y protege tu vehículo con nuestra tecnología de punta. ¡Contáctanos hoy!",
-  // icons: {
-  //   icon: "/app/favicon.ico",
-  // },
+  title:
+    "Enregla - Líderes en Grabado de Patentes | Seguridad Vehicular  | Ley 21.601 | Graba tu patente",
+  description:
+    "Enregla, somos expertos en el grabado de patentes en Chile. Cumple con la ley 21.601 y protege tu vehículo con nuestra tecnología de punta. ¡Contáctanos hoy!",
+  icons: {
+    icon: "/app/favicon.ico",
+  },
   keywords: "grabado de patentes, protección vehicular, espejos, vidrios, seguridad automotriz",
   authors: [{ name: "Enregla", url: "https://www.enreglaintegral.cl" }],
   openGraph: {
-    title: 'Enregla - Líderes en Grabado de Patentes | Seguridad Vehicular  | Ley 21.601 | Graba tu patente',
-    description: 'Enregla, somos expertos en el grabado de patentes en Chile. Cumple con la ley 21.601 y protege tu vehículo con nuestra tecnología de punta. ¡Contáctanos hoy!',
-    url: 'https://www.enreglaintegral.cl',
-    siteName: 'enregla',
-    images: [
-      {
-        url: 'public/assets/svg/auto-white.svg',
-        width: 800,
-        height: 600,
-        alt: 'Imagen de ejemplo',
-      },
-    ],
-    locale: 'es_ES',
-    type: 'website',
+    title:
+      "Enregla - Líderes en Grabado de Patentes | Seguridad Vehicular  | Ley 21.601 | Graba tu patente",
+    description:
+      "Enregla, somos expertos en el grabado de patentes en Chile. Cumple con la ley 21.601 y protege tu vehículo con nuestra tecnología de punta. ¡Contáctanos hoy!",
+    url: "https://www.enreglaintegral.cl",
+    siteName: "enregla",
+    images: "assets/images/brand.png",
+    locale: "es_ES",
+    type: "website",
   },
 };

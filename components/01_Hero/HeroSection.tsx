@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import clsx from "clsx";
-import { CTA } from "@/components/ui/buttons/CTA";
-import { Spotlight } from "@/components/ui/Spotlight";
+// import { CTA } from "@/components/ui/buttons/CTA";
+// import { Spotlight } from "@/components/ui/Spotlight";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import { ButtonContact } from "../ui/buttons/ContactButton";

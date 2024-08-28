@@ -15,13 +15,13 @@ export default function Home() {
     <MainLayout>
       <HeroSection />
       <ClientSection />
-      <MarqueSection />
       {/* <StatsSection /> */}
       <BenefitsSection />
       <OurServiceSection />
       <MaximumTerm/>
       {/* <Responsability/> */}
       <LawSection />
+      <MarqueSection />
       <ContactSection />
     </MainLayout>
   );

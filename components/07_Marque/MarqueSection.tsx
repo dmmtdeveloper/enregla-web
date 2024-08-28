@@ -10,7 +10,7 @@ import { Blocks } from "../ui/icons/Blocks";
 export const MarqueSection = () => {
   return (
     <motion.section
-      id="clientes"
+      // id="clientes"
       initial={{
         opacity: 0,
       }}

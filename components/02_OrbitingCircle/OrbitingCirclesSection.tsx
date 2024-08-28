@@ -1,6 +1,5 @@
 import OrbitingCircles from "@/components/ui/orbiting-circles";
 import clsx from "clsx";
-import { ShieldSvg } from "../ui/ShieldSvg";
 import { AutoEnreglaSvg } from "../ui/AutoEnreglaSvg";
 
 export function OrbitingCirclesSection() {

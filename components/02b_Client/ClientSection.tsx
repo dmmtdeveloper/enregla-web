@@ -10,6 +10,7 @@ export const ClientSection = () => {
 
   return (
     <section
+    id="clientes"
       ref={ref}
       className="relative xl:pt-40  pt-28  mb-10 flex items-center flex-col px-8 2xl:mx-64"
     >
