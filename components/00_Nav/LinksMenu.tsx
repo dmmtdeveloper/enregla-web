@@ -11,14 +11,13 @@ type menuProps = {
 export const LinksMenu: React.FC<menuProps> = ({ onClick }) => {
   return (
     <>
-      <ul className="flex flex-col items-center gap-2 mt-10 dark:text-white text-2xl font-semibold mb-16">
+      <ul className="flex flex-col gap-2 mt-10 dark:text-slate-300 text-normal font-semibold mb-16">
         {links &&
           links.map((link) => (
-            <li className="h-3/4 flex items-center justify-center" key={link.hash}>
+            <li className="h-3/4 flex border-b-1 dark:border-slate-900 border-slate-300" key={link.hash}>
               <Link
                 className={clsx(
                   "flex w-full",
-                  "items-center justify-center",
                   "px-3 py-3",
                   "hover:text-green2-100",
                   "transition",
