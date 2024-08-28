@@ -1,12 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
 import clsx from "clsx";
 import React from "react";
 import MarqueeDemo from "@/components/ui/marquee-demo";
 import { BackgroundGradient } from "../ui/background-gradient";
-import { TimeSvg } from "../ui/TimeSvg";
-import { Blocks } from "../ui/icons/Blocks";
 import { Auto } from "../ui/Auto";
+import { motion } from "framer-motion";
+import { Blocks } from "../ui/icons/Blocks";
 
 export const MarqueSection = () => {
   return (

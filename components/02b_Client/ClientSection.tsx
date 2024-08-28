@@ -2,7 +2,6 @@
 import React from "react";
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import { ClientsImage } from "@/components/ui/ClientsIcons";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import MarqueeDemoLogo from "../ui/marquee-logo";
 

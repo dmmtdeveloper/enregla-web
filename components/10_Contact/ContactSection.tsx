@@ -33,7 +33,7 @@ const ContactSection = () => {
         onSubmit={handleSubmit}
         className="mt-10 flex gap-2 flex-col xl:px-0 px-8 w-full lg:w-3/4 xl:w-1/2 text-black"
       >
-        <input type="hidden" name="subject" value="Nuevo mensaje desde enregla.cl" />
+        <input type="hidden" name="subject" value="Nuevo mensaje desde enreglaintegral.cl" />
         <input
           className="h-14 rounded-lg bg-[#ffff] w-full border border-black/10 p-4"
           name="name"

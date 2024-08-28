@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { SVGProps } from "react";
 
 import Link from "next/link";
+import { ButtonHeroSmall } from "../01_Hero/ButtonHeroSmall";
 
 type BenefitsProps = {
   title: string;
@@ -38,11 +39,13 @@ export const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, conte
         </p>
       </div>
 
-      <Link href="/#contacto">
+      {/* <Link href="/#contacto">
         <small className="text-black text-[12px] dark:text-white-100 hover:text-green">
           PROTEGE TU VEHICULO AHORA
         </small>
-      </Link>
+      </Link> */}
+              <ButtonHeroSmall />
+
     </div>
   );
 };
