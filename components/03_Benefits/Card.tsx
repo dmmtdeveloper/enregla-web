@@ -17,7 +17,7 @@ export const BenefitsCard: React.FC<BenefitsProps> = ({ icon: Icon, title, conte
     <Reveal>
       <div
         className={clsx(
-          "flex flex-col items-center gap-8 dark:bg-black-200 bg-white dark:shadow-none shadow-slate-400  px-8 py-10 shadow-md  w-full h-full  rounded-[30px] justify-between"
+          "flex flex-col items-center gap-8 dark:bg-black-200 bg-white dark:shadow-none shadow-slate-400  px-8 py-10 shadow-md  w-full h-full  rounded-[30px]"
         )}
       >
         <div className=" flex flex-col">

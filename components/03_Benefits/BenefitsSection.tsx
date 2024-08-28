@@ -18,15 +18,15 @@ export const BenefitsSection = () => {
         ref={ref}
         className={clsx(
           "flex-col mb-32",
-          "gap-4 2xl:px-64",
+          "gap-4 px-8",
 
           // lg: 1024px
           "lg:flex lg:pb-20",
           "lg:px-8 lg:mt-16",
 
           // xl: 1280px
-          "xl:flex px-8",
-          "xl:px-32",
+          "xl:flex",
+          "2xl:px-72",
           "xl:mb-32",
 
           // md: 768px
@@ -68,7 +68,7 @@ export const BenefitsSection = () => {
             "lg:grid",
 
             "2xl:grid-cols-2",
-            "2xl:gap-4"
+            "2xl:gap-4",
           )}
         >
           {benefits.map((benefit, index) => (

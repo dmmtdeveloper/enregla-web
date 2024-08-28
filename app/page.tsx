@@ -19,7 +19,6 @@ export default function Home() {
       <BenefitsSection />
       <OurServiceSection />
       <MaximumTerm/>
-      {/* <Responsability/> */}
       <LawSection />
       <MarqueSection />
       <ContactSection />

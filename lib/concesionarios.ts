@@ -17,7 +17,7 @@ export const concesionarios = [
     icon: FaTasks  ,
     title: "Seguimiento Integral",
     content:
-      "Con nuestro sistema de gestión y control, puedes supervisar el avance de cada tarea en tiempo real, detectar posibles inconvenientes y resolverlos de forma oportuna, asegurando la calidad y eficiencia en cada fase del proceso.",
+      "Con nuestro sistema de gestión y control, puedes supervisar el avance de cada tarea en tiempo real, detectar posibles inconvenientes y resolverlos de forma oportuna.",
   },
   {
     id: "feature-1",

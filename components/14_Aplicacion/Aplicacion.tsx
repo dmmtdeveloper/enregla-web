@@ -31,7 +31,7 @@ export const Aplicacion = () => {
 
         // lg: 1024px
         "lg:flex lg:pb-20",
-        "lg:px-8 lg:mt-16",
+        "lg:px-16 lg:mt-48",
 
         // xl: 1280px
         "xl:flex px-8",
@@ -40,7 +40,7 @@ export const Aplicacion = () => {
 
         // 2xl
         "2xl:mt-52",
-        "2xl:px-64",
+        "2xl:px-36",
 
         // md: 768px
         "md:px-16",
