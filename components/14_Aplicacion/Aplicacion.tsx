@@ -1,27 +1,25 @@
 "use client";
 import React from "react";
-
 import Image from "next/image";
 import reportOffice from "@/public/assets/img/report-office.jpg";
 import clsx from "clsx";
-import { motion } from "framer-motion";
 import { ConcesionariosCard } from "@/components/14_Aplicacion/Card";
 import { concesionarios } from "@/lib/concesionarios";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import MarqueeDemoLogo from "../ui/marquee-logo";
 import { Reveal } from "../animation/Reveal";
 
-const fadeIn = {
-  initial: { opacity: 0 },
-  whileInView: { opacity: 1 },
-  transition: { duration: 2 },
-};
+// const fadeIn = {
+//   initial: { opacity: 0 },
+//   whileInView: { opacity: 1 },
+//   transition: { duration: 2 },
+// };
 
 export const Aplicacion = () => {
   const { ref } = useSectionInView("Concesionarios", 0.5);
   return (
     <div
-      {...fadeIn}
+      // {...fadeIn}
       ref={ref}
       id="concesionarios"
       className={clsx(

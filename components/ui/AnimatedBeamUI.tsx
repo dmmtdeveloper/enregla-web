@@ -1,14 +1,13 @@
 "use client";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { RiPoliceBadgeFill } from "react-icons/ri";
-import { FaRegUser } from "react-icons/fa";
 import React, { forwardRef, useRef } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
 import IconAuto from "@/public/assets/svg/auto-black.svg";
 import { GrUserAdmin } from "react-icons/gr";
-import { Reveal } from "../animation/Reveal";
+
 
 // Icons component
 const Icons = {
@@ -18,7 +17,7 @@ const Icons = {
   shield4: () => <IoShieldCheckmarkOutline className="w-14 h-auto text-black-100" />,
   police: () => <RiPoliceBadgeFill className="w-14 h-auto text-black-100" />,
   user: () => <GrUserAdmin className="w-14 h-auto text-black-100" />,
-  auto: () => <Image width={28} height={28} priority alt="auto" src={IconAuto} />,
+  auto: () => <Image className="w-28 h-auto" width={28} height={28} priority alt="auto" src={IconAuto} />,
 };
 
 // Circle component

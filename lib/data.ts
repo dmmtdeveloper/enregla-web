@@ -29,7 +29,7 @@ export const links = [
   },
   {
     name: "Concesionarios",
-    hash: "/concesionarios", // Ruta absoluta
+    hash: "/grabado-de-patentes-para-concesionarios", // Ruta absoluta
   },
 ] as const;
 

@@ -61,7 +61,7 @@ export const footerLinks = [
       },
       {
         name: "Concesionarios",
-        link: "concesionarios",
+        link: "grabado-de-patentes-para-concesionarios",
       },
       {
         name: "Quiénes somos",
@@ -87,12 +87,12 @@ export const socialMedia = [
     link: "https://www.instagram.com/enregla_oficial?igsh=MTl2a2R5dzFvaGR3NA==",
   },
   {
-    id: "social-media-4",
+    id: "social-media-3",
     icon: FaYoutubeSquare,
     link: "https://www.youtube.com/watch?v=WJmduq-Aojg",
   },
   {
-    id: "social-media-3",
+    id: "social-media-4",
     icon: IoLogoTiktok ,
     link: "https://www.tiktok.com/@enreglaoficial?_t=8iLHvxI40m5&_r=1",
   },

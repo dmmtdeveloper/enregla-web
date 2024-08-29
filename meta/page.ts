@@ -11,12 +11,12 @@ export const pagesMetadataList: Array<Metadata & { route: string }> = [
   },
 
   {
-    route: "/consecionarios",
-    title: "enregla app",
+    route: "/grabado-de-patentes-para-concesionarios",
+    title: "Servicios de Grabado de Patentes para Concesionarios | ley 21.601 | Graba tu patente",
     description:
-      "Aplicación que registra los grabados en tiempo real, facilita la lectura automática de patente y VIN sin necesidad de tipeo, asegurando un proceso de grabado sin errores.",
-    keywords: "lectura automática, grabado sin errores, patente, VIN, app, aplicación",
-    authors: [{ name: "Enregla", url: "https://www.enreglaintegral.cl/concesionarios" }],
+      "Ofrezca servicio de grabado de patentes para concesionarios con Enregla. Cumpla la ley 21.601, aumente sus ingresos y mejore la seguridad vehicular. ¡Conozca nuestras soluciones!",
+    keywords: "concesionarios, servicio de grabado, ley 21.601, aumente sus ingresos, mejore la seguridad vehicular, soluciones",
+    authors: [{ name: "Enregla", url: "https://www.enreglaintegral.cl/grabado-de-patentes-para-concesionarios" }],
   },
 
   {

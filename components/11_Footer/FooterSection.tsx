@@ -26,7 +26,6 @@ export const FooterSection = () => {
         )}
       >
         <div className="flex-1">
-          {/* <Logoenregla /> */}
           <Reveal>
             <div className="flex gap-4 flex-row md:mt-0">
               {socialMedia.map((social, index) => (
@@ -66,9 +65,9 @@ export const FooterSection = () => {
                   {footerLink.title}
                 </h4>
               </Reveal>
-              <ul>
-                {footerLink.links.map((link, linkIndex) => (
-                  <Reveal>
+              <Reveal>
+                <ul>
+                  {footerLink.links.map((link, linkIndex) => (
                     <li
                       key={linkIndex}
                       className={clsx(
@@ -78,7 +77,7 @@ export const FooterSection = () => {
                         "leading-[24px]",
                         "cursor-pointer",
                         "hover:text-green",
-                        "dark:hover:text-green",
+                        "dark:hover:text-green"
                       )}
                     >
                       {link.link ? (
@@ -87,9 +86,9 @@ export const FooterSection = () => {
                         <span>{link.name}</span>
                       )}
                     </li>
-                  </Reveal>
-                ))}
-              </ul>
+                  ))}
+                </ul>
+              </Reveal>
             </div>
           ))}
         </div>
