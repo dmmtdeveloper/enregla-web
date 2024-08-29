@@ -50,8 +50,9 @@ export const ClientSection = () => {
             concesionarios y distribuidores automotrices.
           </motion.p>
         </div>
-
-        <MarqueeDemoLogo />
+        <div className="2xl:max-w-[60rem] max-w-96">
+          <MarqueeDemoLogo />
+        </div>
       </section>
     </Reveal>
   );
