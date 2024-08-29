@@ -209,7 +209,6 @@ body {
   }
 }
 
-
 .rainbowBorder {
   border-radius: 9999px;
   background: linear-gradient(90deg, #02fcef70, #ffb52b70 50%, #a02bfe70);
@@ -226,4 +225,15 @@ body {
   width: calc(100% - 2px);
   height: calc(32px - 2px);
   /* background-color: #0b0e14; */
+}
+
+.section_card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  background: inherit;
+  filter: blur(40px) saturate(400%);
+  z-index: -1;
 }

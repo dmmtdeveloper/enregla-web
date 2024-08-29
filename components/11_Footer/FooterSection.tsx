@@ -30,7 +30,7 @@ export const FooterSection = () => {
           <Reveal>
             <div className="flex gap-4 flex-row md:mt-0">
               {socialMedia.map((social, index) => (
-                <a
+                <Link
                   href={social.link}
                   key={index}
                   target="_blank"
@@ -50,7 +50,7 @@ export const FooterSection = () => {
                   )}
                 >
                   <social.icon size={28} />
-                </a>
+                </Link>
               ))}
             </div>
           </Reveal>

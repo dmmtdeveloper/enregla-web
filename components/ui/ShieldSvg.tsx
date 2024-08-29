@@ -2,7 +2,7 @@ import React from "react";
 
 export const ShieldSvg = () => {
   return (
-    <div className="dark:bg-black-200 bg-gray-200 py-5 px-5 rounded-[44px] border-2 z-10 flex justify-center items-center">
+    <div className=" dark:bg-black-200 bg-gray-200 py-5 px-5 rounded-[44px] border-2 z-10 flex justify-center items-center">
       <svg
         className="animate-ripple-icon"
         xmlns="http://www.w3.org/2000/svg"

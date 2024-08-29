@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import clsx from "clsx";
 import { Logo } from "@/components/ui/Logo";
 import { Links } from "@/components/00_Nav/Links";

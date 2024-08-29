@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import { benefits } from "@/lib/Benefits";
 import clsx from "clsx";
 import { useSectionInView } from "@/hooks/useSectionInView";
