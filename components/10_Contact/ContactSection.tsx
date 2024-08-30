@@ -58,7 +58,7 @@ const ContactSection = () => {
             autoComplete="true"
           />
           <textarea
-            className="h-52 w-full bg-[#ffff] mb-4 p-4 rounded-lg"
+            className="h-52 w-full bg-[#ffff] mb-4 p-4 rounded-lg resize-none"
             name="message"
             placeholder="Escribe tu mensaje"
             maxLength={5000}
