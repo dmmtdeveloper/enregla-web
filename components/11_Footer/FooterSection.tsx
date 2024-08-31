@@ -25,7 +25,10 @@ export const FooterSection = () => {
           "mb-8 w-full"
         )}
       >
-        <div className="flex-1">
+        <div className="flex-1 flex flex-col gap-2">
+          <small className={clsx("dark:text-white", "text-black-100", "text-[11px]")}>
+            Síguenos en nuestras redes sociales
+          </small>
           <Reveal>
             <div className="flex gap-4 flex-row md:mt-0">
               {socialMedia.map((social, index) => (
@@ -95,14 +98,14 @@ export const FooterSection = () => {
       </div>
 
       <Reveal>
-        <div className="w-full md:flex-col flex justify-between items-center  flex-col  border-t-[1px] dark:border-t-white-200 border-t-black-200">
-          <small className="dark:text-white-200 text-black-200 text-xs text-center mt-6">
-            © Copyright 2024 - enregla - Todos los derechos reservados.
+        <div className="w-full md:flex-col flex justify-between items-center  flex-col  border-t-[1px] dark:border-t-gray-800 border-t-black-200">
+          <small className="dark:text-white-200 text-black-200 text-xs text-center mt-4">
+          Enregla © 2024. Todos los derechos reservados.
           </small>
-          <p className="text-xs text-center dark:text-white-200 text-black-200 ">
+          {/* <p className="text-xs text-center dark:text-white-200 text-black-200 ">
             <span>About this website:</span> built with React & Next.js, TypeScript, Tailwind CSS,
             Framer Motion, Web3Forms.
-          </p>
+          </p> */}
         </div>
       </Reveal>
     </section>
