@@ -9,9 +9,3 @@ services:
       - .env
     ports:
       - "3000:3000"
-    networks:
-      - bridge-network
-
-networks:
-  bridge-network:
-    external: true
