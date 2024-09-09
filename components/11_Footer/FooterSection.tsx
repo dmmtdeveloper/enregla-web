@@ -100,7 +100,7 @@ export const FooterSection = () => {
       <Reveal>
         <div className="w-full md:flex-col flex justify-between items-center  flex-col  border-t-[1px] dark:border-t-gray-800 border-t-black-200">
           <small className="dark:text-white-200 text-black-200 text-xs text-center mt-4">
-          Enregla © 2024. Todos los derechos reservados.
+            Enregla © 2024. Todos los derechos reservados.
           </small>
           {/* <p className="text-xs text-center dark:text-white-200 text-black-200 ">
             <span>About this website:</span> built with React & Next.js, TypeScript, Tailwind CSS,

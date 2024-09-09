@@ -6,10 +6,10 @@ import React from "react";
 export const Social = () => {
   return (
     <div className="flex items-center justify-center gap-10">
-      {socialMedia.map((social) => {
+      {socialMedia.map((social, index) => {
         const IconComponent = social.icon;
         return (
-          <Link target="_blank" key={social.id} href={social.link} passHref>
+          <Link href={social.link} key={index} target="_blank" rel="noopener noreferrer">
             <IconComponent
               className={clsx(
                 "text-4xl",
