@@ -79,7 +79,7 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: FaWhatsapp,
-    link: "https://web.whatsapp.com/send?phone=56951596668&text=",
+    link: "https://api.whatsapp.com/send?phone=56951596668&text="  ,
   },
   {
     id: "social-media-2",

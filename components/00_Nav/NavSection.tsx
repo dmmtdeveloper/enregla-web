@@ -60,11 +60,12 @@ export const NavSection = () => {
               </div>
             </div>
             <LinksMenu onClick={handleNav} />
+            
             <Social />
           </div>
           <div className="flex items-center justify-center gap-2 md:gap-4 xl:gap-4">
             <Link
-              href="https://web.whatsapp.com/send?phone=+56951596668"
+              href="https://api.whatsapp.com/send?phone=56951596668&text="
               target="_blank"
               rel="noopener noreferrer"
             >
