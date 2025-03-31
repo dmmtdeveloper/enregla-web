@@ -35,7 +35,7 @@ export const LawSection = () => {
             </p>
           </Reveal>
 
-          <Link className="w-full" href="/FAQ">
+          <Link className="w-full" href="/faq-grabado-patentes">
             <MovingBorderDemo title="Conoce más" />
           </Link>
         </div>

@@ -17,7 +17,7 @@ export interface Review {
     {
       name: "Edgard Saéz",
       username: "@Edgard",
-      body: "El grabado de la patente me ha dado mucha más seguridad. Estoy muy satisfecha.",
+      body: "El grabado de la patente me ha dado mucha más seguridad. Estoy muy satisfecho.",
       img: "/assets/img/jill.png",
     },
     {
